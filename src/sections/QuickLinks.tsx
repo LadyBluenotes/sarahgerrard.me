@@ -1,6 +1,6 @@
 import { createSignal, onMount } from "solid-js";
 import { Button } from "~/components/Button";
-import { SectionContainer } from "~/components/SectionContainer";
+import { SectionContainer } from "~/components/Containers";
 import { createResizeObserver } from "@solid-primitives/resize-observer";
 
 export const QuickLinks = () => {

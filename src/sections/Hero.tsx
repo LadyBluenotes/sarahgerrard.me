@@ -1,5 +1,5 @@
 import { Button } from "~/components/Button";
-import { SectionContainer } from "~/components/SectionContainer";
+import { SectionContainer } from "~/components/Containers";
 
 export const Hero = () => {
 	return (

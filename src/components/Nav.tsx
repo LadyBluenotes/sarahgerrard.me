@@ -1,7 +1,7 @@
 import { A, useLocation } from "@solidjs/router";
 import { For } from "solid-js";
 
-export default function Nav() {
+export const Nav = () => {
 	const location = useLocation();
 
 	const links = [
@@ -49,4 +49,4 @@ export default function Nav() {
 			</ul>
 		</nav>
 	);
-}
+};
