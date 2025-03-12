@@ -20,6 +20,7 @@
 		"node": ">=22"
 	},
 	"devDependencies": {
+		"@poppinss/colors": "^4.1.4",
 		"@typescript-eslint/parser": "^8.26.1",
 		"eslint": "^9.22.0",
 		"eslint-plugin-mdx": "^3.2.0",

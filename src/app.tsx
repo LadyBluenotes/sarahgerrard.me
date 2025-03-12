@@ -10,10 +10,14 @@ export default function App() {
 	return (
 		<Router
 			root={props => (
-				<>
-					<Nav />
-					<Suspense>{props.children}</Suspense>
-				</>
+				<div class="bg-black min-h-screen p-4 flex">
+					<div class="bg-#fffde9 rounded-lg flex flex-col w-full">
+						<Nav />
+						<Suspense>
+							<main class="grow font-hubot text-black">{props.children}</main>
+						</Suspense>
+					</div>
+				</div>
 			)}
 		>
 			<FileRoutes />
