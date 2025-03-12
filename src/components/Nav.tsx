@@ -31,16 +31,15 @@ export default function Nav() {
 		<nav class="rounded-lg rounded-b-none border-b-4 border-solid border-black bg-yellow">
 			<ul class="container flex items-center font-silkscreen">
 				<li class="flex p-4">
-					<div class="w-6 h-6 bg-accent-red rounded-full" />
+					<div class="w-5 h-5 bg-accent-red rounded-full" />
 				</li>
 				<For each={links}>
 					{({ href, text }) => (
 						<li class="flex">
 							<A
 								href={href}
-								class="p-4 font-bold text-xl cursor-pointer leading-5"
+								class="ui-button-default"
 								activeClass="underline"
-								inactiveClass="hover:bg-black hover:text-yellow"
 							>
 								{text}
 							</A>

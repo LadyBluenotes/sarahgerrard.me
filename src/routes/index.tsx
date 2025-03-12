@@ -1,9 +1,11 @@
-import { Hero } from "~/components/Hero";
+import { Hero } from "~/sections/Hero";
+import { QuickLinks } from "~/sections/QuickLinks";
 
 export default function Home() {
 	return (
-		<main class="text-center mx-auto p-4">
+		<div>
 			<Hero />
-		</main>
+			<QuickLinks />
+		</div>
 	);
 }

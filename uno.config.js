@@ -1,8 +1,15 @@
-import { defineConfig, presetWebFonts, presetMini } from "unocss";
+import {
+	defineConfig,
+	presetWebFonts,
+	transformerVariantGroup,
+	presetMini,
+} from "unocss";
+import presetWind4 from "@unocss/preset-wind4";
 
 export default defineConfig({
 	presets: [
 		presetMini(),
+		presetWind4(),
 		presetWebFonts({
 			fonts: {
 				silkscreen: ["Silkscreen"],
@@ -10,6 +17,7 @@ export default defineConfig({
 			},
 		}),
 	],
+	transformers: [transformerVariantGroup()],
 	theme: {
 		colors: {
 			accent: {
@@ -21,6 +29,11 @@ export default defineConfig({
 			},
 			black: "#1C1C1C",
 		},
-		shortcuts: {},
+	},
+	shortcuts: {
+		"ui-button-default":
+			"p-4 font-bold text-xl cursor-pointer leading-5 ui-button-focus w-fit",
+		"ui-button-focus":
+			"hover:(bg-black text-white) focus-visible:(ring-solid ring-2 ring-accent-yellow ring-offset-2)",
 	},
 });

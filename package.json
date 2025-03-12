@@ -9,6 +9,9 @@
 		"format": "pnpm dlx prettier --write ."
 	},
 	"dependencies": {
+		"@kobalte/core": "^0.13.9",
+		"@solid-primitives/media": "^2.3.0",
+		"@solid-primitives/resize-observer": "^2.1.0",
 		"@solidjs/router": "^0.15.0",
 		"@solidjs/start": "^1.1.0",
 		"@unocss/reset": "^0.65.1",
@@ -22,6 +25,7 @@
 	"devDependencies": {
 		"@poppinss/colors": "^4.1.4",
 		"@typescript-eslint/parser": "^8.26.1",
+		"@unocss/preset-wind4": "66.1.0-beta.3",
 		"eslint": "^9.22.0",
 		"eslint-plugin-mdx": "^3.2.0",
 		"eslint-plugin-prettier": "^5.2.3",
