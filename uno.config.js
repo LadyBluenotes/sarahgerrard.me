@@ -35,5 +35,6 @@ export default defineConfig({
 			"p-4 font-bold text-xl cursor-pointer leading-5 ui-button-focus w-fit",
 		"ui-button-focus":
 			"hover:(bg-black text-white) focus-visible:(ring-solid ring-2 ring-accent-yellow ring-offset-2)",
+		"ui-link": "underline decoration-2 hover:text-black/70",
 	},
 });
