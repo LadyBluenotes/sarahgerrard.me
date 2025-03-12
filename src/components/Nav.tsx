@@ -39,7 +39,7 @@ export const Nav = () => {
 							<A
 								href={href}
 								class="ui-button-default"
-								activeClass="underline"
+								activeClass="underline decoration-4"
 							>
 								{text}
 							</A>
