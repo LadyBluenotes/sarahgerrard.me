@@ -49,7 +49,7 @@ const SectionContainer: ParentComponent<{
 	title?: string;
 }> = props => (
 	<section
-		class={`py-24 w-full flex flex-col gap-4 ${!props.noWidth ? "max-w-4xl mx-auto" : ""} ${props.class}`}
+		class={`w-full flex flex-col gap-4 ${!props.noWidth ? "max-w-4xl mx-auto" : ""} ${props.class}`}
 	>
 		<Show when={props.title}>
 			<h2 class="text-5xl font-bold">{props.title}</h2>
