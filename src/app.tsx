@@ -12,7 +12,6 @@ export default function App() {
 		<Router
 			root={props => (
 				<div class="bg-black min-h-screen p-4 flex">
-					<div class="cursor" />
 					<div class="bg-#fffde9 flex flex-col w-full">
 						<Nav />
 						<Suspense>

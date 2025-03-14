@@ -1,4 +1,4 @@
-import { StyledContainer } from "~/components";
+import { FromBlog } from "~/sections/FromBlog";
 import { Hero } from "~/sections/Hero";
 import { Projects } from "~/sections/Projects";
 import { QuickLinks } from "~/sections/QuickLinks";
@@ -9,6 +9,7 @@ export default function Home() {
 			<Hero />
 			<QuickLinks />
 			<Projects />
+			<FromBlog />
 		</div>
 	);
 }

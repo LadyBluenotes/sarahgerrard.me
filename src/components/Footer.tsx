@@ -2,12 +2,12 @@ import { Component } from "solid-js";
 
 export const Footer: Component = () => {
 	return (
-		<footer class="border-t-4 border-solid border-black h-50px px-4 flex items-center bg-white">
-			<span class="font-bold">
-				Built using{" "}
+		<footer class="border-t-4 border-solid border-black h-50px px-4 flex items-center justify-center bg-white">
+			<p class="font-bold">
+				Made by me. Built with{" "}
 				<a
 					target="_blank"
-					href="https://docs.solidjs.com/solid-start"
+					href="https://docs.solidjs .com/solid-start"
 					class="ui-link"
 				>
 					SolidStart
@@ -29,7 +29,7 @@ export const Footer: Component = () => {
 					UnoCSS
 				</a>
 				.
-			</span>
+			</p>
 		</footer>
 	);
 };

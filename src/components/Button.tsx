@@ -1,13 +1,6 @@
-import { ParentComponent } from "solid-js";
+import { ParentComponent, ParentProps } from "solid-js";
 import { Button as KButton } from "@kobalte/core/button";
-
-type ButtonProps = {
-	type?: "yellow" | "orange" | "red" | "maroon" | "purple";
-	submitClick: () => void;
-	children: string;
-	isDisabled?: boolean;
-	widthFull?: boolean;
-};
+import { ButtonProps } from "~/types";
 
 export const Button: ParentComponent<ButtonProps> = props => {
 	return (
