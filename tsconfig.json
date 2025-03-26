@@ -1,23 +1,15 @@
 {
 	"compilerOptions": {
-		"outDir": "./dist",
-		"target": "ESNext",
-		"module": "ESNext",
-		"moduleResolution": "bundler",
-		"allowSyntheticDefaultImports": true,
+		"strict": true,
+		"strictNullChecks": true,
 		"esModuleInterop": true,
-		"noImplicitAny": true,
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true,
+		"noUnusedLocals": true,
+		"skipLibCheck": true,
+		"sourceMap": true,
 		"jsx": "preserve",
 		"jsxImportSource": "solid-js",
-		"allowJs": true,
-		"noEmit": true,
-		"strict": true,
-		"types": ["vinxi/types/client"],
-		"isolatedModules": true,
-		"paths": {
-			"~/*": ["./src/*"]
-		}
-	},
-	"include": ["src"],
-	"exclude": ["node_modules"]
+		"moduleResolution": "node"
+	}
 }

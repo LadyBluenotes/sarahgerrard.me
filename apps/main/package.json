@@ -1,0 +1,19 @@
+{
+	"name": "main-site",
+	"type": "module",
+	"scripts": {
+		"dev": "vinxi dev",
+		"build": "vinxi build",
+		"start": "vinxi start",
+		"lint": "pnpm dlx eslint . --ext .ts,.tsx",
+		"format": "pnpm dlx prettier --write ."
+	},
+	"dependencies": {
+		"@solid-primitives/bounds": "^0.1.0",
+		"@solid-primitives/media": "^2.3.0",
+		"@solid-primitives/resize-observer": "^2.1.0"
+	},
+	"devDependencies": {
+		"jiti": "^2.4.2"
+	}
+}
