@@ -43,4 +43,8 @@ export default [
 			],
 		},
 	},
+	{
+		files: ["**/*.mdx"],
+		plugins: pluginMDX.plugins,
+	},
 ];
