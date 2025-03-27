@@ -1,12 +1,11 @@
 {
 	"name": "main-site",
 	"type": "module",
+	"private": "true",
 	"scripts": {
 		"dev": "vinxi dev",
 		"build": "vinxi build",
-		"start": "vinxi start",
-		"lint": "pnpm dlx eslint . --ext .ts,.tsx",
-		"format": "pnpm dlx prettier --write ."
+		"start": "vinxi start"
 	},
 	"dependencies": {
 		"@solid-primitives/bounds": "^0.1.0",

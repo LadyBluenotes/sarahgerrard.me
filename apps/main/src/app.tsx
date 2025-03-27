@@ -7,15 +7,18 @@ import { FileRoutes } from "@solidjs/start/router";
 import { Suspense } from "solid-js";
 import { Footer, Nav } from "~/components";
 
+import "@fontsource-variable/roboto";
+import "@fontsource-variable/epilogue";
+
 export default function App() {
 	return (
 		<Router
-			root={props => (
+			root={(props) => (
 				<div class="bg-black min-h-screen p-4 flex">
 					<div class="bg-#fffde9 flex flex-col w-full">
 						<Nav />
 						<Suspense>
-							<main class="grow font-hubot text-black">{props.children}</main>
+							<main class="grow text-black">{props.children}</main>
 						</Suspense>
 						<Footer />
 					</div>

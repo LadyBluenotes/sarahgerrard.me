@@ -9,7 +9,7 @@ export const Hero = () => {
 		>
 			<div class="flex gap-4">
 				<div class="flex flex-col gap-4 w-70%">
-					<h1 class="text-4rem leading-18 font-test font-black">
+					<h1 class="text-4rem leading-18 font-black">
 						Hi! <br />
 						I'm <span class="text-accent-maroon">Sarah</span>
 					</h1>

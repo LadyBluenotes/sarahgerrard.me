@@ -1,22 +1,8 @@
-import {
-	defineConfig,
-	presetWebFonts,
-	transformerVariantGroup,
-	presetMini,
-} from "unocss";
+import { defineConfig, transformerVariantGroup, presetMini } from "unocss";
 import presetWind4 from "@unocss/preset-wind4";
 
 export default defineConfig({
-	presets: [
-		presetMini(),
-		presetWind4(),
-		presetWebFonts({
-			fonts: {
-				silkscreen: ["Silkscreen"],
-				test: ["Suse"],
-			},
-		}),
-	],
+	presets: [presetMini(), presetWind4()],
 	transformers: [transformerVariantGroup()],
 	theme: {
 		colors: {

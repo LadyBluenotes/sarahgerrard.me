@@ -1,25 +1,28 @@
 {
 	"name": "ladybluenotes.dev",
 	"type": "module",
+	"private": "true",
 	"workspaces": [
-		"sites/main/*"
+		"apps/main/*",
+		"apps/blog/*"
 	],
 	"scripts": {
-		"build": "",
-		"dev:main": "cd apps/main && pnpm dev"
+		"dev:main": "cd apps/main && pnpm dev",
+		"dev:blog": "cd apps/blog && pnpm dev"
 	},
 	"dependencies": {
+		"@fontsource-variable/epilogue": "^5.2.5",
+		"@fontsource-variable/roboto": "^5.2.5",
 		"@kobalte/core": "^0.13.9",
-		"@solidjs/router": "^0.15.3",
-		"@solidjs/start": "^1.1.3",
-		"@unocss/reset": "^0.65.4",
+		"@kobalte/solidbase": "^0.0.29",
+		"@solidjs/meta": "^0.29.4",
+		"@solidjs/router": "^0.15.0",
+		"@solidjs/start": "^1.1.0",
+		"@unocss/reset": "^0.65.1",
 		"solid-js": "^1.9.5",
-		"unocss": "^0.65.4",
+		"unocss": "^0.65.1",
 		"vinxi": "^0.5.3",
-		"vite": "^6.2.3"
-	},
-	"engines": {
-		"node": ">=22"
+		"vite": "6.1.2"
 	},
 	"devDependencies": {
 		"@poppinss/colors": "^4.1.4",
@@ -33,6 +36,9 @@
 		"jiti": "^2.4.2",
 		"prettier": "^3.5.3",
 		"typescript-eslint": "^8.28.0",
-		"vite-plugin-dts": "^4.5.3"
+		"vite": "^6.1.2"
+	},
+	"engines": {
+		"node": ">=22"
 	}
 }

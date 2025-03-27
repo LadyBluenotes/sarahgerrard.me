@@ -29,7 +29,7 @@ export const Nav = () => {
 
 	return (
 		<nav class="rounded-lg rounded-b-none border-b-4 border-solid border-black bg-white">
-			<ul class="container flex items-center font-silkscreen">
+			<ul class="container flex items-center">
 				<li class="flex p-4">
 					<div class="w-5 h-5 bg-accent-red rounded-full" />
 				</li>

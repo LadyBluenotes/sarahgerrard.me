@@ -18,6 +18,6 @@
 			"~/*": ["./src/*"]
 		}
 	},
-	"include": ["src"],
+	"include": ["src", "../blog/src/blogs"],
 	"exclude": ["node_modules"]
 }
