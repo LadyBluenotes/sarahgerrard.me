@@ -1,5 +1,5 @@
 import { Component } from "solid-js";
-import { StyledContainer, SectionContainer } from "~/components";
+import { StyledContainer, SectionContainer } from "@repo/ui/components";
 
 export const Projects: Component = () => {
 	return (

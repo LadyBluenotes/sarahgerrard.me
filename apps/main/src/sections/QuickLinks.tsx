@@ -1,6 +1,5 @@
 import { For } from "solid-js";
-import { Button } from "~/components/Button";
-import { SectionContainer } from "~/components/Containers";
+import { SectionContainer, Button } from "@repo/ui/components";
 
 export const QuickLinks = () => {
 	const quickLinks: {

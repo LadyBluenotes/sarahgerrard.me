@@ -1,5 +1,5 @@
 {
-	"name": "main-site",
+	"name": "main",
 	"scripts": {
 		"dev": "vinxi dev",
 		"build": "vinxi build",

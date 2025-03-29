@@ -1,5 +1,4 @@
-import { Button } from "~/components/Button";
-import { SectionContainer } from "~/components/Containers";
+import { SectionContainer, Button } from "@repo/ui/components";
 
 export const Hero = () => {
 	return (

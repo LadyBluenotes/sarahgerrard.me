@@ -1,5 +1,5 @@
 import { Component } from "solid-js";
-import { SectionContainer } from "~/components";
+import { SectionContainer } from "@repo/ui/components";
 
 export const FromBlog: Component = () => {
 	return (
