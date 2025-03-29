@@ -2,7 +2,21 @@
 @import "@fontsource-variable/roboto";
 @import "@fontsource-variable/epilogue";
 
+@unocss;
+
+:root {
+	--background: #fffde9;
+	--button-bg: #fff;
+	--button-hover: #1c1c1c;
+	--container-header: #fec631;
+	--container-bg: #fff;
+	--container-button: #f9591f;
+	--black: #1c1c1c;
+}
+
 @theme {
+	--font-epilogue: "Epilogue", sans-serif;
+	--font-roboto: "Roboto", sans-serif;
 }
 
 h1,
@@ -10,7 +24,8 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+nav {
 	font-family: var(--font-epilogue);
 }
 

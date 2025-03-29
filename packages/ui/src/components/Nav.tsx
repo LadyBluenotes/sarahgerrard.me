@@ -28,10 +28,10 @@ export const Nav = () => {
 	];
 
 	return (
-		<nav class="rounded-lg rounded-b-none border-b-4 border-solid border-black bg-white">
+		<nav class="rounded-t-lg border-b-4 border-solid border-black bg-white">
 			<ul class="container flex items-center">
 				<li class="flex p-4">
-					<div class="w-5 h-5 bg-accent-red rounded-full" />
+					<div class="w-5 h-5 bg-black rounded-full" />
 				</li>
 				<For each={links}>
 					{({ href, text }) => (

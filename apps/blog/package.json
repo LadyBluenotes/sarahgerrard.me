@@ -19,7 +19,7 @@
 		"solid-js": "^1.9.5",
 		"unocss": "^0.65.1",
 		"vinxi": "^0.5.2",
-		"vite": "^6.1.2"
+		"vite": "catalog:"
 	},
 	"packageManager": "pnpm@9.15.9",
 	"devDependencies": {

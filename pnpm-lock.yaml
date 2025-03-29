@@ -4,6 +4,12 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+catalogs:
+  default:
+    vite:
+      specifier: ^6.1.2
+      version: 6.2.3
+
 importers:
 
   .:
@@ -11,9 +17,6 @@ importers:
       prettier:
         specifier: ^3.5.3
         version: 3.5.3
-      turbo:
-        specifier: ^2.4.4
-        version: 2.4.4
       typescript:
         specifier: 5.8.2
         version: 5.8.2
@@ -57,7 +60,7 @@ importers:
         specifier: ^0.5.2
         version: 0.5.3(db0@0.3.1)(ioredis@5.6.0)(jiti@2.4.2)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.1)
       vite:
-        specifier: ^6.1.2
+        specifier: 'catalog:'
         version: 6.2.3(jiti@2.4.2)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.1)
     devDependencies:
       '@fontsource-variable/inter':
@@ -87,16 +90,6 @@ importers:
       '@fontsource-variable/roboto':
         specifier: ^5.2.5
         version: 5.2.5
-      '@unocss/reset':
-        specifier: ^0.65.1
-        version: 0.65.4
-      unocss:
-        specifier: ^0.65.1
-        version: 0.65.4(postcss@8.5.3)(rollup@4.37.0)(vite@6.2.3(jiti@2.4.2)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.1))(vue@3.5.13(typescript@5.8.2))
-    devDependencies:
-      '@repo/eslint-config':
-        specifier: workspace:*
-        version: link:../../packages/eslint-config
       '@repo/ui':
         specifier: workspace:*
         version: link:../../packages/ui
@@ -110,17 +103,30 @@ importers:
         specifier: ^0.15.0
         version: 0.15.3(solid-js@1.9.5)
       '@solidjs/start':
-        specifier: ^1.1.0
+        specifier: ^1.1.3
         version: 1.1.3(jiti@2.4.2)(solid-js@1.9.5)(terser@5.39.0)(tsx@4.19.3)(vinxi@0.5.3(db0@0.3.1)(ioredis@5.6.0)(jiti@2.4.2)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.1))(vite@6.2.3(jiti@2.4.2)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.1))(yaml@2.7.1)
+      '@unocss/reset':
+        specifier: ^0.65.1
+        version: 0.65.4
       solid-js:
         specifier: ^1.9.3
         version: 1.9.5
-      typescript:
-        specifier: ^5.6.3
-        version: 5.8.2
+      unocss:
+        specifier: ^0.65.1
+        version: 0.65.4(postcss@8.5.3)(rollup@4.37.0)(vite@6.2.3(jiti@2.4.2)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.1))(vue@3.5.13(typescript@5.8.2))
       vinxi:
         specifier: ^0.5.3
         version: 0.5.3(db0@0.3.1)(ioredis@5.6.0)(jiti@2.4.2)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.1)
+      vite:
+        specifier: 'catalog:'
+        version: 6.2.3(jiti@2.4.2)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.1)
+    devDependencies:
+      '@repo/eslint-config':
+        specifier: workspace:*
+        version: link:../../packages/eslint-config
+      typescript:
+        specifier: ^5.6.3
+        version: 5.8.2
 
   packages/eslint-config:
     dependencies:

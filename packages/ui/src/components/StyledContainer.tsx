@@ -1,11 +1,11 @@
 import { Component } from "solid-js";
 import { Button } from "./Button";
-import { StyledContainerProps } from "../../../../../packages/ui/types";
+import { StyledContainerProps } from "../utils/types";
 
 export const StyledContainer: Component<StyledContainerProps> = (props) => {
 	return (
-		<div class="flex flex-col outline-4 outline-solid outline-black bg-white max-w-2xl">
-			<div class="bg-accent-yellow h-50px outline-b outline-solid outline-4 flex items-center">
+		<div class="flex flex-col outline-4 outline-solid outline-black bg-containerbg max-w-2xl">
+			<div class="bg-containerheader h-50px outline-b outline-solid outline-4 flex items-center">
 				<div class="flex gap-4 items-center absolute px-4">
 					<div class="outline-4 outline-solid outline-black w-3.5 h-3.5 rounded-full bg-white" />
 					<div class="outline-4 outline-solid outline-black w-3.5 h-3.5 rounded-full bg-white" />
@@ -28,7 +28,7 @@ export const StyledContainer: Component<StyledContainerProps> = (props) => {
 				<h3 class="text-3xl font-bold">{props.projectName}</h3>
 				<p class="font-medium">{props.summary}</p>
 				<Button
-					type={props.button.type}
+					type="container"
 					submitClick={props.button.submitClick}
 				>
 					{props.button.text}

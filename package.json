@@ -3,15 +3,17 @@
 	"private": true,
 	"type": "module",
 	"scripts": {
-		"build": "turbo run build",
-		"dev": "turbo run dev",
-		"lint": "turbo run lint",
+		"main:dev": "cd apps/main && pnpm dev",
+		"main:build": "cd apps/main && pnpm build",
+		"main:start": "cd apps/main && pnpm start",
+		"blog:dev": "cd apps/blog && pnpm dev",
+		"blog:build": "cd apps/blog && pnpm build",
+		"blog:start": "cd apps/blog && pnpm start",
 		"format": "prettier --write \"**/*.{ts,tsx,md}\"",
 		"cleandep": "rm -rf node_modules && pnpm -r exec rm -rf node_modules"
 	},
 	"devDependencies": {
 		"prettier": "^3.5.3",
-		"turbo": "^2.4.4",
 		"typescript": "5.8.2",
 		"vite": "^6.1.2"
 	},

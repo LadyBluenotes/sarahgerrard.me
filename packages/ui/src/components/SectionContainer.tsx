@@ -1,5 +1,5 @@
 import { ParentComponent, Show } from "solid-js";
-import { SectionContainerProps } from "../../../../../packages/ui/types";
+import { SectionContainerProps } from "../utils/types";
 
 export const SectionContainer: ParentComponent<SectionContainerProps> = (
 	props
