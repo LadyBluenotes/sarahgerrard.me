@@ -1,0 +1,21 @@
+@import "@unocss/reset/tailwind.css";
+@import "@fontsource-variable/roboto";
+@import "@fontsource-variable/epilogue";
+
+@theme {
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: var(--font-epilogue);
+}
+
+body {
+	font-family: var(--font-roboto);
+	font-size: 16px;
+	line-height: 1.5;
+}
