@@ -1,7 +1,6 @@
 import { Button } from "./Button";
-import { Nav } from "./Nav";
+import { Layout } from "./Layout";
 import { SectionContainer } from "./SectionContainer";
 import { StyledContainer } from "./StyledContainer";
-import { Footer } from "./Footer";
 
-export { Button, Nav, SectionContainer, StyledContainer, Footer };
+export { Button, Layout, SectionContainer, StyledContainer };
