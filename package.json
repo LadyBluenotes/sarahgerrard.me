@@ -1,43 +1,21 @@
 {
 	"name": "ladybluenotes.dev",
+	"private": true,
 	"type": "module",
-	"private": "true",
-	"workspaces": [
-		"apps/main/*",
-		"apps/blog/*"
-	],
 	"scripts": {
-		"dev:main": "cd apps/main && pnpm dev",
-		"dev:blog": "cd apps/blog && pnpm dev"
-	},
-	"dependencies": {
-		"@fontsource-variable/epilogue": "^5.2.5",
-		"@fontsource-variable/roboto": "^5.2.5",
-		"@kobalte/core": "^0.13.9",
-		"@kobalte/solidbase": "^0.0.29",
-		"@solidjs/meta": "^0.29.4",
-		"@solidjs/router": "^0.15.0",
-		"@solidjs/start": "^1.1.0",
-		"@unocss/reset": "^0.65.1",
-		"solid-js": "^1.9.5",
-		"unocss": "^0.65.1",
-		"vinxi": "^0.5.3",
-		"vite": "6.1.2"
+		"build": "turbo run build",
+		"dev": "turbo run dev",
+		"lint": "turbo run lint",
+		"format": "prettier --write \"**/*.{ts,tsx,md}\"",
+		"cleandep": "rm -rf node_modules && pnpm -r exec rm -rf node_modules"
 	},
 	"devDependencies": {
-		"@poppinss/colors": "^4.1.4",
-		"@typescript-eslint/parser": "^8.28.0",
-		"@unocss/preset-wind4": "66.1.0-beta.3",
-		"eslint": "^9.23.0",
-		"eslint-plugin-mdx": "^3.3.1",
-		"eslint-plugin-prettier": "^5.2.5",
-		"eslint-plugin-solid": "^0.14.5",
-		"globals": "^16.0.0",
-		"jiti": "^2.4.2",
 		"prettier": "^3.5.3",
-		"typescript-eslint": "^8.28.0",
+		"turbo": "^2.4.4",
+		"typescript": "5.8.2",
 		"vite": "^6.1.2"
 	},
+	"packageManager": "pnpm@9.15.9",
 	"engines": {
 		"node": ">=22"
 	}

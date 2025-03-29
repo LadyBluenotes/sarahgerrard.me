@@ -1,0 +1,35 @@
+{
+	"name": "@repo/ui",
+	"version": "1.0.0",
+	"description": "UI library package.",
+	"type": "module",
+	"main": "index.ts",
+	"exports": {
+		"./components": "./src/components/index.ts"
+	},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"lint": "eslint . --max-warnings 0"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "MIT",
+	"devDependencies": {
+		"@repo/eslint-config": "workspace:*",
+		"@repo/unocss-config": "workspace:*",
+		"@solidjs/meta": "^0.29.4",
+		"@solidjs/router": "^0.15.0",
+		"@unocss/reset": "^0.65.1",
+		"unocss": "^0.65.1",
+		"vite": "^6.1.2",
+		"vite-plugin-solid": "^2.11.6"
+	},
+	"dependencies": {
+		"@kobalte/core": "^0.13.9",
+		"clsx": "^2.1.1",
+		"eslint": "^9.21.0",
+		"path": "^0.12.7",
+		"solid-js": "^1.9.5",
+		"vite-tsconfig-paths": "^5.1.4"
+	}
+}

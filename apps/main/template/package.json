@@ -1,5 +1,5 @@
 {
-	"name": "main-site",
+	"name": "template",
 	"scripts": {
 		"dev": "vinxi dev",
 		"build": "vinxi build",
@@ -7,15 +7,12 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@fontsource-variable/epilogue": "^5.2.5",
-		"@fontsource-variable/roboto": "^5.2.5",
 		"@unocss/reset": "^0.65.1",
 		"unocss": "^0.65.1"
 	},
 	"devDependencies": {
 		"@repo/eslint-config": "workspace:*",
 		"@repo/unocss-config": "workspace:*",
-		"@repo/ui": "workspace:*",
 		"@solidjs/meta": "^0.29.4",
 		"@solidjs/router": "^0.15.0",
 		"@solidjs/start": "^1.1.0",

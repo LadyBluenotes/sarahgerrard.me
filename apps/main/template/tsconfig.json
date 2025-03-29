@@ -1,13 +1,12 @@
 {
 	"compilerOptions": {
-		"target": "esnext",
-		"module": "esnext",
-		"allowSyntheticDefaultImports": true,
+		"target": "ESNext",
+		"module": "ESNext",
 		"moduleResolution": "bundler",
+		"allowSyntheticDefaultImports": true,
 		"esModuleInterop": true,
 		"jsx": "preserve",
 		"jsxImportSource": "solid-js",
-		"strictNullChecks": true,
 		"allowJs": true,
 		"strict": true,
 		"noEmit": true,
