@@ -10,6 +10,8 @@
 	"dependencies": {
 		"@fontsource-variable/epilogue": "^5.2.5",
 		"@fontsource-variable/roboto": "^5.2.5",
+		"@repo/unocss-config": "workspace:*",
+		"@repo/ui": "workspace:*",
 		"@kobalte/solidbase": "^0.0.29",
 		"@solidjs/meta": "^0.29.4",
 		"@solidjs/router": "^0.15.0",
@@ -27,7 +29,6 @@
 		"@fontsource-variable/jetbrains-mono": "^5.1.2",
 		"@fontsource-variable/lexend": "^5.1.2",
 		"@repo/eslint-config": "workspace:*",
-		"@repo/unocss-config": "workspace:*",
 		"@iconify-json/ri": "^1.2.5"
 	}
 }

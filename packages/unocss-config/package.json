@@ -2,12 +2,11 @@
 	"name": "@repo/unocss-config",
 	"version": "1.0.0",
 	"description": "This is the unocss config file.",
-	"main": "index.js",
+	"main": "index.ts",
 	"type": "module",
 	"exports": {
-		".": "./index.js",
+		".": "./index.ts",
 		"./styles.css": "./styles.css"
-		
 	},
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1"

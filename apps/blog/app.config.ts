@@ -1,20 +1,11 @@
-import {
-	createWithSolidBase,
-	defineTheme,
-	withSolidBase,
-} from "@kobalte/solidbase/config";
-import defaultTheme from "@kobalte/solidbase/default-theme";
+import { withSolidBase } from "@kobalte/solidbase/config";
 import { defineConfig } from "@solidjs/start/config";
 import UnoCSS from "unocss/vite";
 
-const theme = defineTheme({
-	componentsPath: import.meta.resolve("./src/components"),
-	extends: defaultTheme,
-});
-
 export default defineConfig(
-	createWithSolidBase(theme)(
+	withSolidBase(
 		{
+			ssr: false,
 			vite: {
 				plugins: [
 					UnoCSS({
@@ -26,7 +17,7 @@ export default defineConfig(
 		{
 			title: "Test",
 			description: "Testing",
-			fonts: false,
+			lang: "en",
 		}
 	)
 );
