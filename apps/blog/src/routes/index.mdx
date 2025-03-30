@@ -1,1 +1,15 @@
-Hello
+# Hello
+
+
+```tsx
+const { data } = await import('./data.json')
+
+export default function Index() {
+  return (
+    <div>
+      <h1>Index</h1>
+      <pre>{JSON.stringify(data, null, 2)}</pre>
+    </div>
+  )
+}
+```

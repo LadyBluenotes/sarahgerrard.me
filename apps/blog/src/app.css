@@ -1,7 +1,1 @@
 @import "@repo/unocss-config/styles.css";
-
-html {
-	--sb-font-headings: "Comic Sans";
-	--sb-font-text: "Comic Sans";
-	--sb-font-mono: "Comic Sans";
-}

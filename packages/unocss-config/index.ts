@@ -4,10 +4,12 @@ import {
 	presetIcons,
 	presetMini,
 	presetAttributify,
+	presetWind
 } from "unocss";
 
+
 export const config = defineConfig({
-	presets: [presetMini(), presetAttributify(), presetIcons()] as Preset[],
+	presets: [presetMini(), presetAttributify(), presetIcons(), presetWind()] as Preset[],
 	theme: {
 		colors: {
 			background: "var(--background)",

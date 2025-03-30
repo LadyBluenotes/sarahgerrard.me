@@ -1,3 +1,3 @@
-import { UnoCSSConfig } from "@repo/unocss-config";
+import { config } from "@repo/unocss-config";
 
-export default UnoCSSConfig;
+export default config;

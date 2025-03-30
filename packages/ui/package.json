@@ -27,7 +27,6 @@
 	},
 	"dependencies": {
 		"@kobalte/core": "^0.13.9",
-		"clsx": "^2.1.1",
 		"eslint": "^9.21.0",
 		"path": "^0.12.7",
 		"solid-js": "^1.9.5",

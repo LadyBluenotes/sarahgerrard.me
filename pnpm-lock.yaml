@@ -4,12 +4,6 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
-catalogs:
-  default:
-    vite:
-      specifier: ^6.1.2
-      version: 6.2.3
-
 importers:
 
   .:
@@ -33,8 +27,8 @@ importers:
         specifier: ^5.2.5
         version: 5.2.5
       '@kobalte/solidbase':
-        specifier: ^0.0.29
-        version: 0.0.29(@algolia/client-search@5.23.0)(@solidjs/start@1.1.3(jiti@2.4.2)(solid-js@1.9.5)(terser@5.39.0)(tsx@4.19.3)(vinxi@0.5.3(db0@0.3.1)(ioredis@5.6.0)(jiti@2.4.2)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.1))(vite@6.2.3(jiti@2.4.2)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.1))(yaml@2.7.1))(@vue/compiler-sfc@3.5.13)(acorn@8.14.1)(expressive-code@0.40.2)(search-insights@2.17.3)(solid-js@1.9.5)(vinxi@0.5.3(db0@0.3.1)(ioredis@5.6.0)(jiti@2.4.2)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.1))(vite@6.2.3(jiti@2.4.2)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.1))
+        specifier: ^0.1.0
+        version: 0.1.0(@algolia/client-search@5.23.0)(@solidjs/start@1.1.3(jiti@2.4.2)(solid-js@1.9.5)(terser@5.39.0)(tsx@4.19.3)(vinxi@0.5.3(db0@0.3.1)(ioredis@5.6.0)(jiti@2.4.2)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.1))(vite@6.1.2(jiti@2.4.2)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.1))(yaml@2.7.1))(@vue/compiler-sfc@3.5.13)(acorn@8.14.1)(expressive-code@0.40.2)(search-insights@2.17.3)(solid-js@1.9.5)(vinxi@0.5.3(db0@0.3.1)(ioredis@5.6.0)(jiti@2.4.2)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.1))(vite@6.1.2(jiti@2.4.2)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.1))
       '@repo/ui':
         specifier: workspace:*
         version: link:../../packages/ui
@@ -49,10 +43,7 @@ importers:
         version: 0.15.3(solid-js@1.9.5)
       '@solidjs/start':
         specifier: ^1.1.3
-        version: 1.1.3(jiti@2.4.2)(solid-js@1.9.5)(terser@5.39.0)(tsx@4.19.3)(vinxi@0.5.3(db0@0.3.1)(ioredis@5.6.0)(jiti@2.4.2)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.1))(vite@6.2.3(jiti@2.4.2)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.1))(yaml@2.7.1)
-      '@unocss/preset-wind4':
-        specifier: 66.1.0-beta.3
-        version: 66.1.0-beta.3
+        version: 1.1.3(jiti@2.4.2)(solid-js@1.9.5)(terser@5.39.0)(tsx@4.19.3)(vinxi@0.5.3(db0@0.3.1)(ioredis@5.6.0)(jiti@2.4.2)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.1))(vite@6.1.2(jiti@2.4.2)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.1))(yaml@2.7.1)
       '@unocss/reset':
         specifier: ^0.65.1
         version: 0.65.4
@@ -61,23 +52,14 @@ importers:
         version: 1.9.5
       unocss:
         specifier: ^0.65.1
-        version: 0.65.4(postcss@8.5.3)(rollup@4.37.0)(vite@6.2.3(jiti@2.4.2)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.1))(vue@3.5.13(typescript@5.8.2))
+        version: 0.65.4(postcss@8.5.3)(rollup@4.37.0)(vite@6.1.2(jiti@2.4.2)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.1))(vue@3.5.13(typescript@5.8.2))
       vinxi:
         specifier: ^0.5.2
         version: 0.5.3(db0@0.3.1)(ioredis@5.6.0)(jiti@2.4.2)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.1)
       vite:
-        specifier: 'catalog:'
-        version: 6.2.3(jiti@2.4.2)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.1)
+        specifier: 6.1.2
+        version: 6.1.2(jiti@2.4.2)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.1)
     devDependencies:
-      '@fontsource-variable/inter':
-        specifier: ^5.1.1
-        version: 5.2.5
-      '@fontsource-variable/jetbrains-mono':
-        specifier: ^5.1.2
-        version: 5.2.5
-      '@fontsource-variable/lexend':
-        specifier: ^5.1.2
-        version: 5.2.6
       '@iconify-json/ri':
         specifier: ^1.2.5
         version: 1.2.5
@@ -120,9 +102,6 @@ importers:
       vinxi:
         specifier: ^0.5.3
         version: 0.5.3(db0@0.3.1)(ioredis@5.6.0)(jiti@2.4.2)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.1)
-      vite:
-        specifier: 'catalog:'
-        version: 6.2.3(jiti@2.4.2)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.1)
     devDependencies:
       '@repo/eslint-config':
         specifier: workspace:*
@@ -167,9 +146,6 @@ importers:
       '@kobalte/core':
         specifier: ^0.13.9
         version: 0.13.9(solid-js@1.9.5)
-      clsx:
-        specifier: ^2.1.1
-        version: 2.1.1
       eslint:
         specifier: ^9.21.0
         version: 9.23.0(jiti@2.4.2)
@@ -1168,8 +1144,8 @@ packages:
     peerDependencies:
       solid-js: ^1.8.15
 
-  '@kobalte/solidbase@0.0.29':
-    resolution: {integrity: sha512-t5lf6arA0ooV8uGeq/3x1zn19VZzOeSsZvT7XlpWkDlc1umwSk0cS+wwZU9poP3sAHDMs0OEiGR2gTd/0BQ98w==}
+  '@kobalte/solidbase@0.1.0':
+    resolution: {integrity: sha512-ZIezBaR18IhekUGUKBpLtD5xGg3Ra+yftbGoPaI9A64hope5+YcptBGsBE2CD6t2rLOp3UNt/g+Uhokb28tR9A==}
     peerDependencies:
       '@solidjs/start': ^1.0.8
       solid-js: ^1.9.1
@@ -1779,14 +1755,8 @@ packages:
   '@unocss/core@0.65.4':
     resolution: {integrity: sha512-a2JOoFutrhqd5RgPhIR5FIXrDoHDU3gwCbPrpT6KYTjsqlSc/fv02yZ+JGOZFN3MCFhCmaPTs+idDFtwb3xU8g==}
 
-  '@unocss/core@66.1.0-beta.3':
-    resolution: {integrity: sha512-kBoMnU4prhpgvmPL6IEOkgENXGuGhuPW0SNZfOROL7IhK22T92fRqccqtyS0K//rzN4cer2NwvhXrGnbJEtDKQ==}
-
   '@unocss/extractor-arbitrary-variants@0.65.4':
     resolution: {integrity: sha512-GbvTgsDaHplfWfsQtOY8RrvEZvptmvR9k9NwQ5NsZBNIG1JepYVel93CVQvsxT5KioKcoWngXxTYLNOGyxLs0g==}
-
-  '@unocss/extractor-arbitrary-variants@66.1.0-beta.3':
-    resolution: {integrity: sha512-xR36RJBeiOjvVMpPvaF/CRIV9UWZ0xoDJRZoE0Y6MjVYIjNfWe2QT89GoZ2/QzGBRr61U2u5+N8hj29oHTD16w==}
 
   '@unocss/inspector@0.65.4':
     resolution: {integrity: sha512-byg9x549Ul17U4Ety7ufDwC0UOygypoq4QnLEPzhlZ0KJG1f7WmXKYanOhupeg3h4qCj6Nc/xdZYMGbHl9QRIg==}
@@ -1818,9 +1788,6 @@ packages:
   '@unocss/preset-web-fonts@0.65.4':
     resolution: {integrity: sha512-UB/MvXHUTqMNVH1bbiKZ/ZtZUI5tsYlTYAvBrnXPO1Cztuwr8hJKSi4RCfI9g+YYtKHX4uYuxUbW5bcN85gmBQ==}
 
-  '@unocss/preset-wind4@66.1.0-beta.3':
-    resolution: {integrity: sha512-6bsoyRzO2ytTv30yRrZp42P2JVz2CMJL7rLVHkIr/QCKQRIWERVmTJgeUAuh6ZEGCE2HThGj1pHIV8lUJKmgJA==}
-
   '@unocss/preset-wind@0.65.4':
     resolution: {integrity: sha512-0rbNbw5E8Lvh2yf4R1Mq+lxI/wL5Tm6+r+crE0uAAhCPe9kxPHW4k+x1cWKDIwq6Vudlm3cNX85N49wN5tYgdA==}
 
@@ -1829,10 +1796,6 @@ packages:
 
   '@unocss/rule-utils@0.65.4':
     resolution: {integrity: sha512-+EzdJEWcqGcO6HwbBTe7vEdBRpuKkBiz4MycQeLD6GEio04T45y6VHHO7/WTqxltbO4YwwW9/s2TKRMxKtoG8g==}
-    engines: {node: '>=14'}
-
-  '@unocss/rule-utils@66.1.0-beta.3':
-    resolution: {integrity: sha512-eYrgxQNgWbuT/rwRJDAEr7HfTe9FmMeFWtRF7Vcu+ILrb0dhF3+vAldERWifz5Dn2brWSrD24f15eCfZ8c2zDA==}
     engines: {node: '>=14'}
 
   '@unocss/transformer-attributify-jsx@0.65.4':
@@ -2154,10 +2117,6 @@ packages:
   cliui@8.0.1:
     resolution: {integrity: sha512-BSeNnyus75C4//NQ9gQt1/csTXyo/8Sb+afLAkzAptFuMsod9HFokGNudZpi/oQV73hnVK+sR+5PVRMd+Dr7YQ==}
     engines: {node: '>=12'}
-
-  clsx@2.1.1:
-    resolution: {integrity: sha512-eYm0QWBtUrBWZWG0d386OGAw16Z995PiOVo2B7bjWSbHedGl5e0ZWaq65kOGgUSNesEIDkB9ISbTg/JK9dhCZA==}
-    engines: {node: '>=6'}
 
   cluster-key-slot@1.1.2:
     resolution: {integrity: sha512-RMr0FhtfXemyinomL4hrWcYJxmX6deFdCxpJzhDttxgO1+bcCnkk+9drydLVDmAMG7NE6aN/fl4F7ucU/90gAA==}
@@ -4219,15 +4178,6 @@ packages:
       '@vueuse/core':
         optional: true
 
-  unplugin-fonts@1.3.1:
-    resolution: {integrity: sha512-GmaJWPAWH6lBI4fP8xKdbMZJwTgsnr8PGJOfQE52jlod8QkqSO4M529Nox2L8zYapjB5hox2wCu4N3c/LOal/A==}
-    peerDependencies:
-      '@nuxt/kit': ^3.0.0
-      vite: ^2.0.0 || ^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0
-    peerDependenciesMeta:
-      '@nuxt/kit':
-        optional: true
-
   unplugin-icons@22.1.0:
     resolution: {integrity: sha512-ect2ZNtk1Zgwb0NVHd0C1IDW/MV+Jk/xaq4t8o6rYdVS3+L660ZdD5kTSQZvsgdwCvquRw+/wYn75hsweRjoIA==}
     peerDependencies:
@@ -4258,10 +4208,6 @@ packages:
   unplugin@1.16.1:
     resolution: {integrity: sha512-4/u/j4FrCKdi17jaxuJA0jClGxB1AvU2hw/IuayPc4ay1XGaJs/rbb4v5WKwAjNifjmXK9PIFyuPiaK8azyR9w==}
     engines: {node: '>=14.0.0'}
-
-  unplugin@2.0.0-beta.1:
-    resolution: {integrity: sha512-2qzQo5LN2DmUZXkWDHvGKLF5BP0WN+KthD6aPnPJ8plRBIjv4lh5O07eYcSxgO2znNw9s4MNhEO1sB+JDllDbQ==}
-    engines: {node: '>=18.12.0'}
 
   unplugin@2.2.2:
     resolution: {integrity: sha512-Qp+iiD+qCRnUek+nDoYvtWX7tfnYyXsrOnJ452FRTgOyKmTM7TUJ3l+PLPJOOWPTUyKISKp4isC5JJPSXUjGgw==}
@@ -5337,7 +5283,7 @@ snapshots:
       solid-presence: 0.1.8(solid-js@1.9.5)
       solid-prevent-scroll: 0.1.10(solid-js@1.9.5)
 
-  '@kobalte/solidbase@0.0.29(@algolia/client-search@5.23.0)(@solidjs/start@1.1.3(jiti@2.4.2)(solid-js@1.9.5)(terser@5.39.0)(tsx@4.19.3)(vinxi@0.5.3(db0@0.3.1)(ioredis@5.6.0)(jiti@2.4.2)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.1))(vite@6.2.3(jiti@2.4.2)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.1))(yaml@2.7.1))(@vue/compiler-sfc@3.5.13)(acorn@8.14.1)(expressive-code@0.40.2)(search-insights@2.17.3)(solid-js@1.9.5)(vinxi@0.5.3(db0@0.3.1)(ioredis@5.6.0)(jiti@2.4.2)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.1))(vite@6.2.3(jiti@2.4.2)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.1))':
+  '@kobalte/solidbase@0.1.0(@algolia/client-search@5.23.0)(@solidjs/start@1.1.3(jiti@2.4.2)(solid-js@1.9.5)(terser@5.39.0)(tsx@4.19.3)(vinxi@0.5.3(db0@0.3.1)(ioredis@5.6.0)(jiti@2.4.2)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.1))(vite@6.1.2(jiti@2.4.2)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.1))(yaml@2.7.1))(@vue/compiler-sfc@3.5.13)(acorn@8.14.1)(expressive-code@0.40.2)(search-insights@2.17.3)(solid-js@1.9.5)(vinxi@0.5.3(db0@0.3.1)(ioredis@5.6.0)(jiti@2.4.2)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.1))(vite@6.1.2(jiti@2.4.2)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.1))':
     dependencies:
       '@bprogress/core': 1.3.3
       '@docsearch/css': 3.9.0
@@ -5361,7 +5307,7 @@ snapshots:
       '@solid-primitives/storage': 4.3.1(solid-js@1.9.5)
       '@solidjs/meta': 0.29.4(solid-js@1.9.5)
       '@solidjs/router': 0.15.3(solid-js@1.9.5)
-      '@solidjs/start': 1.1.3(jiti@2.4.2)(solid-js@1.9.5)(terser@5.39.0)(tsx@4.19.3)(vinxi@0.5.3(db0@0.3.1)(ioredis@5.6.0)(jiti@2.4.2)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.1))(vite@6.2.3(jiti@2.4.2)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.1))(yaml@2.7.1)
+      '@solidjs/start': 1.1.3(jiti@2.4.2)(solid-js@1.9.5)(terser@5.39.0)(tsx@4.19.3)(vinxi@0.5.3(db0@0.3.1)(ioredis@5.6.0)(jiti@2.4.2)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.1))(vite@6.1.2(jiti@2.4.2)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.1))(yaml@2.7.1)
       '@vinxi/plugin-mdx': 3.7.2(@mdx-js/mdx@3.1.0(acorn@8.14.1))
       cross-spawn: 7.0.6
       esast-util-from-js: 2.0.1
@@ -5380,16 +5326,15 @@ snapshots:
       remark-gfm: 4.0.1
       remark-mdx-frontmatter: 5.1.0
       solid-js: 1.9.5
-      solid-mdx: 0.0.7(solid-js@1.9.5)(vite@6.2.3(jiti@2.4.2)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.1))
+      solid-mdx: 0.0.7(solid-js@1.9.5)(vite@6.1.2(jiti@2.4.2)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.1))
       typescript: 5.8.2
       unified: 11.0.5
       unist-builder: 4.0.0
       unist-util-visit: 5.0.0
       unplugin-auto-import: 19.1.2
-      unplugin-fonts: 1.3.1(vite@6.2.3(jiti@2.4.2)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.1))
       unplugin-icons: 22.1.0(@vue/compiler-sfc@3.5.13)
       vinxi: 0.5.3(db0@0.3.1)(ioredis@5.6.0)(jiti@2.4.2)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.1)
-      vite: 6.2.3(jiti@2.4.2)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.1)
+      vite: 6.1.2(jiti@2.4.2)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.1)
     transitivePeerDependencies:
       - '@algolia/client-search'
       - '@nuxt/kit'
@@ -5830,6 +5775,41 @@ snapshots:
     dependencies:
       solid-js: 1.9.5
 
+  '@solidjs/start@1.1.3(jiti@2.4.2)(solid-js@1.9.5)(terser@5.39.0)(tsx@4.19.3)(vinxi@0.5.3(db0@0.3.1)(ioredis@5.6.0)(jiti@2.4.2)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.1))(vite@6.1.2(jiti@2.4.2)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.1))(yaml@2.7.1)':
+    dependencies:
+      '@tanstack/server-functions-plugin': 1.114.29(jiti@2.4.2)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.1)
+      '@vinxi/plugin-directives': 0.5.0(vinxi@0.5.3(db0@0.3.1)(ioredis@5.6.0)(jiti@2.4.2)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.1))
+      '@vinxi/server-components': 0.5.0(vinxi@0.5.3(db0@0.3.1)(ioredis@5.6.0)(jiti@2.4.2)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.1))
+      defu: 6.1.4
+      error-stack-parser: 2.1.4
+      html-to-image: 1.11.13
+      radix3: 1.1.2
+      seroval: 1.2.1
+      seroval-plugins: 1.2.1(seroval@1.2.1)
+      shiki: 1.29.2
+      source-map-js: 1.2.1
+      terracotta: 1.0.6(solid-js@1.9.5)
+      tinyglobby: 0.2.12
+      vinxi: 0.5.3(db0@0.3.1)(ioredis@5.6.0)(jiti@2.4.2)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.1)
+      vite-plugin-solid: 2.11.6(solid-js@1.9.5)(vite@6.1.2(jiti@2.4.2)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.1))
+    transitivePeerDependencies:
+      - '@testing-library/jest-dom'
+      - '@types/node'
+      - babel-plugin-macros
+      - jiti
+      - less
+      - lightningcss
+      - sass
+      - sass-embedded
+      - solid-js
+      - stylus
+      - sugarss
+      - supports-color
+      - terser
+      - tsx
+      - vite
+      - yaml
+
   '@solidjs/start@1.1.3(jiti@2.4.2)(solid-js@1.9.5)(terser@5.39.0)(tsx@4.19.3)(vinxi@0.5.3(db0@0.3.1)(ioredis@5.6.0)(jiti@2.4.2)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.1))(vite@6.2.3(jiti@2.4.2)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.1))(yaml@2.7.1)':
     dependencies:
       '@tanstack/server-functions-plugin': 1.114.29(jiti@2.4.2)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.1)
@@ -6082,6 +6062,18 @@ snapshots:
 
   '@ungap/structured-clone@1.3.0': {}
 
+  '@unocss/astro@0.65.4(rollup@4.37.0)(vite@6.1.2(jiti@2.4.2)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.1))(vue@3.5.13(typescript@5.8.2))':
+    dependencies:
+      '@unocss/core': 0.65.4
+      '@unocss/reset': 0.65.4
+      '@unocss/vite': 0.65.4(rollup@4.37.0)(vite@6.1.2(jiti@2.4.2)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.1))(vue@3.5.13(typescript@5.8.2))
+    optionalDependencies:
+      vite: 6.1.2(jiti@2.4.2)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.1)
+    transitivePeerDependencies:
+      - rollup
+      - supports-color
+      - vue
+
   '@unocss/astro@0.65.4(rollup@4.37.0)(vite@6.2.3(jiti@2.4.2)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.1))(vue@3.5.13(typescript@5.8.2))':
     dependencies:
       '@unocss/core': 0.65.4
@@ -6122,15 +6114,9 @@ snapshots:
 
   '@unocss/core@0.65.4': {}
 
-  '@unocss/core@66.1.0-beta.3': {}
-
   '@unocss/extractor-arbitrary-variants@0.65.4':
     dependencies:
       '@unocss/core': 0.65.4
-
-  '@unocss/extractor-arbitrary-variants@66.1.0-beta.3':
-    dependencies:
-      '@unocss/core': 66.1.0-beta.3
 
   '@unocss/inspector@0.65.4(vue@3.5.13(typescript@5.8.2))':
     dependencies:
@@ -6193,12 +6179,6 @@ snapshots:
       '@unocss/core': 0.65.4
       ofetch: 1.4.1
 
-  '@unocss/preset-wind4@66.1.0-beta.3':
-    dependencies:
-      '@unocss/core': 66.1.0-beta.3
-      '@unocss/extractor-arbitrary-variants': 66.1.0-beta.3
-      '@unocss/rule-utils': 66.1.0-beta.3
-
   '@unocss/preset-wind@0.65.4':
     dependencies:
       '@unocss/core': 0.65.4
@@ -6210,11 +6190,6 @@ snapshots:
   '@unocss/rule-utils@0.65.4':
     dependencies:
       '@unocss/core': 0.65.4
-      magic-string: 0.30.17
-
-  '@unocss/rule-utils@66.1.0-beta.3':
-    dependencies:
-      '@unocss/core': 66.1.0-beta.3
       magic-string: 0.30.17
 
   '@unocss/transformer-attributify-jsx@0.65.4':
@@ -6234,6 +6209,22 @@ snapshots:
   '@unocss/transformer-variant-group@0.65.4':
     dependencies:
       '@unocss/core': 0.65.4
+
+  '@unocss/vite@0.65.4(rollup@4.37.0)(vite@6.1.2(jiti@2.4.2)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.1))(vue@3.5.13(typescript@5.8.2))':
+    dependencies:
+      '@ampproject/remapping': 2.3.0
+      '@rollup/pluginutils': 5.1.4(rollup@4.37.0)
+      '@unocss/config': 0.65.4
+      '@unocss/core': 0.65.4
+      '@unocss/inspector': 0.65.4(vue@3.5.13(typescript@5.8.2))
+      chokidar: 3.6.0
+      magic-string: 0.30.17
+      tinyglobby: 0.2.12
+      vite: 6.1.2(jiti@2.4.2)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.1)
+    transitivePeerDependencies:
+      - rollup
+      - supports-color
+      - vue
 
   '@unocss/vite@0.65.4(rollup@4.37.0)(vite@6.2.3(jiti@2.4.2)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.1))(vue@3.5.13(typescript@5.8.2))':
     dependencies:
@@ -6652,8 +6643,6 @@ snapshots:
       string-width: 4.2.3
       strip-ansi: 6.0.1
       wrap-ansi: 7.0.0
-
-  clsx@2.1.1: {}
 
   cluster-key-slot@1.1.2: {}
 
@@ -8946,10 +8935,10 @@ snapshots:
       seroval: 1.2.1
       seroval-plugins: 1.2.1(seroval@1.2.1)
 
-  solid-mdx@0.0.7(solid-js@1.9.5)(vite@6.2.3(jiti@2.4.2)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.1)):
+  solid-mdx@0.0.7(solid-js@1.9.5)(vite@6.1.2(jiti@2.4.2)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.1)):
     dependencies:
       solid-js: 1.9.5
-      vite: 6.2.3(jiti@2.4.2)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.1)
+      vite: 6.1.2(jiti@2.4.2)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.1)
 
   solid-presence@0.1.8(solid-js@1.9.5):
     dependencies:
@@ -9329,6 +9318,33 @@ snapshots:
       unist-util-is: 6.0.0
       unist-util-visit-parents: 6.0.1
 
+  unocss@0.65.4(postcss@8.5.3)(rollup@4.37.0)(vite@6.1.2(jiti@2.4.2)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.1))(vue@3.5.13(typescript@5.8.2)):
+    dependencies:
+      '@unocss/astro': 0.65.4(rollup@4.37.0)(vite@6.1.2(jiti@2.4.2)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.1))(vue@3.5.13(typescript@5.8.2))
+      '@unocss/cli': 0.65.4(rollup@4.37.0)
+      '@unocss/core': 0.65.4
+      '@unocss/postcss': 0.65.4(postcss@8.5.3)
+      '@unocss/preset-attributify': 0.65.4
+      '@unocss/preset-icons': 0.65.4
+      '@unocss/preset-mini': 0.65.4
+      '@unocss/preset-tagify': 0.65.4
+      '@unocss/preset-typography': 0.65.4
+      '@unocss/preset-uno': 0.65.4
+      '@unocss/preset-web-fonts': 0.65.4
+      '@unocss/preset-wind': 0.65.4
+      '@unocss/transformer-attributify-jsx': 0.65.4
+      '@unocss/transformer-compile-class': 0.65.4
+      '@unocss/transformer-directives': 0.65.4
+      '@unocss/transformer-variant-group': 0.65.4
+      '@unocss/vite': 0.65.4(rollup@4.37.0)(vite@6.1.2(jiti@2.4.2)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.1))(vue@3.5.13(typescript@5.8.2))
+    optionalDependencies:
+      vite: 6.1.2(jiti@2.4.2)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.1)
+    transitivePeerDependencies:
+      - postcss
+      - rollup
+      - supports-color
+      - vue
+
   unocss@0.65.4(postcss@8.5.3)(rollup@4.37.0)(vite@6.2.3(jiti@2.4.2)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.1))(vue@3.5.13(typescript@5.8.2)):
     dependencies:
       '@unocss/astro': 0.65.4(rollup@4.37.0)(vite@6.2.3(jiti@2.4.2)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.1))(vue@3.5.13(typescript@5.8.2))
@@ -9365,12 +9381,6 @@ snapshots:
       unplugin: 2.2.2
       unplugin-utils: 0.2.4
 
-  unplugin-fonts@1.3.1(vite@6.2.3(jiti@2.4.2)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.1)):
-    dependencies:
-      fast-glob: 3.3.3
-      unplugin: 2.0.0-beta.1
-      vite: 6.2.3(jiti@2.4.2)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.1)
-
   unplugin-icons@22.1.0(@vue/compiler-sfc@3.5.13):
     dependencies:
       '@antfu/install-pkg': 1.0.0
@@ -9389,11 +9399,6 @@ snapshots:
       picomatch: 4.0.2
 
   unplugin@1.16.1:
-    dependencies:
-      acorn: 8.14.1
-      webpack-virtual-modules: 0.6.2
-
-  unplugin@2.0.0-beta.1:
     dependencies:
       acorn: 8.14.1
       webpack-virtual-modules: 0.6.2
@@ -9533,7 +9538,7 @@ snapshots:
       unctx: 2.4.1
       unenv: 1.10.0
       unstorage: 1.15.0(db0@0.3.1)(ioredis@5.6.0)
-      vite: 6.2.3(jiti@2.4.2)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.1)
+      vite: 6.1.2(jiti@2.4.2)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.1)
       zod: 3.24.2
     transitivePeerDependencies:
       - '@azure/app-configuration'
@@ -9576,6 +9581,19 @@ snapshots:
       - uploadthing
       - xml2js
       - yaml
+
+  vite-plugin-solid@2.11.6(solid-js@1.9.5)(vite@6.1.2(jiti@2.4.2)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.1)):
+    dependencies:
+      '@babel/core': 7.26.10
+      '@types/babel__core': 7.20.5
+      babel-preset-solid: 1.9.5(@babel/core@7.26.10)
+      merge-anything: 5.1.7
+      solid-js: 1.9.5
+      solid-refresh: 0.6.3(solid-js@1.9.5)
+      vite: 6.1.2(jiti@2.4.2)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.1)
+      vitefu: 1.0.6(vite@6.1.2(jiti@2.4.2)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.1))
+    transitivePeerDependencies:
+      - supports-color
 
   vite-plugin-solid@2.11.6(solid-js@1.9.5)(vite@6.2.3(jiti@2.4.2)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.1)):
     dependencies:
@@ -9624,6 +9642,10 @@ snapshots:
       terser: 5.39.0
       tsx: 4.19.3
       yaml: 2.7.1
+
+  vitefu@1.0.6(vite@6.1.2(jiti@2.4.2)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.1)):
+    optionalDependencies:
+      vite: 6.1.2(jiti@2.4.2)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.1)
 
   vitefu@1.0.6(vite@6.2.3(jiti@2.4.2)(terser@5.39.0)(tsx@4.19.3)(yaml@2.7.1)):
     optionalDependencies:

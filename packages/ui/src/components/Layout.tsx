@@ -49,7 +49,7 @@ export const Layout: ParentComponent = (props) => {
 					</ul>
 				</nav>
 				<Suspense>
-					<main class="grow text-black">{props.children}</main>
+					<main class="grow">{props.children}</main>
 				</Suspense>
 				<footer class="border-t-4 border-solid border-black h-50px px-4 flex items-center justify-center bg-white rounded-b-xl">
 					<p class="font-bold">
