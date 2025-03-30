@@ -10,7 +10,7 @@ export const spa = () => <></>;
 export const h1 = (props: ParentProps) => (
 	<h1
 		{...props}
-		class="text-4xl font-bold mb-4"
+		class=""
 	>
 		{props.children}
 	</h1>
@@ -18,10 +18,10 @@ export const h1 = (props: ParentProps) => (
 export const h2 = (props: ParentProps) => {
 	return (
 		<>
-			<hr class="my-8" />
+			<hr class="" />
 			<h2
 				{...props}
-				class="text-3xl font-bold mb-4"
+				class=""
 			>
 				{props.children}
 			</h2>
@@ -117,7 +117,7 @@ export const p = (props: ParentProps) => (
 export const li = (props: ParentProps) => (
 	<li
 		{...props}
-		class="mb-2"
+		class=""
 	>
 		{props.children}
 	</li>
@@ -125,7 +125,7 @@ export const li = (props: ParentProps) => (
 export const ul = (props: ParentProps) => (
 	<ul
 		{...props}
-		class="pl-6 mb-2 list-disc"
+		class=""
 	>
 		{props.children}
 	</ul>
@@ -133,7 +133,7 @@ export const ul = (props: ParentProps) => (
 export const ol = (props: ParentProps) => (
 	<ol
 		{...props}
-		class="list-decimal pl-8 mb-2"
+		class=""
 	>
 		{props.children}
 	</ol>
@@ -146,7 +146,7 @@ export const pre = (props: ParentProps) => {
 	return (
 		<pre
 			{...props}
-			class="[&>code]:bg-white dark:[&>code]:!bg-slate-950 [&>code]:p-0 [&>code]:text-sm [&>code]:leading-normal custom-scrollbar"
+			class=""
 		>
 			{props.children}
 		</pre>
@@ -155,7 +155,7 @@ export const pre = (props: ParentProps) => {
 export const code = (props: ParentProps) => {
 	return (
 		<code
-			class="inline-block not-prose !font-mono font-semibold bg-blue-200 dark:bg-slate-600/60 text-slate-900 dark:text-white px-1 py-0.5 rounded-lg text-[0.8em] leading-snug"
+			class=""
 			{...props}
 		>
 			{props.children}
@@ -178,6 +178,101 @@ export const hr = (props: ParentProps) => {
 export const response = (props: ParentProps) => {
 	return <span>{props.children}</span>;
 };
-export const unknown = (props: ParentProps) => {
-	return <span>{props.children}</span>;
-};
+
+// export function DirectiveContainer(
+// 	props: {
+// 		type:
+// 			| "info"
+// 			| "note"
+// 			| "tip"
+// 			| "important"
+// 			| "warning"
+// 			| "danger"
+// 			| "caution"
+// 			| "details"
+// 			| "tab-group"
+// 			| "tab";
+// 		title?: string;
+// 		codeGroup?: string;
+// 		tabNames?: string;
+// 	} & ParentProps
+// ) {
+// 	const _children = children(() => props.children).toArray();
+
+// 	if (props.type === "tab") {
+// 		return _children;
+// 	}
+
+// 	if (props.type === "tab-group") {
+// 		const tabNames = props.tabNames?.split("\0");
+
+// 		const tabs = (value?: Accessor<string>, onChange?: (s: string) => void) => (
+// 			<Tabs
+// 				value={value?.()}
+// 				onChange={onChange}
+// 				class={styles["tabs-container"]}
+// 			>
+// 				<Tabs.List class={styles["tabs-list"]}>
+// 					{tabNames?.map((title) => {
+// 						return (
+// 							<Tabs.Trigger
+// 								class={styles["tabs-trigger"]}
+// 								value={title}
+// 							>
+// 								{title}
+// 							</Tabs.Trigger>
+// 						);
+// 					})}
+// 				</Tabs.List>
+
+// 				<For each={tabNames}>
+// 					{(title, i) => (
+// 						<Tabs.Content
+// 							value={title}
+// 							forceMount={true}
+// 							class={styles["tabs-content"]}
+// 						>
+// 							<div>{_children[i()]}</div>
+// 						</Tabs.Content>
+// 					)}
+// 				</For>
+// 			</Tabs>
+// 		);
+
+// 		if (!props.title) return tabs();
+
+// 		const [openTab, setOpenTab] = makePersisted(createSignal(tabNames![0]!), {
+// 			name: `tab-group:${props.title}`,
+// 			sync: messageSync(new BroadcastChannel("tab-group")),
+// 			storage: cookieStorage.withOptions({
+// 				expires: new Date(+new Date() + 3e10),
+// 			}),
+// 		});
+
+// 		return tabs(openTab, setOpenTab);
+// 	}
+
+// 	if (props.type === "details") {
+// 		return (
+// 			<details
+// 				class={styles["custom-container"]}
+// 				data-custom-container="details"
+// 			>
+// 				<summary>{props.title ?? props.type}</summary>
+// 				{_children}
+// 			</details>
+// 		);
+// 	}
+
+// 	return (
+// 		<div
+// 			class={styles["custom-container"]}
+// 			data-custom-container={props.type}
+// 		>
+// 			<Show when={props.title !== " "}>
+// 				<span>{props.title ?? props.type}</span>
+// 			</Show>
+// 			{_children}
+// 		</div>
+// 	);
+// }

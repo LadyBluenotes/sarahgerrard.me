@@ -1,20 +1,22 @@
 import { createWithSolidBase, defineTheme } from "@kobalte/solidbase/config";
 import { defineConfig } from "@solidjs/start/config";
 import UnoCSS from "unocss/vite";
+import { pluginLineNumbers } from "@expressive-code/plugin-line-numbers";
+import defaultTheme from "@kobalte/solidbase/default-theme";
 
 const theme = defineTheme({
 	componentsPath: import.meta.resolve("./src/theme"),
+	extends: defaultTheme,
 });
 
 export default defineConfig(
 	createWithSolidBase(theme)(
 		{
-			ssr: true,
 			server: {
 				prerender: {
 					crawlLinks: true,
-					autoSubfolderIndex: true,
 				},
+				esbuild: { options: { target: "es2022" } },
 			},
 			vite: {
 				plugins: [
@@ -30,16 +32,16 @@ export default defineConfig(
 			lang: "en",
 			markdown: {
 				expressiveCode: {
-					themes: ["one-light", "one-dark-pro"],
+					textMarkers: true,
+					frames: true,
+					// themes: ["github-dark-default", "github-light-default"],
 					themeCssSelector: (theme) => `[data-theme="${theme.type}"]`,
-					twoSlash: false,
+					plugins: [pluginLineNumbers()],
 				},
 				toc: {
 					minDepth: 2,
 					maxDepth: 4,
 				},
-				remarkPlugins: [],
-				rehypePlugins: [],
 				packageManagers: {
 					presets: {
 						npm: {
