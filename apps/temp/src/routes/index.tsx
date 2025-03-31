@@ -4,7 +4,7 @@ import { createSignal } from "solid-js";
 export default function Home() {
 	const [selectedTab, setSelectedTab] = createSignal("home");
 	return (
-		<div class="flex flex-col items-center py-24 w-full h-full">
+		<div class="flex flex-col items-center py-24 w-full h-full px-2">
 			<div
 				class="window active w-fit h-fit"
 				style="max-width: 600px"
@@ -114,9 +114,9 @@ export default function Home() {
 								>
 									hello@sarahgerrard.me
 								</a>
-								or you can follow on any of my socials:
+								or reach out on social media:
 							</p>
-							<div class="relative border-1 border-solid border-[#919b9c] rounded-sm bg-#f9f9f8 p-2 mt-2">
+							<div class="relative border-1 border-solid border-[#919b9c] rounded-sm bg-#f9f9f8 py-6 px-2 mt-2">
 								<div class="absolute -top-2 bg-#f9f9f8 px-1">
 									<span class="text-#0046d5">Links</span>
 								</div>
