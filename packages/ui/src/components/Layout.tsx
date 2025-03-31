@@ -26,8 +26,8 @@ export const Layout: ParentComponent = (props) => {
 	];
 
 	return (
-		<div class="bg-black min-h-screen p-4 flex">
-			<div class="bg-background flex flex-col w-full rounded-lg">
+		<div class="bg-background min-h-screen p-4 flex">
+			<div class="bg-foreground flex flex-col w-full rounded-lg">
 				<nav class="rounded-t-lg border-b-4 border-solid border-black bg-white">
 					<ul class="container flex items-center">
 						<li class="flex p-4">

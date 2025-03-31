@@ -1,41 +1,226 @@
 @import "@unocss/reset/tailwind.css";
 @import "@fontsource-variable/roboto";
 @import "@fontsource-variable/epilogue";
+@import "@fontsource-variable/fira-code";
 
 @unocss;
 
-:root {
-	--background: #fffde9;
-	--button-bg: #fff;
-	--button-hover: #1c1c1c;
-	--container-header: #fec631;
-	--container-bg: #fff;
-	--container-button: #f9591f;
-	--black: #1c1c1c;
+html {
+	--font-heading: "Epilogue", sans-serif;
+	--font-body: "Roboto", sans-serif;
+	--font-code: "Fira Code", monospace;
+
+	--black: #0d0907;
+
+	--background: #f5e7cb;
+	--main-bg: #394569;
+	--decoration-bg: #fff;
+	--primary-text: #292927;
+	--secondary-text: #fff;
+	--primary: #673535;
+	--accent: #c69a39;
 }
 
-@theme {
-	--font-epilogue: "Epilogue", sans-serif;
-	--font-roboto: "Roboto", sans-serif;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
 nav {
-	font-family: var(--font-epilogue);
-	font-weight: 700;
+	font-family: var(--font-heading);
 }
 
 body {
-	font-family: var(--font-roboto);
-	font-size: 16px;
+	font-family: var(--font-body);
+	font-size: 1rem;
+	line-height: 1.5;
+}
+
+pre {
+	font-family: var(--font-code);
+}
+
+code {
+	font-family: var(--font-code);
+	font-size: 1rem;
 	line-height: 1.5;
 }
 
 main {
 	background: var(--background);
+
+	p {
+		a {
+			text-decoration: underline;
+			bold: 700;
+			color: var(--black);
+
+			&:hover,
+			&:focus {
+				color: var(--secondary-text);
+				background-color: var(--primary);
+			}
+		}
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-family: var(--font-epilogue);
+		font-weight: 800;
+		width: fit-content;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		position: relative;
+		&:hover {
+			color: var(--primary);
+			text-decoration: underline;
+		}
+	}
+
+	h1 {
+		font-size: 3.125rem;
+		line-height: 2;
+		letter-spacing: -0.0625rem;
+		@media (max-width: 768px) {
+			font-size: 2.5rem;
+		}
+
+		@media (max-width: 480px) {
+			font-size: 1.5rem;
+		}
+	}
+
+	h2 {
+		font-size: 2.5rem;
+		line-height: 1.75;
+		letter-spacing: -0.0625rem;
+		@media (max-width: 768px) {
+			font-size: 2.125rem;
+		}
+
+		@media (max-width: 480px) {
+			font-size: 1.5rem;
+		}
+	}
+
+	h3 {
+		font-size: 2.125rem;
+		line-height: 1.75;
+		letter-spacing: -0.0625rem;
+		@media (max-width: 768px) {
+			font-size: 1.5rem;
+		}
+
+		@media (max-width: 480px) {
+			font-size: 1.125rem;
+		}
+	}
+
+	h4 {
+		font-size: 1.875rem;
+		line-height: 1.75;
+		@media (max-width: 768px) {
+			font-size: 1.5rem;
+		}
+
+		@media (max-width: 480px) {
+			font-size: 1.125rem;
+		}
+	}
+
+	h5 {
+		font-size: 1.125rem;
+		line-height: 1.75;
+
+		@media (max-width: 768px) {
+			font-size: 1rem;
+		}
+	}
+
+	h6 {
+		font-size: 1rem;
+		line-height: 1.75;
+	}
+
+	ol > li {
+		list-style: decimal;
+		line-height: 1.75;
+	}
+
+	ul > li {
+		list-style: disc;
+		line-height: 1.75;
+		ul > li {
+			margin-left: 2rem;
+			list-style: circle;
+			ul > li {
+				margin-left: 2rem;
+				list-style: square;
+				ul > li {
+					margin-left: 2rem;
+					list-style: disc;
+					ul > li {
+						margin-left: 2rem;
+						list-style: circle;
+						ul > li {
+							margin-left: 2rem;
+							list-style: square;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	table {
+		overflow-x: auto;
+		margin-top: 2em;
+		margin-bottom: 2em;
+		background-color: var(--decoration-bg);
+		width: 100%;
+		table-layout: auto;
+		border-bottom: 2px solid var(--border);
+
+		& table {
+			text-align: left;
+			font-size: 0.875em;
+			line-height: 1.7;
+			border-collapse: collapse;
+		}
+
+		thead {
+			font-family: var(--font-heading);
+			color: var(--table-header-text);
+			text-align: left;
+			font-weight: 500;
+			font-size: 1.125rem;
+			background: var(--table-header);
+			border: 2px solid var(--border);
+		}
+
+		td:not(:last-child),
+		th:not(:last-child) {
+			border-right: 2px solid var(--border);
+		}
+
+		& tr {
+			& > * {
+				padding: 0.5rem 0.75rem;
+			}
+		}
+
+		& > tbody tr {
+			border: 2px solid var(--border);
+			border-top: none;
+
+			&:last-child {
+				border-bottom: none;
+			}
+		}
+	}
 }

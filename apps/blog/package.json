@@ -11,6 +11,7 @@
 		"@expressive-code/plugin-line-numbers": "^0.40.2",
 		"@fontsource-variable/epilogue": "^5.2.5",
 		"@fontsource-variable/roboto": "^5.2.5",
+		"@fontsource-variable/fira-code": "^5.2.5",
 		"@kobalte/solidbase": "^0.1.0",
 		"@repo/ui": "workspace:*",
 		"@repo/unocss-config": "workspace:*",

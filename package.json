@@ -9,6 +9,9 @@
 		"blog:dev": "cd apps/blog && pnpm dev",
 		"blog:build": "cd apps/blog && pnpm build",
 		"blog:start": "cd apps/blog && pnpm start",
+		"temp:dev": "cd apps/temp && pnpm dev",
+		"temp:build": "cd apps/temp && pnpm build",
+		"temp:start": "cd apps/temp && pnpm start",
 		"format": "prettier --write \"**/*.{ts,tsx,md}\"",
 		"cleandep": "rm -rf node_modules && pnpm -r exec rm -rf node_modules"
 	},

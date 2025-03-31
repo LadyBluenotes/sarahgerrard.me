@@ -6,9 +6,6 @@ export const Button: ParentComponent<ButtonProps> = (props) => {
 	return (
 		<KButton
 			class={`ui-button-default outline-4 outline-solid outline-black ${props.widthFull ? "w-full" : ""}`}
-			classList={{
-				"bg-containerbutton": props.type === "container",
-			}}
 			disabled={props.isDisabled}
 			onClick={props.submitClick}
 		>

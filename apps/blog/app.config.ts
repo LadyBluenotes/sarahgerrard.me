@@ -1,4 +1,8 @@
-import { createWithSolidBase, defineTheme } from "@kobalte/solidbase/config";
+import {
+	createWithSolidBase,
+	defineTheme,
+	withSolidBase,
+} from "@kobalte/solidbase/config";
 import { defineConfig } from "@solidjs/start/config";
 import UnoCSS from "unocss/vite";
 import { pluginLineNumbers } from "@expressive-code/plugin-line-numbers";
@@ -34,7 +38,7 @@ export default defineConfig(
 				expressiveCode: {
 					textMarkers: true,
 					frames: true,
-					// themes: ["github-dark-default", "github-light-default"],
+					themes: ["github-dark-default", "github-light-default"],
 					themeCssSelector: (theme) => `[data-theme="${theme.type}"]`,
 					plugins: [pluginLineNumbers()],
 				},
