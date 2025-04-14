@@ -1,7 +1,10 @@
 import { For, ParentComponent, Suspense } from "solid-js";
 import { A } from "@solidjs/router";
+import { RoundDiver } from "./icons";
+import { ThemeSelectorProps } from "@/utils/types";
+import { DropdownMenu } from "@kobalte/core";
 
-export const Layout: ParentComponent = (props) => {
+export const Layout: ParentComponent<ThemeSelectorProps> = (props) => {
 	const links = [
 		{
 			href: "/about",
@@ -25,13 +28,37 @@ export const Layout: ParentComponent = (props) => {
 		},
 	];
 
+	const themes: {
+		value: string;
+		text: string;
+		icon: string;
+	}[] = [
+		{
+			value: "system",
+			text: "System",
+			icon: "i-mdi-monitor",
+		},
+		{
+			value: "light",
+			text: "Light",
+			icon: "i-mdi-white-balance-sunny",
+		},
+		{
+			value: "dark",
+			text: "Dark",
+			icon: "i-mdi-weather-night",
+		},
+	];
+
 	return (
-		<div class="bg-background min-h-screen p-4 flex">
-			<div class="bg-foreground flex flex-col w-full rounded-lg">
-				<nav class="rounded-t-lg border-b-4 border-solid border-black bg-white">
+		<div class="ui-background min-h-screen p-4 flex">
+			<div class="ui-foreground flex flex-col w-full rounded-lg">
+				<nav class="flex justify-between rounded-t-lg border-b-4 border-solid border-black bg-white">
 					<ul class="container flex items-center">
-						<li class="flex p-4">
-							<div class="w-5 h-5 bg-black rounded-full" />
+						<li class="flex p-2">
+							<div class="p-1">
+								<RoundDiver class="w-12" />
+							</div>
 						</li>
 						<For each={links}>
 							{({ href, text }) => (
@@ -47,6 +74,31 @@ export const Layout: ParentComponent = (props) => {
 							)}
 						</For>
 					</ul>
+					<div class="flex items-center">
+						<DropdownMenu.Root>
+							<DropdownMenu.Trigger class="flex items-center ui-button-default ">
+								<div
+									class={
+										themes.find((theme) => theme.value == props.getThemeVariant)
+											?.icon
+									}
+								/>
+							</DropdownMenu.Trigger>
+							<DropdownMenu.Content class="bg-white rounded-lg shadow-lg p-2 flex flex-col gap-2 mt-1 outline-1 outline-solid">
+								<For each={themes}>
+									{({ value, text, icon }) => (
+										<DropdownMenu.Item
+											textValue={value}
+											onClick={() => props.setTheme(value)}
+										>
+											<div class={icon} />
+											<span class="pl-2">{text}</span>
+										</DropdownMenu.Item>
+									)}
+								</For>
+							</DropdownMenu.Content>
+						</DropdownMenu.Root>
+					</div>
 				</nav>
 				<Suspense>
 					<main class="grow">{props.children}</main>

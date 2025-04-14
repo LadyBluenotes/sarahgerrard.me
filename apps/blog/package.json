@@ -10,8 +10,8 @@
 	"dependencies": {
 		"@expressive-code/plugin-line-numbers": "^0.40.2",
 		"@fontsource-variable/epilogue": "^5.2.5",
-		"@fontsource-variable/roboto": "^5.2.5",
 		"@fontsource-variable/fira-code": "^5.2.5",
+		"@fontsource-variable/roboto": "^5.2.5",
 		"@kobalte/solidbase": "^0.1.0",
 		"@repo/ui": "workspace:*",
 		"@repo/unocss-config": "workspace:*",
@@ -26,7 +26,7 @@
 	},
 	"packageManager": "pnpm@9.15.9",
 	"devDependencies": {
-		"@iconify-json/ri": "^1.2.5",
+		"@iconify/json": "^2.2.327",
 		"@repo/eslint-config": "workspace:*"
 	}
 }

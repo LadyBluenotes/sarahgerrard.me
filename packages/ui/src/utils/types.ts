@@ -27,4 +27,23 @@ type SectionContainerProps = ParentProps & {
 	title?: string;
 };
 
-export type { ButtonProps, StyledContainerProps, SectionContainerProps };
+type IconProps = {
+	class?: string;
+	size?: number;
+	color?: string;
+	alt?: string;
+};
+
+type ThemeSelectorProps = {
+	getTheme: string;
+	setTheme: () => any;
+	getThemeVariant: () => any;
+};
+
+export type {
+	ButtonProps,
+	StyledContainerProps,
+	SectionContainerProps,
+	IconProps,
+	ThemeSelectorProps,
+};

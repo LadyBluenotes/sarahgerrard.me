@@ -16,6 +16,7 @@
 	"author": "",
 	"license": "MIT",
 	"devDependencies": {
+		"@iconify/json": "^2.2.327",
 		"@repo/eslint-config": "workspace:*",
 		"@repo/unocss-config": "workspace:*",
 		"@solidjs/meta": "^0.29.4",

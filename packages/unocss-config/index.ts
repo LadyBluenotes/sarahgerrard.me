@@ -11,13 +11,17 @@ export const config = defineConfig({
 	presets: [
 		presetMini(),
 		presetAttributify(),
-		presetIcons(),
+		presetIcons({
+			scale: 1.2,
+			prefix: "i-",
+			extraProperties: {
+				display: "inline-block",
+			},
+		}),
 		presetWind(),
 	] as Preset[],
 	theme: {
 		colors: {
-			background: "var(--background)",
-			foreground: "var(--main-bg)",
 			decorationbg: "var(--decoration-bg)",
 			primaryText: "var(--primary-text)",
 			secondaryText: "var(--secondary-text)",

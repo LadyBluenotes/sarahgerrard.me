@@ -21,6 +21,15 @@ html {
 	--accent: #c69a39;
 }
 
+.ui-background {
+	background-color: #130f40;
+	background-image: linear-gradient(315deg, #130f40 0%, #000000 74%);
+}
+
+.ui-foreground {
+	background-color: #ffffff2d;
+}
+
 nav {
 	font-family: var(--font-heading);
 }
@@ -42,8 +51,6 @@ code {
 }
 
 main {
-	background: var(--background);
-
 	p {
 		a {
 			text-decoration: underline;
