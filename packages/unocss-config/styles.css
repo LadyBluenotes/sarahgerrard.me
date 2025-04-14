@@ -5,7 +5,7 @@
 
 @unocss;
 
-html {
+:root {
 	--font-heading: "Epilogue", sans-serif;
 	--font-body: "Roboto", sans-serif;
 	--font-code: "Fira Code", monospace;
@@ -18,24 +18,104 @@ html {
 	--primary-text: #292927;
 	--secondary-text: #fff;
 	--primary: #673535;
-	--accent: #c69a39;
+
+	.ui-background {
+		--angle: 45deg;
+		background: linear-gradient(
+			var(--angle),
+			oklab(83.3% 0.063 0.049),
+			oklab(83.2% 0.053 0.019),
+			oklab(90.4% 0.028 0.009),
+			oklab(93.6% -0.001 0.027)
+		);
+	}
+
+	.ui-foreground {
+		background-color: #ffffff94;
+	}
 }
 
-.ui-background {
-	background-color: #130f40;
-	background-image: linear-gradient(315deg, #130f40 0%, #000000 74%);
-}
+:root[data-theme="dark"] {
+	--primary-text: #fff;
+	--secondary-text: #292927;
 
-.ui-foreground {
-	background-color: #ffffff2d;
+	.ui-background {
+		background-image:
+			radial-gradient(
+				at 79.35091539632431% 65.37367304478273%,
+				hsla(0, 0%, 0%, 1) 0%,
+				hsla(0, 0%, 0%, 0) 100%
+			),
+			radial-gradient(
+				at 83.89819477905901% 5.364596735397297%,
+				hsla(215.7983193277311, 100%, 23.333333333333332%, 1) 0%,
+				hsla(215.7983193277311, 100%, 23.333333333333332%, 0) 100%
+			),
+			radial-gradient(
+				at 68.73315097191943% 22.638947447338875%,
+				hsla(330.3703703703703, 100%, 15.88235294117647%, 1) 0%,
+				hsla(330.3703703703703, 100%, 15.88235294117647%, 0) 100%
+			),
+			radial-gradient(
+				at 13.919204197221969% 58.69875307806367%,
+				hsla(0, 0%, 0%, 1) 0%,
+				hsla(0, 0%, 0%, 0) 100%
+			),
+			radial-gradient(
+				at 14.968370711807266% 95.2480482571154%,
+				hsla(0, 0%, 0%, 1) 0%,
+				hsla(0, 0%, 0%, 0) 100%
+			),
+			radial-gradient(
+				at 23.392339539475582% 8.911918525902374%,
+				rgb(0, 35, 88) 0%,
+				hsla(215.7983193277311, 100%, 23.333333333333332%, 0) 100%
+			),
+			radial-gradient(
+				at 61.277802439879636% 98.4916588447043%,
+				rgb(58, 0, 29) 0%,
+				hsla(330.3703703703703, 100%, 15.88235294117647%, 0) 100%
+			),
+			radial-gradient(
+				at 92.8593985980762% 0.9615584397614119%,
+				hsla(0, 0%, 0%, 1) 0%,
+				hsla(0, 0%, 0%, 0) 100%
+			),
+			radial-gradient(
+				at 7.48907633756809% 60.7528480055547%,
+				hsla(0, 0%, 0%, 1) 0%,
+				hsla(0, 0%, 0%, 0) 100%
+			),
+			radial-gradient(
+				at 60.219099447125934% 3.376227429744527%,
+				rgb(0, 34, 85) 0%,
+				hsla(215.7983193277311, 100%, 23.333333333333332%, 0) 100%
+			),
+			radial-gradient(
+				at 84.42407765582398% 25.48572507626098%,
+				rgb(56, 0, 28) 0%,
+				hsla(330.3703703703703, 100%, 15.88235294117647%, 0) 100%
+			),
+			radial-gradient(
+				at 80.2304924160387% 84.0811557196135%,
+				hsla(0, 0%, 0%, 1) 0%,
+				hsla(0, 0%, 0%, 0) 100%
+			);
+	}
+
+	.ui-foreground {
+		background-color: #ffffff2d;
+	}
 }
 
 nav {
 	font-family: var(--font-heading);
+	color: var(--secondary-text);
 }
 
 body {
 	font-family: var(--font-body);
+	color: var(--primary-text);
 	font-size: 1rem;
 	line-height: 1.5;
 }
