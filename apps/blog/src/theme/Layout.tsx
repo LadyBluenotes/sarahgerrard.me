@@ -1,5 +1,5 @@
 import { RouteSectionProps } from "@solidjs/router";
-import { createEffect, ErrorBoundary } from "solid-js";
+import { ErrorBoundary } from "solid-js";
 
 // import { NotFound } from "~/ui/not-found";
 import { MDXLayout } from "@repo/ui/components";

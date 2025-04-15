@@ -12,12 +12,12 @@
 
 	--black: #0d0907;
 
-	--background: #f5e7cb;
-	--main-bg: #394569;
 	--decoration-bg: #fff;
 	--primary-text: #292927;
 	--secondary-text: #fff;
-	--primary: #673535;
+	--link-text: #292927;
+	--primary: var(--black);
+	--border: #dce1e7;
 
 	.ui-background {
 		--angle: 45deg;
@@ -38,6 +38,8 @@
 :root[data-theme="dark"] {
 	--primary-text: #fff;
 	--secondary-text: #292927;
+	--link-text: #fff;
+	--decoration-bg: #00000062;
 
 	.ui-background {
 		background-image:
@@ -110,7 +112,11 @@
 
 nav {
 	font-family: var(--font-heading);
-	color: var(--secondary-text);
+	color: var(--primary-text);
+
+	.ui-theme-icon {
+		color: var(--secondary-text);
+	}
 }
 
 body {
@@ -135,7 +141,8 @@ main {
 		a {
 			text-decoration: underline;
 			bold: 700;
-			color: var(--black);
+			color: var(--link-text);
+			padding: 0.15rem 0.15rem;
 
 			&:hover,
 			&:focus {
@@ -171,7 +178,7 @@ main {
 
 	h1 {
 		font-size: 3.125rem;
-		line-height: 2;
+		line-height: 1.75;
 		letter-spacing: -0.0625rem;
 		@media (max-width: 768px) {
 			font-size: 2.5rem;
@@ -184,7 +191,7 @@ main {
 
 	h2 {
 		font-size: 2.5rem;
-		line-height: 1.75;
+		line-height: 1.25;
 		letter-spacing: -0.0625rem;
 		@media (max-width: 768px) {
 			font-size: 2.125rem;
@@ -197,7 +204,6 @@ main {
 
 	h3 {
 		font-size: 2.125rem;
-		line-height: 1.75;
 		letter-spacing: -0.0625rem;
 		@media (max-width: 768px) {
 			font-size: 1.5rem;
@@ -210,7 +216,6 @@ main {
 
 	h4 {
 		font-size: 1.875rem;
-		line-height: 1.75;
 		@media (max-width: 768px) {
 			font-size: 1.5rem;
 		}
@@ -222,8 +227,6 @@ main {
 
 	h5 {
 		font-size: 1.125rem;
-		line-height: 1.75;
-
 		@media (max-width: 768px) {
 			font-size: 1rem;
 		}
@@ -231,17 +234,18 @@ main {
 
 	h6 {
 		font-size: 1rem;
-		line-height: 1.75;
 	}
 
 	ol > li {
 		list-style: decimal;
-		line-height: 1.75;
+		list-style-position: inside;
+		line-height: 1.35;
 	}
 
 	ul > li {
 		list-style: disc;
-		line-height: 1.75;
+		line-height: 1.35;
+		list-style-position: inside;
 		ul > li {
 			margin-left: 2rem;
 			list-style: circle;
@@ -265,49 +269,36 @@ main {
 	}
 
 	table {
-		overflow-x: auto;
-		margin-top: 2em;
-		margin-bottom: 2em;
+		border-collapse: separate;
+		border-spacing: 0;
+		border: 1px solid var(--border);
+		border-radius: 8px;
 		background-color: var(--decoration-bg);
-		width: 100%;
-		table-layout: auto;
-		border-bottom: 2px solid var(--border);
+		text-align: left;
+		margin-top: 1em;
+		margin-bottom: 1em;
+	}
 
-		& table {
-			text-align: left;
-			font-size: 0.875em;
-			line-height: 1.7;
-			border-collapse: collapse;
+	td,
+	th {
+		border-left: 1px solid var(--border);
+		border-top: 1px solid var(--border);
+	}
+
+	th {
+		border-top: none;
+	}
+
+	td:first-child,
+	th:first-child {
+		border-left: none;
+	}
+	& tr {
+		& > * {
+			padding: 0.25rem 0.5rem;
 		}
-
-		thead {
-			font-family: var(--font-heading);
-			color: var(--table-header-text);
-			text-align: left;
-			font-weight: 500;
-			font-size: 1.125rem;
-			background: var(--table-header);
-			border: 2px solid var(--border);
-		}
-
-		td:not(:last-child),
-		th:not(:last-child) {
-			border-right: 2px solid var(--border);
-		}
-
-		& tr {
-			& > * {
-				padding: 0.5rem 0.75rem;
-			}
-		}
-
-		& > tbody tr {
-			border: 2px solid var(--border);
-			border-top: none;
-
-			&:last-child {
-				border-bottom: none;
-			}
-		}
+	}
+	tbody {
+		font-size: 0.875rem;
 	}
 }

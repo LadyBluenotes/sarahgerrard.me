@@ -62,14 +62,7 @@ export const a = (props: ParentProps & { href: string }) => {
 	}
 };
 export const p = (props: ParentProps) => <p {...props}>{props.children}</p>;
-export const li = (props: ParentProps) => (
-	<li
-		{...props}
-		class=""
-	>
-		{props.children}
-	</li>
-);
+export const li = (props: ParentProps) => <li {...props}>{props.children}</li>;
 export const ul = (props: ParentProps) => <ul {...props}>{props.children}</ul>;
 export const ol = (props: ParentProps) => <ol {...props}>{props.children}</ol>;
 export const nav = (props: ParentProps) => (
@@ -79,29 +72,22 @@ export const nav = (props: ParentProps) => (
 export const pre = (props: ParentProps) => {
 	return <pre {...props}>{props.children}</pre>;
 };
-export const code = (props: ParentProps) => {
-	return (
-		<code
-			class="bg-black/5 font-mono rounded-md px-1 text-code"
-			{...props}
-		>
-			{props.children}
-		</code>
-	);
-};
+export const code = (props: ParentProps) => (
+	<code
+		class="bg-black/5 font-mono rounded-md px-1 text-code"
+		{...props}
+	>
+		{props.children}
+	</code>
+);
+
 export const table = (props: ParentProps) => <table>{props.children}</table>;
 export const th = (props: ParentProps) => <th>{props.children}</th>;
 export const thead = (props: ParentProps) => <thead>{props.children}</thead>;
 export const td = (props: ParentProps) => <td>{props.children}</td>;
 export const tr = (props: ParentProps) => <tr>{props.children}</tr>;
-export const hr = (props: ParentProps) => {
-	return (
-		<hr
-			{...props}
-			class="dark:prose-hr:border-slate-900"
-		/>
-	);
-};
+export const hr = (props: ParentProps) => <hr {...props} />;
+
 export const response = (props: ParentProps) => {
 	return <span>{props.children}</span>;
 };

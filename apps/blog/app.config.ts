@@ -37,10 +37,13 @@ export default defineConfig(
 			markdown: {
 				expressiveCode: {
 					textMarkers: true,
-					frames: true,
+					frames: false,
 					themes: ["github-dark-default", "github-light-default"],
 					themeCssSelector: (theme) => `[data-theme="${theme.type}"]`,
 					plugins: [pluginLineNumbers()],
+					styleOverrides: {
+						borderWidth: "1px",
+					},
 				},
 				toc: {
 					minDepth: 2,

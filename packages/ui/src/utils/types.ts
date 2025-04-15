@@ -37,7 +37,7 @@ type IconProps = {
 type ThemeSelectorProps = {
 	getTheme: string;
 	setTheme: () => any;
-	getThemeVariant: () => any;
+	getThemeVariant: string;
 };
 
 export type {
