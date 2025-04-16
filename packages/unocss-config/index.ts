@@ -11,7 +11,7 @@ export const config = defineConfig({
 	presets: [
 		presetMini({
 			dark: {
-				dark: '[data-theme="dark"]',
+				dark: '[data-theme*="dark"]',
 			},
 		}),
 		presetAttributify(),

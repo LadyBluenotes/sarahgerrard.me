@@ -12,9 +12,9 @@
 
 	--black: #0d0907;
 
-	--decoration-bg: #fff;
+	--decoration-bg: #f8f8ff;
 	--primary-text: #292927;
-	--secondary-text: #fff;
+	--secondary-text: #f8f8ff;
 	--link-text: #292927;
 	--primary: var(--black);
 	--border: #dce1e7;
@@ -35,11 +35,10 @@
 	}
 }
 
-:root[data-theme="dark"],
-:root[data-theme="sdark"] {
-	--primary-text: #fff;
+:root[data-theme*="dark"] {
+	--primary-text: #f8f8ff;
 	--secondary-text: #292927;
-	--link-text: #fff;
+	--link-text: #f8f8ff;
 	--decoration-bg: #0d1117;
 	--border: #32363b;
 

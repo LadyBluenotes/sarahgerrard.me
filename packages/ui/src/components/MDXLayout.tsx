@@ -7,7 +7,7 @@ import { links, themes } from "./Layout";
 
 export const MDXLayout: ParentComponent<ThemeSelectorProps> = (props) => (
 	<div class="ui-background min-h-screen flex flex-col w-full">
-		<nav class="flex justify-between bg-white/70 top-0 w-full p-2 dark:bg-white/40 border-b-1 border-solid border-border">
+		<nav class="flex justify-between bg-white/70 top-0 w-full p-2 dark:bg-white/30 border-b-1 border-solid border-border">
 			<div>
 				<RoundDiver class="w-12" />
 			</div>
@@ -30,7 +30,7 @@ export const MDXLayout: ParentComponent<ThemeSelectorProps> = (props) => (
 			</Show>
 			<div class="flex items-center ml-auto">
 				<DropdownMenu.Root>
-					<DropdownMenu.Trigger class="flex items-center cursor-pointer leading-5 w-fit p-2">
+					<DropdownMenu.Trigger class="flex items-center cursor-pointer leading-5 w-fit p-2 fill-secondaryText">
 						<div
 							class={
 								themes.find((theme) => theme.value == props.getThemeVariant)
@@ -60,7 +60,7 @@ export const MDXLayout: ParentComponent<ThemeSelectorProps> = (props) => (
 				{props.children}
 			</main>
 		</Suspense>
-		<footer class="p-4 flex flex-col items-center justify-center bg-white/70 dark:bg-white/40 border-t-1 border-solid border-border">
+		<footer class="p-4 flex flex-col items-center justify-center bg-white/70 dark:bg-white/30 border-t-1 border-solid border-border">
 			<p class="font-bold">
 				Made by me. Built with{" "}
 				<a

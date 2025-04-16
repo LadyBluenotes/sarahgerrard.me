@@ -11,24 +11,20 @@ import {
 	useThemeListener,
 } from "@kobalte/solidbase/client";
 import { usePace } from "@kobalte/solidbase/default-theme/pace.js";
-import TableOfContents from "@kobalte/solidbase/default-theme/components/TableOfContents.js";
 
 export default function (props: RouteSectionProps) {
 	useThemeListener();
 	usePace();
 
 	return (
-		<>
-			<Title>Test</Title>
-			<ErrorBoundary fallback={() => <div>Nothing found</div>}>
-				<MDXLayout
-					getTheme={getTheme()}
-					setTheme={setTheme}
-					getThemeVariant={getThemeVariant()}
-				>
-					{props.children}
-				</MDXLayout>
-			</ErrorBoundary>
-		</>
+		<ErrorBoundary fallback={() => <div>Nothing found</div>}>
+			<MDXLayout
+				getTheme={getTheme()}
+				setTheme={setTheme}
+				getThemeVariant={getThemeVariant()}
+			>
+				{props.children}
+			</MDXLayout>
+		</ErrorBoundary>
 	);
 }
