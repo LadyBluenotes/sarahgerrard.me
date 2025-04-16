@@ -10,7 +10,9 @@ import {
 export const config = defineConfig({
 	presets: [
 		presetMini({
-			dark: "class",
+			dark: {
+				dark: '[data-theme="dark"]',
+			},
 		}),
 		presetAttributify(),
 		presetIcons({
@@ -28,6 +30,7 @@ export const config = defineConfig({
 			primaryText: "var(--primary-text)",
 			secondaryText: "var(--secondary-text)",
 			primary: "var(--primary)",
+			border: "var(--border)",
 		},
 		fonts: {
 			body: "var(--font-body)",
@@ -37,9 +40,9 @@ export const config = defineConfig({
 	},
 	shortcuts: {
 		"ui-button-default":
-			"p-4 font-bold text-xl cursor-pointer leading-5 ui-button-focus w-fit",
+			"p-2 font-bold cursor-pointer leading-5 ui-button-focus w-fit",
 		"ui-button-focus":
-			"hover:(bg-black text-white) focus-visible:(ring-solid ring-2 ring-accent-yellow ring-offset-2)",
+			"hover:(bg-black text-white) focus-visible:(ring-solid ring-2 ring-offset-2)",
 		"ui-link": "underline decoration-2 hover:text-black/70",
 	},
 });

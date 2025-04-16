@@ -54,7 +54,7 @@ export const Layout: ParentComponent<ThemeSelectorProps> = (props) => (
 		<div class="ui-foreground flex flex-col w-full rounded-lg">
 			<nav class="flex justify-between rounded-t-lg border-b-4 border-solid border-black bg-white">
 				<ul class="container flex items-center">
-					<li class="flex p-2">
+					<li class="flex">
 						<div class="p-1">
 							<RoundDiver class="w-12" />
 						</div>

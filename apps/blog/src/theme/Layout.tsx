@@ -11,6 +11,7 @@ import {
 	useThemeListener,
 } from "@kobalte/solidbase/client";
 import { usePace } from "@kobalte/solidbase/default-theme/pace.js";
+import TableOfContents from "@kobalte/solidbase/default-theme/components/TableOfContents.js";
 
 export default function (props: RouteSectionProps) {
 	useThemeListener();

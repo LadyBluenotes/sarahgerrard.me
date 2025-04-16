@@ -35,11 +35,13 @@
 	}
 }
 
-:root[data-theme="dark"] {
+:root[data-theme="dark"],
+:root[data-theme="sdark"] {
 	--primary-text: #fff;
 	--secondary-text: #292927;
 	--link-text: #fff;
-	--decoration-bg: #00000062;
+	--decoration-bg: #0d1117;
+	--border: #32363b;
 
 	.ui-background {
 		background-image:
@@ -113,10 +115,6 @@
 nav {
 	font-family: var(--font-heading);
 	color: var(--primary-text);
-
-	.ui-theme-icon {
-		color: var(--secondary-text);
-	}
 }
 
 body {

@@ -7,9 +7,9 @@ import { links, themes } from "./Layout";
 
 export const MDXLayout: ParentComponent<ThemeSelectorProps> = (props) => (
 	<div class="ui-background min-h-screen flex flex-col w-full">
-		<nav class="flex justify-between bg-white/70 top-0 w-full z-2">
+		<nav class="flex justify-between bg-white/70 top-0 w-full p-2 dark:bg-white/40 border-b-1 border-solid border-border">
 			<div>
-				<RoundDiver class="w-16 p-2" />
+				<RoundDiver class="w-12" />
 			</div>
 			<Show when={false}>
 				<ul class="container flex items-center">
@@ -30,15 +30,15 @@ export const MDXLayout: ParentComponent<ThemeSelectorProps> = (props) => (
 			</Show>
 			<div class="flex items-center ml-auto">
 				<DropdownMenu.Root>
-					<DropdownMenu.Trigger class="flex items-center ui-button-default">
+					<DropdownMenu.Trigger class="flex items-center cursor-pointer leading-5 w-fit p-2">
 						<div
 							class={
 								themes.find((theme) => theme.value == props.getThemeVariant)
-									?.icon
+									?.icon + " text-xl"
 							}
 						/>
 					</DropdownMenu.Trigger>
-					<DropdownMenu.Content class="rounded-lg shadow-lg p-2 flex flex-col gap-2 mt-1 outline-1 outline-solid bg-decorationbg">
+					<DropdownMenu.Content class="rounded-lg shadow-lg p-2 flex flex-col gap-2 mt-1 border-1 border-solid border-border bg-decorationbg">
 						<For each={themes}>
 							{({ value, text, icon }) => (
 								<DropdownMenu.Item
@@ -46,7 +46,7 @@ export const MDXLayout: ParentComponent<ThemeSelectorProps> = (props) => (
 									textValue={value}
 									onClick={() => props.setTheme(value)}
 								>
-									<div class={icon} />
+									<div class={icon + " "} />
 									<span class="pl-2">{text}</span>
 								</DropdownMenu.Item>
 							)}
@@ -56,11 +56,11 @@ export const MDXLayout: ParentComponent<ThemeSelectorProps> = (props) => (
 			</div>
 		</nav>
 		<Suspense>
-			<main class="grow w-full flex flex-col gap-2 max-w-3xl mx-auto ui-foreground px-6 pb-1 my-8 rounded-xl">
+			<main class="grow w-full flex flex-col gap-2 max-w-3xl mx-auto ui-foreground px-6 pb-1 my-8 rounded-xl border-1 border-solid border-border">
 				{props.children}
 			</main>
 		</Suspense>
-		<footer class="p-4 flex flex-col items-center justify-center bg-white/70">
+		<footer class="p-4 flex flex-col items-center justify-center bg-white/70 dark:bg-white/40 border-t-1 border-solid border-border">
 			<p class="font-bold">
 				Made by me. Built with{" "}
 				<a
