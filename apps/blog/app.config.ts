@@ -1,8 +1,4 @@
-import {
-	createWithSolidBase,
-	defineTheme,
-	withSolidBase,
-} from "@kobalte/solidbase/config";
+import { createWithSolidBase, defineTheme } from "@kobalte/solidbase/config";
 import { defineConfig } from "@solidjs/start/config";
 import UnoCSS from "unocss/vite";
 import { pluginLineNumbers } from "@expressive-code/plugin-line-numbers";
@@ -23,11 +19,7 @@ export default defineConfig(
 				esbuild: { options: { target: "es2022" } },
 			},
 			vite: {
-				plugins: [
-					UnoCSS({
-						configFile: "./uno.config.js",
-					}) as any,
-				],
+				plugins: [UnoCSS()],
 			},
 		},
 		{
@@ -47,7 +39,7 @@ export default defineConfig(
 				},
 				toc: {
 					minDepth: 2,
-					maxDepth: 4,
+					maxDepth: 6,
 				},
 				packageManagers: {
 					presets: {

@@ -1,4 +1,4 @@
-import { ParentProps } from "solid-js";
+import { JSX, ParentProps } from "solid-js";
 
 type ButtonProps = ParentProps & {
 	type?: "container";
@@ -38,6 +38,7 @@ type ThemeSelectorProps = {
 	getTheme: string;
 	setTheme: () => any;
 	getThemeVariant: string;
+	toc: JSX.Element;
 };
 
 export type {

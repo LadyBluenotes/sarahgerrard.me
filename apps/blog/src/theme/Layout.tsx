@@ -3,7 +3,6 @@ import { ErrorBoundary } from "solid-js";
 
 // import { NotFound } from "~/ui/not-found";
 import { MDXLayout } from "@repo/ui/components";
-import { Title } from "@solidjs/meta";
 import {
 	getTheme,
 	setTheme,
@@ -11,6 +10,7 @@ import {
 	useThemeListener,
 } from "@kobalte/solidbase/client";
 import { usePace } from "@kobalte/solidbase/default-theme/pace.js";
+import { TableOfContents } from "./ui/TOC";
 
 export default function (props: RouteSectionProps) {
 	useThemeListener();
@@ -22,6 +22,7 @@ export default function (props: RouteSectionProps) {
 				getTheme={getTheme()}
 				setTheme={setTheme}
 				getThemeVariant={getThemeVariant()}
+				toc={TableOfContents}
 			>
 				{props.children}
 			</MDXLayout>

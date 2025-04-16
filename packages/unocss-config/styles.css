@@ -109,6 +109,10 @@
 	.ui-foreground {
 		background-color: #ffffff2d;
 	}
+
+	.ui-toc li {
+		list-style: none;
+	}
 }
 
 nav {
@@ -249,18 +253,6 @@ main {
 			ul > li {
 				margin-left: 2rem;
 				list-style: square;
-				ul > li {
-					margin-left: 2rem;
-					list-style: disc;
-					ul > li {
-						margin-left: 2rem;
-						list-style: circle;
-						ul > li {
-							margin-left: 2rem;
-							list-style: square;
-						}
-					}
-				}
 			}
 		}
 	}

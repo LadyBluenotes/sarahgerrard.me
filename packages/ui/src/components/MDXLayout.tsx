@@ -55,11 +55,24 @@ export const MDXLayout: ParentComponent<ThemeSelectorProps> = (props) => (
 				</DropdownMenu.Root>
 			</div>
 		</nav>
-		<Suspense>
-			<main class="grow w-full flex flex-col gap-2 max-w-3xl mx-auto ui-foreground px-6 pb-1 my-8 rounded-xl border-1 border-solid border-border">
-				{props.children}
-			</main>
-		</Suspense>
+		<div class="flex my-8 gap-8">
+			<aside class="bg-red min-w-14rem">
+				<span>side nav</span>
+			</aside>
+			<Suspense>
+				<main class="flex flex-1 gap-8 relative mx-6">
+					<div class="flex mx-auto flex-col gap-2 max-w-4xl ui-foreground px-6 pb-1 rounded-xl border-1 border-solid border-border">
+						{props.children}
+					</div>
+					<aside
+						aria-label="table of contents"
+						class="flex flex-col ml-4 sticky overflow-y-auto overflow-x-clip scrollbar-thin w-12rem"
+					>
+						{props.toc}
+					</aside>
+				</main>
+			</Suspense>
+		</div>
 		<footer class="p-4 flex flex-col items-center justify-center bg-white/70 dark:bg-white/30 border-t-1 border-solid border-border">
 			<p class="font-bold">
 				Made by me. Built with{" "}
