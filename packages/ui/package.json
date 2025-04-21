@@ -6,7 +6,8 @@
 	"main": "index.ts",
 	"exports": {
 		"./components": "./src/components/index.ts",
-		"./utils": "./src/utils/index.ts"
+		"./types": "./src/utils/types.ts",
+		"./helpers": "./src/utils/helpers.ts"
 	},
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",

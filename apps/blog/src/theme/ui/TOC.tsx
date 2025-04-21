@@ -5,6 +5,7 @@ import {
 } from "@kobalte/solidbase/client";
 import { createEventListener } from "@solid-primitives/event-listener";
 import { isServer } from "solid-js/web";
+import { breakpoints } from "@repo/ui/helpers";
 
 export const TableOfContents = () => {
 	const data = useCurrentPageData();
@@ -47,7 +48,7 @@ export const TableOfContents = () => {
 		});
 
 	return (
-		<Show when={}>
+		<>
 			<span class="font-semibold text-sm">On this page</span>
 			<ol
 				role="list"
@@ -96,7 +97,7 @@ export const TableOfContents = () => {
 					)}
 				</Index>
 			</ol>
-		</Show>
+		</>
 	);
 };
 

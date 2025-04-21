@@ -4,6 +4,7 @@ import { DropdownMenu } from "@kobalte/core";
 import { RoundDiver } from "./icons";
 import { A } from "@solidjs/router";
 import { links, themes } from "./Layout";
+import { breakpoints } from "../utils/helpers";
 
 export const MDXLayout: ParentComponent<ThemeSelectorProps> = (props) => (
 	<div class="ui-background min-h-screen flex flex-col w-full">
@@ -55,21 +56,26 @@ export const MDXLayout: ParentComponent<ThemeSelectorProps> = (props) => (
 				</DropdownMenu.Root>
 			</div>
 		</nav>
-		<div class="flex my-8 gap-8">
+		<div class="flex my-6 gap-4">
 			<aside class="bg-red min-w-14rem">
 				<span>side nav</span>
 			</aside>
 			<Suspense>
-				<main class="flex flex-1 gap-8 relative mx-6">
-					<div class="flex mx-auto flex-col gap-2 max-w-4xl ui-foreground px-6 pb-1 rounded-xl border-1 border-solid border-border">
+				<main class="flex flex-1 gap-4 mx-4">
+					<div class="flex mx-auto flex-col gap-2 max-w-3xl lg:max-w-4xl ui-foreground px-6 pb-1 rounded-xl border-1 border-solid border-border">
 						{props.children}
 					</div>
-					<aside
-						aria-label="table of contents"
-						class="flex flex-col ml-4 sticky overflow-y-auto overflow-x-clip scrollbar-thin w-12rem"
-					>
-						{props.toc}
-					</aside>
+					<Show when={breakpoints.lg}>
+						<aside
+							aria-label="table of contents"
+							class="ml-4 sticky overflow-y-auto overflow-x-clip scrollbar-thin w-12rem right-0 top-0 flex-none"
+							style={{
+								"max-height": "calc(100dvh - var(--sb-header-height) - 4rem)",
+							}}
+						>
+							{props.toc}
+						</aside>
+					</Show>
 				</main>
 			</Suspense>
 		</div>

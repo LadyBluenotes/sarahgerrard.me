@@ -1,7 +1,6 @@
 import { A } from "@solidjs/router";
 import { type ParentProps, children, splitProps } from "solid-js";
 import { isServer } from "solid-js/web";
-import { DirectiveContainer as KDirectiveContainer } from "@kobalte/solidbase/client";
 
 export const strong = (props: ParentProps) => (
 	<b class="font-semibold">{props.children}</b>
