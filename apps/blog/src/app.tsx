@@ -2,7 +2,7 @@ import { Router } from "@solidjs/router";
 import { FileRoutes } from "@solidjs/start/router";
 import { SolidBaseRoot } from "@kobalte/solidbase/client";
 
-import "@repo/unocss-config/styles.css";
+import "./app.css";
 import "virtual:uno.css";
 
 export default function App() {

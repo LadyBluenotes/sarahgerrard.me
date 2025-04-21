@@ -1,3 +1,4 @@
 import * as Types from "./types";
+import * as Helpers from "./helpers";
 
-export { Types };
+export { Types, Helpers };

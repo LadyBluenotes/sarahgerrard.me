@@ -4,11 +4,12 @@ import {
 	presetIcons,
 	presetMini,
 	presetAttributify,
-	presetWind,
+	presetWind3,
 } from "unocss";
 
 export const config = defineConfig({
 	presets: [
+		presetWind3(),
 		presetMini({
 			dark: {
 				dark: '[data-theme*="dark"]',
@@ -22,7 +23,6 @@ export const config = defineConfig({
 				display: "inline-block",
 			},
 		}),
-		presetWind(),
 	] as Preset[],
 	theme: {
 		colors: {
@@ -42,7 +42,8 @@ export const config = defineConfig({
 		"ui-button-default":
 			"p-2 font-bold cursor-pointer leading-5 ui-button-focus w-fit",
 		"ui-button-focus":
-			"hover:(bg-black text-white) focus-visible:(ring-solid ring-2 ring-offset-2)",
+			"hover:(bg-black text-white) focus-visible:(ring-2 ring-offset-2)",
 		"ui-link": "underline decoration-2 hover:text-black/70",
+		"ui-toc-list": "flex flex-col gap-4",
 	},
 });

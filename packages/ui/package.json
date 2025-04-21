@@ -22,12 +22,13 @@
 		"@solidjs/meta": "^0.29.4",
 		"@solidjs/router": "^0.15.0",
 		"@unocss/reset": "^0.65.1",
-		"unocss": "^0.65.1",
+		"unocss": "^66.0.0",
 		"vite": "^6.1.2",
 		"vite-plugin-solid": "^2.11.6"
 	},
 	"dependencies": {
 		"@kobalte/core": "^0.13.9",
+		"@solid-primitives/media": "^2.3.0",
 		"eslint": "^9.21.0",
 		"path": "^0.12.7",
 		"solid-js": "^1.9.5",

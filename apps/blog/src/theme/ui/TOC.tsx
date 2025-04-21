@@ -47,35 +47,41 @@ export const TableOfContents = () => {
 		});
 
 	return (
-		<>
-			<span class="font-semibold text-sm ui-toc">On this page</span>
+		<Show when={}>
+			<span class="font-semibold text-sm">On this page</span>
 			<ol
 				role="list"
-				class="ui-toc"
+				class="ui-toc ui-toc-list pt-4"
 			>
 				<Index each={toc()}>
 					{(section) => (
-						<li class="">
+						<li class="ui-toc-list pl-2">
 							<a
 								href={section().href}
 								classList={{
-									"text-pink": currentSection() !== section().href,
-									"text-red": currentSection() === section().href,
+									"text-#c9cecf hover:text-#edb4ab":
+										currentSection() !== section().href,
+									"text-#ae303c": currentSection() === section().href,
 								}}
 								class="no-underline"
 							>
 								{section().title}
 							</a>
 							<Show when={section().children.length > 0}>
-								<ol role="list">
+								<ol
+									role="list"
+									class="ui-toc-list"
+								>
 									<Index each={section().children}>
 										{(subSection) => (
-											<li>
+											<li class="pl-4">
 												<a
 													href={subSection().href}
 													classList={{
-														"text-pink": currentSection() !== subSection().href,
-														"text-red": currentSection() === subSection().href,
+														"text-#c9cecf hover:text-#edb4ab":
+															currentSection() !== subSection().href,
+														"text-#ae303c":
+															currentSection() === subSection().href,
 													}}
 													class=""
 												>
@@ -90,7 +96,7 @@ export const TableOfContents = () => {
 					)}
 				</Index>
 			</ol>
-		</>
+		</Show>
 	);
 };
 

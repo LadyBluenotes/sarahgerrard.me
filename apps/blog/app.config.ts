@@ -19,7 +19,11 @@ export default defineConfig(
 				esbuild: { options: { target: "es2022" } },
 			},
 			vite: {
-				plugins: [UnoCSS()],
+				plugins: [
+					UnoCSS({
+						configFile: "./unocss.config.ts",
+					}),
+				],
 			},
 		},
 		{
@@ -39,7 +43,6 @@ export default defineConfig(
 				},
 				toc: {
 					minDepth: 2,
-					maxDepth: 6,
 				},
 				packageManagers: {
 					presets: {

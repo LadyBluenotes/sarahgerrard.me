@@ -1,13 +1,13 @@
 import { JSX, ParentProps } from "solid-js";
 
-type ButtonProps = ParentProps & {
+export type ButtonProps = ParentProps & {
 	type?: "container";
 	submitClick: () => void;
 	isDisabled?: boolean;
 	widthFull?: boolean;
 };
 
-type StyledContainerProps = {
+export type StyledContainerProps = {
 	fileTitle: string;
 	img: string;
 	projectName: string;
@@ -19,7 +19,7 @@ type StyledContainerProps = {
 	};
 };
 
-type SectionContainerProps = ParentProps & {
+export type SectionContainerProps = ParentProps & {
 	id?: string;
 	noWidth?: boolean;
 	class?: string;
@@ -27,24 +27,16 @@ type SectionContainerProps = ParentProps & {
 	title?: string;
 };
 
-type IconProps = {
+export type IconProps = {
 	class?: string;
 	size?: number;
 	color?: string;
 	alt?: string;
 };
 
-type ThemeSelectorProps = {
+export type ThemeSelectorProps = {
 	getTheme: string;
 	setTheme: () => any;
 	getThemeVariant: string;
 	toc: JSX.Element;
-};
-
-export type {
-	ButtonProps,
-	StyledContainerProps,
-	SectionContainerProps,
-	IconProps,
-	ThemeSelectorProps,
 };
