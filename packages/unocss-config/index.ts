@@ -1,6 +1,5 @@
 import {
 	defineConfig,
-	Preset,
 	presetIcons,
 	presetMini,
 	presetAttributify,
@@ -23,7 +22,7 @@ export const config = defineConfig({
 				display: "inline-block",
 			},
 		}),
-	] as Preset[],
+	],
 	theme: {
 		colors: {
 			decorationbg: "var(--decoration-bg)",

@@ -38,5 +38,5 @@ export type ThemeSelectorProps = {
 	getTheme: string;
 	setTheme: () => any;
 	getThemeVariant: string;
-	toc: JSX.Element;
+	tableOfContents: JSX.Element;
 };

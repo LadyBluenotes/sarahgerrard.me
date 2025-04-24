@@ -1,9 +1,16 @@
-import { createBreakpoints } from "@solid-primitives/media";
+import { createMediaQuery } from "@solid-primitives/media";
+import { createEffect, createRoot, createSignal, on, onMount } from "solid-js";
 
+const [_mobileLayout, setMobileLayout] = createSignal(false);
 
-export const breakpoints = createBreakpoints({
-    sm: "480px",
-    md: "768px",
-    lg: "1024px",
-    xl: "1280px",
-})
+onMount(() => {
+	const query = createMediaQuery("(max-width: 1100px)");
+
+	createRoot(() => {
+		createEffect(on(query, (q) => setMobileLayout(q), { defer: true }));
+	});
+
+	setTimeout(() => setMobileLayout(query()));
+});
+
+export const mobileLayout = _mobileLayout;

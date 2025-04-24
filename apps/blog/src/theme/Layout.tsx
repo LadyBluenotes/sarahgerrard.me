@@ -10,7 +10,7 @@ import {
 	useThemeListener,
 } from "@kobalte/solidbase/client";
 import { usePace } from "@kobalte/solidbase/default-theme/pace.js";
-import { TableOfContents } from "./ui/TOC";
+import { TableOfContents } from "./ui/TableOfContents";
 
 export default function (props: RouteSectionProps) {
 	useThemeListener();
@@ -22,7 +22,7 @@ export default function (props: RouteSectionProps) {
 				getTheme={getTheme()}
 				setTheme={setTheme}
 				getThemeVariant={getThemeVariant()}
-				toc={TableOfContents}
+				tableOfContents={TableOfContents}
 			>
 				{props.children}
 			</MDXLayout>
