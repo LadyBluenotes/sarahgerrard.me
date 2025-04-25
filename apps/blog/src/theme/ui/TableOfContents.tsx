@@ -69,11 +69,11 @@ export const TableOfContents = () => {
 	return (
 		<Show when={toc()}>
 			{(toc) => (
-				<nav class="ml-4 overflow-y-auto overflow-x-clip scrollbar-thin w-12rem flex flex-col shrink-0 sticky top-0 h-100vh pt-2">
+				<nav class="overflow-y-auto overflow-x-clip scrollbar-thin w-12rem flex flex-col shrink-0 sticky top-0 h-100vh pt-2">
 					<span class="font-semibold text-sm">On This Page</span>
 					<ol
 						role="list"
-						class="ui-toc ui-toc-list pt-2"
+						class="ui-toc pt-2"
 					>
 						<For each={toc()}>
 							{(toc) => (
@@ -118,7 +118,7 @@ function TableOfContentsItem(props: {
 	});
 
 	return (
-		<li class="ui-toc-list pl-2">
+		<li class="ml-0">
 			<a
 				ref={setRef}
 				onClick={handleClick}
@@ -132,7 +132,7 @@ function TableOfContentsItem(props: {
 				{props.data.title}
 			</a>
 			<Show when={props.data.children && props.data.children.length > 0}>
-				<ol class="ui-toc-list">
+				<ol>
 					<For each={props.data.children}>
 						{(nested) => (
 							<TableOfContentsItem
