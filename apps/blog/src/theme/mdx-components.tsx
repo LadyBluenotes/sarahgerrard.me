@@ -59,6 +59,18 @@ export const td = (props: ParentProps) => <td>{props.children}</td>;
 export const tr = (props: ParentProps) => <tr>{props.children}</tr>;
 export const hr = (props: ParentProps) => <hr {...props} />;
 
+export const img = (props: ComponentProps<"img">) => {
+	return (
+		<img
+			class="rounded-md mx-auto"
+			alt={props.alt}
+			src={props.src}
+			loading="lazy"
+			{...props}
+		/>
+	);
+};
+
 export const response = (props: ParentProps) => {
 	return <span>{props.children}</span>;
 };
