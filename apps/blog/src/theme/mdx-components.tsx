@@ -1,6 +1,5 @@
 import { A } from "@solidjs/router";
-import { type ParentProps, children, splitProps } from "solid-js";
-import { isServer } from "solid-js/web";
+import { type ParentProps, ComponentProps } from "solid-js";
 
 export const strong = (props: ParentProps) => (
 	<b class="font-semibold">{props.children}</b>
@@ -21,46 +20,18 @@ export const h5 = (props: ParentProps) => {
 	return <h5 {...props}>{props.children}</h5>;
 };
 export const h6 = (props: ParentProps) => <h6 {...props}>{props.children}</h6>;
-export const a = (props: ParentProps & { href: string }) => {
-	const [, rest] = splitProps(props, ["children"]);
-	const resolved = children(() => props.children);
-	const resolvedArray = resolved.toArray();
+export function a(props: ComponentProps<"a"> & { "data-auto-heading"?: "" }) {
+	const outbound = () => (props.href ?? "").includes("//");
 
-	// Check if the link is a code block
-	if (
-		// Server side
-		(isServer &&
-			resolvedArray[0] &&
-			typeof resolvedArray[0] === "object" &&
-			"t" in resolvedArray[0] &&
-			typeof resolvedArray[0].t === "string" &&
-			resolvedArray[0].t.substring(0, 5) === "<code") ||
-		// Client side
-		(!isServer &&
-			resolvedArray[0] instanceof Element &&
-			resolvedArray[0].nodeName === "CODE")
-	) {
-		// eslint-disable-next-line solid/components-return-once
-		return (
-			<A
-				class=""
-				{...rest}
-			>
-				{resolved()}
-			</A>
-		);
-	} else {
-		// eslint-disable-next-line solid/components-return-once
-		return (
-			<A
-				class=""
-				{...rest}
-			>
-				{resolved()}
-			</A>
-		);
-	}
-};
+	return (
+		<A
+			target={outbound() ? "_blank" : undefined}
+			rel={outbound() ? "noopener noreferrer" : undefined}
+			href={props.href ?? ""}
+			{...props}
+		/>
+	);
+}
 export const p = (props: ParentProps) => <p {...props}>{props.children}</p>;
 export const li = (props: ParentProps) => <li {...props}>{props.children}</li>;
 export const ul = (props: ParentProps) => <ul {...props}>{props.children}</ul>;

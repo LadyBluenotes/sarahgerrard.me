@@ -71,10 +71,7 @@ export const TableOfContents = () => {
 			{(toc) => (
 				<nav class="overflow-y-auto overflow-x-clip scrollbar-thin w-12rem flex flex-col shrink-0 sticky top-0 h-100vh pt-2">
 					<span class="font-semibold text-sm">On This Page</span>
-					<ol
-						role="list"
-						class="ui-toc pt-2"
-					>
+					<ol>
 						<For each={toc()}>
 							{(toc) => (
 								<TableOfContentsItem
