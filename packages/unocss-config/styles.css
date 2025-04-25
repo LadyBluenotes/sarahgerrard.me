@@ -65,16 +65,6 @@ h4,
 h5,
 h6 {
 	position: relative;
-	&:hover {
-		color: var(--secondary-text);
-		text-decoration: underline;
-	}
-
-	& p,
-	& ul,
-	& ol {
-		margin-top: 0;
-	}
 }
 
 h1 {
@@ -118,11 +108,15 @@ h6 {
 
 li {
 	margin-left: 1.5rem;
-	margin-top: 0.5em;
 
 	&::marker {
 		font-weight: 400;
 		color: var(--sb-decoration-color);
+	}
+
+	& > p {
+		margin: 0;
+		margin-bottom: 0.5em;
 	}
 }
 
@@ -145,8 +139,8 @@ nav > ol {
 	list-style-type: none;
 
 	& li {
-		margin-top: 0.75em;
 		list-style-type: none;
+		margin-top: 0.5em;
 	}
 }
 
@@ -167,19 +161,42 @@ code {
 	line-height: 1.5;
 }
 
+a {
+	text-decoration: underline;
+	bold: 700;
+	color: var(--link-text);
+	padding: 0.15rem 0.15rem;
+
+	&:hover,
+	&:focus {
+		color: var(--secondary-text);
+	}
+}
+
 p {
-	margin: 1.25em 0;
+	margin: 0.5em 0;
+}
 
-	a {
-		text-decoration: underline;
-		bold: 700;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	& > a {
 		color: var(--link-text);
-		padding: 0.15rem 0.15rem;
+		text-decoration: none;
+	}
 
-		&:hover,
-		&:focus {
-			color: var(--secondary-text);
-		}
+	& + p,
+	& + ul,
+	& + ol {
+		margin-top: 0;
+	}
+
+	&:hover {
+		color: var(--secondary-text);
+		text-decoration: underline;
 	}
 }
 
