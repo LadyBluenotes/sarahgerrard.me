@@ -1,5 +1,19 @@
+import { Tabs } from "@kobalte/core";
+import {
+	cookieStorage,
+	makePersisted,
+	messageSync,
+} from "@solid-primitives/storage";
 import { A } from "@solidjs/router";
-import { type ParentProps, ComponentProps } from "solid-js";
+import {
+	type Accessor,
+	type ComponentProps,
+	For,
+	type ParentProps,
+	Show,
+	children,
+	createSignal,
+} from "solid-js";
 
 export const strong = (props: ParentProps) => (
 	<b class="font-semibold">{props.children}</b>
@@ -74,3 +88,109 @@ export const img = (props: ComponentProps<"img">) => {
 export const response = (props: ParentProps) => {
 	return <span>{props.children}</span>;
 };
+
+export function DirectiveContainer(
+	props: {
+		type:
+			| "info"
+			| "note"
+			| "tip"
+			| "important"
+			| "warning"
+			| "danger"
+			| "caution"
+			| "details"
+			| "tab-group"
+			| "tab";
+		title?: string;
+		codeGroup?: string;
+		tabNames?: string;
+	} & ParentProps
+) {
+	const _children = children(() => props.children).toArray();
+
+	if (props.type === "tab") {
+		return _children;
+	}
+
+	if (props.type === "tab-group") {
+		const tabNames = props.tabNames?.split("\0");
+
+		const tabs = (value?: Accessor<string>, onChange?: (s: string) => void) => (
+			<Tabs.Root
+				value={value?.()}
+				onChange={onChange}
+				class="tabs-container"
+			>
+				<Tabs.List class="tabs-list">
+					{tabNames?.map((title) => {
+						return (
+							<Tabs.Trigger
+								class="tabs-trigger"
+								value={title}
+							>
+								{title}
+							</Tabs.Trigger>
+						);
+					})}
+				</Tabs.List>
+
+				<For each={tabNames}>
+					{(title, i) => (
+						<Tabs.Content
+							value={title}
+							forceMount={true}
+							class="tabs-content"
+						>
+							<div>{_children[i()]}</div>
+						</Tabs.Content>
+					)}
+				</For>
+			</Tabs.Root>
+		);
+
+		if (!props.title) return tabs();
+
+		const [openTab, setOpenTab] = makePersisted(createSignal(tabNames![0]!), {
+			name: `tab-group:${props.title}`,
+			sync: messageSync(new BroadcastChannel("tab-group")),
+			storage: cookieStorage.withOptions({
+				expires: new Date(+new Date() + 3e10),
+			}),
+		});
+
+		return tabs(openTab, setOpenTab);
+	}
+
+	if (props.type === "details") {
+		return (
+			<details
+				class="custom-container"
+				data-custom-container="details"
+			>
+				<summary>{props.title ?? props.type}</summary>
+				{_children}
+			</details>
+		);
+	}
+
+	return (
+		<div
+			class="custom-container"
+			data-custom-container={props.type}
+		>
+			<Show when={props.title !== " "}>
+				<span>{props.title ?? props.type}</span>
+			</Show>
+			{_children}
+		</div>
+	);
+}
+
+export function Steps(props: ParentProps) {
+	return <div class="steps">{props.children}</div>;
+}
+
+export function Step(props: ParentProps) {
+	return <div class="step">{props.children}</div>;
+}
