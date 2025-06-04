@@ -4,6 +4,7 @@ import { ButtonProps } from "@repo/utils/types";
 
 const Button = (props: ButtonProps) => {
 	const [local, others] = splitProps(props, [
+		"as",
 		"variant",
 		"size",
 		"fullWidth",
@@ -27,7 +28,7 @@ const Button = (props: ButtonProps) => {
 
 	return (
 		<KButton
-			as={"button"}
+			as={local.as || "button"}
 			class={classes}
 			{...others}
 		>

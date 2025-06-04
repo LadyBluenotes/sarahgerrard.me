@@ -115,5 +115,12 @@ export default defineConfig({
 		"button-medium": "text-[1rem] p-[var(--space-2) (var(--space-3))]",
 		"button-large": "text-[1.125rem] p-[var(--space-3) (var(--space-4))]",
 		"button-full-width": "w-full",
+
+		// Hero styles
+		hero: "min-h-10vh flex items-center mt-144px relative overflow-hidden ",
+		"hero-container": "container relative z-1",
+		"hero-content": "max-w-1000px mx-auto text-left",
+		"hero-subtitle": "text-text-secondary max-w-800px",
+		"hero-actions": "flex justify-center",
 	},
 });

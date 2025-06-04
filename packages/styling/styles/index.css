@@ -4,6 +4,8 @@
 @import "./themes/seaTones.css";
 
 @import "./components/button.css";
+@import "./components/hero.css";
+@import "./components/icons.css";
 
 @import "./variables.css";
 @import "./global.css";

@@ -1,0 +1,20 @@
+[
+	{
+		"id": "project-1",
+		"title": "Portfolio Website",
+		"description": "A modern, minimalist portfolio website built with SolidJS and TypeScript.",
+		"image": "https://images.pexels.com/photos/196645/pexels-photo-196645.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+		"technologies": ["SolidJS", "TypeScript", "CSS"],
+		"github": "https://github.com",
+		"liveDemo": "https://example.com"
+	},
+	{
+		"id": "project-2",
+		"title": "Task Management App",
+		"description": "A clean, intuitive task management application with drag-and-drop functionality.",
+		"image": "https://images.pexels.com/photos/5717479/pexels-photo-5717479.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+		"technologies": ["React", "Redux", "TypeScript"],
+		"github": "https://github.com",
+		"liveDemo": "https://example.com"
+	}
+]

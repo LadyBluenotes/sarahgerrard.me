@@ -4,8 +4,8 @@ import { Component, For } from "solid-js";
 import Button from "./Button";
 
 export const ThemePicker: Component = () => {
-	const { theme, themes, setTheme } = useTheme();
-	console.log(themes);
+	const { themes, setTheme } = useTheme();
+
 	return (
 		<DropdownMenu>
 			<DropdownMenu.Trigger
