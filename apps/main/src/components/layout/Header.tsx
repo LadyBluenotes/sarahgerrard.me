@@ -1,17 +1,21 @@
-import { Button } from "@kobalte/core";
-import { A, useLocation } from "@solidjs/router";
-import { Component, createSignal } from "solid-js";
+import { A } from "@solidjs/router";
+import { Component, createSignal, Index, Show } from "solid-js";
 import Icon from "../common/Icon";
+import { mobileLayout } from "@repo/utils/helpers";
+
+import { ThemePicker } from "../common/ThemePicker";
+import Button from "../common/Button";
+
+const navLinks = [
+	{ name: "Home", href: "/" },
+	{ name: "OSS", href: "/oss" },
+	{ name: "Projects", href: "/projects" },
+	{ name: "Resume", href: "/resume" },
+	{ name: "Contact", href: "/contact" },
+];
 
 export const Header: Component = () => {
-	const location = useLocation();
-	const active = (path: string) =>
-		path == location.pathname
-			? "border-sky-600"
-			: "border-transparent hover:border-sky-600";
-
 	const [isMenuOpen, setIsMenuOpen] = createSignal(false);
-	// const { theme, setTheme, nextTheme } = useTheme();
 
 	const toggleMenu = () => setIsMenuOpen(!isMenuOpen());
 	const closeMenu = () => setIsMenuOpen(false);
@@ -27,14 +31,42 @@ export const Header: Component = () => {
 						<span class="header-logo logo-text">Test</span>
 					</A>
 				</div>
+				<Show when={mobileLayout()}>
+					<Button
+						class="menu-toggle"
+						onClick={toggleMenu}
+						aria-label="Toggle menu"
+					>
+						<Icon name={isMenuOpen() ? "close" : "menu"} />
+					</Button>
+				</Show>
+				<Show when={!mobileLayout()}>
+					<nav
+						class="header-nav"
+						classList={{
+							"is-open": isMenuOpen(),
+						}}
+					>
+						<ul class="nav-list">
+							<Index each={navLinks}>
+								{(link, i) => (
+									<li class="nav-item">
+										<A
+											href={link().href}
+											onClick={closeMenu}
+											{...{ end: i === 0 ? true : undefined }}
+											activeClass="active"
+										>
+											{link().name}
+										</A>
+									</li>
+								)}
+							</Index>
+						</ul>
+					</nav>
 
-				{/* <Button
-					class="menu-toggle"
-					onClick={toggleMenu}
-					aria-label="Toggle menu"
-				> */}
-				<Icon name={isMenuOpen() ? "close" : "menu"} />
-				{/* </Button> */}
+					<ThemePicker />
+				</Show>
 			</div>
 		</header>
 	);

@@ -1,0 +1,29 @@
+.button {
+	transition: all var(--transition-fast);
+
+	&:after {
+		content: "";
+		position: absolute;
+		inset: 0;
+		background-color: transparent;
+		transition: background-color var(--transition-fast);
+		pointer-events: none;
+	}
+
+	&:hover::after {
+		background-color: rgba(0, 0, 0, 0.05);
+	}
+
+	&:active::after {
+		background-color: rgba(0, 0, 0, 0.1);
+	}
+
+	&:disabled {
+		opacity: 0.6;
+		cursor: not-allowed;
+	}
+
+	&:disabled::after {
+		display: none;
+	}
+}

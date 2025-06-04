@@ -5,8 +5,9 @@
 	"type": "module",
 	"main": "index.ts",
 	"exports": {
-		"./types": "./src/utils/types.ts",
-		"./helpers": "./src/utils/helpers.ts"
+		"./types": "./src/types.ts",
+		"./helpers": "./src/helpers.ts",
+		"./useTheme": "./src/useTheme.tsx"
 	},
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",

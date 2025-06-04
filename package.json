@@ -18,10 +18,10 @@
 	},
 	"devDependencies": {
 		"prettier": "^3.5.3",
-		"typescript": "5.8.2",
-		"vite": "^6.1.2"
+		"typescript": "5.8.3",
+		"vite": "^6.3.5"
 	},
-	"packageManager": "pnpm@9.15.9",
+	"packageManager": "pnpm@10.11.1",
 	"engines": {
 		"node": ">=18"
 	}

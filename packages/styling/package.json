@@ -6,8 +6,7 @@
 	"type": "module",
 	"exports": {
 		".": "./index.ts",
-		"./base": "./styles/base.css",
-		"./global": "./styles/global.css"
+		"./stylesheets": "./styles/index.css"
 	},
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1"

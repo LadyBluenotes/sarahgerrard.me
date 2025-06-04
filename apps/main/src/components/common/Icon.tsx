@@ -1,5 +1,5 @@
 import { splitProps } from "solid-js";
-import { Dynamic } from "solid-js/web";
+import { Icon as IconifyIcon } from "@iconify-icon/solid";
 
 const IconName = {
 	home: "ri:home-2-line",
@@ -17,7 +17,7 @@ const IconName = {
 };
 
 export interface IconProps {
-	name: any;
+	name: keyof typeof IconName;
 	size?: "small" | "medium" | "large";
 	color?: string;
 	class?: string;
@@ -27,16 +27,16 @@ const Icon = (props: IconProps) => {
 	const [local, others] = splitProps(props, ["name", "size", "color", "class"]);
 
 	const size = local.size || "medium";
-
 	const classes = ["icon", `icon-${size}`, local.class || ""]
 		.filter(Boolean)
 		.join(" ");
 
 	return (
-		<Dynamic
-			component={IconName[local.name] || "span"}
-			{...others}
+		<IconifyIcon
+			icon={IconName[local.name]}
 			class={classes}
+			style={{ color: local.color || "currentColor" }}
+			{...others}
 		/>
 	);
 };

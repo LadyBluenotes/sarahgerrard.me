@@ -1,0 +1,39 @@
+.theme-black-white {
+  /* Background and surface colors */
+  --color-background: #0a0a0a;
+  --color-surface: #141414;
+  --color-surface-elevated: #1a1a1a;
+  
+  /* Text colors */
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #a3a3a3;
+  --color-text-tertiary: #737373;
+  --color-text-on-primary: #000000;
+  
+  /* Border and divider colors */
+  --color-border: #262626;
+  --color-divider: #1f1f1f;
+  
+  /* Brand colors */
+  --color-primary: #ffffff;
+  --color-primary-light: #fafafa;
+  --color-primary-dark: #e5e5e5;
+  
+  --color-secondary: #d4d4d4;
+  --color-secondary-light: #e5e5e5;
+  --color-secondary-dark: #a3a3a3;
+  
+  --color-accent: #ffffff;
+  --color-accent-light: #fafafa;
+  --color-accent-dark: #e5e5e5;
+  
+  /* Status colors */
+  --color-success: #22c55e;
+  --color-warning: #eab308;
+  --color-error: #ef4444;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(255, 255, 255, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(255, 255, 255, 0.1), 0 2px 4px -1px rgba(255, 255, 255, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(255, 255, 255, 0.1), 0 4px 6px -2px rgba(255, 255, 255, 0.05);
+}

@@ -3,6 +3,10 @@ import UnoCSS from "unocss/vite";
 
 export default defineConfig({
 	vite: {
-		plugins: [UnoCSS()],
+		plugins: [
+			UnoCSS({
+				configFile: "./uno.config.ts",
+			}),
+		],
 	},
 });

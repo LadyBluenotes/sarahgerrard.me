@@ -1,5 +1,4 @@
-import BaseStyles from ".styles/base.css";
-import GlobalSytles from ".styles/global.css";
+import StyleSheets from "./index.css";
 import UnoConfig from "./styles/uno";
 
-export { BaseStyles, GlobalSytles, UnoConfig };
+export { StyleSheets, UnoConfig };

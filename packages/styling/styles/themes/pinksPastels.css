@@ -1,0 +1,39 @@
+.theme-pinks-pastels {
+  /* Background and surface colors */
+  --color-background: #fdf2f8;
+  --color-surface: #fce7f3;
+  --color-surface-elevated: #ffffff;
+  
+  /* Text colors */
+  --color-text-primary: #831843;
+  --color-text-secondary: #9d174d;
+  --color-text-tertiary: #be185d;
+  --color-text-on-primary: #ffffff;
+  
+  /* Border and divider colors */
+  --color-border: #fbcfe8;
+  --color-divider: #fce7f3;
+  
+  /* Brand colors */
+  --color-primary: #db2777;
+  --color-primary-light: #ec4899;
+  --color-primary-dark: #be185d;
+  
+  --color-secondary: #a78bfa;
+  --color-secondary-light: #c4b5fd;
+  --color-secondary-dark: #8b5cf6;
+  
+  --color-accent: #f472b6;
+  --color-accent-light: #f9a8d4;
+  --color-accent-dark: #ec4899;
+  
+  /* Status colors */
+  --color-success: #34d399;
+  --color-warning: #fbbf24;
+  --color-error: #f87171;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(219, 39, 119, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(219, 39, 119, 0.1), 0 2px 4px -1px rgba(219, 39, 119, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(219, 39, 119, 0.1), 0 4px 6px -2px rgba(219, 39, 119, 0.05);
+}
