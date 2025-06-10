@@ -66,17 +66,7 @@
 	}
 }
 
-@media (max-width: 991px) {
-	.hero {
-		min-height: 80vh;
-	}
-}
-
 @media (max-width: 767px) {
-	.hero {
-		min-height: 70vh;
-	}
-
 	.hero-content {
 		text-align: left;
 	}

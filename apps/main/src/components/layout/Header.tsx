@@ -34,6 +34,8 @@ export const Header: Component = () => {
 				<Show when={mobileLayout()}>
 					<Button
 						class="menu-toggle"
+						variant="text"
+						size="icon"
 						onClick={toggleMenu}
 						aria-label="Toggle menu"
 					>

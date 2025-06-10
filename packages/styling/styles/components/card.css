@@ -34,7 +34,6 @@
 	padding: var(--space-3);
 }
 
-/* Hover effect - subtle scale */
 .sectioncard:hover {
 	transform: translateY(-2px);
 }
@@ -64,7 +63,7 @@
 	position: relative;
 	width: 100%;
 	height: 0;
-	padding-bottom: 56.25%; /* 16:9 aspect ratio */
+	padding-bottom: 56.25%;
 	overflow: hidden;
 	border-radius: var(--radius-md) var(--radius-md) 0 0;
 }

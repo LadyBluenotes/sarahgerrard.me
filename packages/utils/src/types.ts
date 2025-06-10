@@ -61,3 +61,15 @@ export interface IconProps {
 	color?: string;
 	class?: string;
 }
+
+export interface OSSContributionData {
+	id: string;
+	repository: string;
+	description: string;
+	contributionType: "PR" | "Issue" | "Maintainer" | "Other";
+	link: string;
+}
+
+export interface OSSContributionCardProps {
+	contribution: OSSContributionData;
+}
