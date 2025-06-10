@@ -30,3 +30,34 @@ export interface HeroProps extends ParentProps {
 	ctaText?: string;
 	ctaLink?: string;
 }
+
+export interface SectionCardProps extends ParentProps {
+	title?: string;
+	elevation?: "flat" | "low" | "medium" | "high";
+	class?: string;
+}
+
+export interface ProjectData {
+	id: string;
+	title: string;
+	description?: string;
+	image?: string;
+	technologies: string[];
+	github?: string;
+	liveDemo?: string;
+}
+
+export interface CardProps extends SectionCardProps {
+	project?: ProjectData;
+}
+
+export interface IconNameProps {
+	[key: string]: string;
+}
+
+export interface IconProps {
+	name: keyof IconNameProps | string;
+	size?: "small" | "medium" | "large";
+	color?: string;
+	class?: string;
+}

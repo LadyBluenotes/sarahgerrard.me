@@ -5,7 +5,7 @@ import { HeroProps } from "@repo/utils/types";
 export const Hero: ParentComponent<HeroProps> = (props) => {
 	return (
 		<section class="hero">
-			<div class="hero-container">
+			<div class="container hero-container">
 				<div class="hero-content">
 					<Show when={props.title}>
 						<h1 class="hero-title">{props.title}</h1>
@@ -13,6 +13,7 @@ export const Hero: ParentComponent<HeroProps> = (props) => {
 					<Show when={props.subtitle}>
 						<p class="hero-subtitle">{props.subtitle}</p>
 					</Show>
+					{props.children}
 					<Show when={props.ctaText && props.ctaLink}>
 						<div class="hero-cta">
 							<Button

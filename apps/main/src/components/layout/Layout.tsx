@@ -3,9 +3,9 @@ import { Header } from "./Header";
 
 export const Layout: ParentComponent = (props: ParentProps) => {
 	return (
-		<div>
+		<div class="app">
 			<Header />
-			<main>{props.children}</main>
+			<main class="main">{props.children}</main>
 		</div>
 	);
 };

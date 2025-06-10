@@ -6,7 +6,11 @@
 @import "./components/button.css";
 @import "./components/hero.css";
 @import "./components/icons.css";
+@import "./components/card.css";
+@import "./components/heading.css";
+@import "./components/letterglitch.css";
+
+@import "./pages/home.css";
 
 @import "./variables.css";
 @import "./global.css";
-@import "./layout.css";

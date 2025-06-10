@@ -1,7 +1,8 @@
 import { splitProps } from "solid-js";
 import { Icon as IconifyIcon } from "@iconify-icon/solid";
+import { IconNameProps, IconProps } from "@repo/utils/types";
 
-const IconName = {
+const IconName: IconNameProps = {
 	home: "ri:home-2-line",
 	github: "ri:github-line",
 	linkedin: "ri:linkedin-fill",
@@ -16,13 +17,6 @@ const IconName = {
 	close: "ri:close-circle-line",
 };
 
-export interface IconProps {
-	name: keyof typeof IconName;
-	size?: "small" | "medium" | "large";
-	color?: string;
-	class?: string;
-}
-
 const Icon = (props: IconProps) => {
 	const [local, others] = splitProps(props, ["name", "size", "color", "class"]);
 
@@ -33,7 +27,7 @@ const Icon = (props: IconProps) => {
 
 	return (
 		<IconifyIcon
-			icon={IconName[local.name]}
+			icon={IconName[local.name] || local.name}
 			class={classes}
 			style={{ color: local.color || "currentColor" }}
 			{...others}
