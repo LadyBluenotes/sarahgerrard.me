@@ -133,7 +133,6 @@ button {
 	color: var(--color-text-on-primary);
 }
 
-/* Responsive adjustments */
 @media (max-width: 991px) {
 	.section {
 		padding: var(--space-8) 0;
@@ -143,5 +142,40 @@ button {
 @media (max-width: 767px) {
 	.section {
 		padding: var(--space-6) 0;
+	}
+}
+
+.code-area {
+	font-family: var(--font-family-mono);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 1.25rem;
+
+	.section-codeblock {
+		margin: 5px 25px 20px 25px;
+		display: flex;
+		justify-content: center;
+	}
+
+	.content-codeblock {
+		width: 100%;
+		max-width: 1600px;
+
+		pre {
+			border-radius: 4px;
+			background-color: #282c34;
+		}
+	}
+
+	.button-404 {
+		font-family: monospace;
+
+		&:hover {
+			background-color: transparent;
+			text-decoration: underline;
+			color: var(--color-primary);
+		}
 	}
 }

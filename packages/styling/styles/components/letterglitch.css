@@ -486,23 +486,3 @@
 
 	background-size: cover;
 }
-
-.base .environment {
-	background: url(https://images.unsplash.com/photo-1602136773736-34d445b989cb?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80)
-		center no-repeat;
-}
-
-.theme-black-white .environment {
-	background: url(https://images.unsplash.com/photo-1748989431676-331a3926ef85?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)
-		center no-repeat;
-}
-
-.theme-pinks-pastels .environment {
-	background: url(https://images.unsplash.com/photo-1651185710944-2b976ddc971b?q=80&w=1365&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)
-		center no-repeat;
-}
-
-.theme-sea-tones .environment {
-	background: url(https://images.unsplash.com/photo-1505118380757-91f5f5632de0?q=80&w=1252&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)
-		center no-repeat;
-}
