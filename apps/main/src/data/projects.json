@@ -1,4 +1,22 @@
 {
+	"tags": {
+		"frontend": [
+			"SolidJS",
+			"React",
+			"CSS",
+			"HTML",
+			"UnoCSS",
+			"TailwindCSS",
+			"SolidStart",
+			"Next.js"
+		],
+		"backend": ["Node.js", "Express", "GraphQL", "REST API"],
+		"database": ["MongoDB", "PostgreSQL", "MySQL", "SQLite"],
+		"tools": ["Git", "GitHub", "VSCode", "Figma", "Postman"],
+		"languages": ["JavaScript", "TypeScript", "HTML", "CSS", "Markdown"],
+		"frameworks": ["SolidJS", "React", "Next.js", "SolidStart"],
+		"libraries": ["Chart.js", "D3.js"]
+	},
 	"projects": [
 		{
 			"id": "project-1",

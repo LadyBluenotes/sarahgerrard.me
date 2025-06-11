@@ -17,7 +17,7 @@ export interface ThemeContextType {
 
 export interface ButtonProps
 	extends JSX.ButtonHTMLAttributes<HTMLButtonElement> {
-	as: "button" | "a" | string | typeof A;
+	as?: "button" | "a" | string | typeof A;
 	variant?: "primary" | "secondary" | "outline" | "text";
 	size?: "small" | "medium" | "large";
 	fullWidth?: boolean;
@@ -72,4 +72,18 @@ export interface OSSContributionData {
 
 export interface OSSContributionCardProps {
 	contribution: OSSContributionData;
+}
+
+type FilterType = "all" | "frontend" | "fullstack" | "backend";
+
+export interface Filter {
+	id: FilterType;
+	name: string;
+}
+
+export interface BadgeProps extends ParentProps {
+	textValue?: string;
+	"aria-label"?: string;
+	children?: JSX.Element | string;
+	class?: string;
 }

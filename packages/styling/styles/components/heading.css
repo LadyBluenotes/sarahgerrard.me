@@ -113,7 +113,6 @@
 	align-items: center;
 	justify-content: center;
 	padding: var(--space-1);
-	border-radius: 50%;
 }
 
 .theme-toggle:hover {
