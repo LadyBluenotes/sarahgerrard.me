@@ -29,12 +29,6 @@
 	gap: var(--space-4);
 }
 
-.section-title {
-	margin-bottom: var(--space-6);
-	position: relative;
-	display: inline-block;
-}
-
 .oss-type {
 	font-size: 0.75rem;
 	font-weight: var(--font-weight-medium);
@@ -48,16 +42,6 @@
 	display: flex;
 	align-items: center;
 	gap: var(--space-1);
-}
-
-.section-title::after {
-	content: "";
-	position: absolute;
-	bottom: -8px;
-	left: 0;
-	width: 100%;
-	height: 3px;
-	background: linear-gradient(to right, var(--color-primary), transparent);
 }
 
 .oss-philosophy-content {
