@@ -87,3 +87,20 @@ export interface BadgeProps extends ParentProps {
 	children?: JSX.Element | string;
 	class?: string;
 }
+
+export interface ResumeItemData {
+	id: string;
+	title: string;
+	organization: string;
+	location?: string;
+	startDate: string;
+	endDate?: string;
+	description: string | string[];
+	skills?: string[];
+}
+
+export interface ResumeSectionProps {
+	title: string;
+	items: ResumeItemData[];
+	children?: JSX.Element;
+}

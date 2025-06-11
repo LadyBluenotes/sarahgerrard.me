@@ -1,7 +1,9 @@
 import { Component, Show, splitProps } from "solid-js";
 import { SectionCardProps } from "@repo/utils/types";
+import { useLocation } from "@solidjs/router";
 
 export const SectionCard: Component<SectionCardProps> = (props) => {
+	const location = useLocation();
 	const [local, others] = splitProps(props, [
 		"title",
 		"elevation",
@@ -25,7 +27,17 @@ export const SectionCard: Component<SectionCardProps> = (props) => {
 			{...others}
 		>
 			<Show when={local.title}>
-				<h3 class="sectioncard-title">{local.title}</h3>
+				<h3
+					class="sectioncard-title"
+					style={{
+						"text-decoration":
+							location.pathname === "/resume" ? "underline" : "none",
+						"text-underline-offset":
+							location.pathname === "/resume" ? "0.3rem" : "0",
+					}}
+				>
+					{local.title}
+				</h3>
 			</Show>
 			<div class="sectioncard-content">{local.children}</div>
 		</div>

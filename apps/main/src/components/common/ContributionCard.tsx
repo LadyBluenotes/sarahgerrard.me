@@ -1,6 +1,7 @@
 import { OSSContributionCardProps } from "@repo/utils/types";
 import { Card } from "./Card";
 import Icon from "./Icon";
+import { Badge } from "./Badge";
 
 export const ContributionCard = (props: OSSContributionCardProps) => {
 	return (
@@ -11,11 +12,10 @@ export const ContributionCard = (props: OSSContributionCardProps) => {
 						<Icon name="github" />
 						{props.contribution.repository}
 					</h3>
-					<span
-						class={`oss-type oss-type-${props.contribution.contributionType.toLowerCase()}`}
-					>
-						{props.contribution.contributionType}
-					</span>
+					<Badge
+						class="oss-badge"
+						textValue={props.contribution.contributionType}
+					/>
 				</div>
 
 				<p class="oss-description">{props.contribution.description}</p>

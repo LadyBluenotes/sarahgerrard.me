@@ -12,10 +12,52 @@
 		],
 		"backend": ["Node.js", "Express", "GraphQL", "REST API"],
 		"database": ["MongoDB", "PostgreSQL", "MySQL", "SQLite"],
-		"tools": ["Git", "GitHub", "VSCode", "Figma", "Postman"],
-		"languages": ["JavaScript", "TypeScript", "HTML", "CSS", "Markdown"],
-		"frameworks": ["SolidJS", "React", "Next.js", "SolidStart"],
-		"libraries": ["Chart.js", "D3.js"]
+		"tools": [
+			"Git",
+			"GitHub",
+			"VSCode",
+			"Figma",
+			"Postman",
+			"Docker",
+			"AWS",
+			"Netlify",
+			"Webpack",
+			"CI/CD"
+		],
+		"languages": [
+			"JavaScript",
+			"TypeScript",
+			"HTML",
+			"CSS",
+			"SCSS",
+			"Markdown",
+			"Python"
+		],
+		"frameworks": [
+			"SolidJS",
+			"React",
+			"Next.js",
+			"SolidStart",
+			"Astro",
+			"Vue.js"
+		],
+		"libraries": [
+			"Chart.js",
+			"D3.js",
+			"Three.js",
+			"Jest",
+			"Cypress",
+			"Playwright"
+		],
+		"methodologies": [
+			"Agile",
+			"Scrum",
+			"SEO",
+			"Test-Driven Development (TDD)",
+			"Performance Optimization",
+			"Accessibility (A11Y)",
+			"Responsive Design"
+		]
 	},
 	"projects": [
 		{
@@ -35,15 +77,6 @@
 			"technologies": ["React", "Redux", "TypeScript"],
 			"github": "https://github.com",
 			"liveDemo": "https://example.com"
-		}
-	],
-	"oss": [
-		{
-			"id": "solid-oss",
-			"repository": "solidjs/solid-docs",
-			"description": "Led the overhaul of documentation, conducting a comprehensive audit to identify gaps and areas of improvement, and restructuring content for better clarity, accuracy, and user experience.",
-			"contributionType": "Maintainer",
-			"link": "https://github.com/solidjs/solid-docs"
 		}
 	]
 }

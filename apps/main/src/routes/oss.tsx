@@ -1,7 +1,7 @@
 import { For } from "solid-js";
 import { ContributionCard } from "~/components/common/ContributionCard";
 import { Hero } from "~/components/layout/Hero";
-import Projects from "~/data/projects";
+import { Resume } from "~/data";
 
 export default function OSS() {
 	return (
@@ -23,7 +23,7 @@ export default function OSS() {
 					</div>
 
 					<div class="oss-contributions">
-						<For each={Projects.oss}>
+						<For each={Resume.oss}>
 							{(contribution) => (
 								<ContributionCard contribution={contribution} />
 							)}

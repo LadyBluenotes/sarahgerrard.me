@@ -2,6 +2,19 @@
 	margin-top: 0;
 }
 
+.oss-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: var(--space-3);
+}
+
+.oss-card-inner {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
 .oss-intro {
 	max-width: 800px;
 	margin: 0 auto var(--space-6);
@@ -20,6 +33,21 @@
 	margin-bottom: var(--space-6);
 	position: relative;
 	display: inline-block;
+}
+
+.oss-type {
+	font-size: 0.75rem;
+	font-weight: var(--font-weight-medium);
+	padding: var(--space-1) var(--space-2);
+	border-radius: var(--radius-sm);
+}
+
+.oss-repository {
+	margin: 0;
+	font-size: 1.25rem;
+	display: flex;
+	align-items: center;
+	gap: var(--space-1);
 }
 
 .section-title::after {
@@ -60,6 +88,61 @@
 
 .oss-philosophy-item p {
 	color: var(--color-text-secondary);
+}
+
+.oss-type-pr {
+	background-color: rgba(var(--color-primary-rgb), 0.1);
+	color: var(--color-primary);
+}
+
+.oss-type-issue {
+	background-color: rgba(var(--color-secondary-rgb), 0.1);
+	color: var(--color-secondary);
+}
+
+.oss-type-maintainer {
+	background-color: rgba(var(--color-accent-rgb), 0.1);
+	color: var(--color-accent);
+}
+
+.oss-type-other {
+	background-color: rgba(var(--color-text-tertiary-rgb), 0.1);
+	color: var(--color-text-tertiary);
+}
+
+.oss-description {
+	margin-bottom: var(--space-3);
+	color: var(--color-text-secondary);
+	flex-grow: 1;
+}
+
+.oss-links {
+	margin-top: auto;
+}
+
+.oss-link {
+	display: inline-flex;
+	align-items: center;
+	gap: var(--space-1);
+	font-size: 0.875rem;
+	color: var(--color-primary);
+	font-weight: var(--font-weight-medium);
+	transition:
+		color var(--transition-fast),
+		transform var(--transition-fast);
+}
+
+.oss-link:hover {
+	color: var(--color-primary-light);
+	transform: translateY(-2px);
+}
+
+.oss-description {
+	margin-bottom: var(--space-2);
+	margin-left: var(--space-1);
+	color: var(--color-text-secondary);
+	flex-grow: 1;
+	font-size: var(--font-size-base);
 }
 
 @media (min-width: 991px) {
