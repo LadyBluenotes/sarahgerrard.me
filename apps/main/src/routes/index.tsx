@@ -7,17 +7,17 @@ import { About } from "~/data";
 
 const HeroSection = () => (
 	<Hero
-		title="Hello, I'm a Creative Developer"
-		subtitle="I build beautiful, accessible, and performant web applications with modern technologies."
+		title="Hey, I'm Sarah Gerrard"
+		subtitle="I'm a software developer with a passion for open source and web accessibility."
 	>
 		<div class="hero-actions">
 			<Button
 				as={A}
-				href="/projects"
+				href="/oss"
 				variant="primary"
 				size="large"
 			>
-				View My Work
+				See My Contributions
 			</Button>
 			<Button
 				as={A}
@@ -25,7 +25,7 @@ const HeroSection = () => (
 				variant="outline"
 				size="large"
 			>
-				Get In Touch
+				Let's Connect
 			</Button>
 		</div>
 	</Hero>
@@ -179,7 +179,7 @@ export default function Home() {
 			<HeroSection />
 			<AboutSection />
 			<SkillsSection />
-			<ProjectsSection />
+			{/* <ProjectsSection /> */}
 			<ContactCTASection />
 		</div>
 	);

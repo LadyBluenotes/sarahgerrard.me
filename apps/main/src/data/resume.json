@@ -1,6 +1,23 @@
 {
 	"experience": [
 		{
+			"id": "solid-work",
+			"title": "OSS Documentation Lead",
+			"organization": "SolidJS",
+			"location": "Remote",
+			"startDate": "April 2024",
+			"endDate": "Present",
+			"description": {
+				"list": [
+					"Led the overhaul of documentation, conducting a comprehensive audit to identify gaps and areas of improvement, and restructuring content for better clarity, accuracy, and user experience.",
+					"Created and maintained detailed user guides, manuals, and tutorials that improved onboarding processes and product adoption, reducing support inquiries.", "Wrote custom GitHub Actions workflows to optimize the build and deployment processes, improving CI/CD efficiency and reducing manual intervention."
+				]
+			},
+			"skills": [
+				"TypeScript", "CSS", "Solid.js", "TailwindCSS", "MDX", "Node.js", "JSON", "WAI-ARIA", "GitHub Actions", "Netlify", "Vite"
+			]
+		},
+		{
 			"id": "vpl",
 			"title": "Intermediate Software Developer",
 			"organization": "Vox Pop Labs",
@@ -16,7 +33,7 @@
 					"Led accessibility efforts to implement WCAG 2.1 and WAI-ARIA standards, ensuring keyboard-navigable components and conducting audits with tools like Axe, Lighthouse, and manual screen reader testing resulting in improved accessibility scores."
 				]
 			},
-			"skills": ["React", "TypeScript", "GraphQL", "Jest"]
+			"skills": ["TypeScript", "JavaScript", "HTML", "CSS", "SASS", "Solid.js", "UnoCSS", "Node.js", "Storybook", "MDX", "D3.js", "Three.js", "REST", "WCAG", "WAI-ARIA", "Axe", "Lighthouse", "BrowserStack", "Screen Reader Testing", "Cross-Browser Testing", "Vite", "Figma"]
 		},
 		{
 			"id": "pilot",
@@ -35,13 +52,7 @@
 				]
 			},
 			"skills": [
-				"SolidJS",
-				"JavaScript",
-				"API Testing",
-				"WCAG",
-				"Data Caching",
-				"TypeScript",
-				"TailwindCSS"
+				"JavaScript", "TypeScript", "Cross-Browser Testing", "Solid.js", "TailwindCSS", "Node.js", "API Testing", "Figma"
 			]
 		},
 		{

@@ -115,6 +115,27 @@
 	padding: var(--space-1);
 }
 
+.theme-content {
+	background-color: var(--color-background);
+	outline: 1px solid var(--color-divider);
+	border-radius: var(--radius-md);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	max-height: 200px;
+	overflow: hidden;
+}
+
+.theme-option {
+	display: flex;
+	padding: var(--space-1) var(--space-2);
+	
+	&:hover {
+		background-color: var(--color-surface);
+		cursor: pointer;
+	}
+}
+
 .theme-toggle:hover {
 	color: var(--color-text-primary);
 	background-color: var(--color-surface);

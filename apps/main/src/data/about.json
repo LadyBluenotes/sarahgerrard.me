@@ -2,13 +2,13 @@
 	"expertise": {
 		"languages": {
 			"title": "Languages",
-			"items": ["TypeScript", "JavaScript (ES6+)", "HTML", "CSS"]
+			"items": ["TypeScript", "JavaScript", "HTML", "CSS"]
 		},
 		"frontEnd": {
 			"title": "Front-End Development",
 			"subCategories": {
 				"Frameworks": ["React", "Next.js", "Solid.js", "SolidStart", "Astro"],
-				"Styling": ["SASS", "TailwindCSS"],
+				"Styling": ["SASS", "TailwindCSS", "UnoCSS"],
 				"Data Visualization": ["D3.js", "Three.js"],
 				"UI & Content": ["Storybook", "MDX"]
 			}
@@ -24,7 +24,7 @@
 		"testingAndAccessibility": {
 			"title": "Testing & Accessibility",
 			"subCategories": {
-				"Standards & Auditing": ["WCAG 2", "WAVE", "Lighthouse"],
+				"Standards & Auditing": ["WCAG", "WAI-ARIA", "WAVE", "Lighthouse"],
 				"Screen Readers": ["NVDA", "JAWS", "VoiceOver"],
 				"Cross-Browser Testing": ["BrowserStack"]
 			}

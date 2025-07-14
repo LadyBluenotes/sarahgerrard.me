@@ -9,7 +9,7 @@ import Button from "../common/Button";
 const navLinks = [
 	{ name: "Home", href: "/" },
 	{ name: "OSS", href: "/oss" },
-	{ name: "Projects", href: "/projects" },
+	// { name: "Projects", href: "/projects" },
 	{ name: "Resume", href: "/resume" },
 	{ name: "Contact", href: "/contact" },
 ];
@@ -28,14 +28,14 @@ export const Header: Component = () => {
 						href="/"
 						onClick={closeMenu}
 					>
-						<span class="header-logo logo-text">Test</span>
+						<span class="header-logo logo-text">SG</span>
 					</A>
 				</div>
-				<Show when={mobileLayout()}>
+				<Show when={false}>
 					<Button
 						class="menu-toggle"
 						variant="text"
-						size="icon"
+						size="small"
 						onClick={toggleMenu}
 						aria-label="Toggle menu"
 					>

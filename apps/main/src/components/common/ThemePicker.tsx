@@ -15,7 +15,7 @@ export const ThemePicker: Component = () => {
 			>
 				Theme
 			</DropdownMenu.Trigger>
-			<DropdownMenu.Content>
+			<DropdownMenu.Content class="theme-content">
 				<For each={Object.entries(themes)}>
 					{([key, details]) => (
 						<DropdownMenu.Item
