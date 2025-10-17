@@ -3,13 +3,9 @@
 	"private": true,
 	"type": "module",
 	"scripts": {
-		"example": "cd apps/example && pnpm dev",
 		"main:dev": "cd apps/main && pnpm dev",
 		"main:build": "cd apps/main && pnpm build",
 		"main:start": "cd apps/main && pnpm start",
-		"blog:dev": "cd apps/blog && pnpm dev",
-		"blog:build": "cd apps/blog && pnpm build",
-		"blog:start": "cd apps/blog && pnpm start",
 		"temp:dev": "cd apps/temp && pnpm dev",
 		"temp:build": "cd apps/temp && pnpm build",
 		"temp:start": "cd apps/temp && pnpm start",
