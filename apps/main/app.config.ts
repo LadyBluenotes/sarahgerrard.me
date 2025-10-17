@@ -52,6 +52,11 @@ export default defineConfig(
 					},
 				},
 			},
+			markdown: {
+				expressiveCode: {
+					themes: ["vitesse-light", "vitesse-dark"],
+				},
+			},
 		}
 	)
 );
