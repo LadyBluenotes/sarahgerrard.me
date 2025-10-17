@@ -1,0 +1,35 @@
+@import url('./fonts/fonts.css');
+@import url('./variables.css');
+
+:root {
+  background-color: var(--background-color);
+	color: var(--text-color);
+
+	font-family: "Open Sans", sans-serif;
+
+	.initials {
+		font-family: "Mindway", sans-serif;
+		font-weight: 400;
+	}
+
+	header {
+		a {
+			color: var(--inactive);
+
+			&:hover {
+				color: var(--hover-inactive);
+				text-decoration: underline;
+				text-underline-offset: 0.2rem;
+			}
+		}
+
+		button {
+			background-color: transparent;
+			color: var(--inactive);
+
+			&:hover {
+				color: var(--hover-inactive);
+			}
+		}
+	}
+}

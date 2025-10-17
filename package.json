@@ -1,24 +1,28 @@
 {
-	"name": "ladybluenotes.dev",
-	"private": true,
-	"type": "module",
-	"scripts": {
-		"main:dev": "cd apps/main && pnpm dev",
-		"main:build": "cd apps/main && pnpm build",
-		"main:start": "cd apps/main && pnpm start",
-		"temp:dev": "cd apps/temp && pnpm dev",
-		"temp:build": "cd apps/temp && pnpm build",
-		"temp:start": "cd apps/temp && pnpm start",
-		"format": "prettier --write \"**/*.{ts,tsx,md}\"",
-		"cleandep": "rm -rf node_modules && pnpm -r exec rm -rf node_modules"
-	},
-	"devDependencies": {
-		"prettier": "^3.5.3",
-		"typescript": "5.8.3",
-		"vite": "^6.3.5"
-	},
-	"packageManager": "pnpm@10.11.1",
-	"engines": {
-		"node": ">=18"
-	}
+  "name": "ladybluenotes.dev",
+  "private": true,
+  "sideEffects": false,
+  "type": "module",
+  "scripts": {
+    "dev": "vite dev",
+    "build": "vite build && tsc --noEmit",
+    "start": "vite start"
+  },
+  "dependencies": {
+    "@tanstack/solid-router": "^1.133.10",
+    "@tanstack/solid-router-devtools": "^1.133.10",
+    "@tanstack/solid-start": "^1.133.10",
+    "redaxios": "^0.5.1",
+    "solid-js": "^1.9.5"
+  },
+  "devDependencies": {
+    "@types/node": "^22.5.4",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.5.1",
+    "typescript": "^5.7.2",
+    "unocss": "^66.5.4",
+    "vite": "^7.1.7",
+    "vite-plugin-solid": "^2.11.8",
+    "vite-tsconfig-paths": "^5.1.4"
+  }
 }
