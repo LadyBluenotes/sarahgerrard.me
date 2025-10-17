@@ -1,13 +1,27 @@
 import { defineConfig } from "@solidjs/start/config";
-import { withSolidBase } from "@kobalte/solidbase/config";
+import { createWithSolidBase, defineTheme } from "@kobalte/solidbase/config";
+import defaultTheme from "@kobalte/solidbase/default-theme";
+import UnoCSS from "unocss/vite";
+
+const customTheme = defineTheme({
+	componentsPath: import.meta.resolve("./src/ui"),
+	extends: defaultTheme,
+});
 
 export default defineConfig(
-	withSolidBase(
+	createWithSolidBase(customTheme)(
 		{
 			server: {
 				prerender: {
 					crawlLinks: true,
 				},
+			},
+			vite: {
+				plugins: [
+					UnoCSS({
+						configFile: "./unocss.config.ts",
+					}),
+				],
 			},
 		},
 		{
@@ -16,6 +30,7 @@ export default defineConfig(
 			description:
 				"Fully featured, fully customisable static site generation for SolidStart",
 			themeConfig: {
+				fonts: false,
 				sidebar: {
 					"/": {
 						items: [

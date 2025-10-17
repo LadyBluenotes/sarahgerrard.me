@@ -1,4 +1,47 @@
+@import url("./ui/fonts/fonts.css");
+
 :root {
-  --sb-hero-name-background: linear-gradient(-20deg, hsl(200, 98%, 39%) 30%, hsl(199, 95%, 74%));
-  --sb-hero-background: linear-gradient(-45deg, hsl(200, 98%, 39%) 50%, hsl(199, 95%, 74%) 50%);
+	--background-color: #ffffff;
+	--inactive: #303030;
+	--hover-inactive: #000000;
+	--border-color: #bfbfbf;
+	--text-color: #000000;
+
+	background-color: var(--background-color);
+
+	font-family: "Open Sans", sans-serif;
+
+	.initials {
+		font-family: "Mindway", sans-serif;
+		font-weight: 400;
+	}
+
+	header {
+		a {
+			color: var(--inactive);
+
+			&:hover {
+				color: var(--hover-inactive);
+				text-decoration: underline;
+				text-underline-offset: 0.2rem;
+			}
+		}
+
+		button {
+			background-color: transparent;
+			color: var(--inactive);
+
+			&:hover {
+				color: var(--hover-inactive);
+			}
+		}
+	}
+}
+
+:root[data-theme="dark"] {
+	--border-color: #303030;
+	--inactive: #a6a6a6;
+	--hover-inactive: #ffffff;
+	--background-color: #050505;
+	--text-color: #f3f2ed;
 }
