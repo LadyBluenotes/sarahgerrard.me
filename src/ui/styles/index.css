@@ -2,7 +2,7 @@
 @import url('./variables.css');
 
 :root {
-  background-color: var(--background-color);
+  	background-color: var(--background-color);
 	color: var(--text-color);
 
 	font-family: "Open Sans", sans-serif;

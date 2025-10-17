@@ -1,7 +1,7 @@
 import { Link, Outlet, createFileRoute } from '@tanstack/solid-router'
-import { fetchPosts } from '../utils/posts'
+import { fetchPosts } from '../../utils/posts'
 
-export const Route = createFileRoute('/posts')({
+export const Route = createFileRoute('/(blog)/blog')({
   loader: async () => fetchPosts(),
   component: PostsComponent,
 })
@@ -17,7 +17,7 @@ function PostsComponent() {
             return (
               <li class="whitespace-nowrap">
                 <Link
-                  to="/posts/$postId"
+                  to="/blog/$postId"
                   params={{
                     postId: post.id,
                   }}
