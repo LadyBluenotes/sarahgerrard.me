@@ -1,7 +1,11 @@
 @import url('./fonts/fonts.css');
 @import url('./variables.css');
 
-:root {
+html {
+	min-height: 100dvh;
+	width: 100dvw;
+	font-size: 1rem;
+
   	background-color: var(--background-color);
 	color: var(--text-color);
 

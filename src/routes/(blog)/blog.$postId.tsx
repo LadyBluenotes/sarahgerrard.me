@@ -1,7 +1,7 @@
 import { Link, createFileRoute } from '@tanstack/solid-router'
 import { fetchPost } from '../../utils/posts'
-import { NotFound } from '~/ui/components/NotFound'
-import { PostErrorComponent } from '~/ui/components/PostError'
+import { NotFound } from '~/ui/components/errors/NotFound'
+import { PostErrorComponent } from '~/ui/components/errors/PostError'
 
 export const Route = createFileRoute('/(blog)/blog/$postId')({
   loader: ({ params: { postId } }) => fetchPost({ data: postId }),

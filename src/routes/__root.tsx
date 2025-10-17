@@ -1,19 +1,21 @@
-/// <reference types="vite/client" />
+// <reference types="vite/client" />
 import {
   HeadContent,
-  Link,
   Scripts,
   createRootRoute,
 } from '@tanstack/solid-router'
 import { TanStackRouterDevtools } from '@tanstack/solid-router-devtools'
 import type * as Solid from 'solid-js'
-import { DefaultCatchBoundary } from '~/ui/components/DefaultCatchBoundary'
-import { NotFound } from '~/ui/components/NotFound'
+import { DefaultCatchBoundary } from '~/ui/components/errors/DefaultCatchBoundary'
+import { NotFound } from '~/ui/components/errors/NotFound'
 import { seo } from '~/utils/seo'
+import cssStyles from "../ui/styles/index.css?url";
 
+import '@unocss/reset/tailwind-compat.css'
 import "virtual:uno.css";
-import "../ui/styles/index.css";
 
+import "../ui/styles/index.css?url";
+import Header from '~/ui/components/layout/Header'
 
 export const Route = createRootRoute({
   head: () => ({
@@ -27,11 +29,15 @@ export const Route = createRootRoute({
       },
       ...seo({
         title:
-          'TanStack Start | Type-Safe, Client-First, Full-Stack React Framework',
-        description: `TanStack Start is a type-safe, client-first, full-stack React framework. `,
+          'My Site - Todo',
+        description: `Todo`,
       }),
     ],
     links: [
+      {
+        rel: 'stylesheet',
+        href: cssStyles,
+    },
       {
         rel: 'apple-touch-icon',
         sizes: '180x180',
@@ -52,6 +58,11 @@ export const Route = createRootRoute({
       { rel: 'manifest', href: '/site.webmanifest', color: '#fffff' },
       { rel: 'icon', href: '/favicon.ico' },
     ],
+    scripts: [
+      {
+        src: "https://cdn.jsdelivr.net/npm/@unocss/runtime"
+      }
+    ]
   }),
   errorComponent: DefaultCatchBoundary,
   notFoundComponent: () => <NotFound />,
@@ -62,6 +73,7 @@ function RootDocument(props: { children: Solid.JSX.Element }) {
   return (
     <>
       <HeadContent />
+      <Header />
       {props.children}
       <TanStackRouterDevtools position="bottom-right" />
       <Scripts />

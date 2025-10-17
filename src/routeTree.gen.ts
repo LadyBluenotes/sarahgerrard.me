@@ -11,9 +11,9 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as RedirectRouteImport } from './routes/redirect'
 import { Route as AboutRouteImport } from './routes/about'
+import { Route as PathlessLayoutRouteImport } from './routes/_pathlessLayout'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ApiUsersRouteImport } from './routes/api/users'
-import { Route as PathlessLayoutPathlessLayoutRouteImport } from './routes/_pathlessLayout/_pathlessLayout'
 import { Route as PathlessLayoutNestedLayoutRouteImport } from './routes/_pathlessLayout/_nested-layout'
 import { Route as blogBlogRouteImport } from './routes/(blog)/blog'
 import { Route as blogBlogIndexRouteImport } from './routes/(blog)/blog.index'
@@ -33,6 +33,10 @@ const AboutRoute = AboutRouteImport.update({
   path: '/about',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PathlessLayoutRoute = PathlessLayoutRouteImport.update({
+  id: '/_pathlessLayout',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -43,11 +47,6 @@ const ApiUsersRoute = ApiUsersRouteImport.update({
   path: '/api/users',
   getParentRoute: () => rootRouteImport,
 } as any)
-const PathlessLayoutPathlessLayoutRoute =
-  PathlessLayoutPathlessLayoutRouteImport.update({
-    id: '/_pathlessLayout/_pathlessLayout',
-    getParentRoute: () => rootRouteImport,
-  } as any)
 const PathlessLayoutNestedLayoutRoute =
   PathlessLayoutNestedLayoutRouteImport.update({
     id: '/_nested-layout',
@@ -119,11 +118,11 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/_pathlessLayout': typeof PathlessLayoutRouteWithChildren
   '/about': typeof AboutRoute
   '/redirect': typeof RedirectRoute
   '/(blog)/blog': typeof blogBlogRouteWithChildren
   '/_pathlessLayout/_nested-layout': typeof PathlessLayoutNestedLayoutRouteWithChildren
-  '/_pathlessLayout/_pathlessLayout': typeof PathlessLayoutPathlessLayoutRoute
   '/api/users': typeof ApiUsersRouteWithChildren
   '/(blog)/blog/$postId': typeof blogBlogPostIdRoute
   '/_pathlessLayout/_nested-layout/route-a': typeof PathlessLayoutNestedLayoutRouteARoute
@@ -161,11 +160,11 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/_pathlessLayout'
     | '/about'
     | '/redirect'
     | '/(blog)/blog'
     | '/_pathlessLayout/_nested-layout'
-    | '/_pathlessLayout/_pathlessLayout'
     | '/api/users'
     | '/(blog)/blog/$postId'
     | '/_pathlessLayout/_nested-layout/route-a'
@@ -177,10 +176,10 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  PathlessLayoutRoute: typeof PathlessLayoutRouteWithChildren
   AboutRoute: typeof AboutRoute
   RedirectRoute: typeof RedirectRoute
   blogBlogRoute: typeof blogBlogRouteWithChildren
-  PathlessLayoutPathlessLayoutRoute: typeof PathlessLayoutPathlessLayoutRoute
   ApiUsersRoute: typeof ApiUsersRouteWithChildren
   blogBlogPostIdDeepRoute: typeof blogBlogPostIdDeepRoute
 }
@@ -201,6 +200,13 @@ declare module '@tanstack/solid-router' {
       preLoaderRoute: typeof AboutRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/_pathlessLayout': {
+      id: '/_pathlessLayout'
+      path: ''
+      fullPath: ''
+      preLoaderRoute: typeof PathlessLayoutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -213,13 +219,6 @@ declare module '@tanstack/solid-router' {
       path: '/api/users'
       fullPath: '/api/users'
       preLoaderRoute: typeof ApiUsersRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/_pathlessLayout/_pathlessLayout': {
-      id: '/_pathlessLayout/_pathlessLayout'
-      path: ''
-      fullPath: ''
-      preLoaderRoute: typeof PathlessLayoutPathlessLayoutRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/_pathlessLayout/_nested-layout': {
@@ -281,6 +280,36 @@ declare module '@tanstack/solid-router' {
   }
 }
 
+interface PathlessLayoutNestedLayoutRouteChildren {
+  PathlessLayoutNestedLayoutRouteARoute: typeof PathlessLayoutNestedLayoutRouteARoute
+  PathlessLayoutNestedLayoutRouteBRoute: typeof PathlessLayoutNestedLayoutRouteBRoute
+}
+
+const PathlessLayoutNestedLayoutRouteChildren: PathlessLayoutNestedLayoutRouteChildren =
+  {
+    PathlessLayoutNestedLayoutRouteARoute:
+      PathlessLayoutNestedLayoutRouteARoute,
+    PathlessLayoutNestedLayoutRouteBRoute:
+      PathlessLayoutNestedLayoutRouteBRoute,
+  }
+
+const PathlessLayoutNestedLayoutRouteWithChildren =
+  PathlessLayoutNestedLayoutRoute._addFileChildren(
+    PathlessLayoutNestedLayoutRouteChildren,
+  )
+
+interface PathlessLayoutRouteChildren {
+  PathlessLayoutNestedLayoutRoute: typeof PathlessLayoutNestedLayoutRouteWithChildren
+}
+
+const PathlessLayoutRouteChildren: PathlessLayoutRouteChildren = {
+  PathlessLayoutNestedLayoutRoute: PathlessLayoutNestedLayoutRouteWithChildren,
+}
+
+const PathlessLayoutRouteWithChildren = PathlessLayoutRoute._addFileChildren(
+  PathlessLayoutRouteChildren,
+)
+
 interface blogBlogRouteChildren {
   blogBlogPostIdRoute: typeof blogBlogPostIdRoute
   blogBlogIndexRoute: typeof blogBlogIndexRoute
@@ -309,10 +338,10 @@ const ApiUsersRouteWithChildren = ApiUsersRoute._addFileChildren(
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  PathlessLayoutRoute: PathlessLayoutRouteWithChildren,
   AboutRoute: AboutRoute,
   RedirectRoute: RedirectRoute,
   blogBlogRoute: blogBlogRouteWithChildren,
-  PathlessLayoutPathlessLayoutRoute: PathlessLayoutPathlessLayoutRoute,
   ApiUsersRoute: ApiUsersRouteWithChildren,
   blogBlogPostIdDeepRoute: blogBlogPostIdDeepRoute,
 }

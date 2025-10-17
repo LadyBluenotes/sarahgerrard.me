@@ -9,14 +9,19 @@
     "start": "vite start"
   },
   "dependencies": {
+    "@kobalte/core": "^0.13.11",
     "@tanstack/solid-router": "^1.133.10",
     "@tanstack/solid-router-devtools": "^1.133.10",
     "@tanstack/solid-start": "^1.133.10",
+    "@unocss/reset": "^66.5.4",
     "redaxios": "^0.5.1",
     "solid-js": "^1.9.5"
   },
   "devDependencies": {
+    "@iconify-json/logos": "^1.2.9",
+    "@iconify-json/tabler": "^1.2.23",
     "@types/node": "^22.5.4",
+    "@unocss/preset-icons": "^66.5.4",
     "autoprefixer": "^10.4.20",
     "postcss": "^8.5.1",
     "typescript": "^5.7.2",
