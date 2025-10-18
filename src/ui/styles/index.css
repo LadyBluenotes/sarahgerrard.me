@@ -131,7 +131,7 @@ html {
 		color: var(--sb-text-color);
 	}
 
-	a:not(.header-link) a:not(.initials) {
+	a {
 		color: var(--heading-color);
 		font-weight: 600;
 		text-decoration: none;
@@ -153,6 +153,7 @@ html {
 
 	.header-link {
 		color: var(--inactive);
+		font-weight: 500;
 		box-shadow: none;
 		&:hover {
 			color: var(--hover-inactive);

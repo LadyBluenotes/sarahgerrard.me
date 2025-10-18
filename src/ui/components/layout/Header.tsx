@@ -1,6 +1,7 @@
 import { Button } from "@kobalte/core/button";
 import { ThemeSelector } from "./ThemeSelector";
 import { Index, Show } from "solid-js";
+import { Link } from "@tanstack/solid-router";
 
 const blogLinks = [
 	{ href: "/blog", label: "Blog" },
@@ -31,9 +32,8 @@ export default function Header() {
 				<nav class="flex items-center gap-6 text-sm font-medium">
 					<Index each={blogLinks}>
 						{(link) => (
-							<Button
-								as="a"
-								href={link().href}
+							<Link
+								to={link().href}
 								target={link().href.startsWith("http") ? "_blank" : undefined}
 								title={link().label}
 								class="header-link"
@@ -44,7 +44,7 @@ export default function Header() {
 								>
 									<div class={`${link().iconClass} w-1.2em h-1.2em icon`} />
 								</Show>
-							</Button>
+							</Link>
 						)}
 					</Index>
 					<ThemeSelector />
