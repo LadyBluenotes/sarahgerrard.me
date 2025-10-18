@@ -60,10 +60,15 @@ export const Route = createRootRoute({
 			{
 				children: `const theme = localStorage.getItem('theme');
 					const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-					if (theme === 'dark' || (!theme && prefersDark)) {
-						document.documentElement.setAttribute('data-theme', 'dark');
+
+					if (!theme) {
+						if (prefersDark) {
+							document.documentElement.setAttribute('data-theme', 'dark');
+						} else {
+							document.documentElement.setAttribute('data-theme', 'light');
+						}
 					} else {
-						document.documentElement.setAttribute('data-theme', 'light');
+						document.documentElement.setAttribute('data-theme', theme);
 					}`,
 			},
 		],

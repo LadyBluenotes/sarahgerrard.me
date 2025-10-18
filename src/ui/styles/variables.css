@@ -1,6 +1,6 @@
 :root {
 	--background-color: #f2f0ef;
-	--border-color: #bfc1c2;
+	--border-color: #c8c8c8;
 
 	--inactive: #555555;
 	--hover-inactive: #1a2421;
@@ -13,7 +13,7 @@
 
 :root[data-theme="dark"] {
 	--background-color: #050505;
-	--border-color: #303030;
+	--border-color: #212121;
 
 	--inactive: #b8b8b8;
 	--hover-inactive: #e1e1dd;
