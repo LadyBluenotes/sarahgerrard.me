@@ -176,6 +176,7 @@ html {
 		align-items: center;
 		gap: 0.5em;
 		outline: 1px solid;
+		color: var(--text-color);
 		outline-color: var(--button-bg);
 		border: none;
 		padding: 0.2rem 0.3rem;

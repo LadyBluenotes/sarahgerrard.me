@@ -1,8 +1,10 @@
 :root {
 	--background-color: #f2f0ef;
+	--border-color: #bfc1c2;
+
 	--inactive: #555555;
 	--hover-inactive: #1a2421;
-	--border-color: #bfc1c2;
+
 	--text-color: #232b2b;
 	--heading-color: #111111;
 	--underline-color: #888888;
@@ -10,9 +12,14 @@
 }
 
 :root[data-theme="dark"] {
-	--border-color: #303030;
-	--inactive: #a6a6a6;
-	--hover-inactive: #ffffff;
 	--background-color: #050505;
-	--text-color: #f3f2ed;
+	--border-color: #303030;
+
+	--inactive: #b8b8b8;
+	--hover-inactive: #e1e1dd;
+
+	--text-color: #b6b6b6;
+	--heading-color: #e6e6e6;
+	--underline-color: #a7a7a7;
+	--button-bg: #2b2b2b;
 }
