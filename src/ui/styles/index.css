@@ -131,9 +131,9 @@ html {
 		color: var(--sb-text-color);
 	}
 
-	a {
-		color: var(--heading-color);
-		font-weight: 500;
+	a[:not(.social-button)] {
+		color: var(--button-bg);
+		font-weight: 600;
 		text-decoration: none;
 		box-shadow: var(--underline-color) 0 -0.5px 0 0 inset;
 		cursor: pointer;
@@ -142,7 +142,7 @@ html {
 
 		&:hover,
 		&:focus {
-			box-shadow: var(--heading-color) 0 -1.5px 0 0 inset;
+			box-shadow: var(--heading-color) 0 -1px 0 0 inset;
 		}
 	}
 
@@ -154,21 +154,42 @@ html {
 	header {
 		a {
 			color: var(--inactive);
-
+			box-shadow: none;
 			&:hover {
 				color: var(--hover-inactive);
+				box-shadow: none;
 				text-decoration: underline;
-				text-underline-offset: 0.2rem;
+				text-decoration-thickness: 1.5px;
+				text-decoration-color: var(--hover-inactive);
+				text-underline-offset: 0.1rem;
+				transition: text-decoration 0.3s ease-in-out;
 			}
 		}
 
-		button {
-			background-color: transparent;
-			color: var(--inactive);
+		.icon {
+			box-shadow: none;
 
 			&:hover {
-				color: var(--hover-inactive);
+				box-shadow: none;
 			}
+		}
+	}
+
+	.social-button {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5em;
+		outline: 1px solid;
+		outline-color: var(--button-bg);
+		border: none;
+		padding: 0.2rem 0.3rem;
+		border-radius: 0.375em;
+		cursor: pointer;
+		transition: background-color 0.2s ease-in-out;
+		background-color: transparent;
+
+		&:hover {
+			background-color: var(--button-bg);
 		}
 	}
 }

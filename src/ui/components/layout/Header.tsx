@@ -42,7 +42,7 @@ export default function Header() {
 									when={link().iconClass}
 									fallback={link().label}
 								>
-									<div class={`${link().iconClass} w-1.2em h-1.2em`} />
+									<div class={`${link().iconClass} w-1.2em h-1.2em icon`} />
 								</Show>
 							</Button>
 						)}

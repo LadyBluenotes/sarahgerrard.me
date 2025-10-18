@@ -1,11 +1,12 @@
 :root {
-	--background-color: #ffffff;
-	--inactive: #303030;
-	--hover-inactive: #262626;
-	--border-color: #bfbfbf;
-	--text-color: #262626;
+	--background-color: #f2f0ef;
+	--inactive: #636261;
+	--hover-inactive: #1a2421;
+	--border-color: #c9c8c7;
+	--text-color: #2a2626;
 	--heading-color: #111111;
 	--underline-color: #888888;
+	--button-bg: #d9d9d9;
 }
 
 :root[data-theme="dark"] {
