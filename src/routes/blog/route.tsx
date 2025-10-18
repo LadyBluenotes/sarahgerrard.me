@@ -8,15 +8,7 @@ export const Route = createFileRoute("/blog")({
 function RouteComponent() {
 	return (
 		<Layout>
-			<ul class="flex items-center gap-4 mb-4">
-				<li>
-					<Link to="/blog">Blog Posts</Link>
-				</li>
-				<li>
-					<Link to="/blog/thoughts">Thoughts</Link>
-				</li>
-			</ul>
-			<hr class="my-4 border-[var(--border-color)]" />
+			<h1 class="text-2xl font-bold mb-4">Blog</h1>
 			<Outlet />
 		</Layout>
 	);

@@ -1,11 +1,10 @@
-import { Button } from "@kobalte/core/button";
 import { ThemeSelector } from "./ThemeSelector";
 import { Index, Show } from "solid-js";
 import { Link } from "@tanstack/solid-router";
 
 const blogLinks = [
 	{ href: "/blog", label: "Blog" },
-	{ href: "/projects", label: "Projects" },
+	{ href: "/thoughts", label: "Thoughts" },
 	{ href: "/oss", label: "OSS" },
 	{
 		href: "https://bsky.app/profile/ladybluenotes.dev",

@@ -10,17 +10,13 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as RedirectRouteImport } from './routes/redirect'
-import { Route as ProjectsRouteRouteImport } from './routes/projects/route'
+import { Route as ThoughtsRouteRouteImport } from './routes/thoughts/route'
 import { Route as OssRouteRouteImport } from './routes/oss/route'
 import { Route as BlogRouteRouteImport } from './routes/blog/route'
 import { Route as AwesomeListRouteRouteImport } from './routes/awesome-list/route'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as ProjectsIndexRouteImport } from './routes/projects/index'
 import { Route as OssIndexRouteImport } from './routes/oss/index'
-import { Route as BlogIndexRouteImport } from './routes/blog/index'
-import { Route as AwesomeListIndexRouteImport } from './routes/awesome-list/index'
 import { Route as Blog1RouteImport } from './routes/blog/1'
-import { Route as BlogThoughtsIndexRouteImport } from './routes/blog/thoughts/index'
 import { Route as AwesomeListTvIndexRouteImport } from './routes/awesome-list/tv/index'
 import { Route as AwesomeListMovieIndexRouteImport } from './routes/awesome-list/movie/index'
 import { Route as AwesomeListBooksIndexRouteImport } from './routes/awesome-list/books/index'
@@ -30,9 +26,9 @@ const RedirectRoute = RedirectRouteImport.update({
   path: '/redirect',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ProjectsRouteRoute = ProjectsRouteRouteImport.update({
-  id: '/projects',
-  path: '/projects',
+const ThoughtsRouteRoute = ThoughtsRouteRouteImport.update({
+  id: '/thoughts',
+  path: '/thoughts',
   getParentRoute: () => rootRouteImport,
 } as any)
 const OssRouteRoute = OssRouteRouteImport.update({
@@ -55,34 +51,14 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ProjectsIndexRoute = ProjectsIndexRouteImport.update({
-  id: '/',
-  path: '/',
-  getParentRoute: () => ProjectsRouteRoute,
-} as any)
 const OssIndexRoute = OssIndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => OssRouteRoute,
 } as any)
-const BlogIndexRoute = BlogIndexRouteImport.update({
-  id: '/',
-  path: '/',
-  getParentRoute: () => BlogRouteRoute,
-} as any)
-const AwesomeListIndexRoute = AwesomeListIndexRouteImport.update({
-  id: '/',
-  path: '/',
-  getParentRoute: () => AwesomeListRouteRoute,
-} as any)
 const Blog1Route = Blog1RouteImport.update({
   id: '/1',
   path: '/1',
-  getParentRoute: () => BlogRouteRoute,
-} as any)
-const BlogThoughtsIndexRoute = BlogThoughtsIndexRouteImport.update({
-  id: '/thoughts/',
-  path: '/thoughts/',
   getParentRoute: () => BlogRouteRoute,
 } as any)
 const AwesomeListTvIndexRoute = AwesomeListTvIndexRouteImport.update({
@@ -106,30 +82,25 @@ export interface FileRoutesByFullPath {
   '/awesome-list': typeof AwesomeListRouteRouteWithChildren
   '/blog': typeof BlogRouteRouteWithChildren
   '/oss': typeof OssRouteRouteWithChildren
-  '/projects': typeof ProjectsRouteRouteWithChildren
+  '/thoughts': typeof ThoughtsRouteRoute
   '/redirect': typeof RedirectRoute
   '/blog/1': typeof Blog1Route
-  '/awesome-list/': typeof AwesomeListIndexRoute
-  '/blog/': typeof BlogIndexRoute
   '/oss/': typeof OssIndexRoute
-  '/projects/': typeof ProjectsIndexRoute
   '/awesome-list/books': typeof AwesomeListBooksIndexRoute
   '/awesome-list/movie': typeof AwesomeListMovieIndexRoute
   '/awesome-list/tv': typeof AwesomeListTvIndexRoute
-  '/blog/thoughts': typeof BlogThoughtsIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/awesome-list': typeof AwesomeListRouteRouteWithChildren
+  '/blog': typeof BlogRouteRouteWithChildren
+  '/thoughts': typeof ThoughtsRouteRoute
   '/redirect': typeof RedirectRoute
   '/blog/1': typeof Blog1Route
-  '/awesome-list': typeof AwesomeListIndexRoute
-  '/blog': typeof BlogIndexRoute
   '/oss': typeof OssIndexRoute
-  '/projects': typeof ProjectsIndexRoute
   '/awesome-list/books': typeof AwesomeListBooksIndexRoute
   '/awesome-list/movie': typeof AwesomeListMovieIndexRoute
   '/awesome-list/tv': typeof AwesomeListTvIndexRoute
-  '/blog/thoughts': typeof BlogThoughtsIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -137,17 +108,13 @@ export interface FileRoutesById {
   '/awesome-list': typeof AwesomeListRouteRouteWithChildren
   '/blog': typeof BlogRouteRouteWithChildren
   '/oss': typeof OssRouteRouteWithChildren
-  '/projects': typeof ProjectsRouteRouteWithChildren
+  '/thoughts': typeof ThoughtsRouteRoute
   '/redirect': typeof RedirectRoute
   '/blog/1': typeof Blog1Route
-  '/awesome-list/': typeof AwesomeListIndexRoute
-  '/blog/': typeof BlogIndexRoute
   '/oss/': typeof OssIndexRoute
-  '/projects/': typeof ProjectsIndexRoute
   '/awesome-list/books/': typeof AwesomeListBooksIndexRoute
   '/awesome-list/movie/': typeof AwesomeListMovieIndexRoute
   '/awesome-list/tv/': typeof AwesomeListTvIndexRoute
-  '/blog/thoughts/': typeof BlogThoughtsIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -156,47 +123,38 @@ export interface FileRouteTypes {
     | '/awesome-list'
     | '/blog'
     | '/oss'
-    | '/projects'
+    | '/thoughts'
     | '/redirect'
     | '/blog/1'
-    | '/awesome-list/'
-    | '/blog/'
     | '/oss/'
-    | '/projects/'
     | '/awesome-list/books'
     | '/awesome-list/movie'
     | '/awesome-list/tv'
-    | '/blog/thoughts'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
-    | '/redirect'
-    | '/blog/1'
     | '/awesome-list'
     | '/blog'
+    | '/thoughts'
+    | '/redirect'
+    | '/blog/1'
     | '/oss'
-    | '/projects'
     | '/awesome-list/books'
     | '/awesome-list/movie'
     | '/awesome-list/tv'
-    | '/blog/thoughts'
   id:
     | '__root__'
     | '/'
     | '/awesome-list'
     | '/blog'
     | '/oss'
-    | '/projects'
+    | '/thoughts'
     | '/redirect'
     | '/blog/1'
-    | '/awesome-list/'
-    | '/blog/'
     | '/oss/'
-    | '/projects/'
     | '/awesome-list/books/'
     | '/awesome-list/movie/'
     | '/awesome-list/tv/'
-    | '/blog/thoughts/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -204,7 +162,7 @@ export interface RootRouteChildren {
   AwesomeListRouteRoute: typeof AwesomeListRouteRouteWithChildren
   BlogRouteRoute: typeof BlogRouteRouteWithChildren
   OssRouteRoute: typeof OssRouteRouteWithChildren
-  ProjectsRouteRoute: typeof ProjectsRouteRouteWithChildren
+  ThoughtsRouteRoute: typeof ThoughtsRouteRoute
   RedirectRoute: typeof RedirectRoute
 }
 
@@ -217,11 +175,11 @@ declare module '@tanstack/solid-router' {
       preLoaderRoute: typeof RedirectRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/projects': {
-      id: '/projects'
-      path: '/projects'
-      fullPath: '/projects'
-      preLoaderRoute: typeof ProjectsRouteRouteImport
+    '/thoughts': {
+      id: '/thoughts'
+      path: '/thoughts'
+      fullPath: '/thoughts'
+      preLoaderRoute: typeof ThoughtsRouteRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/oss': {
@@ -252,13 +210,6 @@ declare module '@tanstack/solid-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/projects/': {
-      id: '/projects/'
-      path: '/'
-      fullPath: '/projects/'
-      preLoaderRoute: typeof ProjectsIndexRouteImport
-      parentRoute: typeof ProjectsRouteRoute
-    }
     '/oss/': {
       id: '/oss/'
       path: '/'
@@ -266,32 +217,11 @@ declare module '@tanstack/solid-router' {
       preLoaderRoute: typeof OssIndexRouteImport
       parentRoute: typeof OssRouteRoute
     }
-    '/blog/': {
-      id: '/blog/'
-      path: '/'
-      fullPath: '/blog/'
-      preLoaderRoute: typeof BlogIndexRouteImport
-      parentRoute: typeof BlogRouteRoute
-    }
-    '/awesome-list/': {
-      id: '/awesome-list/'
-      path: '/'
-      fullPath: '/awesome-list/'
-      preLoaderRoute: typeof AwesomeListIndexRouteImport
-      parentRoute: typeof AwesomeListRouteRoute
-    }
     '/blog/1': {
       id: '/blog/1'
       path: '/1'
       fullPath: '/blog/1'
       preLoaderRoute: typeof Blog1RouteImport
-      parentRoute: typeof BlogRouteRoute
-    }
-    '/blog/thoughts/': {
-      id: '/blog/thoughts/'
-      path: '/thoughts'
-      fullPath: '/blog/thoughts'
-      preLoaderRoute: typeof BlogThoughtsIndexRouteImport
       parentRoute: typeof BlogRouteRoute
     }
     '/awesome-list/tv/': {
@@ -319,14 +249,12 @@ declare module '@tanstack/solid-router' {
 }
 
 interface AwesomeListRouteRouteChildren {
-  AwesomeListIndexRoute: typeof AwesomeListIndexRoute
   AwesomeListBooksIndexRoute: typeof AwesomeListBooksIndexRoute
   AwesomeListMovieIndexRoute: typeof AwesomeListMovieIndexRoute
   AwesomeListTvIndexRoute: typeof AwesomeListTvIndexRoute
 }
 
 const AwesomeListRouteRouteChildren: AwesomeListRouteRouteChildren = {
-  AwesomeListIndexRoute: AwesomeListIndexRoute,
   AwesomeListBooksIndexRoute: AwesomeListBooksIndexRoute,
   AwesomeListMovieIndexRoute: AwesomeListMovieIndexRoute,
   AwesomeListTvIndexRoute: AwesomeListTvIndexRoute,
@@ -337,14 +265,10 @@ const AwesomeListRouteRouteWithChildren =
 
 interface BlogRouteRouteChildren {
   Blog1Route: typeof Blog1Route
-  BlogIndexRoute: typeof BlogIndexRoute
-  BlogThoughtsIndexRoute: typeof BlogThoughtsIndexRoute
 }
 
 const BlogRouteRouteChildren: BlogRouteRouteChildren = {
   Blog1Route: Blog1Route,
-  BlogIndexRoute: BlogIndexRoute,
-  BlogThoughtsIndexRoute: BlogThoughtsIndexRoute,
 }
 
 const BlogRouteRouteWithChildren = BlogRouteRoute._addFileChildren(
@@ -363,24 +287,12 @@ const OssRouteRouteWithChildren = OssRouteRoute._addFileChildren(
   OssRouteRouteChildren,
 )
 
-interface ProjectsRouteRouteChildren {
-  ProjectsIndexRoute: typeof ProjectsIndexRoute
-}
-
-const ProjectsRouteRouteChildren: ProjectsRouteRouteChildren = {
-  ProjectsIndexRoute: ProjectsIndexRoute,
-}
-
-const ProjectsRouteRouteWithChildren = ProjectsRouteRoute._addFileChildren(
-  ProjectsRouteRouteChildren,
-)
-
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AwesomeListRouteRoute: AwesomeListRouteRouteWithChildren,
   BlogRouteRoute: BlogRouteRouteWithChildren,
   OssRouteRoute: OssRouteRouteWithChildren,
-  ProjectsRouteRoute: ProjectsRouteRouteWithChildren,
+  ThoughtsRouteRoute: ThoughtsRouteRoute,
   RedirectRoute: RedirectRoute,
 }
 export const routeTree = rootRouteImport

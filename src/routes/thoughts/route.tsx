@@ -1,14 +1,14 @@
 import { createFileRoute } from "@tanstack/solid-router";
+import { Layout } from "~/ui/components/layout/Layout";
 
-export const Route = createFileRoute("/blog/thoughts/")({
+export const Route = createFileRoute("/thoughts")({
 	component: RouteComponent,
 });
 
 function RouteComponent() {
 	return (
-		<div>
+		<Layout>
 			<h1 class="text-2xl font-bold">Thoughts Blog</h1>
-			<p>Welcome to the thoughts section of the blog!</p>
-		</div>
+		</Layout>
 	);
 }
