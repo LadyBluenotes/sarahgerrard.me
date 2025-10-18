@@ -1,5 +1,23 @@
 import { Button } from "@kobalte/core/button";
 import { ThemeSelector } from "./ThemeSelector";
+import { Index, Show } from "solid-js";
+
+const blogLinks = [
+	{ href: "/about", label: "About" },
+	{ href: "/blog", label: "Blog" },
+	{ href: "/projects", label: "Projects" },
+	{ href: "/oss", label: "OSS" },
+	{
+		href: "https://bsky.app/profile/ladybluenotes.dev",
+		label: "Bluesky",
+		iconClass: "i-tabler-brand-bluesky",
+	},
+	{
+		href: "https://github.com/ladybluenotes",
+		label: "GitHub",
+		iconClass: "i-tabler-brand-github",
+	},
+];
 
 export default function Header() {
 	return (
@@ -12,26 +30,23 @@ export default function Header() {
 					<span>sg</span>
 				</a>
 				<nav class="flex items-center gap-6 text-sm font-medium">
-					<a href="/about">About</a>
-					<a href="/blog">Blog</a>
-					<a href="/projects">Projects</a>
-					<a href="/oss">OSS</a>
-					<Button
-						as="a"
-						href="https://bsky.app/profile/ladybluenotes.dev"
-						target="_blank"
-						title="Bluesky"
-					>
-						<div class="i-tabler-brand-bluesky w-1.4em h-1.4em" />
-					</Button>
-					<Button
-						as="a"
-						href="https://github.com/ladybluenotes"
-						target="_blank"
-						title="GitHub"
-					>
-						<div class="i-tabler-brand-github w-1.4em h-1.4em" />
-					</Button>
+					<Index each={blogLinks}>
+						{(link) => (
+							<Button
+								as="a"
+								href={link().href}
+								target={link().href.startsWith("http") ? "_blank" : undefined}
+								title={link().label}
+							>
+								<Show
+									when={link().iconClass}
+									fallback={link().label}
+								>
+									<div class={`${link().iconClass} w-1.2em h-1.2em`} />
+								</Show>
+							</Button>
+						)}
+					</Index>
 					<ThemeSelector />
 				</nav>
 			</header>

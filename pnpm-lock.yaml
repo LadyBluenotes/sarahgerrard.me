@@ -23,6 +23,9 @@ importers:
       '@unocss/reset':
         specifier: ^66.5.4
         version: 66.5.4
+      prettier:
+        specifier: ^3.6.2
+        version: 3.6.2
       redaxios:
         specifier: ^0.5.1
         version: 0.5.1

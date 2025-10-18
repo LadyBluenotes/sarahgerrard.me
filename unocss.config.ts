@@ -1,7 +1,10 @@
-import { defineConfig, presetIcons } from 'unocss'
+import { defineConfig, presetIcons, presetWind4 } from "unocss";
 
 export default defineConfig({
-  presets: [
-    presetIcons({}),
-  ]
-})
+	presets: [
+		presetIcons(),
+		presetWind4({
+			darkMode: "class",
+		}),
+	],
+});

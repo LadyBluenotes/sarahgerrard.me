@@ -1,9 +1,11 @@
 :root {
 	--background-color: #ffffff;
 	--inactive: #303030;
-	--hover-inactive: #000000;
+	--hover-inactive: #262626;
 	--border-color: #bfbfbf;
-	--text-color: #000000;
+	--text-color: #262626;
+	--heading-color: #111111;
+	--underline-color: #888888;
 }
 
 :root[data-theme="dark"] {
