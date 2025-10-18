@@ -3,7 +3,6 @@ import { ThemeSelector } from "./ThemeSelector";
 import { Index, Show } from "solid-js";
 
 const blogLinks = [
-	{ href: "/about", label: "About" },
 	{ href: "/blog", label: "Blog" },
 	{ href: "/projects", label: "Projects" },
 	{ href: "/oss", label: "OSS" },
@@ -37,6 +36,7 @@ export default function Header() {
 								href={link().href}
 								target={link().href.startsWith("http") ? "_blank" : undefined}
 								title={link().label}
+								class="header-link"
 							>
 								<Show
 									when={link().iconClass}
