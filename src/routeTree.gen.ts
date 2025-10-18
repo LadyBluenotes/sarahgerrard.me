@@ -10,29 +10,19 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as RedirectRouteImport } from './routes/redirect'
-import { Route as AboutRouteImport } from './routes/about'
-import { Route as PathlessLayoutRouteImport } from './routes/_pathlessLayout'
+import { Route as BlogRouteRouteImport } from './routes/blog/route'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as PathlessLayoutNestedLayoutRouteImport } from './routes/_pathlessLayout/_nested-layout'
-import { Route as blogBlogRouteImport } from './routes/(blog)/blog'
-import { Route as blogBlogIndexRouteImport } from './routes/(blog)/blog.index'
-import { Route as PathlessLayoutNestedLayoutRouteBRouteImport } from './routes/_pathlessLayout/_nested-layout/route-b'
-import { Route as PathlessLayoutNestedLayoutRouteARouteImport } from './routes/_pathlessLayout/_nested-layout/route-a'
-import { Route as blogBlogPostIdRouteImport } from './routes/(blog)/blog.$postId'
-import { Route as blogBlogPostIdDeepRouteImport } from './routes/(blog)/blog_.$postId.deep'
+import { Route as Blog1RouteImport } from './routes/blog/1'
+import { Route as BlogThoughtsIndexRouteImport } from './routes/blog/thoughts/index'
 
 const RedirectRoute = RedirectRouteImport.update({
   id: '/redirect',
   path: '/redirect',
   getParentRoute: () => rootRouteImport,
 } as any)
-const AboutRoute = AboutRouteImport.update({
-  id: '/about',
-  path: '/about',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PathlessLayoutRoute = PathlessLayoutRouteImport.update({
-  id: '/_pathlessLayout',
+const BlogRouteRoute = BlogRouteRouteImport.update({
+  id: '/blog',
+  path: '/blog',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -40,123 +30,51 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const PathlessLayoutNestedLayoutRoute =
-  PathlessLayoutNestedLayoutRouteImport.update({
-    id: '/_nested-layout',
-    getParentRoute: () => PathlessLayoutRoute,
-  } as any)
-const blogBlogRoute = blogBlogRouteImport.update({
-  id: '/(blog)/blog',
-  path: '/blog',
-  getParentRoute: () => rootRouteImport,
+const Blog1Route = Blog1RouteImport.update({
+  id: '/1',
+  path: '/1',
+  getParentRoute: () => BlogRouteRoute,
 } as any)
-const blogBlogIndexRoute = blogBlogIndexRouteImport.update({
-  id: '/',
-  path: '/',
-  getParentRoute: () => blogBlogRoute,
-} as any)
-const PathlessLayoutNestedLayoutRouteBRoute =
-  PathlessLayoutNestedLayoutRouteBRouteImport.update({
-    id: '/route-b',
-    path: '/route-b',
-    getParentRoute: () => PathlessLayoutNestedLayoutRoute,
-  } as any)
-const PathlessLayoutNestedLayoutRouteARoute =
-  PathlessLayoutNestedLayoutRouteARouteImport.update({
-    id: '/route-a',
-    path: '/route-a',
-    getParentRoute: () => PathlessLayoutNestedLayoutRoute,
-  } as any)
-const blogBlogPostIdRoute = blogBlogPostIdRouteImport.update({
-  id: '/$postId',
-  path: '/$postId',
-  getParentRoute: () => blogBlogRoute,
-} as any)
-const blogBlogPostIdDeepRoute = blogBlogPostIdDeepRouteImport.update({
-  id: '/(blog)/blog_/$postId/deep',
-  path: '/blog/$postId/deep',
-  getParentRoute: () => rootRouteImport,
+const BlogThoughtsIndexRoute = BlogThoughtsIndexRouteImport.update({
+  id: '/thoughts/',
+  path: '/thoughts/',
+  getParentRoute: () => BlogRouteRoute,
 } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/about': typeof AboutRoute
+  '/blog': typeof BlogRouteRouteWithChildren
   '/redirect': typeof RedirectRoute
-  '/blog': typeof blogBlogRouteWithChildren
-  '/blog/$postId': typeof blogBlogPostIdRoute
-  '/route-a': typeof PathlessLayoutNestedLayoutRouteARoute
-  '/route-b': typeof PathlessLayoutNestedLayoutRouteBRoute
-  '/blog/': typeof blogBlogIndexRoute
-  '/blog/$postId/deep': typeof blogBlogPostIdDeepRoute
+  '/blog/1': typeof Blog1Route
+  '/blog/thoughts': typeof BlogThoughtsIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/about': typeof AboutRoute
+  '/blog': typeof BlogRouteRouteWithChildren
   '/redirect': typeof RedirectRoute
-  '/blog/$postId': typeof blogBlogPostIdRoute
-  '/route-a': typeof PathlessLayoutNestedLayoutRouteARoute
-  '/route-b': typeof PathlessLayoutNestedLayoutRouteBRoute
-  '/blog': typeof blogBlogIndexRoute
-  '/blog/$postId/deep': typeof blogBlogPostIdDeepRoute
+  '/blog/1': typeof Blog1Route
+  '/blog/thoughts': typeof BlogThoughtsIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/_pathlessLayout': typeof PathlessLayoutRouteWithChildren
-  '/about': typeof AboutRoute
+  '/blog': typeof BlogRouteRouteWithChildren
   '/redirect': typeof RedirectRoute
-  '/(blog)/blog': typeof blogBlogRouteWithChildren
-  '/_pathlessLayout/_nested-layout': typeof PathlessLayoutNestedLayoutRouteWithChildren
-  '/(blog)/blog/$postId': typeof blogBlogPostIdRoute
-  '/_pathlessLayout/_nested-layout/route-a': typeof PathlessLayoutNestedLayoutRouteARoute
-  '/_pathlessLayout/_nested-layout/route-b': typeof PathlessLayoutNestedLayoutRouteBRoute
-  '/(blog)/blog/': typeof blogBlogIndexRoute
-  '/(blog)/blog_/$postId/deep': typeof blogBlogPostIdDeepRoute
+  '/blog/1': typeof Blog1Route
+  '/blog/thoughts/': typeof BlogThoughtsIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths:
-    | '/'
-    | '/about'
-    | '/redirect'
-    | '/blog'
-    | '/blog/$postId'
-    | '/route-a'
-    | '/route-b'
-    | '/blog/'
-    | '/blog/$postId/deep'
+  fullPaths: '/' | '/blog' | '/redirect' | '/blog/1' | '/blog/thoughts'
   fileRoutesByTo: FileRoutesByTo
-  to:
-    | '/'
-    | '/about'
-    | '/redirect'
-    | '/blog/$postId'
-    | '/route-a'
-    | '/route-b'
-    | '/blog'
-    | '/blog/$postId/deep'
-  id:
-    | '__root__'
-    | '/'
-    | '/_pathlessLayout'
-    | '/about'
-    | '/redirect'
-    | '/(blog)/blog'
-    | '/_pathlessLayout/_nested-layout'
-    | '/(blog)/blog/$postId'
-    | '/_pathlessLayout/_nested-layout/route-a'
-    | '/_pathlessLayout/_nested-layout/route-b'
-    | '/(blog)/blog/'
-    | '/(blog)/blog_/$postId/deep'
+  to: '/' | '/blog' | '/redirect' | '/blog/1' | '/blog/thoughts'
+  id: '__root__' | '/' | '/blog' | '/redirect' | '/blog/1' | '/blog/thoughts/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  PathlessLayoutRoute: typeof PathlessLayoutRouteWithChildren
-  AboutRoute: typeof AboutRoute
+  BlogRouteRoute: typeof BlogRouteRouteWithChildren
   RedirectRoute: typeof RedirectRoute
-  blogBlogRoute: typeof blogBlogRouteWithChildren
-  blogBlogPostIdDeepRoute: typeof blogBlogPostIdDeepRoute
 }
 
 declare module '@tanstack/solid-router' {
@@ -168,18 +86,11 @@ declare module '@tanstack/solid-router' {
       preLoaderRoute: typeof RedirectRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/about': {
-      id: '/about'
-      path: '/about'
-      fullPath: '/about'
-      preLoaderRoute: typeof AboutRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/_pathlessLayout': {
-      id: '/_pathlessLayout'
-      path: ''
-      fullPath: ''
-      preLoaderRoute: typeof PathlessLayoutRouteImport
+    '/blog': {
+      id: '/blog'
+      path: '/blog'
+      fullPath: '/blog'
+      preLoaderRoute: typeof BlogRouteRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -189,109 +100,41 @@ declare module '@tanstack/solid-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/_pathlessLayout/_nested-layout': {
-      id: '/_pathlessLayout/_nested-layout'
-      path: ''
-      fullPath: ''
-      preLoaderRoute: typeof PathlessLayoutNestedLayoutRouteImport
-      parentRoute: typeof PathlessLayoutRoute
+    '/blog/1': {
+      id: '/blog/1'
+      path: '/1'
+      fullPath: '/blog/1'
+      preLoaderRoute: typeof Blog1RouteImport
+      parentRoute: typeof BlogRouteRoute
     }
-    '/(blog)/blog': {
-      id: '/(blog)/blog'
-      path: '/blog'
-      fullPath: '/blog'
-      preLoaderRoute: typeof blogBlogRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/(blog)/blog/': {
-      id: '/(blog)/blog/'
-      path: '/'
-      fullPath: '/blog/'
-      preLoaderRoute: typeof blogBlogIndexRouteImport
-      parentRoute: typeof blogBlogRoute
-    }
-    '/_pathlessLayout/_nested-layout/route-b': {
-      id: '/_pathlessLayout/_nested-layout/route-b'
-      path: '/route-b'
-      fullPath: '/route-b'
-      preLoaderRoute: typeof PathlessLayoutNestedLayoutRouteBRouteImport
-      parentRoute: typeof PathlessLayoutNestedLayoutRoute
-    }
-    '/_pathlessLayout/_nested-layout/route-a': {
-      id: '/_pathlessLayout/_nested-layout/route-a'
-      path: '/route-a'
-      fullPath: '/route-a'
-      preLoaderRoute: typeof PathlessLayoutNestedLayoutRouteARouteImport
-      parentRoute: typeof PathlessLayoutNestedLayoutRoute
-    }
-    '/(blog)/blog/$postId': {
-      id: '/(blog)/blog/$postId'
-      path: '/$postId'
-      fullPath: '/blog/$postId'
-      preLoaderRoute: typeof blogBlogPostIdRouteImport
-      parentRoute: typeof blogBlogRoute
-    }
-    '/(blog)/blog_/$postId/deep': {
-      id: '/(blog)/blog_/$postId/deep'
-      path: '/blog/$postId/deep'
-      fullPath: '/blog/$postId/deep'
-      preLoaderRoute: typeof blogBlogPostIdDeepRouteImport
-      parentRoute: typeof rootRouteImport
+    '/blog/thoughts/': {
+      id: '/blog/thoughts/'
+      path: '/thoughts'
+      fullPath: '/blog/thoughts'
+      preLoaderRoute: typeof BlogThoughtsIndexRouteImport
+      parentRoute: typeof BlogRouteRoute
     }
   }
 }
 
-interface PathlessLayoutNestedLayoutRouteChildren {
-  PathlessLayoutNestedLayoutRouteARoute: typeof PathlessLayoutNestedLayoutRouteARoute
-  PathlessLayoutNestedLayoutRouteBRoute: typeof PathlessLayoutNestedLayoutRouteBRoute
+interface BlogRouteRouteChildren {
+  Blog1Route: typeof Blog1Route
+  BlogThoughtsIndexRoute: typeof BlogThoughtsIndexRoute
 }
 
-const PathlessLayoutNestedLayoutRouteChildren: PathlessLayoutNestedLayoutRouteChildren =
-  {
-    PathlessLayoutNestedLayoutRouteARoute:
-      PathlessLayoutNestedLayoutRouteARoute,
-    PathlessLayoutNestedLayoutRouteBRoute:
-      PathlessLayoutNestedLayoutRouteBRoute,
-  }
-
-const PathlessLayoutNestedLayoutRouteWithChildren =
-  PathlessLayoutNestedLayoutRoute._addFileChildren(
-    PathlessLayoutNestedLayoutRouteChildren,
-  )
-
-interface PathlessLayoutRouteChildren {
-  PathlessLayoutNestedLayoutRoute: typeof PathlessLayoutNestedLayoutRouteWithChildren
+const BlogRouteRouteChildren: BlogRouteRouteChildren = {
+  Blog1Route: Blog1Route,
+  BlogThoughtsIndexRoute: BlogThoughtsIndexRoute,
 }
 
-const PathlessLayoutRouteChildren: PathlessLayoutRouteChildren = {
-  PathlessLayoutNestedLayoutRoute: PathlessLayoutNestedLayoutRouteWithChildren,
-}
-
-const PathlessLayoutRouteWithChildren = PathlessLayoutRoute._addFileChildren(
-  PathlessLayoutRouteChildren,
-)
-
-interface blogBlogRouteChildren {
-  blogBlogPostIdRoute: typeof blogBlogPostIdRoute
-  blogBlogIndexRoute: typeof blogBlogIndexRoute
-}
-
-const blogBlogRouteChildren: blogBlogRouteChildren = {
-  blogBlogPostIdRoute: blogBlogPostIdRoute,
-  blogBlogIndexRoute: blogBlogIndexRoute,
-}
-
-const blogBlogRouteWithChildren = blogBlogRoute._addFileChildren(
-  blogBlogRouteChildren,
+const BlogRouteRouteWithChildren = BlogRouteRoute._addFileChildren(
+  BlogRouteRouteChildren,
 )
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  PathlessLayoutRoute: PathlessLayoutRouteWithChildren,
-  AboutRoute: AboutRoute,
+  BlogRouteRoute: BlogRouteRouteWithChildren,
   RedirectRoute: RedirectRoute,
-  blogBlogRoute: blogBlogRouteWithChildren,
-  blogBlogPostIdDeepRoute: blogBlogPostIdDeepRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

@@ -6,7 +6,7 @@ export const Route = createFileRoute("/")({
 
 function Home() {
 	return (
-		<div class="max-w-3xl mx-auto p-6 sm:px-8 lg:px-8">
+		<main class="max-w-3xl mx-auto p-6 sm:px-8 lg:px-8">
 			<h1>Sarah Gerrard</h1>
 			<h2 class="-mt-4">Software Dev, OSS Enthusiast</h2>
 			<p>
@@ -51,6 +51,6 @@ function Home() {
 					<SocialButton type="emailme" />
 				</li>
 			</ul>
-		</div>
+		</main>
 	);
 }
