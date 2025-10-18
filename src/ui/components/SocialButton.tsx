@@ -33,7 +33,7 @@ const socialButtonOptions: Record<string, SocialButtonOptions> = {
 	},
 	emailme: {
 		iconClass: "i-tabler-mail",
-		ariaLabel: "Email Me",
+		ariaLabel: "Email",
 		link: "mailto:hello@sarahgerrard.me",
 	},
 };

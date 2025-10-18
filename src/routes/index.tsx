@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/solid-router";
+import { createFileRoute, Link } from "@tanstack/solid-router";
 import { SocialButton } from "~/ui/components/SocialButton";
 export const Route = createFileRoute("/")({
 	component: Home,
@@ -18,8 +18,8 @@ function Home() {
 			</p>
 			<p>
 				Open source is a huge part of my life. I've{" "}
-				<a href="/oss">contributed to many projects</a> over the years, and I'm
-				a maintainer of a few libraries. Being part of communities that work
+				<Link to="/oss">contributed to many projects</Link> over the years, and
+				I'm a maintainer of a few libraries. Being part of communities that work
 				together to build awesome software is something I truly value. I believe
 				that without open source software, the tech industry wouldn't be what it
 				is today.
@@ -29,7 +29,7 @@ function Home() {
 				reading, swimming, working out, and video games, to name a few, I always
 				have something keeping me busy. Inspired by{" "}
 				<a href="https://antfu.me/">Anthony Fu</a>, I've started to keep a{" "}
-				<a href="/awesome-list">list of my favourite things</a>.
+				<Link to="/awesome-list">list of my favourite things</Link>.
 			</p>
 			<p>
 				I live in the beautiful city of Vancouver, Canada. With its growing tech

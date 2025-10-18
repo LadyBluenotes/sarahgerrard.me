@@ -1,4 +1,5 @@
-import { createFileRoute, Outlet } from "@tanstack/solid-router";
+import { createFileRoute, Link, Outlet } from "@tanstack/solid-router";
+import { Layout } from "~/ui/components/layout/Layout";
 
 export const Route = createFileRoute("/blog")({
 	component: RouteComponent,
@@ -6,27 +7,17 @@ export const Route = createFileRoute("/blog")({
 
 function RouteComponent() {
 	return (
-		<div class="max-w-3xl mx-auto p-6 sm:px-8 lg:px-8">
+		<Layout>
 			<ul class="flex items-center gap-4 mb-4">
 				<li>
-					<a
-						href="/blog"
-						class="text-blue-800 hover:text-blue-600"
-					>
-						Blog Posts
-					</a>
+					<Link to="/blog">Blog Posts</Link>
 				</li>
 				<li>
-					<a
-						href="/blog/thoughts"
-						class="text-blue-800 hover:text-blue-600"
-					>
-						Thoughts
-					</a>
+					<Link to="/blog/thoughts">Thoughts</Link>
 				</li>
 			</ul>
-			<hr class="my-4" />
+			<hr class="my-4 border-[var(--border-color)]" />
 			<Outlet />
-		</div>
+		</Layout>
 	);
 }
