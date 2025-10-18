@@ -57,6 +57,15 @@ export const Route = createRootRoute({
 			{
 				src: "https://cdn.jsdelivr.net/npm/@unocss/runtime",
 			},
+			{
+				children: `const theme = localStorage.getItem('theme');
+					const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+					if (theme === 'dark' || (!theme && prefersDark)) {
+						document.documentElement.setAttribute('data-theme', 'dark');
+					} else {
+						document.documentElement.setAttribute('data-theme', 'light');
+					}`,
+			},
 		],
 	}),
 	errorComponent: DefaultCatchBoundary,

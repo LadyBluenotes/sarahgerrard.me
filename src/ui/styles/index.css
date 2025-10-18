@@ -128,10 +128,15 @@ html {
 
 	p {
 		margin: 1.25em 0;
-		color: var(--sb-text-color);
+		color: var(--text-color);
 	}
 
-	a {
+	a:focus {
+		outline: 2px solid var(--focus-outline);
+		outline-offset: 2px;
+	}
+
+	a:not(.social-button):not(.header-link):not(.initials) {
 		color: var(--heading-color);
 		font-weight: 600;
 		text-decoration: none;
@@ -148,12 +153,12 @@ html {
 
 	.initials {
 		font-family: "Mindway", sans-serif;
-		font-weight: 400;
+		font-weight: 600;
 	}
 
 	.header-link {
 		color: var(--inactive);
-		font-weight: 500;
+		font-weight: 400;
 		box-shadow: none;
 		&:hover {
 			color: var(--hover-inactive);

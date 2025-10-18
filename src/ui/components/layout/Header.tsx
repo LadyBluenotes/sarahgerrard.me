@@ -50,9 +50,7 @@ export default function Header() {
 					<ThemeSelector />
 				</nav>
 			</header>
-			<section class="border-y border-border/50 border-[--border-color] z-[1] relative border-t-border dark:border-t-border/50">
-				<div class="h-1 w-full" />
-			</section>
+			<hr class="border-y border-border/50 border-[--border-color] z-[1] relative border-t-border dark:border-t-border/50 h-[5px]" />
 		</>
 	);
 }
