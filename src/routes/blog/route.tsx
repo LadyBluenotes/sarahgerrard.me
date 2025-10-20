@@ -17,21 +17,7 @@ export const Route = createFileRoute("/blog")({
 function RouteComponent() {
 	return (
 		<Layout>
-			<h1 class="text-2xl font-bold mb-4">Blog</h1>
-			<ul>
-				{allBlogs.map((blog) => {
-					return (
-						<li class="mb-2">
-							<Link
-								to={`/blog/${blog._meta.path}`}
-								class="bold i"
-							>
-								{blog.title}
-							</Link>
-						</li>
-					);
-				})}
-			</ul>
+			<h1>Bloggy</h1>
 			<Outlet />
 		</Layout>
 	);

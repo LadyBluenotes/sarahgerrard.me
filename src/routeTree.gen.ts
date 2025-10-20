@@ -16,6 +16,7 @@ import { Route as BlogRouteRouteImport } from './routes/blog/route'
 import { Route as AwesomeListRouteRouteImport } from './routes/awesome-list/route'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as OssIndexRouteImport } from './routes/oss/index'
+import { Route as BlogIndexRouteImport } from './routes/blog/index'
 import { Route as BlogSlugRouteImport } from './routes/blog/$slug'
 import { Route as AwesomeListTvIndexRouteImport } from './routes/awesome-list/tv/index'
 import { Route as AwesomeListMovieIndexRouteImport } from './routes/awesome-list/movie/index'
@@ -56,6 +57,11 @@ const OssIndexRoute = OssIndexRouteImport.update({
   path: '/',
   getParentRoute: () => OssRouteRoute,
 } as any)
+const BlogIndexRoute = BlogIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => BlogRouteRoute,
+} as any)
 const BlogSlugRoute = BlogSlugRouteImport.update({
   id: '/$slug',
   path: '/$slug',
@@ -85,6 +91,7 @@ export interface FileRoutesByFullPath {
   '/thoughts': typeof ThoughtsRouteRoute
   '/redirect': typeof RedirectRoute
   '/blog/$slug': typeof BlogSlugRoute
+  '/blog/': typeof BlogIndexRoute
   '/oss/': typeof OssIndexRoute
   '/awesome-list/books': typeof AwesomeListBooksIndexRoute
   '/awesome-list/movie': typeof AwesomeListMovieIndexRoute
@@ -93,10 +100,10 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/awesome-list': typeof AwesomeListRouteRouteWithChildren
-  '/blog': typeof BlogRouteRouteWithChildren
   '/thoughts': typeof ThoughtsRouteRoute
   '/redirect': typeof RedirectRoute
   '/blog/$slug': typeof BlogSlugRoute
+  '/blog': typeof BlogIndexRoute
   '/oss': typeof OssIndexRoute
   '/awesome-list/books': typeof AwesomeListBooksIndexRoute
   '/awesome-list/movie': typeof AwesomeListMovieIndexRoute
@@ -111,6 +118,7 @@ export interface FileRoutesById {
   '/thoughts': typeof ThoughtsRouteRoute
   '/redirect': typeof RedirectRoute
   '/blog/$slug': typeof BlogSlugRoute
+  '/blog/': typeof BlogIndexRoute
   '/oss/': typeof OssIndexRoute
   '/awesome-list/books/': typeof AwesomeListBooksIndexRoute
   '/awesome-list/movie/': typeof AwesomeListMovieIndexRoute
@@ -126,6 +134,7 @@ export interface FileRouteTypes {
     | '/thoughts'
     | '/redirect'
     | '/blog/$slug'
+    | '/blog/'
     | '/oss/'
     | '/awesome-list/books'
     | '/awesome-list/movie'
@@ -134,10 +143,10 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/awesome-list'
-    | '/blog'
     | '/thoughts'
     | '/redirect'
     | '/blog/$slug'
+    | '/blog'
     | '/oss'
     | '/awesome-list/books'
     | '/awesome-list/movie'
@@ -151,6 +160,7 @@ export interface FileRouteTypes {
     | '/thoughts'
     | '/redirect'
     | '/blog/$slug'
+    | '/blog/'
     | '/oss/'
     | '/awesome-list/books/'
     | '/awesome-list/movie/'
@@ -217,6 +227,13 @@ declare module '@tanstack/solid-router' {
       preLoaderRoute: typeof OssIndexRouteImport
       parentRoute: typeof OssRouteRoute
     }
+    '/blog/': {
+      id: '/blog/'
+      path: '/'
+      fullPath: '/blog/'
+      preLoaderRoute: typeof BlogIndexRouteImport
+      parentRoute: typeof BlogRouteRoute
+    }
     '/blog/$slug': {
       id: '/blog/$slug'
       path: '/$slug'
@@ -265,10 +282,12 @@ const AwesomeListRouteRouteWithChildren =
 
 interface BlogRouteRouteChildren {
   BlogSlugRoute: typeof BlogSlugRoute
+  BlogIndexRoute: typeof BlogIndexRoute
 }
 
 const BlogRouteRouteChildren: BlogRouteRouteChildren = {
   BlogSlugRoute: BlogSlugRoute,
+  BlogIndexRoute: BlogIndexRoute,
 }
 
 const BlogRouteRouteWithChildren = BlogRouteRoute._addFileChildren(

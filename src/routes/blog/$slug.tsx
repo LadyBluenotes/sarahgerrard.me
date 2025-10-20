@@ -16,7 +16,7 @@ export const Route = createFileRoute("/blog/$slug")({
 			title: post.title,
 			summary: post.summary,
 			html: post.html,
-		};
+		}
 	},
 	head: (post) => ({
 		meta: post.loaderData
@@ -47,5 +47,5 @@ function RouteComponent() {
 				innerHTML={post().html}
 			></article>
 		</div>
-	);
+	)
 }
