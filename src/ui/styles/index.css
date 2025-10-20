@@ -188,9 +188,6 @@ html {
 	}
 
 	pre code {
-		counter-reset: step;
-		counter-increment: step var(--codeblock-line-start, 0);
-
 		display: block;
 		position: relative;
 		padding-left: 1rem;
