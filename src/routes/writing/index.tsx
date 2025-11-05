@@ -28,6 +28,27 @@ function RouteComponent() {
 		{} as Record<number, typeof allPosts>
 	);
 
+	// grab all the tags used in posts
+
+	const tagsSet = new Set<string>();
+	allPosts.forEach((post) => {
+		post.tags?.forEach((tag) => tagsSet.add(tag));
+	});
+	const tags = Array.from(tagsSet).sort();
+
+	console.log("tags:", tags);
+
+	// categorize by tag
+	const postsByTag = tags.reduce(
+		(acc, tag) => {
+			acc[tag] = allPosts.filter((post) => post.tags?.includes(tag));
+			return acc;
+		},
+		{} as Record<string, typeof allPosts>
+	);
+
+	console.log("postsByTag:", postsByTag);
+
 	return (
 		<div>
 			<ul class="flex flex-col gap-4">
@@ -41,13 +62,13 @@ function RouteComponent() {
 										<li>
 											<a
 												href={`/writing/${post._meta.path}`}
-												class="group flex gap-2 content-bottom group-hover:underline"
+												class="group flex gap-4 items-baseline group-hover:underline"
 											>
 												<span class="text-[--inactive] group-hover:text-[--hover-inactive] group-hover:underline">
 													{post.title}
 												</span>
-												-
-												<span class="text-sm mt-auto text-[--inactive]/70">
+
+												<span class="text-sm text-[--inactive]/70">
 													{new Date(post.date as string).toLocaleDateString(
 														"en-CA",
 														{

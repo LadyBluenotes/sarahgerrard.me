@@ -44,6 +44,7 @@ function RouteComponent() {
 				<div class="i-tabler-chevron-left w-1em h-1em" />
 				See all posts
 			</Link>
+			<h1 class="text-4xl font-bold my-4">{post().title}</h1>
 			<article
 				class="my-4"
 				innerHTML={post().html}

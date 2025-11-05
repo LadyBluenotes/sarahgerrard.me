@@ -20,7 +20,6 @@ export const Route = createFileRoute("/writing")({
 function RouteComponent() {
 	return (
 		<Layout>
-			<h1>Writing</h1>
 			<Outlet />
 		</Layout>
 	);
