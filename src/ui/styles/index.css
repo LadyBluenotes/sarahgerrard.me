@@ -133,7 +133,7 @@ html {
 		outline-offset: 2px;
 	}
 
-	a:not(.social-button):not(.header-link):not(.initials) {
+	p a {
 		color: var(--heading-color);
 		font-weight: 600;
 		text-decoration: none;
@@ -148,12 +148,17 @@ html {
 		}
 	}
 
-	.initials {
-		font-family: "Mindway", sans-serif;
-		font-weight: 600;
+	a.initials {
+		box-shadow: none;
+
+		> span {
+			font-family: "Mindway", sans-serif;
+			font-weight: 600;
+			text-decoration: none;
+		}
 	}
 
-	.header-link {
+	a.header-link {
 		color: var(--inactive);
 		font-weight: 400;
 		box-shadow: none;
@@ -168,7 +173,7 @@ html {
 		}
 	}
 
-	.social-button {
+	a.social-button {
 		display: inline-flex;
 		align-items: center;
 		gap: 0.5rem;
@@ -181,10 +186,19 @@ html {
 		cursor: pointer;
 		transition: background-color 0.2s ease-in-out;
 		background-color: transparent;
+		box-shadow: none;
 
 		&:hover {
 			background-color: var(--button-bg);
+			box-shadow: none;
 		}
+	}
+
+	code {
+		background-color: rgb(from var(--inactive) r g b / 10%);
+		cursor: text;
+		padding: 0.1rem 0.25rem;
+		border-radius: 0.25rem;
 	}
 
 	pre code {
@@ -211,6 +225,12 @@ html {
 		margin-left: -1rem;
 		margin-right: -1rem;
 		padding: 0 1rem;
+	}
+
+	ul li {
+		list-style-type: disc;
+		margin-left: 1.5rem;
+		color: var(--text-color);
 	}
 }
 

@@ -3,8 +3,7 @@ import { Index, Show } from "solid-js";
 import { Link } from "@tanstack/solid-router";
 
 const blogLinks = [
-	{ href: "/blog", label: "Blog" },
-	{ href: "/thoughts", label: "Thoughts" },
+	{ href: "/writing", label: "Writing" },
 	{ href: "/oss", label: "OSS" },
 	{
 		href: "https://bsky.app/profile/ladybluenotes.dev",
@@ -32,7 +31,7 @@ export default function Header() {
 					<Index each={blogLinks}>
 						{(link) => (
 							<Link
-								to={link().href}
+								to={link().href.startsWith("/") ? link().href : undefined}
 								target={link().href.startsWith("http") ? "_blank" : undefined}
 								title={link().label}
 								class="header-link"

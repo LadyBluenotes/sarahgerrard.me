@@ -1,14 +1,14 @@
 import { createFileRoute, Link } from "@tanstack/solid-router";
-import { allBlogs } from "content-collections";
+import { allPosts } from "content-collections";
 import { seo } from "~/utils/seo";
 
-export const Route = createFileRoute("/blog/$slug")({
+export const Route = createFileRoute("/writing/$slug")({
 	beforeLoad: () => ({
-		allBlogs,
+		allPosts,
 	}),
-	loader: async ({ params, context: { allBlogs } }) => {
+	loader: async ({ params, context: { allPosts } }) => {
 		const slug = params.slug;
-		const post = allBlogs.find((post) => post._meta.path === slug);
+		const post = allPosts.find((post) => post._meta.path === slug);
 		if (!post) {
 			throw new Response("Not Found", { status: 404 });
 		}
@@ -16,7 +16,9 @@ export const Route = createFileRoute("/blog/$slug")({
 			title: post.title,
 			summary: post.summary,
 			html: post.html,
-		}
+			next: post.next,
+			prev: post.prev,
+		};
 	},
 	head: (post) => ({
 		meta: post.loaderData
@@ -36,7 +38,7 @@ function RouteComponent() {
 	return (
 		<div>
 			<Link
-				to="/blog"
+				to="/writing"
 				class="inline-flex items-center gap-1"
 			>
 				<div class="i-tabler-chevron-left w-1em h-1em" />
@@ -45,7 +47,7 @@ function RouteComponent() {
 			<article
 				class="my-4"
 				innerHTML={post().html}
-			></article>
+			/>
 		</div>
-	)
+	);
 }
