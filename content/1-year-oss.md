@@ -13,7 +13,7 @@ When diving into tech, there is a lot of talk about open source. While tech wasn
 
 Open source encompasses a _massive_ community. In includes projects for web development like [Node](https://nodejs.org/en/), [React](https://react.dev/), [NextJS](https://nextjs.org/), and [Astro](https://astro.build/), to name a few. Beyond web development, it extends to your operating systems like [Ubuntu](https://ubuntu.com/) and [Arch](https://archlinux.org/) linux, code editors such as [VS Code](https://code.visualstudio.com/) , database management systems like [PostgreSQL](https://www.postgresql.org/) and [MySQL](https://www.mysql.com/), and the programming languages like [Python](https://www.python.org/) and [Go](https://go.dev/). This widespread influence of open source in various domains is incredible. It was shocking just how many projects I was using in my day-to-day that were open source, inevitably driving my desire to contribute.
 
-![Open Source 101. An unconventional introduction to… | by Naveen Sundar |  NITRR Open Source | Medium](https://miro.medium.com/v2/resize:fit:820/0*c3sn8UF6d6dE3e8v.png align="left")
+![Open Source 101. An unconventional introduction to… | by Naveen Sundar |  NITRR Open Source | Medium](https://miro.medium.com/v2/resize:fit:820/0*c3sn8UF6d6dE3e8v.png)
 
 Reflecting on this, I was (and still am) in awe of just how profound of an influence open source has had on so many different aspects of our day to day. Merely using these projects didn't feel like enough for me, I wanted to contribute and give back to them. With these thoughts in mind, I actively sought out ways to make a meaningful difference in the open source community. I officially started my open source contribution journey.
 
@@ -59,7 +59,7 @@ An open-source community thrives on more than just identifying problems through 
 6. **Bug Triaging:** Helping to manage the issue tracker by reproducing bugs, labeling issues, or closing resolved ones can greatly assist the maintainers.
 7. **Accessibility Improvements:** Making a project more accessible to everyone is incredibly important. This can be offering translations if you know a language the docs haven't been translated into or suggesting and implementing features that make the project easier to use for individuals with a disability.
 
-![CDN media](https://i.redd.it/wjrgcxm0err91.jpg align="center")
+![CDN media](https://i.redd.it/wjrgcxm0err91.jpg)
 
 #### Play to your strengths
 
@@ -78,7 +78,7 @@ Some key points to consider are:
 - **Quality over quantity:** Instead of simply making contributions for the sake of it, focus on delivering meaningful contributions that genuinely advance the project. The goal is to feel like you're actively moving the project forward.
 - **Collaborate and communicate:** Open-source is a collaborative effort. Work with other contributors and maintainers and communicate your intentions, ideas, and progress clearly. Engage in discussions, ask questions when needed, and be responsive to feedback.
 
-![CDN media](https://i.redd.it/ri36zeo78qj71.jpg align="center")
+![CDN media](https://i.redd.it/ri36zeo78qj71.jpg)
 
 - > **Insight #6:** Be specific.
 

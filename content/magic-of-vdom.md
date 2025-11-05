@@ -13,7 +13,7 @@ When crafting HTML for your webpage, the magic happens behind the scenes as the 
 
 The DOM serves as a representation of the elements in your HTML. It organizes those elements into a hierarchical structure, as seen below, where each one becomes a node in the tree. These nodes can be accessed, manipulated, and interacted with using programming languages such as JavaScript.
 
-[![Visual representation of the DOM hierarchy, showcasing the parent-child relationships between HTML elements.](https://www.w3schools.com/js/pic_htmltree.gif align="center")](https://www.w3schools.com/js/js_htmldom.asp)
+[![Visual representation of the DOM hierarchy, showcasing the parent-child relationships between HTML elements.](https://www.w3schools.com/js/pic_htmltree.gif)](https://www.w3schools.com/js/js_htmldom.asp)
 
 The Virtual DOM (VDOM), as the name suggests, is a virtual or secondary representation of the DOM. While the DOM is maintained by the browser, the VDOM exists in JavaScript’s memory stack, where it mirrors the structure and properties of the DOM tree.
 
@@ -27,7 +27,7 @@ This efficient and innovative approach to handling updates and changes modifies 
 
 The VDOM works in a way that optimizes and streamlines the process of updating the user interfaces of web applications. In a nutshell, this is how it operates:
 
-![A diagram showing the process from change of state, diffing, to re-rendering the virtual DOM, comparing what happens at the VDOM level and what happens with the DOM. Retrieved from https://codingmedic.wordpress.com/2020/11/10/the-virtual-dom/](https://codingmedic.files.wordpress.com/2020/11/virtualdom.png?w=1024 align="center")
+![A diagram showing the process from change of state, diffing, to re-rendering the virtual DOM, comparing what happens at the VDOM level and what happens with the DOM. Retrieved from https://codingmedic.wordpress.com/2020/11/10/the-virtual-dom/](https://codingmedic.files.wordpress.com/2020/11/virtualdom.png?w=1024)
 
 1. **Representation:** First, the VDOM presents a virtual representation of the actual DOM. Each time a change occurs, such as a user interaction or data update, a new version of the VDOM is mutated as opposed to immediately changing the actual DOM.
 2. **Diffing:** After a new version of the VDOM has been created, the next step is "diffing". Diffing, originating from "difference," is an algorithm that causes the VDOM to conduct a comparison between the two versions of the DOM - the current (old) one, or the newly created one.
