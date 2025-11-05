@@ -194,11 +194,15 @@ html {
 		}
 	}
 
-	code {
+	:is(p, li, span) code {
 		background-color: rgb(from var(--inactive) r g b / 10%);
 		cursor: text;
 		padding: 0.1rem 0.25rem;
 		border-radius: 0.25rem;
+	}
+
+	pre {
+		margin: 1rem 0;
 	}
 
 	pre code {
@@ -227,10 +231,12 @@ html {
 		padding: 0 1rem;
 	}
 
-	ul li {
-		list-style-type: disc;
-		margin-left: 1.5rem;
-		color: var(--text-color);
+	article {
+		ul li {
+			list-style-type: disc;
+			margin-left: 1.5rem;
+			color: var(--text-color);
+		}
 	}
 }
 
