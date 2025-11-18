@@ -8,7 +8,7 @@ export const Route = createFileRoute("/oss")({
 function RouteComponent() {
 	return (
 		<Layout>
-			<h1>Open Source Contributions</h1>
+			<h1>Open Source</h1>
 		</Layout>
 	);
 }

@@ -27,9 +27,7 @@ function Home() {
 			<p>
 				Outside of coding, I have a healthy list of hobbies. Between the baking,
 				reading, swimming, working out, and video games, to name a few, I always
-				have something keeping me busy. Inspired by{" "}
-				<a href="https://antfu.me/">Anthony Fu</a>, I've started to keep a{" "}
-				<Link to="/awesome-list">list of my favourite things</Link>.
+				have something keeping me busy.
 			</p>
 			<p>
 				I live in the beautiful city of Vancouver, Canada. With its growing tech

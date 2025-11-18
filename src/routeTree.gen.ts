@@ -12,14 +12,10 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as RedirectRouteImport } from './routes/redirect'
 import { Route as WritingRouteRouteImport } from './routes/writing/route'
 import { Route as OssRouteRouteImport } from './routes/oss/route'
-import { Route as AwesomeListRouteRouteImport } from './routes/awesome-list/route'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as WritingIndexRouteImport } from './routes/writing/index'
 import { Route as OssIndexRouteImport } from './routes/oss/index'
 import { Route as WritingSlugRouteImport } from './routes/writing/$slug'
-import { Route as AwesomeListTvIndexRouteImport } from './routes/awesome-list/tv/index'
-import { Route as AwesomeListMovieIndexRouteImport } from './routes/awesome-list/movie/index'
-import { Route as AwesomeListBooksIndexRouteImport } from './routes/awesome-list/books/index'
 
 const RedirectRoute = RedirectRouteImport.update({
   id: '/redirect',
@@ -34,11 +30,6 @@ const WritingRouteRoute = WritingRouteRouteImport.update({
 const OssRouteRoute = OssRouteRouteImport.update({
   id: '/oss',
   path: '/oss',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const AwesomeListRouteRoute = AwesomeListRouteRouteImport.update({
-  id: '/awesome-list',
-  path: '/awesome-list',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -61,103 +52,58 @@ const WritingSlugRoute = WritingSlugRouteImport.update({
   path: '/$slug',
   getParentRoute: () => WritingRouteRoute,
 } as any)
-const AwesomeListTvIndexRoute = AwesomeListTvIndexRouteImport.update({
-  id: '/tv/',
-  path: '/tv/',
-  getParentRoute: () => AwesomeListRouteRoute,
-} as any)
-const AwesomeListMovieIndexRoute = AwesomeListMovieIndexRouteImport.update({
-  id: '/movie/',
-  path: '/movie/',
-  getParentRoute: () => AwesomeListRouteRoute,
-} as any)
-const AwesomeListBooksIndexRoute = AwesomeListBooksIndexRouteImport.update({
-  id: '/books/',
-  path: '/books/',
-  getParentRoute: () => AwesomeListRouteRoute,
-} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/awesome-list': typeof AwesomeListRouteRouteWithChildren
   '/oss': typeof OssRouteRouteWithChildren
   '/writing': typeof WritingRouteRouteWithChildren
   '/redirect': typeof RedirectRoute
   '/writing/$slug': typeof WritingSlugRoute
   '/oss/': typeof OssIndexRoute
   '/writing/': typeof WritingIndexRoute
-  '/awesome-list/books': typeof AwesomeListBooksIndexRoute
-  '/awesome-list/movie': typeof AwesomeListMovieIndexRoute
-  '/awesome-list/tv': typeof AwesomeListTvIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/awesome-list': typeof AwesomeListRouteRouteWithChildren
   '/redirect': typeof RedirectRoute
   '/writing/$slug': typeof WritingSlugRoute
   '/oss': typeof OssIndexRoute
   '/writing': typeof WritingIndexRoute
-  '/awesome-list/books': typeof AwesomeListBooksIndexRoute
-  '/awesome-list/movie': typeof AwesomeListMovieIndexRoute
-  '/awesome-list/tv': typeof AwesomeListTvIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/awesome-list': typeof AwesomeListRouteRouteWithChildren
   '/oss': typeof OssRouteRouteWithChildren
   '/writing': typeof WritingRouteRouteWithChildren
   '/redirect': typeof RedirectRoute
   '/writing/$slug': typeof WritingSlugRoute
   '/oss/': typeof OssIndexRoute
   '/writing/': typeof WritingIndexRoute
-  '/awesome-list/books/': typeof AwesomeListBooksIndexRoute
-  '/awesome-list/movie/': typeof AwesomeListMovieIndexRoute
-  '/awesome-list/tv/': typeof AwesomeListTvIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
-    | '/awesome-list'
     | '/oss'
     | '/writing'
     | '/redirect'
     | '/writing/$slug'
     | '/oss/'
     | '/writing/'
-    | '/awesome-list/books'
-    | '/awesome-list/movie'
-    | '/awesome-list/tv'
   fileRoutesByTo: FileRoutesByTo
-  to:
-    | '/'
-    | '/awesome-list'
-    | '/redirect'
-    | '/writing/$slug'
-    | '/oss'
-    | '/writing'
-    | '/awesome-list/books'
-    | '/awesome-list/movie'
-    | '/awesome-list/tv'
+  to: '/' | '/redirect' | '/writing/$slug' | '/oss' | '/writing'
   id:
     | '__root__'
     | '/'
-    | '/awesome-list'
     | '/oss'
     | '/writing'
     | '/redirect'
     | '/writing/$slug'
     | '/oss/'
     | '/writing/'
-    | '/awesome-list/books/'
-    | '/awesome-list/movie/'
-    | '/awesome-list/tv/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  AwesomeListRouteRoute: typeof AwesomeListRouteRouteWithChildren
   OssRouteRoute: typeof OssRouteRouteWithChildren
   WritingRouteRoute: typeof WritingRouteRouteWithChildren
   RedirectRoute: typeof RedirectRoute
@@ -184,13 +130,6 @@ declare module '@tanstack/solid-router' {
       path: '/oss'
       fullPath: '/oss'
       preLoaderRoute: typeof OssRouteRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/awesome-list': {
-      id: '/awesome-list'
-      path: '/awesome-list'
-      fullPath: '/awesome-list'
-      preLoaderRoute: typeof AwesomeListRouteRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -221,44 +160,8 @@ declare module '@tanstack/solid-router' {
       preLoaderRoute: typeof WritingSlugRouteImport
       parentRoute: typeof WritingRouteRoute
     }
-    '/awesome-list/tv/': {
-      id: '/awesome-list/tv/'
-      path: '/tv'
-      fullPath: '/awesome-list/tv'
-      preLoaderRoute: typeof AwesomeListTvIndexRouteImport
-      parentRoute: typeof AwesomeListRouteRoute
-    }
-    '/awesome-list/movie/': {
-      id: '/awesome-list/movie/'
-      path: '/movie'
-      fullPath: '/awesome-list/movie'
-      preLoaderRoute: typeof AwesomeListMovieIndexRouteImport
-      parentRoute: typeof AwesomeListRouteRoute
-    }
-    '/awesome-list/books/': {
-      id: '/awesome-list/books/'
-      path: '/books'
-      fullPath: '/awesome-list/books'
-      preLoaderRoute: typeof AwesomeListBooksIndexRouteImport
-      parentRoute: typeof AwesomeListRouteRoute
-    }
   }
 }
-
-interface AwesomeListRouteRouteChildren {
-  AwesomeListBooksIndexRoute: typeof AwesomeListBooksIndexRoute
-  AwesomeListMovieIndexRoute: typeof AwesomeListMovieIndexRoute
-  AwesomeListTvIndexRoute: typeof AwesomeListTvIndexRoute
-}
-
-const AwesomeListRouteRouteChildren: AwesomeListRouteRouteChildren = {
-  AwesomeListBooksIndexRoute: AwesomeListBooksIndexRoute,
-  AwesomeListMovieIndexRoute: AwesomeListMovieIndexRoute,
-  AwesomeListTvIndexRoute: AwesomeListTvIndexRoute,
-}
-
-const AwesomeListRouteRouteWithChildren =
-  AwesomeListRouteRoute._addFileChildren(AwesomeListRouteRouteChildren)
 
 interface OssRouteRouteChildren {
   OssIndexRoute: typeof OssIndexRoute
@@ -288,7 +191,6 @@ const WritingRouteRouteWithChildren = WritingRouteRoute._addFileChildren(
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  AwesomeListRouteRoute: AwesomeListRouteRouteWithChildren,
   OssRouteRoute: OssRouteRouteWithChildren,
   WritingRouteRoute: WritingRouteRouteWithChildren,
   RedirectRoute: RedirectRoute,

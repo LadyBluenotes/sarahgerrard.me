@@ -15,6 +15,7 @@
 		"@tanstack/solid-router-devtools": "^1.133.10",
 		"@tanstack/solid-start": "^1.133.10",
 		"@unocss/reset": "^66.5.4",
+		"octokit": "^5.0.5",
 		"redaxios": "^0.5.1",
 		"rehype-raw": "^7.0.0",
 		"rehype-sanitize": "^6.0.0",

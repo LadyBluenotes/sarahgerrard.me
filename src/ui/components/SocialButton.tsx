@@ -46,7 +46,7 @@ export const SocialButton = (props: SocialButtonProps) => {
 			href={socialButtonOptions[props.type].link}
 			target="_blank"
 			rel="noopener noreferrer"
-			class="social-button"
+			class="button"
 		>
 			<div
 				class={`${socialButtonOptions[props.type].iconClass} h-1.5em w-1.5em icon`}
