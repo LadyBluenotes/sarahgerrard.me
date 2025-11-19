@@ -5,7 +5,9 @@
   Josh's Custom CSS Reset
   https://www.joshwcomeau.com/css/custom-css-reset/
 */
-*, *: : before, *: : after {
+*,
+*::before,
+*::after {
 	box-sizing: border-box;
 }
 
@@ -129,11 +131,12 @@ html {
 	}
 
 	a:focus {
-		outline: 2px solid var(--focus-outline);
+		outline: 2px solid;
 		outline-offset: 2px;
 	}
 
-	p a {
+	p a,
+	.link {
 		color: var(--heading-color);
 		font-weight: 600;
 		text-decoration: none;
@@ -162,6 +165,7 @@ html {
 		color: var(--inactive);
 		font-weight: 400;
 		box-shadow: none;
+
 		&:hover {
 			color: var(--hover-inactive);
 			box-shadow: none;
@@ -213,11 +217,11 @@ html {
 
 		overflow-x: hidden;
 		white-space: pre-wrap;
-		position: relative;
 
 		padding-top: 12px;
 		padding-bottom: 12px;
 	}
+
 	.shiki {
 		border-radius: 0.5rem;
 	}

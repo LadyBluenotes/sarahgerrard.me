@@ -1,17 +1,14 @@
 import { unified } from "unified";
 import remarkParse from "remark-parse";
 import remarkRehype from "remark-rehype";
-import remarkShikiTwoslash from "@shikijs/remark-twoslash";
 import rehypeSanitize from "rehype-sanitize";
 import rehypeStringify from "rehype-stringify";
 import rehypeRaw from "rehype-raw";
 
 import rehypeShiki from "@shikijs/rehype";
-import { transformerTwoslash } from "@shikijs/twoslash";
 import {
-	transformerNotationDiff,
-	transformerRenderIndentGuides,
 	transformerMetaHighlight,
+	transformerNotationDiff,
 } from "@shikijs/transformers";
 
 const processFile = unified()

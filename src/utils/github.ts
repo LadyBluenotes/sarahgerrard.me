@@ -1,6 +1,5 @@
 import { createServerFn } from "@tanstack/solid-start";
 import { Octokit } from "octokit";
-import { any } from "zod";
 
 const octokit = new Octokit({
 	auth: import.meta.env.VITE_GITHUB_TOKEN,
