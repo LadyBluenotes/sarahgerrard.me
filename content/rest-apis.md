@@ -2,54 +2,89 @@
 title: Getting Started with REST APIs
 summary: An introduction to REST APIs, their principles, and best practices for building and using them.
 date: 01-28-2023
-tags: ["REST API", "APIs", "web development", "backend"]
+draft: true
+tags: [ "REST API", "APIs", "web development", "backend" ]
 ---
 
-If you've been in tech for any amount of time, you've probably heard the term "API." API stands for application programming interface and it acts as a bridge between different software systems.
+If you've been in tech for any amount of time, you've probably heard the term "API." API stands for application
+programming interface and it acts as a bridge between different software systems.
 
-A REST API, or Representational State Transfer API, is a specific type of API that follows certain principles to make sure that the message exchange is consistent and predictable. A great example of a REST API in action is when you use a mobile app to check the weather. The app sends a request to a weather API with your location and the API processes the request and sends back a response. The app then displays information, such as the current temperature and forecast, for you to see. All of this happens in a matter of seconds, but behind the scenes, the app and the API are communicating with each other through a series of requests and responses, all following the principles of REST.
+A REST API, or Representational State Transfer API, is a specific type of API that follows certain principles to make
+sure that the message exchange is consistent and predictable. A great example of a REST API in action is when you use a
+mobile app to check the weather. The app sends a request to a weather API with your location and the API processes the
+request and sends back a response. The app then displays information, such as the current temperature and forecast, for
+you to see. All of this happens in a matter of seconds, but behind the scenes, the app and the API are communicating
+with each other through a series of requests and responses, all following the principles of REST.
 
 ## What are the principles of REST?
 
-The principles of REST set guidelines and constraints that must be satisfied to be referred to as RESTful. These include:
+The principles of REST set guidelines and constraints that must be satisfied to be referred to as RESTful. These
+include:
 
-- Client-server architecture: The separation of concerns between the client and server allows for the development of each component independently.
-- Statelessness: The server does not maintain any information about the client's state, which allows for scalability and flexibility.
-- Cacheability: Responses from the server can be cached by the client, reducing the number of requests and improving performance.
-- Layered system: RESTful systems can be composed of multiple layers, each with a specific role, which allows for flexibility and ease of development.
+- Client-server architecture: The separation of concerns between the client and server allows for the development of
+  each component independently.
+- Statelessness: The server does not maintain any information about the client's state, which allows for scalability and
+  flexibility.
+- Cacheability: Responses from the server can be cached by the client, reducing the number of requests and improving
+  performance.
+- Layered system: RESTful systems can be composed of multiple layers, each with a specific role, which allows for
+  flexibility and ease of development.
 
-In simple terms, the principles of REST help developers create web services that can handle a lot of traffic and change easily.
+In simple terms, the principles of REST help developers create web services that can handle a lot of traffic and change
+easily.
 
 ## Handling requests and responses
 
 ### Requesting information
 
-REST APIs rely on the HTTP protocol to send and receive requests and responses. The most common HTTP methods used in these scenarios are GET, POST, PUT, and DELETE.
+REST APIs rely on the HTTP protocol to send and receive requests and responses. The most common HTTP methods used in
+these scenarios are GET, POST, PUT, and DELETE.
 
-These methods correspond to specific actions that the client wants to perform on the server. A GET request is used to retrieve information from the server, POST is used to submit new information, PUT updates existing information, and DELETE removes information.
+These methods correspond to specific actions that the client wants to perform on the server. A GET request is used to
+retrieve information from the server, POST is used to submit new information, PUT updates existing information, and
+DELETE removes information.
 
-When a client wants to make a request it is sent to the server's API endpoint - a specific URL that allows the client to send requests to retrieve or manipulate data from the server. The server then processes the request and sends back a response, which may include a status code indicating the operation was successful or if there was an error.
+When a client wants to make a request it is sent to the server's API endpoint - a specific URL that allows the client to
+send requests to retrieve or manipulate data from the server. The server then processes the request and sends back a
+response, which may include a status code indicating the operation was successful or if there was an error.
 
 ### Server returns
 
-When the server sends data back to the client, it is formatted in a way that is agreed upon by both the server and the client.
+When the server sends data back to the client, it is formatted in a way that is agreed upon by both the server and the
+client.
 
-Common formats for REST APIs include JSON and XML. JSON, or JavaScript Object Notation, is a lightweight data-interchange format that is easy for humans to read and write, and easy for machines to parse and generate. XML, or Extensible Markup Language, is a markup language that defines a set of rules for encoding documents in a format that is both human-readable and machine-readable.
+Common formats for REST APIs include JSON and XML. JSON, or JavaScript Object Notation, is a lightweight
+data-interchange format that is easy for humans to read and write, and easy for machines to parse and generate. XML, or
+Extensible Markup Language, is a markup language that defines a set of rules for encoding documents in a format that is
+both human-readable and machine-readable.
 
-It is important to note that each API endpoint may have different rules and restrictions on what actions can be performed on the data they manage. For example, some endpoints may only allow read-only access, while others may allow for full CRUD (Create, Read, Update, Delete) functionality. Some endpoints may even have specific requirements for the data format, such as a specific version of JSON or XML. It's essential to thoroughly document these rules and restrictions to ensure seamless integration between the server and client.
+It is important to note that each API endpoint may have different rules and restrictions on what actions can be
+performed on the data they manage. For example, some endpoints may only allow read-only access, while others may allow
+for full CRUD (Create, Read, Update, Delete) functionality. Some endpoints may even have specific requirements for the
+data format, such as a specific version of JSON or XML. It's essential to thoroughly document these rules and
+restrictions to ensure seamless integration between the server and client.
 
 ## Using authentication
 
-Authentication is a process that ensures only authorized users or applications can access and manipulate data on the server. This is done by verifying the identity of the client when making a request using the API.
+Authentication is a process that ensures only authorized users or applications can access and manipulate data on the
+server. This is done by verifying the identity of the client when making a request using the API.
 
 There are many ways to authenticate API requests, but some of the most common methods include:
 
-- Basic authentication: Sending a user's login credentials (such as username and password) with each request. This information is shown in the request headers, making it relatively simple to implement but also easy to intercept.
-- Token-based authentication: Using a token that is generated by the server and sent to the client. The client then sends the token with each request, allowing the server to verify the identity of the client. Tokens can be short or long-lived and sent in a cookie or an HTTP header.
-- OAuth: An open standard for authorization that allows third-party applications to access user data without sharing their login credentials. Instead. The user is redirected to the service provider's website to grant permissions, then the service provider sends an access token to the client to access the API.
-- API keys: Strings that are assigned to users or applications and sent with each request. The server can look up the API key in the database to determine whether the request is authorized or not.
+- Basic authentication: Sending a user's login credentials (such as username and password) with each request. This
+  information is shown in the request headers, making it relatively simple to implement but also easy to intercept.
+- Token-based authentication: Using a token that is generated by the server and sent to the client. The client then
+  sends the token with each request, allowing the server to verify the identity of the client. Tokens can be short or
+  long-lived and sent in a cookie or an HTTP header.
+- OAuth: An open standard for authorization that allows third-party applications to access user data without sharing
+  their login credentials. Instead. The user is redirected to the service provider's website to grant permissions, then
+  the service provider sends an access token to the client to access the API.
+- API keys: Strings that are assigned to users or applications and sent with each request. The server can look up the
+  API key in the database to determine whether the request is authorized or not.
 
-It's important to note that different API endpoints may have different authentication requirements, so it's crucial to understand and implement these requirements to properly secure an API. Additionally, it is essential to keep authentication secure to avoid any vulnerabilities that can be exploited.
+It's important to note that different API endpoints may have different authentication requirements, so it's crucial to
+understand and implement these requirements to properly secure an API. Additionally, it is essential to keep
+authentication secure to avoid any vulnerabilities that can be exploited.
 
 ## Best practices
 
@@ -68,6 +103,14 @@ There are many things to consider when building your API, a few REST best practi
 
 ## Final takeaways
 
-APIs, or Application Programming Interfaces, act as the bridge between the client and server, enabling different software applications to communicate with each other. They provide a set of rules and protocols for accessing a web-based software application or web tool, allowing developers to access the functionality of another application and use it for their own purposes. This can range from retrieving data, such as from a database, to performing actions, such as sending an email.
+APIs, or Application Programming Interfaces, act as the bridge between the client and server, enabling different
+software applications to communicate with each other. They provide a set of rules and protocols for accessing a
+web-based software application or web tool, allowing developers to access the functionality of another application and
+use it for their own purposes. This can range from retrieving data, such as from a database, to performing actions, such
+as sending an email.
 
-Moreover, APIs also expose data and functionality to external developers, providing opportunities for innovation and collaboration. Third-party developers can build applications that make use of the API, creating new possibilities and services. This allows businesses to expand their reach and gain access to new audiences, while developers can leverage the existing functionality to create new products and services. Overall, APIs play a crucial role in today's digital landscape by enabling seamless communication and integration in a more streamlined way.
+Moreover, APIs also expose data and functionality to external developers, providing opportunities for innovation and
+collaboration. Third-party developers can build applications that make use of the API, creating new possibilities and
+services. This allows businesses to expand their reach and gain access to new audiences, while developers can leverage
+the existing functionality to create new products and services. Overall, APIs play a crucial role in today's digital
+landscape by enabling seamless communication and integration in a more streamlined way.
