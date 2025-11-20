@@ -3,8 +3,6 @@ import { Index, Show } from "solid-js";
 import { Link } from "@tanstack/solid-router";
 
 const blogLinks = [
-	{ href: "/writing", label: "Writing" },
-	{ href: "/oss", label: "OSS" },
 	{
 		href: "https://bsky.app/profile/ladybluenotes.dev",
 		label: "Bluesky",
