@@ -11,10 +11,8 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as RedirectRouteImport } from './routes/redirect'
 import { Route as WritingRouteRouteImport } from './routes/writing/route'
-import { Route as OssRouteRouteImport } from './routes/oss/route'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as WritingIndexRouteImport } from './routes/writing/index'
-import { Route as OssIndexRouteImport } from './routes/oss/index'
 import { Route as WritingSlugRouteImport } from './routes/writing/$slug'
 
 const RedirectRoute = RedirectRouteImport.update({
@@ -27,11 +25,6 @@ const WritingRouteRoute = WritingRouteRouteImport.update({
   path: '/writing',
   getParentRoute: () => rootRouteImport,
 } as any)
-const OssRouteRoute = OssRouteRouteImport.update({
-  id: '/oss',
-  path: '/oss',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -42,11 +35,6 @@ const WritingIndexRoute = WritingIndexRouteImport.update({
   path: '/',
   getParentRoute: () => WritingRouteRoute,
 } as any)
-const OssIndexRoute = OssIndexRouteImport.update({
-  id: '/',
-  path: '/',
-  getParentRoute: () => OssRouteRoute,
-} as any)
 const WritingSlugRoute = WritingSlugRouteImport.update({
   id: '/$slug',
   path: '/$slug',
@@ -55,56 +43,41 @@ const WritingSlugRoute = WritingSlugRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/oss': typeof OssRouteRouteWithChildren
   '/writing': typeof WritingRouteRouteWithChildren
   '/redirect': typeof RedirectRoute
   '/writing/$slug': typeof WritingSlugRoute
-  '/oss/': typeof OssIndexRoute
   '/writing/': typeof WritingIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/redirect': typeof RedirectRoute
   '/writing/$slug': typeof WritingSlugRoute
-  '/oss': typeof OssIndexRoute
   '/writing': typeof WritingIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/oss': typeof OssRouteRouteWithChildren
   '/writing': typeof WritingRouteRouteWithChildren
   '/redirect': typeof RedirectRoute
   '/writing/$slug': typeof WritingSlugRoute
-  '/oss/': typeof OssIndexRoute
   '/writing/': typeof WritingIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths:
-    | '/'
-    | '/oss'
-    | '/writing'
-    | '/redirect'
-    | '/writing/$slug'
-    | '/oss/'
-    | '/writing/'
+  fullPaths: '/' | '/writing' | '/redirect' | '/writing/$slug' | '/writing/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/redirect' | '/writing/$slug' | '/oss' | '/writing'
+  to: '/' | '/redirect' | '/writing/$slug' | '/writing'
   id:
     | '__root__'
     | '/'
-    | '/oss'
     | '/writing'
     | '/redirect'
     | '/writing/$slug'
-    | '/oss/'
     | '/writing/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  OssRouteRoute: typeof OssRouteRouteWithChildren
   WritingRouteRoute: typeof WritingRouteRouteWithChildren
   RedirectRoute: typeof RedirectRoute
 }
@@ -125,13 +98,6 @@ declare module '@tanstack/solid-router' {
       preLoaderRoute: typeof WritingRouteRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/oss': {
-      id: '/oss'
-      path: '/oss'
-      fullPath: '/oss'
-      preLoaderRoute: typeof OssRouteRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/': {
       id: '/'
       path: '/'
@@ -146,13 +112,6 @@ declare module '@tanstack/solid-router' {
       preLoaderRoute: typeof WritingIndexRouteImport
       parentRoute: typeof WritingRouteRoute
     }
-    '/oss/': {
-      id: '/oss/'
-      path: '/'
-      fullPath: '/oss/'
-      preLoaderRoute: typeof OssIndexRouteImport
-      parentRoute: typeof OssRouteRoute
-    }
     '/writing/$slug': {
       id: '/writing/$slug'
       path: '/$slug'
@@ -162,18 +121,6 @@ declare module '@tanstack/solid-router' {
     }
   }
 }
-
-interface OssRouteRouteChildren {
-  OssIndexRoute: typeof OssIndexRoute
-}
-
-const OssRouteRouteChildren: OssRouteRouteChildren = {
-  OssIndexRoute: OssIndexRoute,
-}
-
-const OssRouteRouteWithChildren = OssRouteRoute._addFileChildren(
-  OssRouteRouteChildren,
-)
 
 interface WritingRouteRouteChildren {
   WritingSlugRoute: typeof WritingSlugRoute
@@ -191,7 +138,6 @@ const WritingRouteRouteWithChildren = WritingRouteRoute._addFileChildren(
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  OssRouteRoute: OssRouteRouteWithChildren,
   WritingRouteRoute: WritingRouteRouteWithChildren,
   RedirectRoute: RedirectRoute,
 }
