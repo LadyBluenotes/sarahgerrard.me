@@ -33,6 +33,7 @@
 		"@content-collections/vite": "^0.2.7",
 		"@iconify-json/logos": "^1.2.9",
 		"@iconify-json/tabler": "^1.2.23",
+		"@netlify/vite-plugin-tanstack-start": "^1.2.1",
 		"@shikijs/rehype": "^3.13.0",
 		"@shikijs/transformers": "^3.13.0",
 		"@shikijs/twoslash": "^3.13.0",

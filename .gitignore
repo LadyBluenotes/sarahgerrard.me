@@ -18,3 +18,5 @@ yarn.lock
 /playwright/.cache/
 .content-collections
 .idea
+/.vscode
+/dist/
