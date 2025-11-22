@@ -25,5 +25,55 @@ the input.
 
 ## Time Complexity
 
+Time complexity measures the amount of time it takes an algorithm to execute as a function of its input size. It's not
+about assessing the seconds or milliseconds it takes, which vary based on the hardware and software being used. Instead,
+it focuses on how the execution time grows as the input size increases.
+
+When talking about time complexity, the focus is always on the **worst-case scenarios**. This gives an upper-bound on
+how long an algorithm *could* take, giving you a way to predict how long it will take in practice.
+
+As an example, let's say you're searching for a number in a list:
+
+```js
+function findNum(nums, target) {
+	for (let i = 0; i < nums.length; i++) {
+		if (nums[i] === target) return i;
+	}
+	return -1;
+}
+```
+
+To analyze its time complexity:
+
+- **Best Case**: If the `target` is the first element in the `nums` array, the loop will run only once, and the
+  algorithm will return immediately. This would be a **constant** time operation.
+- **Worst Case**: If the `target` is the last element in the array, or not present at all, the loop will have to iterate
+  through *every* element in the list. If the list has `n` elements, the function will perform `n` comparisons in the
+  worst case.
+
+Therefore, the **time complexity** of the function `findNum` is `O(n)`, where `n` is the number of elements in the
+`nums` array. This means that, as the size of the array grows, the algorithm will also grow linearly in the wost-case
+scenario.
+
 ## Space Complexity
+
+Space complexity measures the amount of memory an algorithm needs to run. Like time complexity, it doesn't measure the
+exact amount of memory used but rather the growth of memory usage as the input size increases. We typically consider the
+**auxillary space complexity**, which is the extra space an algorithm uses *beyond* the input size itself.
+
+Let's look at a function that creates a new list containing the squares of numbers in a given list:
+
+```js
+function sumNums(nums) {
+	let total = 0;
+	for (let num of nums) {
+		total += num * num;
+	}
+	return total;
+}
+```
+
+Since we only care about *additional* space being used, we can ignore the initial space required to store the input
+array. Therefore, the **space complexity** of the function would be `O(1)`, since the space required to store the total
+is constant regardless of the size of the input.
 
