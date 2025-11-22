@@ -1,7 +1,6 @@
 ---
 title: Introduction to Big O Notation
 summary: An generalized introduction to Big O Notation, in the context of software development.
-draft: true
 date: 2025-11-22
 ---
 
@@ -77,3 +76,20 @@ Since we only care about *additional* space being used, we can ignore the initia
 array. Therefore, the **space complexity** of the function would be `O(1)`, since the space required to store the total
 is constant regardless of the size of the input.
 
+## Common Big O Notations
+
+Now that we looked into time and space complexity, we can explore the common Big O Notations. You might have noticed the
+reference to `O(1)` and `O(n)` in the examples above. These are common Big O Notations, but there are many more.
+
+![Big O Notation Chart](https://paper-attachments.dropbox.com/s_2D428973624E7FC84C7D69D11421DE762BEA6B6F3361231FCDCAE0425D14526F_1664885448372_Untitled.drawio+17.png)
+
+In the chart above, you can see some of the most common Big O Notations. In order from best to worst, they are:
+
+- **Constant** (`O(1)`): When growth is independent of the input size.
+- **Logarithmic** (`O(log n)`): As the input size increases, the growth rate decreases.
+- **Linear** (`O(n)`): The input size increases proportionally to the growth rate.
+- **Quadratic** (`O(n^2)`): As the input size increases, the growth rate increases proportionally to the square of the
+  input size.
+- **Exponential** (`O(2^n)`): When the input size increases, the growth rate doubles each time.
+- **Factorial** (`O(n!)`): For each additional input element, the number of operations multiplies by the size of the
+  input.
