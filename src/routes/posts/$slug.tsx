@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/solid-router";
 import { allPosts } from "content-collections";
 import { seo } from "~/utils/seo";
 
-export const Route = createFileRoute("/writing/$slug")({
+export const Route = createFileRoute("/posts/$slug")({
 	beforeLoad: () => ({
 		allPosts,
 	}),
@@ -18,7 +18,7 @@ export const Route = createFileRoute("/writing/$slug")({
 			html: post.html,
 			next: post.next,
 			prev: post.prev,
-		};
+		}
 	},
 	head: (post) => ({
 		meta: post.loaderData
@@ -50,5 +50,5 @@ function RouteComponent() {
 				innerHTML={post().html}
 			/>
 		</div>
-	);
+	)
 }

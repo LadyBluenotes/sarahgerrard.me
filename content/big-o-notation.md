@@ -1,7 +1,8 @@
 ---
 title: Introduction to Big O Notation
 summary: An generalized introduction to Big O Notation, in the context of software development.
-date: 2025-11-22
+tags: ['DSA']
+date: 2025-12-12
 ---
 
 Understanding how efficient your code is, is crucial to writing high-quality software. As data scales, it becomes more
