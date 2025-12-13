@@ -3,7 +3,7 @@ import { allPosts } from "content-collections";
 import { Layout } from "~/ui/components/layout/Layout";
 import { seo } from "~/utils/seo";
 
-export const Route = createFileRoute("/writing")({
+export const Route = createFileRoute("/posts")({
 	beforeLoad: () => ({
 		allPosts,
 	}),
@@ -22,5 +22,5 @@ function RouteComponent() {
 		<Layout>
 			<Outlet />
 		</Layout>
-	);
+	)
 }

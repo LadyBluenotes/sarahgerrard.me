@@ -4,6 +4,10 @@ import { Link } from "@tanstack/solid-router";
 
 const blogLinks = [
 	{
+		href: "/posts",
+		label: "Posts",
+	},
+	{
 		href: "https://bsky.app/profile/ladybluenotes.dev",
 		label: "Bluesky",
 		iconClass: "i-tabler-brand-bluesky",

@@ -10,19 +10,19 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as RedirectRouteImport } from './routes/redirect'
-import { Route as WritingRouteRouteImport } from './routes/writing/route'
+import { Route as PostsRouteRouteImport } from './routes/posts/route'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as WritingIndexRouteImport } from './routes/writing/index'
-import { Route as WritingSlugRouteImport } from './routes/writing/$slug'
+import { Route as PostsIndexRouteImport } from './routes/posts/index'
+import { Route as PostsSlugRouteImport } from './routes/posts/$slug'
 
 const RedirectRoute = RedirectRouteImport.update({
   id: '/redirect',
   path: '/redirect',
   getParentRoute: () => rootRouteImport,
 } as any)
-const WritingRouteRoute = WritingRouteRouteImport.update({
-  id: '/writing',
-  path: '/writing',
+const PostsRouteRoute = PostsRouteRouteImport.update({
+  id: '/posts',
+  path: '/posts',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -30,55 +30,49 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const WritingIndexRoute = WritingIndexRouteImport.update({
+const PostsIndexRoute = PostsIndexRouteImport.update({
   id: '/',
   path: '/',
-  getParentRoute: () => WritingRouteRoute,
+  getParentRoute: () => PostsRouteRoute,
 } as any)
-const WritingSlugRoute = WritingSlugRouteImport.update({
+const PostsSlugRoute = PostsSlugRouteImport.update({
   id: '/$slug',
   path: '/$slug',
-  getParentRoute: () => WritingRouteRoute,
+  getParentRoute: () => PostsRouteRoute,
 } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/writing': typeof WritingRouteRouteWithChildren
+  '/posts': typeof PostsRouteRouteWithChildren
   '/redirect': typeof RedirectRoute
-  '/writing/$slug': typeof WritingSlugRoute
-  '/writing/': typeof WritingIndexRoute
+  '/posts/$slug': typeof PostsSlugRoute
+  '/posts/': typeof PostsIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/redirect': typeof RedirectRoute
-  '/writing/$slug': typeof WritingSlugRoute
-  '/writing': typeof WritingIndexRoute
+  '/posts/$slug': typeof PostsSlugRoute
+  '/posts': typeof PostsIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/writing': typeof WritingRouteRouteWithChildren
+  '/posts': typeof PostsRouteRouteWithChildren
   '/redirect': typeof RedirectRoute
-  '/writing/$slug': typeof WritingSlugRoute
-  '/writing/': typeof WritingIndexRoute
+  '/posts/$slug': typeof PostsSlugRoute
+  '/posts/': typeof PostsIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/writing' | '/redirect' | '/writing/$slug' | '/writing/'
+  fullPaths: '/' | '/posts' | '/redirect' | '/posts/$slug' | '/posts/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/redirect' | '/writing/$slug' | '/writing'
-  id:
-    | '__root__'
-    | '/'
-    | '/writing'
-    | '/redirect'
-    | '/writing/$slug'
-    | '/writing/'
+  to: '/' | '/redirect' | '/posts/$slug' | '/posts'
+  id: '__root__' | '/' | '/posts' | '/redirect' | '/posts/$slug' | '/posts/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  WritingRouteRoute: typeof WritingRouteRouteWithChildren
+  PostsRouteRoute: typeof PostsRouteRouteWithChildren
   RedirectRoute: typeof RedirectRoute
 }
 
@@ -91,11 +85,11 @@ declare module '@tanstack/solid-router' {
       preLoaderRoute: typeof RedirectRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/writing': {
-      id: '/writing'
-      path: '/writing'
-      fullPath: '/writing'
-      preLoaderRoute: typeof WritingRouteRouteImport
+    '/posts': {
+      id: '/posts'
+      path: '/posts'
+      fullPath: '/posts'
+      preLoaderRoute: typeof PostsRouteRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -105,40 +99,40 @@ declare module '@tanstack/solid-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/writing/': {
-      id: '/writing/'
+    '/posts/': {
+      id: '/posts/'
       path: '/'
-      fullPath: '/writing/'
-      preLoaderRoute: typeof WritingIndexRouteImport
-      parentRoute: typeof WritingRouteRoute
+      fullPath: '/posts/'
+      preLoaderRoute: typeof PostsIndexRouteImport
+      parentRoute: typeof PostsRouteRoute
     }
-    '/writing/$slug': {
-      id: '/writing/$slug'
+    '/posts/$slug': {
+      id: '/posts/$slug'
       path: '/$slug'
-      fullPath: '/writing/$slug'
-      preLoaderRoute: typeof WritingSlugRouteImport
-      parentRoute: typeof WritingRouteRoute
+      fullPath: '/posts/$slug'
+      preLoaderRoute: typeof PostsSlugRouteImport
+      parentRoute: typeof PostsRouteRoute
     }
   }
 }
 
-interface WritingRouteRouteChildren {
-  WritingSlugRoute: typeof WritingSlugRoute
-  WritingIndexRoute: typeof WritingIndexRoute
+interface PostsRouteRouteChildren {
+  PostsSlugRoute: typeof PostsSlugRoute
+  PostsIndexRoute: typeof PostsIndexRoute
 }
 
-const WritingRouteRouteChildren: WritingRouteRouteChildren = {
-  WritingSlugRoute: WritingSlugRoute,
-  WritingIndexRoute: WritingIndexRoute,
+const PostsRouteRouteChildren: PostsRouteRouteChildren = {
+  PostsSlugRoute: PostsSlugRoute,
+  PostsIndexRoute: PostsIndexRoute,
 }
 
-const WritingRouteRouteWithChildren = WritingRouteRoute._addFileChildren(
-  WritingRouteRouteChildren,
+const PostsRouteRouteWithChildren = PostsRouteRoute._addFileChildren(
+  PostsRouteRouteChildren,
 )
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  WritingRouteRoute: WritingRouteRouteWithChildren,
+  PostsRouteRoute: PostsRouteRouteWithChildren,
   RedirectRoute: RedirectRoute,
 }
 export const routeTree = rootRouteImport
