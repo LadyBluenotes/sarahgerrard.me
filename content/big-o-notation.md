@@ -16,7 +16,7 @@ understanding of how operations will scale.
 
 Big O notation quantifies the efficiency of your code. This efficiency is measured in two ways: **time complexity** and
 **space complexity**. Time complexity describes how the execution time scales as the input size increases, while space
-complexity how memory usage scales.
+complexity is how memory usage scales.
 
 It's important to remember that Big O notation is an *expression* describing performance, not an exact number. It is
 written as `O(f(n))`, where `f(n)` is the function describing the performance of your algorithm, and `n` is the size of
@@ -45,7 +45,8 @@ function findNum(nums, target) {
 To analyze its time complexity:
 
 - **Best Case**: If the `target` is the first element in the `nums` array, the loop will run only once, and the
-  algorithm will return immediately. This would be a **constant** time operation.
+  algorithm will return immediately. This would be a **constant** time operation, as it doesn't depend on the size of the
+  input.
 - **Worst Case**: If the `target` is the last element in the array, or not present at all, the loop will have to iterate
   through *every* element in the list. If the list has `n` elements, the function will perform `n` comparisons in the
   worst case.
@@ -73,13 +74,12 @@ function sumNums(nums) {
 ```
 
 Since we only care about *additional* space being used, we can ignore the initial space required to store the input
-array. Therefore, the **space complexity** of the function would be `O(1)`, since the space required to store the total
-is constant regardless of the size of the input.
+array. Therefore, the **space complexity** of the function would be constant, since the extra space required is independent
+of the size of the input.
 
 ## Common Big O Notations
 
-Now that we looked into time and space complexity, we can explore the common Big O Notations. You might have noticed the
-reference to `O(1)` and `O(n)` in the examples above. These are common Big O Notations, but there are many more.
+Now that we looked into time and space complexity, we can explore the common Big O Notations. You may have seen the terms `O(1)` or `O(n)`, these are common Big O Notations, but there are many more.
 
 ![Big O Notation Chart](https://paper-attachments.dropbox.com/s_2D428973624E7FC84C7D69D11421DE762BEA6B6F3361231FCDCAE0425D14526F_1664885448372_Untitled.drawio+17.png)
 
@@ -98,7 +98,7 @@ In the chart above, you can see some of the most common Big O Notations. In orde
 
 Big O notation is a great way to understand how efficient your code is, but it's ultimately just a theoretical model. In
 practice, choosing an algorithm or data structure requires making tradeoffs between performance and complexity. The "
-best" choice in one scenario might not be suboptimal in another, depending on factors beyond just Big O.
+best" choice in one scenario might be suboptimal in another, depending on factors beyond just Big O.
 
 ### Time vs Memory
 
@@ -109,7 +109,7 @@ algorithm faster by using more memory, or use less memory at the expense of spee
 
 Consider a recursive function that calculates Fibonacci numbers. The naive approach has a time complexity of `O(2^n)`
 due to the redundant calls to the function itself. By using **memoization**, which is storing previously computed values
-in memory, we can reduce the time complexity it to `O(n)`. However, this comes at the cost of increased space
+in memory, we can reduce the time complexity of it to `O(n)`. However, this comes at the cost of increased space
 complexity, as we need to store the previously computed values.
 
 ### Simplicity vs Optimization
