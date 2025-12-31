@@ -200,7 +200,7 @@ html {
 
 	:is(p, li, span) code {
 		background-color: rgb(from var(--inactive) r g b / 10%);
-        font-size: 0.875em;
+		font-size: 0.875em;
 		cursor: text;
 		padding: 0.1rem 0.25rem;
 		border-radius: 0.25rem;
@@ -255,6 +255,13 @@ html {
 			display: block;
 			margin-left: auto;
 			margin-right: auto;
+		}
+
+		blockquote {
+			padding-inline: 1.5rem;
+			border-inline-start: 2px solid;
+			background: rgb(from var(--inactive) r g b / 10%);
+			padding: 0.125rem 1rem;
 		}
 	}
 }
