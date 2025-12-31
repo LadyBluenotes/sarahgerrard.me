@@ -25,8 +25,7 @@ HTML tags are elements that are used to structure and format the content of a we
 webpage and usually have an opening and closing tag. For example, the `<p>` tag is used to create a paragraph and looks
 like the following:
 
-```xml
-
+```html
 <p>This is a paragraph of text.</p>
 ```
 
@@ -78,20 +77,19 @@ Some examples of proper semantic HTML:
 
 * Using the `<p>` tag for paragraphs of text:
 
-```xml
-
+```html
 <p>This is a paragraph of text.</p>
 <p>This is another paragraph of text.</p>
 ```
 
 * Using the `<ul>` and `<li>` tags for an unordered list:
 
-```xml
+```html
 
 <ul>
-    <li>Item 1</li>
-    <li>Item 2</li>
-    <li>Item 3</li>
+	<li>Item 1</li>
+	<li>Item 2</li>
+	<li>Item 3</li>
 </ul>
 ```
 
@@ -103,15 +101,11 @@ modern browsers. However, examples of some more commonly deprecated tags are:
 
 * `<big>` and `<small>` : These tags were used to increase or decrease the size of text, but have been deprecated in
   favour of CSS for styling.
-
 * `<s>` and `<strike>` : These tags were used to strike through text, but have been deprecated in favour of `<del>` tag.
-
 * `<spacer>` : This tag was used to display preformatted text on a webpage but has been deprecated in favour of the
   `<pre>` tag.
-
 * `<b>` : This tag was once used to display bolded text but has been deprecated in favour of CSS for styling. Should the
   developer wish to emphasize content they are recommended to use `<strong>`.
-
 * `<i>` : This tag was used to indicate italicized text, but it has since been deprecated; `<em>` which is semantically
   more appropriate as it indicates emphasis and is not just stylistically needed.
 
@@ -199,7 +193,7 @@ instructions for the field and can be read by assistive technologies.
 * `aria-hidden`: This attribute is used to indicate that an element is not visible to users and should be ignored by
   assistive technologies. The value of the attribute is a boolean (`true` or `false`). For example:
 
-```xml
+```html
 
 <div aria-hidden="true">This content is hidden and will not be read by assistive technologies.</div>
 ```
@@ -210,7 +204,7 @@ should be ignored by assistive technologies.
 * `aria-expanded`: This attribute is used to indicate whether an element is expanded or collapsed. It is often used with
   widgets such as accordions and tree views. The value of the attribute is a boolean (`true` or `false`). For example:
 
-```xml
+```html
 
 <button aria-expanded="false">Show More</button>
 ```
