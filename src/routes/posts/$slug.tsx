@@ -18,7 +18,7 @@ export const Route = createFileRoute("/posts/$slug")({
 			html: post.html,
 			next: post.next,
 			prev: post.prev,
-		}
+		};
 	},
 	head: (post) => ({
 		meta: post.loaderData
@@ -38,7 +38,7 @@ function RouteComponent() {
 	return (
 		<div>
 			<Link
-				to="/writing"
+				to="/posts"
 				class="inline-flex items-center gap-1"
 			>
 				<div class="i-tabler-chevron-left w-1em h-1em" />
@@ -50,5 +50,5 @@ function RouteComponent() {
 				innerHTML={post().html}
 			/>
 		</div>
-	)
+	);
 }
