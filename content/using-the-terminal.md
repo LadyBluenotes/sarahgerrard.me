@@ -1,7 +1,7 @@
 ---
 title: Using the Terminal
-summary:
-date: 2023-01-22T12:00:00Z
+summary: ""
+date: 2023-02-04T12:00:00Z
 tags: []
 ---
 
