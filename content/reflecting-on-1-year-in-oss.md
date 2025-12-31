@@ -11,33 +11,33 @@ With this last year in the open source community, I've had the privilege of conn
 
 ## Open source is everywhere
 
-When diving into tech, there is a lot of talk about open source. While tech wasn't my first exposure to the concept, once I was more immersed in the community I had a clearer idea of what it was.
+When diving into tech, there is a lot of talk about open source. While tech wasn't my first exposure to the concept, once I was more immersed in the community, I had a clearer idea of what it was.
 
-Open source encompasses a _massive_ community. In includes projects for web development like [Node](https://nodejs.org/en/), [React](https://react.dev/), [NextJS](https://nextjs.org/), and [Astro](https://astro.build/), to name a few. Beyond web development, it extends to your operating systems like [Ubuntu](https://ubuntu.com/) and [Arch](https://archlinux.org/) linux, code editors such as [VS Code](https://code.visualstudio.com/) , database management systems like [PostgreSQL](https://www.postgresql.org/) and [MySQL](https://www.mysql.com/), and the programming languages like [Python](https://www.python.org/) and [Go](https://go.dev/). This widespread influence of open source in various domains is incredible. It was shocking just how many projects I was using in my day-to-day that were open source, inevitably driving my desire to contribute.
+Open source encompasses a _massive_ community. It includes projects for web development like [Node](https://nodejs.org/en/), [React](https://react.dev/), [Next.js](https://nextjs.org/), and [Astro](https://astro.build/), to name a few. Beyond web development, it extends to your operating systems like [Ubuntu](https://ubuntu.com/) and [Arch Linux](https://archlinux.org/), code editors such as [VS Code](https://code.visualstudio.com/) , database management systems like [PostgreSQL](https://www.postgresql.org/) and [MySQL](https://www.mysql.com/), and the programming languages like [Python](https://www.python.org/) and [Go](https://go.dev/). This widespread influence of open source in various domains is incredible. It was shocking just how many projects I was using in my day-to-day that were open source, inevitably driving my desire to contribute.
 
 ![Open Source 101. An unconventional introduction to… | by Naveen Sundar |  NITRR Open Source | Medium](https://miro.medium.com/v2/resize:fit:820/0*c3sn8UF6d6dE3e8v.png)
 
 Reflecting on this, I was (and still am) in awe of just how profound of an influence open source has had on so many different aspects of our day to day. Merely using these projects didn't feel like enough for me, I wanted to contribute and give back to them. With these thoughts in mind, I actively sought out ways to make a meaningful difference in the open source community. I officially started my open source contribution journey.
 
-## It's difficult to get started
+## It's challenging to get started
 
 Entering the open source world can be overwhelming. While there are a ton of resources geared towards helping you find ways to contribute, these suggestions are quite saturated.
 
-> **Insight #1:** Sometimes the most frequently suggested way to help, may not be the easiest path.
+> **Insight #1:** Sometimes the most frequently suggested way to help may not be the easiest path.
 
-`Good first issue`, for example, is a label that many beginners will seek out when they first look to contribute on an open source project. While a good and valuable resource, this tag is popular to the point of being competitive. When you finally stumble upon an issue that is marked with this label, it's not uncommon to find it swarmed with comments of other contributors that are as eager to take it on as yourself. This competition isn't just making it challenging to stand out and meaningfully contribute, but it can create doubt and leave you wondering how you can make your mark in such a crowded space.
+`Good first issue`, for example, is a label that many beginners will seek out when they first look to contribute on an open source project. While a good and valuable resource, this tag is popular to the point of being competitive. When you finally stumble upon an issue marked with this label, it's not uncommon to find it swarmed with comments from other contributors that are as eager to take it on as yourself. This competition isn't just making it challenging to stand out and meaningfully contribute, but it can create doubt and leave you wondering how you can make your mark in such a crowded space.
 
-Similarly, documentation is another common avenue suggested to newcomers. The idea is that you meticulously comb through documentation looking for typos, grammatical mistakes, or outdated and incorrect information. While this seems like a fairly straightforward task, the reality is not the same. Often, people are drawn to more popular projects that are already fairly well-maintained, leaving little room for any significant contributions. Furthermore, if you're newcomer, identifying any inaccuracies or gaps in documentation can be challenging without a deep understanding of the project.
+Similarly, documentation is another common avenue suggested to newcomers. The idea is that you meticulously comb through documentation looking for typos, grammatical mistakes, or outdated and incorrect information. While this seems like a fairly straightforward task, the reality is different. Often, people are drawn to more popular projects that are already fairly well-maintained, leaving little room for any significant contributions. Furthermore, if you're a newcomer, identifying any inaccuracies or gaps in documentation can be challenging without a deep understanding of the project.
 
 ### So how _do_ you make a difference?
 
-When I was asking around about how I can contribute, it was often suggested that I find a small project that needed help. The problem I had with this was, how do I make a difference in a project that I don't know much about and do not use? In addition to that, how do you even _find_ projects like this?
+When I was asking around about how I could contribute, it was often suggested that I find a small project that needed help. The problem I had with this was, how I make a difference in a project that I don't know much about and do not use? In addition to that, how do you even _find_ projects like this?
 
 > **Insight #2:** Contribute to projects you _value_ and _use_.
 
-At the time, I was using popular projects such as [MUI](https://mui.com/), [Create-React-App](https://create-react-app.dev/), and NextJS. If I had run into an issue or a documentation error, it was already documented and a PR was in progress. When I noticed any issues or PRs geared towards beginners, there were _dozens_ of comments asking to claim it. I felt so disheartened and frustrated.
+At the time, I was using popular projects such as [MUI](https://mui.com/), [Create-React-App](https://create-react-app.dev/), and Next.js. If I had run into an issue or a documentation error, it was already documented and a PR was in progress. When I noticed any issues or PRs geared towards beginners, there were _dozens_ of comments asking to claim it. I felt so disheartened and frustrated.
 
-The way I ended up getting to my first contribution, was through getting actively involved in these communities. Open source is all about the _community_. It is what helps these projects grow and thrive. Through talking to maintainers and other contributors, I was exposed to other ways to help that didn't include fighting for my life in the issue sections.
+The way I ended up getting to my first contribution was through getting actively involved in these communities. Open source is all about the _community_. It is what helps these projects grow and thrive. Through talking to maintainers and other contributors, I was exposed to other ways to help that didn't include fighting for my life in the issue sections.
 
 > **Insight #3:** Explore the open source project's community.
 
@@ -45,7 +45,7 @@ _Every_ open source project has a public repo published in a place like GitHub. 
 
 While I'm not someone who can actively juggle multiple social media platforms, I picked a platform I found easy (which was Twitter) and kept up with the communities I enjoyed. In addition to this, I had been involved in a few Discord groups where I made some friends and connected with maintainers and contributors.
 
-My first PR was a result of attending a talk in Discord. I had reached out to the individual to learn some more about their journey, asking questions like what it was like for them to be employed in open source. This conversation lead to my involvement in some of issues that were not quite as popular, but what fit what I could do.
+My first PR was a result of attending a talk in Discord. I had reached out to the individual to learn some more about their journey, asking questions like what it was like for them to be employed in open source. This conversation led to my involvement in some of the issues that were not quite as popular, but what fit what I could do.
 
 ### Making an impact
 
@@ -53,12 +53,12 @@ My first PR was a result of attending a talk in Discord. I had reached out to th
 
 An open-source community thrives on more than just identifying problems through issues and proposing solutions via pull requests. Your contribution can significantly impact a project in various ways beyond just these methods.
 
-1. **Answer questions:** Given that maintainers often have to juggle many tasks including issues, pull requests, and resolving bugs, when community members step in to answer questions it can significantly lighten their load. Additionally, this assistance directly helps the individuals who are looking for answers.
+1. **Answer questions:** Given that maintainers often have to juggle many tasks including issues, pull requests, and resolving bugs, when community members step in to answer questions, it can significantly lighten their load. Additionally, this assistance directly helps the individuals who are looking for answers.
 2. **Start discussions:** Initiating thoughtful discussions about new features, design changes, or potential improvements can be incredibly valuable. It's a way for the maintainers to get community feedback and engage others in the project's development.
 3. **Review code:** Participating in code reviews, even if you're not a maintainer, can be helpful. It provides additional perspectives on the code changes and can improve the overall quality of the project.
-4. **Create tutorials or guides:** Crafting tutorials and guides that demonstrate how to use the project or the implementation of particular features. This is helpful when these resources highlight innovative or less-known ways to utilize the project's capabilities.
+4. **Create tutorials or guides:** Crafting tutorials and guides that demonstrate how to use the project or the implementation of particular features. This is helpful when these resources highlight innovative or less-known ways to use the project's capabilities.
 5. **Promote the Project:** Help spread the word about the project. This can be through writing blog posts, speaking at conferences, or simply sharing it with your network.
-6. **Bug Triaging:** Helping to manage the issue tracker by reproducing bugs, labeling issues, or closing resolved ones can greatly assist the maintainers.
+6. **Bug Triaging:** Helping to manage the issue tracker by reproducing bugs, labelling issues, or closing resolved ones can greatly help the maintainers.
 7. **Accessibility Improvements:** Making a project more accessible to everyone is incredibly important. This can be offering translations if you know a language the docs haven't been translated into or suggesting and implementing features that make the project easier to use for individuals with a disability.
 
 ![CDN media](https://i.redd.it/wjrgcxm0err91.jpg)
@@ -67,7 +67,7 @@ An open-source community thrives on more than just identifying problems through 
 
 > **Insight #5:** Leverage your strengths
 
-When contributing to open source, it's important to ensure that your involvement aligns with what you find enjoyable and fulfilling. Pick the technologies and projects that excite you, because this enthusiasm naturally leads to more meaningful and sustained contributions. When you're invested in the work you do, it not only improves the quality of your contributions but also makes the experience more rewarding and sustainable in the long run.
+When contributing to open source, it's important to ensure that your involvement aligns with what you find enjoyable and fulfilling. Pick the technologies and projects that excite you because this enthusiasm naturally leads to more meaningful and sustained contributions. When you're invested in the work you do, it not only improves the quality of your contributions but also makes the experience more rewarding and sustainable in the long run.
 
 ### Navigating contributions
 
@@ -75,7 +75,7 @@ Grasping the difference between helpful and unhelpful contributions is a critica
 
 Some key points to consider are:
 
-- **Understand the projects goals:** Take the time to understand the project's objectives and goals. Knowing what the project aims to achieve will help you make more targeted and _relevant_ contributions.
+- **Understand the project goals:** Take the time to understand the project's goals and goals. Knowing what the project aims to achieve will help you make more targeted and _relevant_ contributions.
 - **Follow contribution guidelines:** Most open-source projects have established guidelines and standards for contributions. These guidelines cover coding style, documentation, testing, and more. Adhering to these guidelines ensures that your contributions fit seamlessly into the project and don't create additional work for maintainers.
 - **Quality over quantity:** Instead of simply making contributions for the sake of it, focus on delivering meaningful contributions that genuinely advance the project. The goal is to feel like you're actively moving the project forward.
 - **Collaborate and communicate:** Open-source is a collaborative effort. Work with other contributors and maintainers and communicate your intentions, ideas, and progress clearly. Engage in discussions, ask questions when needed, and be responsive to feedback.
@@ -102,17 +102,17 @@ Getting involved in open source projects is not as straightforward as it appears
 
 > **Insight #7:** The hard work is often not recognized.
 
-Despite the substantial time and effort invested by contributors, especially maintainers, recognition and gratitude are not always forthcoming. This reality resonates with the notion that "you can't please everyone."
+Despite the significant time and effort invested by contributors, especially maintainers, recognition and gratitude are not always forthcoming. This reality resonates with the notion that "you can't please everyone."
 
-Despite their considerable efforts, maintainers frequently face criticism, with more emphasis on what is lacking or needs improvement rather than on what has been accomplished. This environment can be challenging, as it tends to focus more on the negatives rather than celebrating the successes and hard work that go into open-source projects. Things like "thank you" and "your work is appreciated" tend to go a long way to the individuals in the projects.
+Despite their considerable efforts, maintainers frequently face criticism, with more emphasis on what is lacking or needs improvement rather than on what has been achieved. This environment can be challenging, as it tends to focus more on the negatives rather than celebrating the successes and hard work that go into open-source projects. Things like "thank you" and "your work is appreciated" tend to go a long way to the individuals in the projects.
 
 > **Insight #8:** Maintainers are underappreciated.
 
-Maintainers have an demanding job and a lot of what they do often goes unrecognized. They shoulder the responsibility of triaging issues, reviewing pull requests, implementing new features, answering questions, managing communities, and _so much more_.
+Maintainers have a demanding job and a lot of what they do often goes unrecognized. They shoulder the responsibility of triaging issues, reviewing pull requests, implementing new features, answering questions, managing communities, and _so much more_.
 
 Maintainers often face a unique set of challenges, especially when it comes to work-life balance. While some maintainers are compensated, the nature of their role typically requires a level of commitment that extends well beyond standard working hours. The possibility for these individuals to take a vacation and fully disconnect is not common at all.
 
-In addition to these challenges, a significant number of maintainers are actually volunteers. These individuals manage their regular jobs, education, and personal lives, and then dedicate countless hours of their free time to contribute to these projects. This level of dedication underscores the passion and commitment that drives the open source community, but also highlights the often demanding and relentless nature of the role.
+In addition to these challenges, a significant number of maintainers are actually volunteers. These individuals manage their regular jobs, education, and personal lives and then dedicate countless hours of their free time to contribute to these projects. This level of dedication underscores the passion and commitment that drives the open source community but also highlights the often demanding and relentless nature of the role.
 
 ## What to do now?
 
@@ -121,8 +121,8 @@ Ultimately, the last year was both an informative and challenging time. Finding 
 Here are some steps I plan to take over the next year:
 
 1. **Diversify my contributions:** While I've thoroughly enjoyed working on documentation mainly, I'm eager to explore different domains within open source. I see this as a chance to expand my skill set and tackle new challenges. Open source offers a wide range of projects and opportunities, and I want to make the most of it.
-2. **Mentorship & outreach:** I'm passionate about ensuring that newcomers to the open source community feel welcome and empowered. I believe that everyone has a place here, and I want to mentor and guide people who wish to get involved so they can find their way to making meaningful contributions. Mentorship and outreach are help to nurture a diverse and inclusive open source ecosystem.
-3. **Attend events and conferences:** The people I've met in the open source world have been truly inspiring. To continue growing and building connections, I plan to attend more open source events and conferences. I attended my first tech conference this last year and it was an incredible time.
+2. **Mentorship & outreach:** I'm passionate about ensuring that newcomers to the open source community feel welcome and empowered. I believe that everyone has a place here, and I want to mentor and guide people who wish to get involved so they can find their way to making meaningful contributions. Mentorship and outreach help to nurture a diverse and inclusive open source ecosystem.
+3. **Attend events and conferences:** The people I've met in the open source world have been truly inspiring. To continue growing and building connections, I plan to attend more open source events and conferences. I attended my first tech conference this last year, and it was an incredible time.
 4. **Prioritize work-life balance:** Burnout is a real concern in the open source community, and I want to avoid falling into that trap. I'm committed to maintaining a healthy balance between my contributions to open source and my personal life. It's essential to take breaks, recharge, and ensure my well-being remains a priority.
 
 As I embark on another year in the open source community, I'm excited about the possibilities and the chance to build on the foundation I've established. Open source has enriched my life in countless ways, and I'm eager to give back, learn, and continue making a positive impact. Here's to another year of growth and contributions in the open source world!
