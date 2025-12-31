@@ -1,7 +1,7 @@
 ---
 title: The Fundamentals of Algorithms
 summary: ""
-date: 2021-01-01
+date: 2023-02-24T12:00:00.000Z
 tags: []
 ---
 
