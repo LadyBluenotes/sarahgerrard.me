@@ -35,13 +35,13 @@ text." - is the content formatted as a paragraph.
 
 Some common HTML tags include:
 
-* `<h1>` : create a heading
-* `<p>` : creates a paragraph
-* `<img>` : inserts an image
-* `<div>` : creates a container for content
-* `<ol>` : creates an ordered list
-* `<ul>` : creates an unordered list
-* `<form>` : creates a form for user input
+- `<h1>` : create a heading
+- `<p>` : creates a paragraph
+- `<img>` : inserts an image
+- `<div>` : creates a container for content
+- `<ol>` : creates an ordered list
+- `<ul>` : creates an unordered list
+- `<form>` : creates a form for user input
 
 These are just a few examples of the many available HTML tags. Each tag has a specific purpose and function and can be
 combined and used in different ways to create a wide variety of web content and layouts.
@@ -53,10 +53,10 @@ docs [here](https://developer.mozilla.org/en-US/docs/Web/HTML/Content_categories
 
 Using the correct HTML tags and maintaining a clear and logical structure is important for several reasons:
 
-* It helps make content easier to understand for both humans and assistive technologies.
-* It allows search engines to index and understand the content on a website, which can improve ranking in search
+- It helps make content easier to understand for both humans and assistive technologies.
+- It allows search engines to index and understand the content on a website, which can improve ranking in search
   results.
-* It makes the HTML code easier to maintain and read, as it indicates the structure and purpose of the content.
+- It makes the HTML code easier to maintain and read, as it indicates the structure and purpose of the content.
 
 Using the correct HTML tags also plays an important role for accessibility. By using semantic tags to indicate the
 structure and purpose of the content, users with disabilities can easily understand and navigate content.
@@ -67,7 +67,7 @@ visitors.
 
 Some examples of proper semantic HTML:
 
-* Using the `<h1>` tag for the main heading of a page and using `<h2>`, `<h3>`, etc. for subheadings:
+- Using the `<h1>` tag for the main heading of a page and using `<h2>`, `<h3>`, etc. for subheadings:
 
 ```html
 <h1>Main Heading</h1>
@@ -75,17 +75,16 @@ Some examples of proper semantic HTML:
 <h3>Sub-subheading</h3>
 ```
 
-* Using the `<p>` tag for paragraphs of text:
+- Using the `<p>` tag for paragraphs of text:
 
 ```html
 <p>This is a paragraph of text.</p>
 <p>This is another paragraph of text.</p>
 ```
 
-* Using the `<ul>` and `<li>` tags for an unordered list:
+- Using the `<ul>` and `<li>` tags for an unordered list:
 
 ```html
-
 <ul>
 	<li>Item 1</li>
 	<li>Item 2</li>
@@ -99,14 +98,14 @@ With the evolution of CSS, certain HTML tags have become deprecated as they are 
 styling. It's important to note that while some HTML tags have been deprecated, others are still in use and supported by
 modern browsers. However, examples of some more commonly deprecated tags are:
 
-* `<big>` and `<small>` : These tags were used to increase or decrease the size of text, but have been deprecated in
+- `<big>` and `<small>` : These tags were used to increase or decrease the size of text, but have been deprecated in
   favour of CSS for styling.
-* `<s>` and `<strike>` : These tags were used to strike through text, but have been deprecated in favour of `<del>` tag.
-* `<spacer>` : This tag was used to display preformatted text on a webpage but has been deprecated in favour of the
+- `<s>` and `<strike>` : These tags were used to strike through text, but have been deprecated in favour of `<del>` tag.
+- `<spacer>` : This tag was used to display preformatted text on a webpage but has been deprecated in favour of the
   `<pre>` tag.
-* `<b>` : This tag was once used to display bolded text but has been deprecated in favour of CSS for styling. Should the
+- `<b>` : This tag was once used to display bolded text but has been deprecated in favour of CSS for styling. Should the
   developer wish to emphasize content they are recommended to use `<strong>`.
-* `<i>` : This tag was used to indicate italicized text, but it has since been deprecated; `<em>` which is semantically
+- `<i>` : This tag was used to indicate italicized text, but it has since been deprecated; `<em>` which is semantically
   more appropriate as it indicates emphasis and is not just stylistically needed.
 
 It is generally recommended to use modern HTML tags and techniques to create web content and to avoid using deprecated
@@ -144,13 +143,13 @@ example of how it is used:
 
 There are a few general guidelines to follow when writing `alt` attribute text:
 
-* If the image is purely decorative and adds no meaningful content to the page, the attribute should be left empty (
-  `alt=""`). This tells the assistive technologies to *ignore* the image.
+- If the image is purely decorative and adds no meaningful content to the page, the attribute should be left empty (
+  `alt=""`). This tells the assistive technologies to _ignore_ the image.
 
-* If the image conveys important information or is a part of the content of the page, a brief, concise description of
+- If the image conveys important information or is a part of the content of the page, a brief, concise description of
   the image should be provided.
 
-* If the image is complex or contains a lot of details, a more detailed description of the content and context should be
+- If the image is complex or contains a lot of details, a more detailed description of the content and context should be
   added.
 
 By using the `alt` attribute correctly, you can make your website more accessible and user-friendly for a wider range of
@@ -167,7 +166,7 @@ provides additional information for assistive technologies.
 
 Some common ARIA attributes include:
 
-* `aria-labelledby`: This attribute is used to associate an element with a label that is defined elsewhere on the page.
+- `aria-labelledby`: This attribute is used to associate an element with a label that is defined elsewhere on the page.
   The value of the attribute is the `id` of the element that contains the label text. For example:
 
 ```html
@@ -178,11 +177,10 @@ Some common ARIA attributes include:
 In this example, it associates the input field with the "Name:" label. This helps users understand the purpose of the
 field and can be read by assistive technologies.
 
-* `aria-describedby`: This attribute is used to associate an element with a description that is defined elsewhere on the
+- `aria-describedby`: This attribute is used to associate an element with a description that is defined elsewhere on the
   page. The value of the attribute is the `id` of the element that contains the description text. For example:
 
 ```html
-
 <div id="description">Please enter your name in the field above.</div>
 <input type="text" aria-describedby="description">
 ```
@@ -190,22 +188,20 @@ field and can be read by assistive technologies.
 In this example, it is used to associate the input field with the description text. This provides additional context and
 instructions for the field and can be read by assistive technologies.
 
-* `aria-hidden`: This attribute is used to indicate that an element is not visible to users and should be ignored by
+- `aria-hidden`: This attribute is used to indicate that an element is not visible to users and should be ignored by
   assistive technologies. The value of the attribute is a boolean (`true` or `false`). For example:
 
 ```html
-
 <div aria-hidden="true">This content is hidden and will not be read by assistive technologies.</div>
 ```
 
 In this example, the `aria-hidden` attribute is set to `true`, which indicates that the content of the `div` element
 should be ignored by assistive technologies.
 
-* `aria-expanded`: This attribute is used to indicate whether an element is expanded or collapsed. It is often used with
+- `aria-expanded`: This attribute is used to indicate whether an element is expanded or collapsed. It is often used with
   widgets such as accordions and tree views. The value of the attribute is a boolean (`true` or `false`). For example:
 
 ```html
-
 <button aria-expanded="false">Show More</button>
 ```
 
