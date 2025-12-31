@@ -1,8 +1,8 @@
 ---
 title: Introduction to Big O Notation
 summary: An generalized introduction to Big O Notation, in the context of software development.
-tags: ['DSA']
-date: 2025-12-12
+tags: [ 'DSA' ]
+date: 2025-12-12T10:00:00.000Z
 ---
 
 Understanding how efficient your code is, is crucial to writing high-quality software. As data scales, it becomes more
@@ -46,7 +46,8 @@ function findNum(nums, target) {
 To analyze its time complexity:
 
 - **Best Case**: If the `target` is the first element in the `nums` array, the loop will run only once, and the
-  algorithm will return immediately. This would be a **constant** time operation, as it doesn't depend on the size of the
+  algorithm will return immediately. This would be a **constant** time operation, as it doesn't depend on the size of
+  the
   input.
 - **Worst Case**: If the `target` is the last element in the array, or not present at all, the loop will have to iterate
   through *every* element in the list. If the list has `n` elements, the function will perform `n` comparisons in the
@@ -75,12 +76,14 @@ function sumNums(nums) {
 ```
 
 Since we only care about *additional* space being used, we can ignore the initial space required to store the input
-array. Therefore, the **space complexity** of the function would be constant, since the extra space required is independent
+array. Therefore, the **space complexity** of the function would be constant, since the extra space required is
+independent
 of the size of the input.
 
 ## Common Big O Notations
 
-Now that we looked into time and space complexity, we can explore the common Big O Notations. You may have seen the terms `O(1)` or `O(n)`, these are common Big O Notations, but there are many more.
+Now that we looked into time and space complexity, we can explore the common Big O Notations. You may have seen the
+terms `O(1)` or `O(n)`, these are common Big O Notations, but there are many more.
 
 ![Big O Notation Chart](https://paper-attachments.dropbox.com/s_2D428973624E7FC84C7D69D11421DE762BEA6B6F3361231FCDCAE0425D14526F_1664885448372_Untitled.drawio+17.png)
 
