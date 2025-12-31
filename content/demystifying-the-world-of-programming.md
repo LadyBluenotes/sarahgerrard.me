@@ -5,6 +5,8 @@ date: 2023-01-17T12:00:00Z
 tags: []
 ---
 
+![](https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/uyfohHiTxho/upload/81dec85f9203889cb63756b0774a9539.jpeg?w=1600&h=840&fit=crop&crop=entropy&auto=compress,format&format=webp)
+
 If you're new to the field, it can be an intimidating place to navigate. With various languages, tools, and concepts that make up the world of programming, it can be hard to know where to start. But don't worry, this article aims to guide you through some of the basics and help you unlock the power of code. First things first, let's define what programming is.
 
 ## What is programming?
