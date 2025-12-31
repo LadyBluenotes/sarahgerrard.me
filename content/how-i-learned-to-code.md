@@ -2,7 +2,7 @@
 title: How I Learned to Code
 summary: From learning the basics of HTML to the complexities of data structures and algorithms
 date: 2022-12-26T12:00:00.000Z
-tags: [ 'personal', 'career' ]
+tags: []
 ---
 
 ![](https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/3a4af70585c1df5bd94a5f4df6af9346.jpeg?w=1600&h=840&fit=crop&crop=entropy&auto=compress,format&format=webp)
@@ -28,7 +28,7 @@ paragraphs, lists). From a developer's standpoint, HTML is essential for SEO as 
 content of a webpage, defined as HTML, to understand the **content** and **context** of a page.
 
 Finally, HTML is widely used and supported by all modern web browsers and is the basis for many other technologies and
-frameworks, such as CSS and JavaScript. It is also *crucial* to know the more intimate details of HTML to
+frameworks, such as CSS and JavaScript. It is also _crucial_ to know the more intimate details of HTML to
 ensure accessibility for individuals who need it.
 
 What was the first task I tackled using HTML? Writing out the content of a brownie recipe web page, as seen below.
@@ -132,7 +132,7 @@ What was the first task I tackled using HTML? Writing out the content of a brown
 ## Styling with CSS
 
 Just like my experience with HTML, I originally used CSS, or Cascading Style Sheets, to fiddle around with colors and
-text sizes. CSS describes the *look* and *formatting* of a document written in HTML. It is an important part of modern
+text sizes. CSS describes the _look_ and _formatting_ of a document written in HTML. It is an important part of modern
 web development because it allows developers to separate the content of the webpage (HTML) from its presentation (CSS).
 Because of this, I was able to create a web page that not only contained the content I wanted, but that looked good as
 well.
@@ -186,10 +186,10 @@ Being as powerful as it is, JavaScript introduced the possibility of developing 
 the client and server-side functionality. In exploring this topic, I made an effort to build something at every major
 milestone—including building when I was introduced to a new framework or library. Some of the projects I did were:
 
-* Create a task list
-* Used a cocktail API that users could interact with
-* Using NASA API to showcase daily photos
-* Make a pokedex
+- Create a task list
+- Used a cocktail API that users could interact with
+- Using NASA API to showcase daily photos
+- Make a pokedex
 
 You can find projects I've made on [my GitHub](https://github.com/LadyBluenotes).
 

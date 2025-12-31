@@ -2,7 +2,7 @@
 title: "Designing with Inclusion in Mind: Tips and Best Practices"
 summary: Learn the essential strategies and techniques for maximizing usability for all users
 date: 2023-01-07T12:00:00+00:00
-tags: ["accessibility", "technical"]
+tags: []
 ---
 
 ![](https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/7a1908174138564cb5ccd962f7314280.jpeg?w=1600&h=840&fit=crop&crop=entropy&auto=compress,format&format=webp)

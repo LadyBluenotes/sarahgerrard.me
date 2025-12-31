@@ -2,7 +2,7 @@
 title: From a Casual Gamer to Developer
 summary: How I went from being a casual gamer and computer tinkerer to working towards a career change.
 date: 2022-12-15T12:00:00Z
-tags: [ 'personal', 'career' ]
+tags: []
 ---
 
 ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1671212554373/sib3m6a6-.jpeg?w=1600&h=840&fit=crop&crop=entropy&auto=compress,format&format=webp)
@@ -12,20 +12,20 @@ tags: [ 'personal', 'career' ]
 Growing up, I was pretty lucky to have had the life I did. My family had had gaming consoles for as long as I can
 remember, including:
 
-* Super Nintendo with games like Duck Hunter, Legend of Zelda, Super Mario World, and Harvest Moon
+- Super Nintendo with games like Duck Hunter, Legend of Zelda, Super Mario World, and Harvest Moon
 
-* Game Boy Color Games where I got to play mini-games with Austin Powers, skate with Tony Hawk, and save Princesses
+- Game Boy Color Games where I got to play mini-games with Austin Powers, skate with Tony Hawk, and save Princesses
   some
   more with Mario.
 
-* Using my GameCube to play with the likes of Donkey Kong, Nemo, Harry Potter, Harvest Moon, all sorts of Mario and
+- Using my GameCube to play with the likes of Donkey Kong, Nemo, Harry Potter, Harvest Moon, all sorts of Mario and
   Zelda games, Pokémon, Scooby-Doo, and so many more.
 
 While I inevitably ended up getting a WII, Nintendo DS, and Xbox 360, nothing got my fascination with software started
 quite like Barbie Magic Genie, which had its own genie bottle you could use to interact with in-game. I remember my
 family's massive off-white, almost yellow, computer that was running Windows 98 and sounding like a jet engine while
 running minesweeper and solitaire. I was dumbfounded over the fact that this machine allowed me to interact with this
-genie bottle, and it would affect things *in the game*. While I wasn't quite at a point where I was fiddling with the
+genie bottle, and it would affect things _in the game_. While I wasn't quite at a point where I was fiddling with the
 systems in the computer, it lit the fuse for my interest in all types of electronics.
 
 In the years since getting the Barbie game, I continued my fascination with tech. Once my family had finally gotten
@@ -66,13 +66,13 @@ moved on.
 With the pressure from those, I put down my tech and picked up the textbooks. I was never quite certain where I wanted
 to land within healthcare, all I knew was that there were some qualities I needed in a position:
 
-* Problem-solving - I needed to identify and solve problems. This would allow me to think critically and creatively to
+- Problem-solving - I needed to identify and solve problems. This would allow me to think critically and creatively to
   come up with solutions to, hopefully, complex issues.
 
-* Communication—I wanted to be able to collaborate with individuals so that when I would be presented with something I
+- Communication—I wanted to be able to collaborate with individuals so that when I would be presented with something I
   needed some consulting on, I would be able to do so.
 
-* Adaptability—I wanted a field that would consistently evolve. I didn't want to remain in the same place for too long,
+- Adaptability—I wanted a field that would consistently evolve. I didn't want to remain in the same place for too long,
   thus I wanted to find a career that would allow me to continue to learn and reward me for doing so.
 
 With these three traits in mind, I settled on my career as a physical therapist. It provided me with the necessary
@@ -140,17 +140,17 @@ Express, React, and Node.js. And, to be honest, starting this in January 2022 wa
 With close to 12 months of learning programming under my belt, I've never been more excited for something going forward.
 These last 12 months I have learned and worked with the following:
 
-* HTML, CSS
-* JavaScript
-    * React
-    * Next.js
-    * Express.js
-    * Node.js
-* MongoDB
-* GraphQL
-* REST APIs
-* Object-Orientated Programming
-* Git & Github
+- HTML, CSS
+- JavaScript
+  - React
+  - Next.js
+  - Express.js
+  - Node.js
+- MongoDB
+- GraphQL
+- REST APIs
+- Object-Orientated Programming
+- Git & Github
 
 In the year, I have worked with clients to create websites, built my own applications and websites and created a network
 of phenomenal people who have supported me in this process. The next step for me is to pursue this as a full-time
