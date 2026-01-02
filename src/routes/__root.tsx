@@ -76,6 +76,12 @@ export const Route = createRootRoute({
 			},
 		],
 	}),
+	scripts: () => [
+		{
+			async: true,
+			src: "https://www.googletagmanager.com/gtag/js?id=G-FD4EDGWJ5V",
+		},
+	],
 	errorComponent: DefaultCatchBoundary,
 	notFoundComponent: () => <NotFound />,
 	shellComponent: RootDocument,
