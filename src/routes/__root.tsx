@@ -81,6 +81,14 @@ export const Route = createRootRoute({
 			async: true,
 			src: "https://www.googletagmanager.com/gtag/js?id=G-FD4EDGWJ5V",
 		},
+		{
+			children: `(function() {
+			 window.dataLayer = window.dataLayer || [];
+			 function gtag(){dataLayer.push(arguments);}
+			 gtag('js', new Date());
+			 gtag('config', 'G-FD4EDGWJ5V');
+			})();`,
+		},
 	],
 	errorComponent: DefaultCatchBoundary,
 	notFoundComponent: () => <NotFound />,
