@@ -82,11 +82,14 @@ export const Route = createRootRoute({
 			src: "https://www.googletagmanager.com/gtag/js?id=G-FD4EDGWJ5V",
 		},
 		{
-			children: `(function(window.dataLayer = window.dataLayer || [];
-					function gtag(){dataLayer.push(arguments);}
-					gtag('js', new Date());
-					gtag('config', 'G-FD4EDGWJ5V');
-				})(window);`,
+			children:`
+					(function() {
+					 window.dataLayer = window.dataLayer || [];
+					 function gtag(){dataLayer.push(arguments);}
+					 gtag('js', new Date());
+					 gtag('config', 'G-FD4EDGWJ5V');
+					})();
+					`
 		},
 	],
 	errorComponent: DefaultCatchBoundary,
