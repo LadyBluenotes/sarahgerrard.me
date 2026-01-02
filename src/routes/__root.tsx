@@ -74,19 +74,21 @@ export const Route = createRootRoute({
 						}
 					})();`,
 			},
-			{
-				async: true,
-				src: "https://www.googletagmanager.com/gtag/js?id=G-FD4EDGWJ5V",
-			},
-			{
-				children: `window.dataLayer = window.dataLayer || [];
+		],
+	}),
+	scripts: () => [
+		{
+			async: true,
+			src: "https://www.googletagmanager.com/gtag/js?id=G-FD4EDGWJ5V",
+		},
+		{
+			children: `window.dataLayer = window.dataLayer || [];
 					function gtag(){dataLayer.push(arguments);}
 					gtag('js', new Date());
 					gtag('config', 'G-FD4EDGWJ5V');
 					`,
-			},
-		],
-	}),
+		},
+	],
 	errorComponent: DefaultCatchBoundary,
 	notFoundComponent: () => <NotFound />,
 	shellComponent: RootDocument,
