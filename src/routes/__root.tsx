@@ -71,6 +71,18 @@ export const Route = createRootRoute({
 						document.documentElement.setAttribute('data-theme', theme);
 					}`,
 			},
+			{
+				async: true,
+				src: "https://www.googletagmanager.com/gtag/js?id=G-FD4EDGWJ5V"
+
+			},
+			{
+			children: `window.dataLayer = window.dataLayer || [];
+					function gtag(){dataLayer.push(arguments);}
+					gtag('js', new Date());
+					gtag('config', 'G-FD4EDGWJ5V');
+					`
+	}
 		],
 	}),
 	errorComponent: DefaultCatchBoundary,
