@@ -52,6 +52,12 @@ export const Route = createRootRoute({
 			},
 			{ rel: "manifest", href: "/site.webmanifest", color: "#fffff" },
 			{ rel: "icon", href: "/favicon.ico" },
+			{
+				rel: "alternate",
+				type: "application/rss+xml",
+				title: "Sarah Gerrard's RSS Feed",
+				href: '/rss.xml'
+			},
 		],
 		scripts: [
 			{
