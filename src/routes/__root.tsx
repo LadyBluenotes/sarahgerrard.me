@@ -76,26 +76,6 @@ export const Route = createRootRoute({
 			},
 		],
 	}),
-	scripts: () => [
-		{
-			async: true,
-			src: "https://www.googletagmanager.com/gtag/js?id=G-FD4EDGWJ5V",
-		},
-		{
-			children: `
-					(function(w,d,s,l,i){
- w[l]=w[l]||[];
- w[l].push({'gtag.js':new Date()});
- var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl='';
- j.async=true;j.src='https://www.googletagmanager.com/gtag/js?id='+i+dl;
- f.parentNode.insertBefore(j,f);
- w.gtag=w.gtag||function(){w[l].push(arguments);};
- w.gtag('config',i);
-})(window,document,'script','dataLayer','G-FD4EDGWJ5V');
-
-					`,
-		},
-	],
 	errorComponent: DefaultCatchBoundary,
 	notFoundComponent: () => <NotFound />,
 	shellComponent: RootDocument,
