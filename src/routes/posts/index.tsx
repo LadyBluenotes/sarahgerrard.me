@@ -36,8 +36,6 @@ function RouteComponent() {
 	})
 	const tags = Array.from(tagsSet).sort();
 
-	console.log("tags:", tags);
-
 	// categorize by tag
 	const postsByTag = tags.reduce(
 		(acc, tag) => {
