@@ -58,6 +58,16 @@ export const Route = createRootRoute({
 				src: "https://cdn.jsdelivr.net/npm/@unocss/runtime",
 			},
 			{
+				async: true,
+				src: "https://www.googletagmanager.com/gtag/js?id=G-FD4EDGWJ5V",
+			},
+			{
+				children: `window.dataLayer = window.dataLayer || [];
+  			function gtag(){dataLayer.push(arguments);}
+  			gtag('js', new Date());
+  			gtag('config', 'G-FD4EDGWJ5V');`,
+			},
+			{
 				children: `
 					(function() {
 						let theme = localStorage.getItem('theme');
@@ -76,18 +86,6 @@ export const Route = createRootRoute({
 			},
 		],
 	}),
-	scripts: () => [
-		{
-			async: true,
-			src: "https://www.googletagmanager.com/gtag/js?id=G-FD4EDGWJ5V",
-		},
-		{
-			children: `window.dataLayer = window.dataLayer || [];
-			 function gtag(){dataLayer.push(arguments);}
-			 gtag('js', new Date());
-			 gtag('config', 'G-FD4EDGWJ5V');`,
-		},
-	],
 	errorComponent: DefaultCatchBoundary,
 	notFoundComponent: () => <NotFound />,
 	shellComponent: RootDocument,
