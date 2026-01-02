@@ -32,19 +32,38 @@ export default function Header() {
 				<nav class="flex items-center gap-6 text-sm font-medium">
 					<Index each={blogLinks}>
 						{(link) => (
-							<Link
-								to={link().href.startsWith("/") ? link().href : undefined}
-								target={link().href.startsWith("http") ? "_blank" : undefined}
-								title={link().label}
-								class="header-link"
+							<Show
+								when={link().href.startsWith("/")}
+								fallback={
+									<a
+										href={link().href}
+										target="_blank"
+										rel="noopener noreferrer"
+										class="header-link"
+									>
+										<Show
+											when={link().iconClass}
+											fallback={link().label}
+										>
+											<div class={`${link().iconClass} w-1.2em h-1.2em icon`} />
+										</Show>
+									</a>
+								}
 							>
-								<Show
-									when={link().iconClass}
-									fallback={link().label}
+								<Link
+									to={link().href.startsWith("/") ? link().href : undefined}
+									target={link().href.startsWith("http") ? "_blank" : undefined}
+									title={link().label}
+									class="header-link"
 								>
-									<div class={`${link().iconClass} w-1.2em h-1.2em icon`} />
-								</Show>
-							</Link>
+									<Show
+										when={link().iconClass}
+										fallback={link().label}
+									>
+										<div class={`${link().iconClass} w-1.2em h-1.2em icon`} />
+									</Show>
+								</Link>
+							</Show>
 						)}
 					</Index>
 					<ThemeSelector />
