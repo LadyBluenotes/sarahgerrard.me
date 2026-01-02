@@ -25,7 +25,7 @@ export const Route = createRootRoute({
 			},
 			...seo({
 				title: "Sarah Gerrard",
-				description: `Todo`,
+				description: `The personal website of Sarah Gerrard - software developer, tech enthusiast, and lifelong learner. Explore my projects, blog posts, and more.`,
 			}),
 		],
 		links: [
@@ -58,8 +58,8 @@ export const Route = createRootRoute({
 				src: "https://cdn.jsdelivr.net/npm/@unocss/runtime",
 			},
 			{
-				children: `const theme = localStorage.getItem('theme');
-					const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+				children: `let theme = localStorage.getItem('theme');
+					let prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
 
 					if (!theme) {
 						if (prefersDark) {
