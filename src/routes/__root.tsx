@@ -58,31 +58,33 @@ export const Route = createRootRoute({
 				src: "https://cdn.jsdelivr.net/npm/@unocss/runtime",
 			},
 			{
-				children: `let theme = localStorage.getItem('theme');
-					let prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-
-					if (!theme) {
-						if (prefersDark) {
-							document.documentElement.setAttribute('data-theme', 'dark');
+				children: `
+					(function() {
+						let theme = localStorage.getItem('theme');
+						let prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+			
+						if (!theme) {
+							if (prefersDark) {
+								document.documentElement.setAttribute('data-theme', 'dark');
+							} else {
+								document.documentElement.setAttribute('data-theme', 'light');
+							}
 						} else {
-							document.documentElement.setAttribute('data-theme', 'light');
+							document.documentElement.setAttribute('data-theme', theme);
 						}
-					} else {
-						document.documentElement.setAttribute('data-theme', theme);
-					}`,
+					})();`,
 			},
 			{
 				async: true,
-				src: "https://www.googletagmanager.com/gtag/js?id=G-FD4EDGWJ5V"
-
+				src: "https://www.googletagmanager.com/gtag/js?id=G-FD4EDGWJ5V",
 			},
 			{
-			children: `window.dataLayer = window.dataLayer || [];
+				children: `window.dataLayer = window.dataLayer || [];
 					function gtag(){dataLayer.push(arguments);}
 					gtag('js', new Date());
 					gtag('config', 'G-FD4EDGWJ5V');
-					`
-	}
+					`,
+			},
 		],
 	}),
 	errorComponent: DefaultCatchBoundary,
