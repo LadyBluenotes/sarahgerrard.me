@@ -91,10 +91,10 @@ export const Route = createFileRoute('/rss.xml')({
     .item {
     	background: var(--background-color)/10;
       border-bottom: 1px solid var(--border-color);
-      padding: 0.75rem;
       display: flex;
       flex-direction: column;
       gap: 0.5rem;
+      padding: 1rem 0;
     }
     .item:last-child {
       border-bottom: none;
@@ -127,6 +127,7 @@ export const Route = createFileRoute('/rss.xml')({
       color: var(--text-color);
       line-height: 1.5;
       margin: 0.5rem 0;
+      padding: 0 1rem;
     }
     .categories {
       display: flex;
