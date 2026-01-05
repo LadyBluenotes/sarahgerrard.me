@@ -1,0 +1,97 @@
+import { createFileRoute } from '@tanstack/solid-router'
+import { Layout } from "~/ui/components/layout/Layout";
+import { createSignal, onMount } from 'solid-js';
+
+export const Route = createFileRoute('/rss')({
+  component: RssDebug,
+});
+
+function RssDebug() {
+  const [defaultRes, setDefaultRes] = createSignal<{ ct?: string; status?: number; body?: string } | null>(null);
+  const [xmlRes, setXmlRes] = createSignal<{ ct?: string; status?: number; body?: string } | null>(null);
+  const [loading, setLoading] = createSignal(false);
+
+  function classifyContentType(ct?: string | null) {
+    if (!ct) return 'unknown';
+    const c = ct.toLowerCase();
+    if (c.includes('html')) return 'html';
+    if (c.includes('xml') || c.includes('rss') || c.includes('atom')) return 'xml';
+    if (c.includes('json')) return 'json';
+    return 'other';
+  }
+
+  async function fetchDefault() {
+    setLoading(true);
+    try {
+      const res = await fetch('/rss.xml');
+      const ct = res.headers.get('content-type') || undefined;
+      const status = res.status;
+      const body = await res.text();
+      setDefaultRes({ ct, status, body: body.slice(0, 2000) });
+    } catch (e: any) {
+      setDefaultRes({ ct: undefined, status: 0, body: String(e) });
+    } finally {
+      setLoading(false);
+    }
+  }
+
+  async function fetchXml() {
+    setLoading(true);
+    try {
+      const res = await fetch('/rss.xml', {
+        headers: { Accept: 'application/rss+xml' },
+      });
+      const ct = res.headers.get('content-type') || undefined;
+      const status = res.status;
+      const body = await res.text();
+      setXmlRes({ ct, status, body: body.slice(0, 2000) });
+    } catch (e: any) {
+      setXmlRes({ ct: undefined, status: 0, body: String(e) });
+    } finally {
+      setLoading(false);
+    }
+  }
+
+  onMount(() => {
+    fetchDefault();
+    fetchXml();
+  });
+
+  return (
+    <Layout>
+      <div style={{ padding: '1rem' }}>
+        <h1>RSS debug</h1>
+        <p>This page checks <code>/rss.xml</code> with different Accept headers to show whether the server returns HTML or XML.</p>
+				
+        <section style={{ marginTop: '1rem' }}>
+          <h2>Fetch with Accept: application/rss+xml</h2>
+          {xmlRes() ? (
+            <div>
+              <div>
+                <strong>Content-Type:</strong> {xmlRes()!.ct}
+                {' '}
+                <span style={{ marginLeft: '8px', padding: '2px 8px', borderRadius: '999px', background: classifyContentType(xmlRes()!.ct) === 'xml' ? '#e6fff2' : '#f0f0f0' }}>
+                  {classifyContentType(xmlRes()!.ct).toUpperCase()}
+                </span>
+              </div>
+              <div><strong>Status:</strong> {String(xmlRes()!.status)}</div>
+              <details style={{ marginTop: '8px' }}>
+                <summary>Preview (truncated)</summary>
+                <pre style="white-space:pre-wrap;word-break:break-word;padding:1rem;background:#f8f8f8;border-radius:6px;border:1px solid #eee">{xmlRes()!.body}</pre>
+              </details>
+            </div>
+          ) : (
+            <p>Loading xml fetch...</p>
+          )}
+        </section>
+
+        <p style={{ marginTop: '1rem' }}>
+          <a href="/rss.xml">Open raw RSS XML</a>
+          {' '}
+          <a href="/rss.xml?preview=1">Preview as HTML</a>
+        </p>
+      </div>
+    </Layout>
+  );
+}
+

@@ -16,7 +16,17 @@ export default defineConfig({
 		tsConfigPaths({
 			projects: ["./tsconfig.json"],
 		}),
-		tanstackStart(),
+		tanstackStart({
+			pages: [
+				{
+					path: '/rss.xml',
+					prerender: {
+						enabled: true,
+						outputPath: 'public/rss.xml',
+					}
+				}
+			]
+			}),
 		viteSolid({ ssr: true }),
 		UnoCSS(),
 	],
