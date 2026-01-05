@@ -1,5 +1,6 @@
 import { createFileRoute } from '@tanstack/solid-router'
 import { buildRss } from "~/server/rss";
+import { Show } from "solid-js";
 
 export const Route = createFileRoute('/rss.xml')({
 	server: {
@@ -230,4 +231,3 @@ export const Route = createFileRoute('/rss.xml')({
 		},
 	},
 });
-
