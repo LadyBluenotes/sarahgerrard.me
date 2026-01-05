@@ -14,15 +14,9 @@ import {
 const processFile = unified()
 	.use(remarkParse, { fragments: true })
 	.use(remarkRehype)
-	// .use(remarkShikiTwoslash, {
-	// 	themes: ["vitesse-light", "gruvbox-dark-hard"],
-	// })
 	.use(rehypeSanitize)
 	.use(rehypeShiki, {
 		transformers: [
-			// transformerTwoslash({
-			// 	explicitTrigger: true,
-			// }),
 			transformerNotationDiff(),
 			transformerMetaHighlight(),
 		],

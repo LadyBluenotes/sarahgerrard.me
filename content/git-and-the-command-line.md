@@ -1,6 +1,6 @@
 ---
 title: Streamlining Your Workflow with Git and the Command Line
-summary: ""
+summary: Mastering Git through the command line - from basic commands to understanding how version control actually works
 date: 2023-02-13T12:00:00Z
 tags: []
 ---

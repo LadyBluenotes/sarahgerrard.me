@@ -1,6 +1,6 @@
 ---
 title: Demystifying the World of Programming
-summary: ""
+summary: Breaking down what programming really is and clearing up common misconceptions for beginners
 date: 2023-01-17T12:00:00Z
 tags: []
 ---

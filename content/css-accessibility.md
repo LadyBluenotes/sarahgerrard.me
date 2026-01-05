@@ -1,7 +1,7 @@
 ---
 title: The Importance of Accessible CSS for a User-Friendly Website
-summary: ""
-date: 2023-03-05
+summary: A look at why accessible CSS matters and practical tips for making your websites work for everyone
+date: 2023-03-05T12:00:00.000Z
 tags: []
 ---
 

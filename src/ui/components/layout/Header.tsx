@@ -8,6 +8,11 @@ const blogLinks = [
 		label: "Posts",
 	},
 	{
+		href: '/rss.xml',
+		label: "RSS Feed",
+		iconClass: "i-tabler-rss",
+	},
+	{
 		href: "https://bsky.app/profile/ladybluenotes.dev",
 		label: "Bluesky",
 		iconClass: "i-tabler-brand-bluesky",
