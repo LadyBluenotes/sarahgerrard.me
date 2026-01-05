@@ -1,6 +1,6 @@
 ---
 title: Using the Terminal
-summary: ""
+summary: Getting comfortable with the command line and learning the essential commands every developer should know
 date: 2023-02-04T12:00:00Z
 tags: []
 ---

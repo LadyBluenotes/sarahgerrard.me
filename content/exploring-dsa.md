@@ -1,6 +1,6 @@
 ---
 title: Exploring the Basics of Data Structures and Algorithms
-summary: ""
+summary: A deep dive into why data structures and algorithms matter and how they shape the way we solve problems
 date: 2023-01-22T12:00:00Z
 tags: []
 ---

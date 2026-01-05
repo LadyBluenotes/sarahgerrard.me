@@ -1,6 +1,6 @@
 ---
 title: An Introduction to Data Structures
-summary: ""
+summary: Getting started with data structures - what they are, why they matter, and how they fit into programming
 date: 2023-02-17T12:00:00.000Z
 tags: []
 ---

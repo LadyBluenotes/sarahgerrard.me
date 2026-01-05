@@ -1,6 +1,6 @@
 ---
 title: Reflecting on 1-year in Open Source
-summary: ""
+summary: Looking back at my first year contributing to open-source projects and the lessons I've learned along the way
 date: 2023-11-19T12:00:00.000Z
 tags: []
 ---

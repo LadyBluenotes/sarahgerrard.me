@@ -1,6 +1,6 @@
 ---
 title: Unraveling the Magic of the Virtual DOM
-summary: ""
+summary: How the Virtual DOM works under the hood and why it makes modern web apps faster
 date: 2023-06-08T12:00:00Z
 tags: []
 ---

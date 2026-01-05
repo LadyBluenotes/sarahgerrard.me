@@ -1,6 +1,6 @@
 ---
 title: Getting Started with REST APIs
-summary: ""
+summary: A beginner-friendly introduction to REST APIs, how they work, and how to start using them in your projects
 date: 2023-01-28T12:00:00.000Z
 tags: []
 ---

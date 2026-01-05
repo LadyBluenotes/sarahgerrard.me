@@ -1,6 +1,6 @@
 ---
 title: Implementing a Linked List
-summary: ""
+summary: Building a linked list from scratch and understanding how this fundamental data structure works
 date: 2023-03-26T12:00:00Z
 tags: []
 ---
