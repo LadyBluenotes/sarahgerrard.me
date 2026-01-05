@@ -1,7 +1,7 @@
 ---
 title: Introduction to Big O Notation
-summary: An generalized introduction to Big O Notation, in the context of software development.
-tags: [ 'DSA' ]
+summary: A generalized introduction to Big O Notation, in the context of software development.
+tags: []
 date: 2025-12-12T10:00:00.000Z
 ---
 
