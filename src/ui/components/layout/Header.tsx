@@ -4,7 +4,7 @@ import { Link } from "@tanstack/solid-router";
 
 const blogLinks = [
 	{
-		href: "/posts",
+		to: "/posts",
 		label: "Posts",
 	},
 	{
@@ -38,7 +38,7 @@ export default function Header() {
 					<Index each={blogLinks}>
 						{(link) => (
 							<Show
-								when={link().href.startsWith("/")}
+								when={link().to}
 								fallback={
 									<a
 										href={link().href}
@@ -56,8 +56,8 @@ export default function Header() {
 								}
 							>
 								<Link
-									to={link().href.startsWith("/") ? link().href : undefined}
-									target={link().href.startsWith("http") ? "_blank" : undefined}
+									to={link()?.to}
+									target={"_blank"}
 									title={link().label}
 									class="header-link"
 								>
