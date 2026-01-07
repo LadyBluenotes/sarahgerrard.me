@@ -12,21 +12,11 @@ export default defineConfig({
 	},
 	plugins: [
 		netlify(),
-		contentCollections(),
 		tsConfigPaths({
 			projects: ["./tsconfig.json"],
 		}),
-		tanstackStart({
-			pages: [
-				{
-					path: '/rss.xml',
-					prerender: {
-						enabled: true,
-						outputPath: 'public/rss.xml',
-					}
-				}
-			]
-			}),
+		tanstackStart(),
+		contentCollections(),
 		viteSolid({ ssr: true }),
 		UnoCSS(),
 	],
