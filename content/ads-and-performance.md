@@ -1,7 +1,7 @@
 ---
 title: Ads as a Performance Budget Problem
 summary: Exploring how ads impact website performance and strategies to manage their effects.
-date: 2026-01-07
+date: 2026-01-07T12:00:00.000Z
 ---
 
 Open source projects don’t run on good intentions.
