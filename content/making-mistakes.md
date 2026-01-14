@@ -1,110 +1,74 @@
---- 
+---
 title: Making Mistakes in Public Isn’t a Failure
-summary: elllo
-date: 2026-01-01
+summary: Working in public means being visible while learning. That isn’t a weakness—it’s how real software gets built.
+date: 2026-01-14T12:00:00.000Z
 ---
 
-There’s a quiet rule many of us internalize early: **don’t be wrong where people can see it**.
+There’s an unspoken rule many of us learn early:
 
-Once your work is public (open source, PRs, issues, RFCs, blog posts about systems) you’re expected to already know the answer. To push clean commits. To ask “good” questions. To never misunderstand an API in a way that leaves a paper trail.
+**Don’t be wrong where people can see it.**
 
-That pressure is real. And it shapes how people show up more than we like to admit.
+Once your work is public—open source contributions, pull requests, design docs, blog posts—there’s an expectation, whether real or imagined, that you already know the answer. That you ask the *right* questions. That your commits are clean. That confusion, if it exists at all, happens privately.
 
-## Public Code Comes With Permanent Visibility
+That pressure is real. And it shapes how people participate.
 
-Code has memory.
+## Code Has Memory (and That Changes Behavior)
 
-Every commit, every PR comment, every review suggestion sticks around long after the context that produced it fades. A mistaken assumption doesn’t just disappear once it’s corrected; it lives on in the diff history. An early design idea that didn’t pan out can still be pulled up months later.
+Code remembers everything.
 
-That permanence changes behavior.
+Every commit, review comment, and revert outlives the context that produced it. A mistaken assumption doesn’t disappear once it’s corrected; it lives on in the diff. An early idea that didn’t work can resurface months later, stripped of the constraints that once made it reasonable.
 
-People hesitate to:
-- Open exploratory PRs
-- Touch unfamiliar parts of a codebase
-- Ask clarifying questions in issues
-- Admit they don’t fully understand an abstraction yet
+That permanence changes behavior. People hesitate to touch unfamiliar code, ask clarifying questions, or admit they don’t fully understand an abstraction. Being wrong in code feels worse than being wrong in conversation because it looks *objective*. There’s evidence. A line number. A commit hash.
 
-A mistake in code feels worse than being wrong in conversation because it looks *objective*. There’s evidence. A line number. A before-and-after. It can feel like the mistake says something definitive about your ability, rather than something temporary about your understanding at that moment.
+It can feel like the mistake says something permanent about your competence instead of something temporary about your understanding.
 
-But code history isn’t a record of incompetence. It’s a record of how understanding evolved over time.
+But a codebase isn’t a record of who was good or bad.  
+It’s a record of how understanding evolved.
 
-## Most “Mistakes” in Code Are Just Intermediate States
+## Most “Mistakes” Are Just the Work
 
-A lot of what we label as mistakes are really just **transitional states** in the process of building something real.
+Most mistakes aren’t failures. They’re **intermediate states**.
 
-A refactor exposes an edge case no one had accounted for.  
-A performance optimization backfires because production traffic behaves differently than expected.  
-A type definition seems airtight until a new consumer uses it unexpectedly.  
-A cleanup PR breaks something because the dependency graph was more tangled than anyone realized.
+A refactor exposes an edge case. A performance tweak fails under real traffic. A type definition breaks when a new consumer shows up. A cleanup PR reveals how tangled the dependency graph really is. That isn’t incompetence. It’s feedback.
 
-None of that indicates failure. It indicates reality.
+Complex systems don’t reveal themselves upfront. They reveal themselves through use: by being changed, stressed, and corrected. If you never see mistakes, it usually means the learning happened privately, or the system isn’t being meaningfully challenged.
 
-Complex systems don’t reveal themselves all at once. They reveal themselves through interaction; by being changed, stressed, misused, and corrected. If you never see mistakes in a codebase, it usually means one of two things:
-- The learning happened privately, behind closed doors
-- Or the system isn’t being meaningfully challenged
+Neither scales.
 
-Neither scale particularly well.
+This is true everywhere, but open source makes it louder. Your work isn’t just visible to teammates; it’s visible to maintainers you respect, contributors you’ve never met, and employers you didn’t know were watching. Feedback happens in public. Corrections are permanent.
 
-## Open Source Raises the Stakes (and the Fear)
+It’s easy to mistake that visibility for judgment. But most experienced maintainers aren’t looking for perfection. They’re looking for clear intent, engagement with feedback, and follow-through. Some of the best contributions don’t start strong; they get there through discussion. They show how someone thinks, not just what they ship.
 
-In open source, everything is amplified.
+Avoiding contribution to protect your image helps no one.
 
-Your work isn’t just visible to teammates, it’s visible to maintainers you respect, contributors you’ve never met, and potential employers you didn’t even realize were watching. Feedback happens in public threads. Corrections are visible to everyone.
+The same pattern holds at scale. Large organizations ship regressions constantly. They inherit legacy systems, split ownership across teams, and operate with incomplete mental models. The difference isn’t whether mistakes happen; it’s how teams respond. Healthy teams treat incidents as system feedback, not personal failure. Error isn’t a moral failing. It’s a property of complex systems.
 
-That can turn every misstep into a perceived judgment on whether you belong.
+## Correction Is Not a Verdict
 
-But the reality is very different from the fear. Most experienced maintainers don’t expect perfection. They expect:
-- Clear intent
-- Willingness to engage with feedback
-- Openness to revising an approach
-- Follow-through once issues are identified
+Code review often *feels* personal.
 
-A PR that starts rough and improves through discussion is often *more* valuable than one that arrives fully polished but opaque. It shows how you think. It shows that you can collaborate. It shows that you can adapt.
+Comments can be blunt. Context can be missing. Tone doesn’t always carry. And when you’ve invested time in a solution, even neutral feedback can sting. But code review isn’t a verdict. It’s collaborative reasoning to stress-testing assumptions, surface edge cases, and make decisions more explicit.
 
-Avoiding contribution to protect your image helps no one; not the project, and not you.
+Being corrected doesn’t mean you failed. It means the system worked. Someone else saw something you didn’t.
 
-## Code Review Is Not a Trial
+The real damage happens when correction is treated as proof of incompetence instead of part of the process.
 
-Code review often *feels* adversarial, even when it isn’t meant to be.
+There’s also a limit to how much you can reason your way to the right answer in advance. Some lessons only appear once code exists in the world: real performance characteristics, how APIs feel to consumers, where abstractions collapse under maintenance.
 
-Comments can be blunt. Context can be missing. Tone doesn’t always carry well. And when you’ve invested time and care into a solution, even neutral feedback can feel personal.
+No amount of private perfectionism replaces that feedback loop. Shipping something imperfect, learning from it, and improving it is how software gets better. Avoiding visibility to preserve an image of correctness doesn’t make you stronger, it just slows learning and shifts risk downstream.
 
-But code review, at its best, is shared problem-solving:
-- Stress-testing assumptions
-- Surfacing edge cases
-- Exploring trade-offs
-- Making implicit decisions explicit
+## How I’m Choosing to Work
 
-Being corrected in review doesn’t mean you failed. It means the system worked. Someone else brought a perspective you didn’t have. That’s the point.
+I’m choosing to work more openly, but more importantly, I’m choosing to reframe how I interpret my own work.
 
-The real damage happens when corrections are treated—explicitly or implicitly—as proof of incompetence rather than part of collaborative reasoning.
+When something doesn’t land, I don’t want my first reaction to be judgment. I want it to be curiosity. What did I assume? What constraint changed? What did the system reveal that I couldn’t have known in advance?
 
-## Shipping Code Teaches You Things Thinking Never Will
+That means opening PRs before everything is resolved, leaving context instead of hiding uncertainty, and being explicit when an approach didn’t work. Not as a confession, but as part of the process.
 
-There’s a limit to how much you can reason about a system in advance.
+This isn’t carelessness. It’s an open mind applied consistently.
 
-Some lessons only appear once code exists in the world:
-- Performance characteristics under a real load
-- How APIs feel to actual consumers
-- Where abstractions become burdens instead of helpers
-- What maintenance really costs over time
+Code isn’t a moral test.  
+It’s an evolving artifact shaped by incomplete information and real constraints.
 
-No amount of private perfectionism replaces that feedback loop.
-
-Public iteration, like shipping something imperfect, learning from it, and improving it, is how software gets better. Avoiding that process to maintain an image of correctness doesn’t make you more competent; it just slows learning and shifts risk downstream.
-
-## What I’m Actively Practicing
-
-I’m trying to be more intentional about how I show up in public:
-
-- Opening PRs before everything is fully resolved
-- Leaving context in commits instead of hiding uncertainty
-- Being explicit when an approach didn’t work
-- Treating rewrites, reversions, and follow-up PRs as normal
-
-Code is not a moral test. It’s an evolving artifact shaped by many hands, many assumptions, and many revisions.
-
-The people who grow fastest aren’t the ones who never get corrected. They’re the ones who keep engaging with real systems, real feedback, and real constraints, even when that means being visibly wrong along the way.
-
-Perfection is quiet.  
-Progress leaves a commit history.
+The people who grow fastest aren’t the ones who never get corrected.  
+They’re the ones who stay engaged long enough to learn from it.
