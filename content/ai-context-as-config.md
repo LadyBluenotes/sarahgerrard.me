@@ -7,7 +7,7 @@ tags: []
 
 Prompting is usually the first thing people reach for when they want better results from an AI system. If the output isn’t quite right, the fix feels obvious: add more detail, clarify expectations, repeat the important constraints so the model doesn’t miss them.
 
-That works— up to a point.
+That works—up to a point.
 
 Over time, prompts tend to grow: instructions accumulate, token usage creeps up, behaviour starts to vary depending on the tool, the model, or the order the instructions happen to appear. Nothing is obviously broken, but nothing feels stable either.
 
@@ -49,7 +49,7 @@ Not all contexts serve the same purpose, and treating it as if it does is where 
 
 An `agents.md` file is a dedicated, predictable place to give AI agents the context they need to work effectively on a project. Think of it as a machine-readable companion to your human-focused documentation; it contains the project-specific guidance that AI systems don’t otherwise have.
 
-It isn’t about style or personality. It’s about context the agent needs _before it ever sees a prompt_ — setup steps, conventions, commands, and essential project information. Because it lives in one place and is automatically included, you don’t have to repeat the same expectations in every prompt.
+It isn’t about style or personality. It’s about context the agent needs _before it ever sees a prompt_—setup steps, conventions, commands, and essential project information. Because it lives in one place and is automatically included, you don’t have to repeat the same expectations in every prompt.
 
 Put simply:
 
@@ -80,9 +80,11 @@ Here’s how a minimal snippet might look:
 
 ## Code style
 
-- Use strict TypeScript
+- Use TypeScript's strict mode in tsconfig.json
 - Single quotes, no semicolons
 ```
+
+For a real-world example, see [the examples on the agents.md site](https://agents.md/#examples).
 
 ### Rules are about invariants
 
@@ -99,6 +101,27 @@ Rules work when they’re stable and automatically applied. Once defined, they s
 The value here isn’t detail. It’s permanence.
 
 If you’re pasting the same constraints into every prompt, that’s a placement problem, not a prompting problem.
+
+### How to create and maintain good rules
+
+The best rules emerge from repetition: when you notice yourself giving the same instruction multiple times, that's a signal it belongs in your rules, not your prompts.
+
+#### Writing rules
+
+Start with behaviour you want to enforce universally. Write rules as clear constraints, not suggestions. Good rules are:
+
+- Specific enough to guide behaviour consistently
+- General enough to apply across tasks
+- Focused on outcomes, not implementation details
+
+#### Maintaining rules
+
+You have two approaches:
+
+1. **Manual updates**: When an agent does something you don't like, add a rule that prevents it. Review your rules periodically to remove ones that are no longer relevant or that conflict with newer conventions.
+2. **Agent-assisted**: Ask the agent to update your rules file when you notice a pattern. For instance: "Add a rule that you should always ask before creating new files." The agent can help refine wording and placement, but you should review the changes to ensure they match your intent.
+
+Both approaches work. Manual editing gives you control; agent-assisted editing is faster. The important part is that you're capturing patterns as they emerge, not trying to anticipate everything upfront.
 
 ### Skills are about capability
 
@@ -132,6 +155,10 @@ There are many kinds of skills: analytical patterns, domain routines, transforma
 
 Capabilities earn their keep by being optional—and relevant.
 
+#### How to use skills in practice
+
+The mechanics depend on your tooling. In systems like [OpenCode](https://opencode.ai), you can load skills on demand using slash commands (e.g., `/skill code-review`), which adds that skill's context to the current session. In other tools, you might manually include a skill file as an additional context when it's relevant. The key is that skills are _opt-in_: you include them when needed, not by default.
+
 ## What changes when you stop prompting defensively?
 
 Once purpose separates context, prompting stops being defensive.
@@ -156,4 +183,6 @@ Instead of carefully reasserting rules and expectations, you can describe the ta
 
 Prompting doesn’t disappear. It just stops carrying weight it was never meant to bear.
 
-Used this way, prompts become smaller, clearer, and easier to reason about— and the surrounding system does the heavy lifting instead.
+Used this way, prompts become smaller, clearer, and easier to reason about—and the surrounding system does the heavy lifting instead.
+
+If you're curious about how I'm putting this into practice, you can [`agent-infra`](https://github.com/LadyBluenotes/agent-infra), a repository where I maintain my own `agents.md`, rules, and skills files as I work through real projects. It's a living example of how these structures evolve as I discover what actually works _for me_. If you're experimenting with this approach, it might be useful as a reference for how to organize your own context.
