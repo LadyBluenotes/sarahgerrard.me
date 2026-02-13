@@ -15,7 +15,17 @@ Not because this work is glamorous, but because it compounds.
 
 This pattern has repeated itself across nearly every team I've worked with.
 
+I’m currently looking for my next role, and I’m looking for a team that values this kind of structural work — where improving the system itself is considered part of delivering the product, not separate from it.
+
 ## Structural Work, Repeated
+
+Across teams, I’ve learned that friction is usually a signal of misalignment.
+
+When systems require explanation just to be navigated, when contributors depend on unwritten rules, or when small changes create unpredictable side effects, that tension usually points to something structural. The issue isn’t the feature itself — it’s the way the system is shaped around it.
+
+In practice, that has meant changing documentation pipelines instead of duplicating pages, introducing component systems instead of standardizing layouts through review comments, or even moving accessibility checks into tooling rather than relying on memory.
+
+Structural changes alter how future contributors interact with the system. They reduce how much coordination is required. They make correct usage more natural and incorrect usage harder.
 
 ### TanStack
 
@@ -83,3 +93,5 @@ My bias is toward reducing cognitive load — for contributors, for reviewers, a
 And that doesn’t mean avoiding feature work. It means building features in systems that support them. Clear boundaries make bugs easier to isolate. Consistent patterns make debugging less about guesswork and more about traceability. Strong structure doesn’t slow delivery — it compounds it.
 
 I care about building systems that make teams faster over time, not just busier in the moment. That’s the kind of environment I’m continuing to look for — one where infrastructure, clarity, and long-term thinking are treated as product work.
+
+If you’re building something where that kind of work matters, I’d welcome the conversation. You can reach me at [hello@sarahgerrard.me](mailto:hello@sarahgerrard.me).
