@@ -5,17 +5,17 @@ date: 2026-02-13T12:00:00.000Z
 tags: []
 ---
 
-I try to treat code as a conversation. Sometimes that conversation is with the people I’m working with. Sometimes it’s with the user. Often, it’s with my future self. To keep those conversations productive, I ask questions that force clarity, narrow the scope, and make the tradeoffs explicit.
+I try to treat code as a conversation. Sometimes that conversation is with the people I’m working with. Sometimes it’s with the user. Often, it’s with my future self. To keep the conversations productive, I ask questions that force clarity, narrow scope, and make the tradeoffs explicit.
 
 These questions aren’t about being pedantic. They’re about shipping with confidence.
 
 ## The questions I ask (and why they matter)
 
-Figuring out the “right” questions doesn’t come naturally. It was built through trial and error — messy PRs, late-night debugging, and a lot of reflection.
+Figuring out the “right” questions to ask doesn't come naturally. It gets built through trial and error — messy PRs, late-night debugging, and a lot of reflection.
 
-Over time, those mistakes turned into patterns: small prompts that stop problems early, make reviews faster, and help me communicate intent more clearly.
+Over time, those mistakes turn into patterns: small prompts that stop problems early, make reviews faster, and help me communicate intent more clearly.
 
-Now the list is almost reflexive. I run through it quickly before starting work. But it was earned through fumbling, rewriting, and deliberate practice.
+Now, the list is almost reflexive. I run through it quickly before starting work or a project. But it was earned through fumbling, rewriting, and deliberate practice.
 
 ### The general questions
 
@@ -30,13 +30,13 @@ While every project has its own constraints, there are core questions I ask for 
 | How will this be tested (unit/integration/e2e)? | Ensures coverage and reduces regressions.                       |
 | What are the real constraints and tradeoffs?    | Makes performance, size, and maintenance implications explicit. |
 
-These questions shift attention away from naïve implementations and toward clarity: defining the goal, naming the metric of success, and identifying the smallest change that achieves it. That upfront discipline reduces wasted work, shortens review cycles, and gives reviewers a clear way to evaluate the change.
+These questions shift attention away from naïve implementations and toward clarity: defining the goal, naming the metric of success, and identifying the smallest change to achieve it. That upfront discipline reduces wasted work, shortens review cycles, and gives reviewers a clear way to evaluate the change.
 
 This step is also about communication. When assumptions and tradeoffs are made explicit, teammates — including non-technical stakeholders — can weigh in earlier. That reduces misunderstandings and prevents small changes from expanding into expensive rework.
 
 ## Focused Checks for Cross‑Cutting Concerns
 
-Some changes are not isolated to a single file. They touch accessibility, performance, documentation, or a public API. When that happens, I pause and run a more targeted set of questions to avoid breaking a wider surface area.
+Some changes are not isolated to a single file, either. They touch accessibility, performance, documentation, or a public API. When that happens, I pause and run a more targeted set of questions to avoid breaking a wider surface area.
 
 | Question                                         | Why it matters                                               |
 | ------------------------------------------------ | ------------------------------------------------------------ |
@@ -47,7 +47,7 @@ Some changes are not isolated to a single file. They touch accessibility, perfor
 
 After answering these, I convert them into concrete follow-ups: add an accessibility test, update a doc page, capture a performance baseline, tag the right reviewers. If two checks conflict, such as a micro-optimization that would reduce accessibility, it forces an explicit tradeoff before anything ships.
 
-For higher-risk changes, I prefer a phased approach: ship the minimal safe iteration, validate metrics and audits, then iterate.
+For higher-risk changes, I prefer a more phased approach: ship the minimal safe iteration, validate metrics and audits, then iterate.
 
 This practice keeps rollbacks cheap and makes incremental improvement safer.
 
@@ -57,6 +57,6 @@ Pause for the right question, and you avoid a week of firefighting.
 
 This practice isn’t bureaucracy; it’s insurance. A brief pause to name the problem, define success, and clarify tradeoffs prevents accidental regressions and long review cycles. It turns guesswork into decisions.
 
-Teams notice this discipline. It makes code easier to review, easier to maintain, and easier to trust in production. The habit can feel slower at first, especially around a “just ship it” culture, but over time it compounds.
+Teams notice this discipline. It makes code easier to review, maintain, and trust in production. The habit can feel slow at first, especially around a “just ship it” culture, but over time it compounds.
 
 It’s not about shipping less. It’s about shipping deliberately.
