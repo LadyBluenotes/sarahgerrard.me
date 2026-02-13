@@ -35,7 +35,7 @@ Different surfaces, but the same underlying pattern of identifying friction poin
 
 With [SolidJS](https://www.solidjs.com/), my work was originally to improve documentation but it ended up extending well beyond that.
 
-While I was working on the documentation, I helped to establish documentation standards and convetions. That including rethinking structure, organization, and contributor flow so the documentation better matched the mental model of the framework.
+While I was working on the documentation, I helped to establish documentation standards and conventions. That including rethinking structure, organization, and contributor flow so the documentation better matched the mental model of the framework.
 
 When documentation aligns with architecture, contributors can reason more effectively. When it doesn’t, friction increases and understanding (and maintenance) becomes more difficult.
 
@@ -76,7 +76,7 @@ I aim to work in small, reviewable increments. I surface assumptions early. When
 
 If the structure feels accidental, I’ll ask why. Not to override decisions— but to understand the constraints that shaped them.
 
-I document context, async clarity, and I push for guardrails where your memory would be doing too much work.
+I document context, seek clarity, and push for guardrails where your memory would be doing too much work.
 
 My bias is toward reducing cognitive load — for contributors, for reviewers, and for the next person who has to touch the system.
 
