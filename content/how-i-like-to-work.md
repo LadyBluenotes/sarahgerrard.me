@@ -1,21 +1,17 @@
 ---
-title: "How I Like to Work: Incremental, Intentional, Structural"
+title: "How I Like to Work"
 summary: ""
 date: 2026-02-11T12:00:00Z
 tags: []
 ---
 
-I’ve realized I’m less interested in the visible parts of engineering and more interested in what makes those parts possible.
+I’m currently looking for my next role, and that process has clarified something that’s been consistent across nearly every team I’ve worked with: I tend to gravitate toward the parts of engineering that are easy to overlook.
 
-The abstractions underneath. The patterns that hold them together. The guardrails that prevent the same mistakes from being made twice.
+Not the visible features or the surface polish, but the structural decisions beneath them — the conventions that make a codebase predictable, the abstractions that reduce repetition, the small quality-of-life improvements that clients may never explicitly notice but feel in the product’s reliability, coherence, and adaptability.
 
-When something feels difficult to navigate, inconsistent, or fragile, that’s usually where I lean in. When systems begin accumulating friction, that’s where I focus.
+Over time, I’ve realized this isn’t incidental. When I enter a system, I notice the friction others have learned to work around. The places that require explanation. The assumptions that exist only in a shared context. The patterns that almost work — but not consistently enough to disappear into the background.
 
-Not because this work is glamorous, but because it compounds.
-
-This pattern has repeated itself across nearly every team I've worked with.
-
-I’m currently looking for my next role, and I’m looking for a team that values this kind of structural work — where improving the system itself is considered part of delivering the product, not separate from it.
+That pattern of attention has followed me across teams, and it has shaped the kind of work I choose to do.
 
 ## Structural Work, Repeated
 
