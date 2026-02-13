@@ -1,7 +1,7 @@
 import { unified } from "unified";
 import remarkParse from "remark-parse";
 import remarkRehype from "remark-rehype";
-import rehypeSanitize from "rehype-sanitize";
+import remarkGfm from "remark-gfm";
 import rehypeStringify from "rehype-stringify";
 import rehypeRaw from "rehype-raw";
 
@@ -13,8 +13,9 @@ import {
 
 const processFile = unified()
 	.use(remarkParse, { fragments: true })
-	.use(remarkRehype)
-	.use(rehypeSanitize)
+	.use(remarkGfm)
+	.use(remarkRehype, { allowDangerousHtml: true })
+	.use(rehypeRaw)
 	.use(rehypeShiki, {
 		transformers: [
 			transformerNotationDiff(),
@@ -27,8 +28,7 @@ const processFile = unified()
 	})
 	.use(rehypeStringify, {
 		allowDangerousHtml: true,
-	})
-	.use(rehypeRaw, { passThrough: ["mdxjsEsm"] });
+	});
 
 export async function createHtml(post) {
 	const result = await processFile().process(post);
