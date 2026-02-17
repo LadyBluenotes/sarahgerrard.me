@@ -10,16 +10,19 @@ export const ThemeSelector = () => {
 			setDarkMode(true);
 			document.documentElement.classList.add("dark");
 		}
-	})
+	});
 
 	createEffect(
 		on(darkMode, (isDark) => {
-		if(isDark) {
-			document.documentElement.setAttribute("data-theme", "dark");
-		} else {
-			document.documentElement.removeAttribute("data-theme");
-		}
+			if (isDark) {
+				document.documentElement.setAttribute("data-theme", "dark");
+			} else {
+				document.documentElement.setAttribute("data-theme", "light");
+			}
 			window.localStorage.setItem("theme", isDark ? "dark" : "light");
+			(
+				window as Window & { updateThemePictures?: (theme: string) => void }
+			).updateThemePictures?.(isDark ? "dark" : "light");
 		})
 	);
 
@@ -27,7 +30,7 @@ export const ThemeSelector = () => {
 	return (
 		<Button
 			aria-label="Toggle Theme"
-			onClick={() => setDarkMode(prev => !prev)}
+			onClick={() => setDarkMode((prev) => !prev)}
 			class="color-[--inactive] hover:color-[--hover-inactive]"
 		>
 			<Show

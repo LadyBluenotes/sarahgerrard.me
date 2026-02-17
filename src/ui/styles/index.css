@@ -264,6 +264,35 @@ html {
 			padding: 0.125rem 1rem;
 		}
 	}
+
+	table {
+		border: 1px solid var(--border-color);
+		border-collapse: collapse;
+		margin: 1.5rem 0;
+		width: 100%;
+		overflow: hidden;
+
+		thead {
+			background-color: rgb(from var(--inactive) r g b / 10%);
+
+			th {
+				font-weight: 600;
+				padding: 0.5rem 1rem;
+				text-align: left;
+			}
+		}
+
+		th,
+		td {
+			border: 1px solid var(--border-color);
+		}
+
+		tr {
+			td {
+				padding: 0.5rem 1rem;
+			}
+		}
+	}
 }
 
 html[data-theme="dark"] {
