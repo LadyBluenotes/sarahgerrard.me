@@ -1,7 +1,7 @@
 ---
 title: "How I Like to Work"
-summary: ""
-date: 2026-02-11T12:00:00Z
+summary: "A review of how I work as a developer, centered on clarity, maintainability, and the structural decisions that compound over time."
+date: 2026-02-17T12:00:00Z
 tags: []
 ---
 
