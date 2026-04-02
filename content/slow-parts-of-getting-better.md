@@ -11,7 +11,7 @@ It's not in my commit history. It's not in merged PRs or shipped features. There
 
 For a long time, I treated the visible work as the real work. The PRs, the docs pages, the shipped features. That's the part other people can see, and honestly, it's the part I knew how to talk about. What I've realized instead is that a lot of the work that changes me as a developer happens before any of that becomes visible.
 
-![](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F008%2F902%2F881%2Foriginal%2Ficeberg-s-model-of-system-thinking-is-an-illustration-of-the-blue-mountain-and-presentation-this-theory-is-to-analyze-the-root-causes-of-events-hidden-underwater-for-developing-marketing-trend-vector.jpg&f=1&nofb=1&ipt=f96c54b5cec9b7a967922125acc9c057e13a1bf7ac87c7d851e309b6690f3e9d)
+![Systems-thinking iceberg diagram with visible events above the waterline and deeper layers below labeled pattern trends, structures, and mental models.](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F008%2F902%2F881%2Foriginal%2Ficeberg-s-model-of-system-thinking-is-an-illustration-of-the-blue-mountain-and-presentation-this-theory-is-to-analyze-the-root-causes-of-events-hidden-underwater-for-developing-marketing-trend-vector.jpg&f=1&nofb=1&ipt=f96c54b5cec9b7a967922125acc9c057e13a1bf7ac87c7d851e309b6690f3e9d)
 
 ## Mental Models Don't Arrive on a Schedule
 
