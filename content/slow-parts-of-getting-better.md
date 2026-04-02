@@ -71,14 +71,20 @@ Those moments don't announce themselves, they just happen. You then look back an
 
 ## The Value of the Slow Parts
 
-In an industry that seems to value the output of work through things like commits and velocity, this kind of progress feels like a waste of time. It can be easy to undervalue the slow, invisible parts of getting better, especially when they don't leave a paper trail. But I think that's a mistake. Those parts are the foundation for the visible work. They shape how I approach problems, how I design systems, and how I communicate with others. They may not be visible, but they're essential.
+In an industry that seems to value the output of work through things like commits and velocity, this kind of progress feels like a waste of time. It can be easy to undervalue the slow, invisible parts of getting better, especially when they don't leave a paper trail. 
 
-As much as it seems like things have opposite of the point, where people are now shipping more code and more features thanks to AI and ML, the reality is that these points still matter.
+But I think that's a mistake. 
 
-I'm not writing this from the other side of some neat transformation story. I'm still very much in the throes of it all. There are still concepts I can use but can't fully explain. There are design discussions where I know something feels off but can't quite articulate why quickly enough. There are even moments where the gap between what I understand and what I can communicate is wider than I'd like.
+Those parts are the foundation for the visible work. They shape how I approach problems, how I design systems, and how I communicate with others. They may not be visible, but they're essential.
+
+As much as it seems like things are moving in the opposite direction, where people are now shipping more code and more features thanks to AI and ML, the reality is that these points still matter.
+
+I'm not writing this from the other side of some neat transformation story. I'm still very much in the throes of it all. There are still concepts I can use but can't fully explain. There are design discussions where I know something feels off but can't quite articulate why eloquently. There are even moments where the gap between what I understand and what I can communicate is wider than I'd like.
 
 But with each passing day, I'm learning that the gap continues to shrink. I'm learning that I can explain things that I didn't know before. I can use my existing understanding to get to new places that I couldn't before. I can have more confidence in my own judgment, even when it's still a work in progress
 
-The fact that I can see it more clearly now, can name the specific places where my understanding is intuitive rather than explicit, feels like progress in itself.
+The fact that I can see it more clearly now, can even name the specific places where my understanding is intuitive rather than explicit, feels like progress in itself.
 
-And honestly, the slow parts might take a lot of work, but they are still worth it. Sometimes, they just don't give us the tangible results we expect, and that's okay. The growth is happening, even if it doesn't look like it in the moment.
+And honestly, the slow parts might take a lot of work, but they are still worth it. Sometimes, they just don't give us the tangible results we expect, and that's okay. 
+
+The growth is happening, even if it doesn't look like it in the moment.
