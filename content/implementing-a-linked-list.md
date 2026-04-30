@@ -2,7 +2,8 @@
 title: Implementing a Linked List
 summary: Building a linked list from scratch and understanding how this fundamental data structure works
 date: 2023-03-26T12:00:00Z
-tags: []
+category: technical
+tags: [data-structures, linked-list]
 ---
 
 A linked list is a popular data structure used in computer science and programming for sorting and managing collections of data.
@@ -22,10 +23,10 @@ The constructor function takes a `data` parameter, which is used to initialize t
 ```javascript
 // Define the class for a Node
 class Node {
-	constructor(data) {
-		this.data = data;
-		this.next = null;
-	}
+  constructor(data) {
+    this.data = data;
+    this.next = null;
+  }
 }
 ```
 
@@ -40,11 +41,11 @@ By default, all three properties are set to `0` or `null`.
 ```javascript
 // Define the class for the Linked List
 class LinkedList {
-	constructor() {
-		this.head = null;
-		this.tail = null;
-		this.size = 0;
-	}
+  constructor() {
+    this.head = null;
+    this.tail = null;
+    this.size = 0;
+  }
 }
 ```
 

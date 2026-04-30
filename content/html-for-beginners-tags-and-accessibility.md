@@ -2,7 +2,8 @@
 title: "HTML for Beginners: Tags and Accessibility"
 summary: Discover the role of HTML tags and how they make your website accessible
 date: 2023-01-01T12:00:00.000Z
-tags: []
+category: technical
+tags: [html, a11y, beginners]
 ---
 
 ![](https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/6b40d743c5e58ff0d5234629059ec5a0.jpeg?w=1600&h=840&fit=crop&crop=entropy&auto=compress,format&format=webp)
@@ -86,9 +87,9 @@ Some examples of proper semantic HTML:
 
 ```html
 <ul>
-	<li>Item 1</li>
-	<li>Item 2</li>
-	<li>Item 3</li>
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li>Item 3</li>
 </ul>
 ```
 
@@ -138,10 +139,7 @@ introduces a way for users who are unable to see the content to understand the c
 example of how it is used:
 
 ```html
-<img
-	src="image.jpg"
-	alt="A photograph of the night sky over the ocean"
-/>
+<img src="image.jpg" alt="A photograph of the night sky over the ocean" />
 ```
 
 There are a few general guidelines to follow when writing `alt` attribute text:
@@ -174,10 +172,7 @@ Some common ARIA attributes include:
 
 ```html
 <label id="name-label">Name:</label>
-<input
-	type="text"
-	aria-labelledby="name-label"
-/>
+<input type="text" aria-labelledby="name-label" />
 ```
 
 In this example, it associates the input field with the "Name:" label. This helps users understand the purpose of the
@@ -188,10 +183,7 @@ field and can be read by assistive technologies.
 
 ```html
 <div id="description">Please enter your name in the field above.</div>
-<input
-	type="text"
-	aria-describedby="description"
-/>
+<input type="text" aria-describedby="description" />
 ```
 
 In this example, it is used to associate the input field with the description text. This provides additional context and
@@ -202,7 +194,7 @@ instructions for the field and can be read by assistive technologies.
 
 ```html
 <div aria-hidden="true">
-	This content is hidden and will not be read by assistive technologies.
+  This content is hidden and will not be read by assistive technologies.
 </div>
 ```
 

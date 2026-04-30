@@ -2,7 +2,8 @@
 title: Using the Terminal
 summary: Getting comfortable with the command line and learning the essential commands every developer should know
 date: 2023-02-04T12:00:00Z
-tags: []
+category: tools
+tags: [terminal, command-line]
 ---
 
 ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1675541808718/9ed72502-1786-4545-9c87-9b1aeae36e8f.gif?w=1600&h=840&fit=crop&crop=entropy&auto=format,compress&gif-q=60&format=webm)

@@ -2,7 +2,8 @@
 title: AI Context as Configuration, Not Prompts
 summary: Stop repeating yourself in every prompt. Use files like agents.md to define project conventions, rules for universal constraints, and skills for optional capabilities. Prompts stay focused on the task, context lives where it belongs, and behaviour becomes predictable.
 date: 2026-01-21T12:00:00Z
-tags: []
+category: tools
+tags: [ai, context, workflow]
 ---
 
 Prompting is usually the first thing people reach for when they want better results from an AI system. If the output isn’t quite right, the fix feels obvious: add more detail, clarify expectations, repeat the important constraints so the model doesn’t miss them.

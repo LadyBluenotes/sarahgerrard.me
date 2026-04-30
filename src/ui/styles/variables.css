@@ -1,23 +1,45 @@
+@import url("fonts/fonts.css");
+
 :root {
-	--background-color: #f2f0ef;
+	--primary: #111;
+	--soft: #777;
+
+	--background: #fafaf7;
+
+	--background-color: #fafaf7;
 	--border-color: #c8c8c8;
 
 	--inactive: #555555;
+	--inactive-muted: rgb(from var(--inactive) r g b / 70%);
 	--hover-inactive: #1a2421;
 
+	--detail: #ddd;
+
 	--text-color: #232b2b;
-	--heading-color: #111111;
+	--heading-color: #777;
 	--underline-color: #888888;
 	--button-bg: #d9d9d9;
 	--code-highlight: #fbf1c7;
+
+	--serif: "Instrument Serif", serif;
+	--sans-serif: "Inter", sans-serif;
+	--display: "Playfair Display", serif;
+	--mono: "JetBrains Mono", monospace;
 }
 
 :root[data-theme="dark"] {
-	--background-color: #050505;
+	--primary: #ece8de;
+	--soft: #a8a89f;
+
+	--background: #1a1a1c;
+	--background-color: #1a1a1c;
 	--border-color: #212121;
 
 	--inactive: #b8b8b8;
+	--inactive-muted: rgb(from var(--inactive) r g b / 70%);
 	--hover-inactive: #e1e1dd;
+
+	--detail: #7a7a72;
 
 	--text-color: #b6b6b6;
 	--heading-color: #e6e6e6;

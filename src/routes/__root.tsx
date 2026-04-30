@@ -1,16 +1,16 @@
 // <reference types="vite/client" />
-import { HeadContent, Scripts, createRootRoute } from "@tanstack/solid-router";
+import { createRootRoute, HeadContent, Scripts } from "@tanstack/solid-router";
 import { TanStackRouterDevtools } from "@tanstack/solid-router-devtools";
+import { HydrationScript } from "solid-js/web";
 import type * as Solid from "solid-js";
 import { DefaultCatchBoundary } from "~/ui/components/errors/DefaultCatchBoundary";
 import { NotFound } from "~/ui/components/errors/NotFound";
 import { seo } from "~/utils/seo";
-import cssStyles from "../ui/styles/index.css?url";
 
 import "virtual:uno.css";
 import "@unocss/reset/tailwind-compat.css";
 
-import "../ui/styles/index.css?url";
+import "../ui/styles/index.css";
 import Header from "~/ui/components/layout/Header";
 
 export const Route = createRootRoute({
@@ -29,10 +29,6 @@ export const Route = createRootRoute({
 			}),
 		],
 		links: [
-			{
-				rel: "stylesheet",
-				href: cssStyles,
-			},
 			{
 				rel: "apple-touch-icon",
 				sizes: "180x180",
@@ -60,9 +56,6 @@ export const Route = createRootRoute({
 			},
 		],
 		scripts: [
-			{
-				src: "https://cdn.jsdelivr.net/npm/@unocss/runtime",
-			},
 			{
 				async: true,
 				src: "https://www.googletagmanager.com/gtag/js?id=G-FD4EDGWJ5V",
@@ -177,6 +170,7 @@ export const Route = createRootRoute({
 							window.updateThemePictures = setThemePictures;
 		
 							document.documentElement.setAttribute('data-theme', currentTheme);
+							document.documentElement.classList.toggle('dark', currentTheme === 'dark');
 							updateThemePictures(currentTheme);
 							window.addEventListener('DOMContentLoaded', function() {
 								updateThemePictures(currentTheme);
@@ -220,12 +214,17 @@ export const Route = createRootRoute({
 
 function RootDocument(props: { children: Solid.JSX.Element }) {
 	return (
-		<>
-			<HeadContent />
-			<Header />
-			{props.children}
-			<TanStackRouterDevtools position="top-right" />
-			<Scripts />
-		</>
+		<html lang="en">
+			<head>
+				<HydrationScript />
+			</head>
+			<body>
+				<HeadContent />
+				<Header />
+				{props.children}
+				<TanStackRouterDevtools position="bottom-right" />
+				<Scripts />
+			</body>
+		</html>
 	);
 }

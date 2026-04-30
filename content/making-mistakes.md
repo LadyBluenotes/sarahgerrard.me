@@ -2,13 +2,15 @@
 title: Making Mistakes in Public Isn’t a Failure
 summary: Working in public means being visible while learning. That isn’t a weakness—it’s how real software gets built.
 date: 2026-01-14T12:00:00.000Z
+category: open-source
+tags: [learning, public-work]
 ---
 
 There’s an unspoken rule many of us learn early:
 
 **Don’t be wrong where people can see it.**
 
-Once your work is public—open source contributions, pull requests, design docs, blog posts—there’s an expectation, whether real or imagined, that you already know the answer. That you ask the *right* questions. That your commits are clean. That confusion, if it exists at all, happens privately.
+Once your work is public—open source contributions, pull requests, design docs, blog posts—there’s an expectation, whether real or imagined, that you already know the answer. That you ask the _right_ questions. That your commits are clean. That confusion, if it exists at all, happens privately.
 
 That pressure is real. And it shapes how people participate.
 
@@ -18,7 +20,7 @@ Code remembers everything.
 
 Every commit, review comment, and revert outlives the context that produced it. A mistaken assumption doesn’t disappear once it’s corrected; it lives on in the diff. An early idea that didn’t work can resurface months later, stripped of the constraints that once made it reasonable.
 
-That permanence changes behavior. People hesitate to touch unfamiliar code, ask clarifying questions, or admit they don’t fully understand an abstraction. Being wrong in code feels worse than being wrong in conversation because it looks *objective*. There’s evidence. A line number. A commit hash.
+That permanence changes behavior. People hesitate to touch unfamiliar code, ask clarifying questions, or admit they don’t fully understand an abstraction. Being wrong in code feels worse than being wrong in conversation because it looks _objective_. There’s evidence. A line number. A commit hash.
 
 It can feel like the mistake says something permanent about your competence instead of something temporary about your understanding.
 
@@ -45,7 +47,7 @@ The same pattern holds at scale. Large organizations ship regressions constantly
 
 ## Correction Is Not a Verdict
 
-Code review often *feels* personal.
+Code review often _feels_ personal.
 
 Comments can be blunt. Context can be missing. Tone doesn’t always carry. And when you’ve invested time in a solution, even neutral feedback can sting. But code review isn’t a verdict. It’s collaborative reasoning to stress-testing assumptions, surface edge cases, and make decisions more explicit.
 

@@ -1,8 +1,9 @@
 ---
 title: Introduction to Big O Notation
 summary: A generalized introduction to Big O Notation, in the context of software development.
-tags: []
 date: 2025-12-12T10:00:00.000Z
+category: technical
+tags: [algorithms, big-o, performance]
 ---
 
 Understanding how efficient your code is, is crucial to writing high-quality software. As data scales, it becomes more
@@ -10,7 +11,7 @@ important to understand how the performance of your code scales as well. This is
 comes in.
 
 At its core, Big O notation is a mathematical expression that describes the performance of an algorithm or data
-structure as a function of its input size. It primarily focuses on the *worst-case scenario*, providing a high-level
+structure as a function of its input size. It primarily focuses on the _worst-case scenario_, providing a high-level
 understanding of how operations will scale.
 
 ## How Big O Notation Works
@@ -19,7 +20,7 @@ Big O notation quantifies the efficiency of your code. This efficiency is measur
 **space complexity**. Time complexity describes how the execution time scales as the input size increases, while space
 complexity is how memory usage scales.
 
-It's important to remember that Big O notation is an *expression* describing performance, not an exact number. It is
+It's important to remember that Big O notation is an _expression_ describing performance, not an exact number. It is
 written as `O(f(n))`, where `f(n)` is the function describing the performance of your algorithm, and `n` is the size of
 the input.
 
@@ -30,16 +31,16 @@ about assessing the seconds or milliseconds it takes, which vary based on the ha
 it focuses on how the execution time grows as the input size increases.
 
 When talking about time complexity, the focus is always on the **worst-case scenarios**. This gives an upper-bound on
-how long an algorithm *could* take, giving you a way to predict how long it will take in practice.
+how long an algorithm _could_ take, giving you a way to predict how long it will take in practice.
 
 As an example, let's say you're searching for a number in a list:
 
 ```js
 function findNum(nums, target) {
-	for (let i = 0; i < nums.length; i++) {
-		if (nums[i] === target) return i;
-	}
-	return -1;
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[i] === target) return i;
+  }
+  return -1;
 }
 ```
 
@@ -50,7 +51,7 @@ To analyze its time complexity:
   the
   input.
 - **Worst Case**: If the `target` is the last element in the array, or not present at all, the loop will have to iterate
-  through *every* element in the list. If the list has `n` elements, the function will perform `n` comparisons in the
+  through _every_ element in the list. If the list has `n` elements, the function will perform `n` comparisons in the
   worst case.
 
 Therefore, the **time complexity** of the function `findNum` is `O(n)`, where `n` is the number of elements in the
@@ -61,21 +62,21 @@ scenario.
 
 Space complexity measures the amount of memory an algorithm needs to run. Like time complexity, it doesn't measure the
 exact amount of memory used but rather the growth of memory usage as the input size increases. We typically consider the
-**auxillary space complexity**, which is the extra space an algorithm uses *beyond* the input size itself.
+**auxillary space complexity**, which is the extra space an algorithm uses _beyond_ the input size itself.
 
 Let's look at a function that creates a new list containing the squares of numbers in a given list:
 
 ```js
 function sumNums(nums) {
-	let total = 0;
-	for (let num of nums) {
-		total += num * num;
-	}
-	return total;
+  let total = 0;
+  for (let num of nums) {
+    total += num * num;
+  }
+  return total;
 }
 ```
 
-Since we only care about *additional* space being used, we can ignore the initial space required to store the input
+Since we only care about _additional_ space being used, we can ignore the initial space required to store the input
 array. Therefore, the **space complexity** of the function would be constant, since the extra space required is
 independent
 of the size of the input.
@@ -106,7 +107,7 @@ best" choice in one scenario might be suboptimal in another, depending on factor
 
 ### Time vs Memory
 
-One of the most common trade-offs is between the time and space complexity, or *memory usage*. Often, you can make an
+One of the most common trade-offs is between the time and space complexity, or _memory usage_. Often, you can make an
 algorithm faster by using more memory, or use less memory at the expense of speed.
 
 **Example**: Memoization

@@ -2,7 +2,8 @@
 title: "How I Like to Work"
 summary: "A review of how I work as a developer, centered on clarity, maintainability, and the structural decisions that compound over time."
 date: 2026-02-17T12:00:00Z
-tags: []
+category: personal
+tags: [workflow, maintainability]
 ---
 
 I’m currently looking for my next role, and that process has clarified something that’s been consistent across nearly every team I’ve worked with: I tend to gravitate toward the parts of engineering that are easy to overlook.

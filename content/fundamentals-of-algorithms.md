@@ -2,7 +2,8 @@
 title: The Fundamentals of Algorithms
 summary: Understanding the building blocks of algorithms and how they solve computational problems efficiently
 date: 2023-02-24T12:00:00.000Z
-tags: []
+category: technical
+tags: [algorithms, computer-science]
 ---
 
 ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1677222194132/6d796977-6fe8-43f1-8db4-aeb5c1e4e971.jpeg?w=1600&h=840&fit=crop&crop=entropy&auto=compress,format&format=webp)

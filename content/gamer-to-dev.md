@@ -2,7 +2,8 @@
 title: From a Casual Gamer to Developer
 summary: How I went from being a casual gamer and computer tinkerer to working towards a career change.
 date: 2022-12-15T12:00:00Z
-tags: []
+category: personal
+tags: [career-change, learning]
 ---
 
 ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1671212554373/sib3m6a6-.jpeg?w=1600&h=840&fit=crop&crop=entropy&auto=compress,format&format=webp)

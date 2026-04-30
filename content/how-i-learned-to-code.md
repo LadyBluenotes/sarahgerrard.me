@@ -2,7 +2,8 @@
 title: How I Learned to Code
 summary: From learning the basics of HTML to the complexities of data structures and algorithms
 date: 2022-12-26T12:00:00.000Z
-tags: []
+category: personal
+tags: [programming, learning]
 ---
 
 ![](https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/3a4af70585c1df5bd94a5f4df6af9346.jpeg?w=1600&h=840&fit=crop&crop=entropy&auto=compress,format&format=webp)

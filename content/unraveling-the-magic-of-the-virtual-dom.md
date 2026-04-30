@@ -2,7 +2,8 @@
 title: Unraveling the Magic of the Virtual DOM
 summary: How the Virtual DOM works under the hood and why it makes modern web apps faster
 date: 2023-06-08T12:00:00Z
-tags: []
+category: technical
+tags: [react, virtual-dom]
 ---
 
 ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1686268579412/9416c4f7-6cb6-4db3-8c5e-0bd27cd0d265.png?w=1600&h=840&fit=crop&crop=entropy&auto=compress,format&format=webp)

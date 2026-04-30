@@ -1,5 +1,5 @@
-export const Divider = () => {
+export const Divider = (props: { class?: string }) => {
 	return (
-		<hr class="border-y border-border/50 border-[--border-color] z-[1] relative border-t-border dark:border-t-border/50 h-[6px]" />
+		<hr class={`border-t-1 border-[var(--detail)] z-[1] w-full ${props.class}`} />
 	);
 };

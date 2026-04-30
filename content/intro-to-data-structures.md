@@ -2,7 +2,8 @@
 title: An Introduction to Data Structures
 summary: Getting started with data structures - what they are, why they matter, and how they fit into programming
 date: 2023-02-17T12:00:00.000Z
-tags: []
+category: technical
+tags: [data-structures, computer-science]
 ---
 
 ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1676666230162/a3d154e1-4634-412a-8961-349485da4bc5.webp?w=1600&h=840&fit=crop&crop=entropy&auto=compress,format&format=webp)

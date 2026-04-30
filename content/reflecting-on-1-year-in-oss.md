@@ -2,7 +2,8 @@
 title: Reflecting on 1-year in Open Source
 summary: Looking back at my first year contributing to open-source projects and the lessons I've learned along the way
 date: 2023-11-19T12:00:00.000Z
-tags: []
+category: open-source
+tags: [reflection, contribution]
 ---
 
 ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1700438907220/5befad29-53eb-493e-8359-d30b826f7926.png?w=1600&h=840&fit=crop&crop=entropy&auto=compress,format&format=webp)

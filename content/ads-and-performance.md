@@ -2,6 +2,8 @@
 title: Ads as a Performance Budget Problem
 summary: Exploring how ads impact website performance and strategies to manage their effects.
 date: 2026-01-07T12:00:00.000Z
+category: technical
+tags: [performance, ads, open-source]
 ---
 
 Open source projects don’t run on good intentions.
@@ -36,7 +38,7 @@ When regressions show up, they’re often attributed to vague causes (“the sit
 
 That’s why ads can’t be reasoned about purely as an integration concern.
 
-*They’re part of the system.*
+_They’re part of the system._
 
 ## Performance budgets are about tradeoffs, not scores
 

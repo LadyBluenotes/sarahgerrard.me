@@ -1,8 +1,9 @@
 ---
 title: How I’m Writing (and Working) in 2026
 summary: A rundown of how I'm approaching my blog in 2026 - what kinds of posts to expect, how often I'm writing, and the principles guiding my approach to writing.
-tags: []
 date: 2026-01-01T10:00:00.000Z
+category: personal
+tags: [writing, growth]
 ---
 
 At the start of a new year, it's easy to reach for ambitious goals or create a big pile of work to do. Instead, I wanted

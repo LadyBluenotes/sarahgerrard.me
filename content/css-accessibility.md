@@ -2,7 +2,8 @@
 title: The Importance of Accessible CSS for a User-Friendly Website
 summary: A look at why accessible CSS matters and practical tips for making your websites work for everyone
 date: 2023-03-05T12:00:00.000Z
-tags: []
+category: technical
+tags: [css, a11y]
 ---
 
 ![](https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/tZc3vjPCk-Q/upload/d9b9011ac5aab29d3002d549da329e63.jpeg?w=1600&h=840&fit=crop&crop=entropy&auto=compress,format&format=webp)

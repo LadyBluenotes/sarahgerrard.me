@@ -2,7 +2,8 @@
 title: "The Slow Parts of Getting Better"
 summary: "Most of the growth that matters as a developer happens slowly and invisibly — building mental models, learning to articulate what you know, getting better at reasoning about tradeoffs. This post is about making peace with that process, even when there's no PR or shipped feature to show for it."
 date: 2026-04-03T12:00:00Z
-tags: []
+category: personal
+tags: [learning, growth]
 ---
 
 Lately, I've been thinking about how much of my growth as a developer has happened in ways that are hard to point to.
@@ -71,9 +72,9 @@ Those moments don't announce themselves, they just happen. You then look back an
 
 ## The Value of the Slow Parts
 
-In an industry that seems to value the output of work through things like commits and velocity, this kind of progress feels like a waste of time. It can be easy to undervalue the slow, invisible parts of getting better, especially when they don't leave a paper trail. 
+In an industry that seems to value the output of work through things like commits and velocity, this kind of progress feels like a waste of time. It can be easy to undervalue the slow, invisible parts of getting better, especially when they don't leave a paper trail.
 
-But I think that's a mistake. 
+But I think that's a mistake.
 
 Those parts are the foundation for the visible work. They shape how I approach problems, how I design systems, and how I communicate with others. They may not be visible, but they're essential.
 
@@ -85,6 +86,6 @@ But with each passing day, I'm learning that the gap continues to shrink. I'm le
 
 The fact that I can see it more clearly now, can even name the specific places where my understanding is intuitive rather than explicit, feels like progress in itself.
 
-And honestly, the slow parts might take a lot of work, but they are still worth it. Sometimes, they just don't give us the tangible results we expect, and that's okay. 
+And honestly, the slow parts might take a lot of work, but they are still worth it. Sometimes, they just don't give us the tangible results we expect, and that's okay.
 
 The growth is happening, even if it doesn't look like it in the moment.

@@ -2,7 +2,8 @@
 title: Streamlining Your Workflow with Git and the Command Line
 summary: Mastering Git through the command line - from basic commands to understanding how version control actually works
 date: 2023-02-13T12:00:00Z
-tags: []
+category: tools
+tags: [git, command-line, version-control]
 ---
 
 ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1676314923974/3144e52b-c284-43fa-a81b-2e4495021ba1.jpeg?w=1600&h=840&fit=crop&crop=entropy&auto=compress,format&format=webp)

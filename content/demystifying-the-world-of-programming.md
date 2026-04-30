@@ -2,7 +2,8 @@
 title: Demystifying the World of Programming
 summary: Breaking down what programming really is and clearing up common misconceptions for beginners
 date: 2023-01-17T12:00:00Z
-tags: []
+category: technical
+tags: [programming, beginners]
 ---
 
 ![](https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/uyfohHiTxho/upload/81dec85f9203889cb63756b0774a9539.jpeg?w=1600&h=840&fit=crop&crop=entropy&auto=compress,format&format=webp)

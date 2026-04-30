@@ -60,11 +60,11 @@ function RouteComponent() {
 												href={`/posts/${post._meta.path}`}
 												class="group flex gap-4 items-baseline group-hover:underline"
 											>
-												<span class="text-[--inactive] group-hover:text-[--hover-inactive] group-hover:underline">
+												<span class="text-[var(--inactive)] group-hover:text-[var(--hover-inactive)] group-hover:underline">
 													{post.title}
 												</span>
 
-												<span class="text-sm text-[--inactive]/70">
+												<span class="text-sm text-[var(--inactive-muted)]">
 													{new Date(post.date as string).toLocaleDateString(
 														"en-CA",
 														{

@@ -1,13 +1,47 @@
 @font-face {
-	font-family: "Mindway";
-	src: url("./Mindway.otf") format("opentype");
-	font-weight: 400;
+	font-family: "Inter";
+	src: url("./Inter.woff2") format("woff2");
+	font-weight: 100 900;
 	font-style: normal;
+	font-display: swap;
 }
 
 @font-face {
-	font-family: "Open Sans";
-	src: url("./OpenSans.ttf") format("truetype");
-	font-weight: 300 400 500 600 700 800;
-	font-style: italic normal;
+	font-family: "Instrument Serif";
+	src: url("./InstrumentSerif-Regular.woff2") format("woff2");
+	font-weight: 100 900;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Instrument Serif";
+	src: url("./InstrumentSerif-Italic.woff2") format("woff2");
+	font-weight: 100 900;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Playfair Display";
+	src: url("./PlayfairDisplay-Regular.woff2") format("woff2");
+	font-weight: 100 900;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Playfair Display";
+	src: url("./PlayfairDisplay-Italic.woff2") format("woff2");
+	font-weight: 100 900;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "JetBrains Mono";
+	src: url("./JetBrainsMono-Regular.woff2") format("woff2");
+	font-weight: 100 900;
+	font-style: normal;
+	font-display: swap;
 }

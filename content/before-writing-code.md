@@ -2,7 +2,8 @@
 title: Questions I Ask Before I Write a Line of Code
 summary: A practical list of questions I run through before starting work to scope the smallest useful change, reduce surprises, and make my work easier to review, test, and maintain.
 date: 2026-02-13T12:00:00.000Z
-tags: []
+category: code
+tags: [planning, code-review, maintainability]
 ---
 
 I try to treat code as a conversation. Sometimes that conversation is with the people I’m working with. Sometimes it’s with the user. Often, it’s with my future self. To keep the conversations productive, I ask questions that force clarity, narrow scope, and make the tradeoffs explicit.

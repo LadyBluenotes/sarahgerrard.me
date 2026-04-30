@@ -2,7 +2,8 @@
 title: Getting Started with REST APIs
 summary: A beginner-friendly introduction to REST APIs, how they work, and how to start using them in your projects
 date: 2023-01-28T12:00:00.000Z
-tags: []
+category: technical
+tags: [api, rest, web-development]
 ---
 
 ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1674936096613/046167f0-1f65-4aa7-8d7f-59ffc74519b8.jpeg?w=1600&h=840&fit=crop&crop=entropy&auto=compress,format&format=webp)

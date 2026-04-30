@@ -10,3 +10,9 @@ export function getPublishedPosts(): Post[] {
 				new Date(b.date || 0).getTime() - new Date(a.date || 0).getTime()
 		);
 }
+
+export function calculateReadingTime(content: string): number {
+	const wordsPerMinute = 200;
+	const words = content.trim().split(/\s+/).length;
+	return Math.ceil(words / wordsPerMinute);
+}

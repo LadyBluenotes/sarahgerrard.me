@@ -1,37 +1,36 @@
-import { createEffect, createSignal, on, onMount, Show } from "solid-js";
+import { createSignal, onMount, Show } from "solid-js";
 import { Button } from "@kobalte/core/button";
 
 export const ThemeSelector = () => {
 	const [darkMode, setDarkMode] = createSignal<boolean>(false);
 
+	const applyTheme = (isDark: boolean) => {
+		const theme = isDark ? "dark" : "light";
+
+		document.documentElement.setAttribute("data-theme", theme);
+		document.documentElement.classList.toggle("dark", isDark);
+		window.localStorage.setItem("theme", theme);
+		(
+			window as Window & { updateThemePictures?: (theme: string) => void }
+		).updateThemePictures?.(theme);
+		setDarkMode(isDark);
+	};
+
 	onMount(() => {
-		const theme = window.localStorage.getItem("theme");
+		const theme =
+			document.documentElement.dataset.theme ??
+			window.localStorage.getItem("theme");
 		if (theme === "dark") {
 			setDarkMode(true);
-			document.documentElement.classList.add("dark");
 		}
 	});
-
-	createEffect(
-		on(darkMode, (isDark) => {
-			if (isDark) {
-				document.documentElement.setAttribute("data-theme", "dark");
-			} else {
-				document.documentElement.setAttribute("data-theme", "light");
-			}
-			window.localStorage.setItem("theme", isDark ? "dark" : "light");
-			(
-				window as Window & { updateThemePictures?: (theme: string) => void }
-			).updateThemePictures?.(isDark ? "dark" : "light");
-		})
-	);
 
 	// noinspection TypeScriptValidateTypes
 	return (
 		<Button
 			aria-label="Toggle Theme"
-			onClick={() => setDarkMode((prev) => !prev)}
-			class="color-[--inactive] hover:color-[--hover-inactive]"
+			onClick={() => applyTheme(!darkMode())}
+			class="text-[var(--inactive)] hover:text-[var(--hover-inactive)]"
 		>
 			<Show
 				when={darkMode()}

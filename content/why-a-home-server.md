@@ -2,7 +2,8 @@
 title: Why I’m Building My Own Home Server
 summary: Exploring the motivation behind why I'm building a home server.
 date: 2026-01-30T12:00:00Z
-tags: []
+category: infrastructure
+tags: [home-server, self-hosting]
 ---
 
 My current setup looks a lot like most people's: cloud storage, cloud DNS, cloud everything. It works well, it's incredibly convenient, and I don't have to think much about it.
