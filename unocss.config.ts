@@ -28,5 +28,9 @@ export default defineConfig({
     "i-tabler-moon-stars",
     "i-tabler-sun-filled",
     "i-tabler-chevron-left",
+    "i-tabler-device-gamepad-2",
+    "i-tabler-movie",
+    "i-tabler-device-tv",
+    "i-tabler-book",
   ],
 });
