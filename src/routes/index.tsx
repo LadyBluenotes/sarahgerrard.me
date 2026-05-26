@@ -4,6 +4,7 @@ import { Section } from "~/ui/components/layout/Section";
 import { allPosts } from "content-collections";
 import { For, Show } from "solid-js";
 import { interests, type InterestType } from "~/data/interests";
+import { getSortedPosts } from "~/utils/posts";
 
 export const Route = createFileRoute("/")({
   component: Home,
@@ -72,11 +73,7 @@ const stackItems = [
   },
 ];
 
-const sortedPosts = [...allPosts].sort((a, b) => {
-  const dateA = new Date(a.date as string).getTime();
-  const dateB = new Date(b.date as string).getTime();
-  return dateB - dateA;
-});
+const sortedPosts = getSortedPosts();
 
 const INTEREST_ICONS: Record<InterestType, string> = {
   game: "i-tabler-device-gamepad-2",
@@ -339,7 +336,9 @@ function Home() {
             <ul class="flex flex-col gap-1">
               <For each={socialFooterLinks}>
                 {(link) => {
-                  const isInternal = link.href.startsWith("/") || link.href.startsWith("mailto:");
+                  const isInternal =
+                    link.href.startsWith("/") ||
+                    link.href.startsWith("mailto:");
                   return (
                     <li>
                       <a

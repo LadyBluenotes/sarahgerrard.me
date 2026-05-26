@@ -54,53 +54,41 @@ type HastNode = {
   children?: HastNode[];
 };
 
-const stashSourceMedia = () => (tree: HastNode) => {
+function visitSources(tree: HastNode, fn: (node: HastNode) => void) {
   const stack: HastNode[] = [tree];
   while (stack.length) {
     const node = stack.pop();
-    if (!node || typeof node !== "object") {
-      continue;
-    }
-    if (node.type === "element" && node.tagName === "source") {
-      const properties = node.properties ?? {};
-      const media = properties.media;
-      if (
-        typeof media === "string" &&
-        !properties["data-media"] &&
-        !properties.dataMedia
-      ) {
-        properties["data-media"] = media;
-        properties.dataMedia = media;
-        node.properties = properties;
-      }
-    }
-    if (Array.isArray(node.children)) {
-      stack.push(...node.children);
-    }
+    if (!node || typeof node !== "object") continue;
+    if (node.type === "element" && node.tagName === "source") fn(node);
+    if (Array.isArray(node.children)) stack.push(...node.children);
   }
-};
+}
 
-const restoreSourceMedia = () => (tree: HastNode) => {
-  const stack: HastNode[] = [tree];
-  while (stack.length) {
-    const node = stack.pop();
-    if (!node || typeof node !== "object") {
-      continue;
+const stashSourceMedia = () => (tree: HastNode) =>
+  visitSources(tree, (node) => {
+    const properties = node.properties ?? {};
+    const media = properties.media;
+    if (
+      typeof media === "string" &&
+      !properties["data-media"] &&
+      !properties.dataMedia
+    ) {
+      properties["data-media"] = media;
+      properties.dataMedia = media;
+      node.properties = properties;
     }
-    if (node.type === "element" && node.tagName === "source") {
-      const properties = node.properties ?? {};
-      const media = properties.media;
-      const dataMedia = properties.dataMedia ?? properties["data-media"];
-      if (!media && typeof dataMedia === "string") {
-        properties.media = dataMedia;
-        node.properties = properties;
-      }
+  });
+
+const restoreSourceMedia = () => (tree: HastNode) =>
+  visitSources(tree, (node) => {
+    const properties = node.properties ?? {};
+    const media = properties.media;
+    const dataMedia = properties.dataMedia ?? properties["data-media"];
+    if (!media && typeof dataMedia === "string") {
+      properties.media = dataMedia;
+      node.properties = properties;
     }
-    if (Array.isArray(node.children)) {
-      stack.push(...node.children);
-    }
-  }
-};
+  });
 
 const processFile = unified()
   .use(remarkParse, { fragments: true })
@@ -123,6 +111,5 @@ const processFile = unified()
 
 export async function createHtml(post: string) {
   const result = await processFile().process(post);
-
   return String(result);
 }

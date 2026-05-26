@@ -10,7 +10,6 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as RssDotxmlRouteImport } from './routes/rss[.]xml'
-import { Route as RedirectRouteImport } from './routes/redirect'
 import { Route as PostsRouteRouteImport } from './routes/posts/route'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as PostsIndexRouteImport } from './routes/posts/index'
@@ -19,11 +18,6 @@ import { Route as PostsSlugRouteImport } from './routes/posts/$slug'
 const RssDotxmlRoute = RssDotxmlRouteImport.update({
   id: '/rss.xml',
   path: '/rss.xml',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const RedirectRoute = RedirectRouteImport.update({
-  id: '/redirect',
-  path: '/redirect',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PostsRouteRoute = PostsRouteRouteImport.update({
@@ -50,14 +44,12 @@ const PostsSlugRoute = PostsSlugRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/posts': typeof PostsRouteRouteWithChildren
-  '/redirect': typeof RedirectRoute
   '/rss.xml': typeof RssDotxmlRoute
   '/posts/$slug': typeof PostsSlugRoute
   '/posts/': typeof PostsIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/redirect': typeof RedirectRoute
   '/rss.xml': typeof RssDotxmlRoute
   '/posts/$slug': typeof PostsSlugRoute
   '/posts': typeof PostsIndexRoute
@@ -66,36 +58,21 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/posts': typeof PostsRouteRouteWithChildren
-  '/redirect': typeof RedirectRoute
   '/rss.xml': typeof RssDotxmlRoute
   '/posts/$slug': typeof PostsSlugRoute
   '/posts/': typeof PostsIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths:
-    | '/'
-    | '/posts'
-    | '/redirect'
-    | '/rss.xml'
-    | '/posts/$slug'
-    | '/posts/'
+  fullPaths: '/' | '/posts' | '/rss.xml' | '/posts/$slug' | '/posts/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/redirect' | '/rss.xml' | '/posts/$slug' | '/posts'
-  id:
-    | '__root__'
-    | '/'
-    | '/posts'
-    | '/redirect'
-    | '/rss.xml'
-    | '/posts/$slug'
-    | '/posts/'
+  to: '/' | '/rss.xml' | '/posts/$slug' | '/posts'
+  id: '__root__' | '/' | '/posts' | '/rss.xml' | '/posts/$slug' | '/posts/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   PostsRouteRoute: typeof PostsRouteRouteWithChildren
-  RedirectRoute: typeof RedirectRoute
   RssDotxmlRoute: typeof RssDotxmlRoute
 }
 
@@ -106,13 +83,6 @@ declare module '@tanstack/solid-router' {
       path: '/rss.xml'
       fullPath: '/rss.xml'
       preLoaderRoute: typeof RssDotxmlRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/redirect': {
-      id: '/redirect'
-      path: '/redirect'
-      fullPath: '/redirect'
-      preLoaderRoute: typeof RedirectRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/posts': {
@@ -163,7 +133,6 @@ const PostsRouteRouteWithChildren = PostsRouteRoute._addFileChildren(
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   PostsRouteRoute: PostsRouteRouteWithChildren,
-  RedirectRoute: RedirectRoute,
   RssDotxmlRoute: RssDotxmlRoute,
 }
 export const routeTree = rootRouteImport

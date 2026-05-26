@@ -1,59 +1,31 @@
 import { createFileRoute } from "@tanstack/solid-router";
-import { allPosts } from "content-collections";
 import { For } from "solid-js";
+import { getSortedPosts } from "~/utils/posts";
 
 export const Route = createFileRoute("/posts/")({
   component: RouteComponent,
 });
 
 function RouteComponent() {
-  // sort posts by date descending
-
-  // categorize by year
-  allPosts.sort((a, b) => {
-    const dateA = new Date(a.date as string).getTime();
-    const dateB = new Date(b.date as string).getTime();
-    return dateB - dateA;
-  });
-
-  const postsByYear = allPosts.reduce(
+  const posts = getSortedPosts();
+  const postsByYear = posts.reduce<Record<number, typeof posts>>(
     (acc, post) => {
       const year = new Date(post.date as string).getFullYear();
-      if (!acc[year]) {
-        acc[year] = [];
-      }
-      acc[year].push(post);
+      (acc[year] ??= []).push(post);
       return acc;
     },
-    {} as Record<number, typeof allPosts>,
-  );
-
-  // grab all the tags used in posts
-
-  const tagsSet = new Set<string>();
-  allPosts.forEach((post) => {
-    post.tags?.forEach((tag) => tagsSet.add(tag));
-  });
-  const tags = Array.from(tagsSet).sort();
-
-  // categorize by tag
-  const postsByTag = tags.reduce(
-    (acc, tag) => {
-      acc[tag] = allPosts.filter((post) => post.tags?.includes(tag));
-      return acc;
-    },
-    {} as Record<string, typeof allPosts>,
+    {},
   );
 
   return (
     <div>
       <ul class="flex flex-col gap-4">
         <For each={Object.entries(postsByYear).reverse()}>
-          {([year, posts]) => (
+          {([year, yearPosts]) => (
             <li>
               <h2 class="text-2xl font-bold mb-2">{year}</h2>
               <ul class="flex flex-col gap-2">
-                <For each={posts}>
+                <For each={yearPosts}>
                   {(post) => (
                     <li>
                       <a
@@ -67,11 +39,7 @@ function RouteComponent() {
                         <span class="text-sm text-[var(--inactive-muted)]">
                           {new Date(post.date as string).toLocaleDateString(
                             "en-CA",
-                            {
-                              year: "numeric",
-                              month: "short",
-                              day: "numeric",
-                            },
+                            { year: "numeric", month: "short", day: "numeric" },
                           )}
                         </span>
                       </a>

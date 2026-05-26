@@ -1,5 +1,5 @@
 import { Feed } from "feed";
-import { allPosts } from "content-collections";
+import { getPublishedPosts } from "~/utils/posts";
 
 export function buildRss(origin: string) {
   const feed = new Feed({
@@ -21,12 +21,8 @@ export function buildRss(origin: string) {
     },
   });
 
-  const posts = allPosts
-    .filter((p) => !p.draft)
-    .sort((a, b) => +new Date(b.date ?? 0) - +new Date(a.date ?? 0));
-
-  for (const post of posts) {
-    const slug = (post as any).slug ?? (post as any)._meta?.path;
+  for (const post of getPublishedPosts()) {
+    const slug = (post as { slug?: string })?.slug ?? post._meta?.path;
     const path = `/posts/${String(slug).replace(/\.mdx?$/, "")}`;
     const url = origin + path;
 
@@ -37,8 +33,10 @@ export function buildRss(origin: string) {
       description: post.summary,
       date: post.date ? new Date(post.date) : new Date(),
       category: (post.tags ?? []).map((t) => ({ name: t })),
-      // prefer transformed HTML (post.html) when available, fall back to raw content or empty string
-      content: (post as any).html ?? (post as any).content ?? "",
+      content:
+        (post as { html?: string; content?: string }).html ??
+        (post as { content?: string }).content ??
+        "",
     });
   }
 
