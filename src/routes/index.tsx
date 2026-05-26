@@ -26,25 +26,49 @@ const ROMAN_MONTHS = [
 
 const LATELY = "home server, type-safe routing, sourdough that finally rises.";
 
-const linkCards = [
-  {
-    href: "/posts",
-    label: "Posts",
-    meta: () => `${allPosts.length} essays`,
-    description: "Notes on the craft, the tools, and the slow parts.",
-  },
+const siteFooterLinks = [
+  { href: "/posts", label: `Posts — ${allPosts.length} essays` },
+  { href: "/oss", label: "Open Source" },
+  { href: "/about", label: "About" },
+];
+
+const socialFooterLinks = [
   {
     href: "https://github.com/ladybluenotes",
-    label: "Open source",
-    meta: () => "→ GitHub",
-    description: "What I build and contribute to in the open.",
-    external: true,
+    label: "GitHub",
+    iconClass: "i-tabler-brand-github",
   },
   {
-    href: "/about",
-    label: "About",
-    meta: () => "Who I am",
-    description: "A bit about me, how I work, and how to reach me.",
+    href: "https://bsky.app/profile/ladybluenotes.dev",
+    label: "Bluesky",
+    iconClass: "i-tabler-brand-bluesky",
+  },
+  {
+    href: "https://www.linkedin.com/in/sarahgerrard",
+    label: "LinkedIn",
+    iconClass: "i-tabler-brand-linkedin",
+  },
+  {
+    href: "/rss.xml",
+    label: "RSS Feed",
+    iconClass: "i-tabler-rss",
+  },
+  {
+    href: "mailto:hello@sarahgerrard.me",
+    label: "Email",
+    iconClass: "i-tabler-mail",
+  },
+];
+
+const stackItems = [
+  { label: "Solid.js", href: "https://www.solidjs.com" },
+  { label: "TanStack Start", href: "https://tanstack.com/start" },
+  { label: "UnoCSS", href: "https://unocss.dev" },
+  { label: "Vite", href: "https://vite.dev" },
+  { label: "Netlify", href: "https://netlify.com" },
+  {
+    label: "Source on GitHub",
+    href: "https://github.com/LadyBluenotes/sarahgerrard.me",
   },
 ];
 
@@ -284,47 +308,82 @@ function Home() {
         </div>
       </Section>
 
-      <Section class="py-10">
-        <div class="mb-6 font-[var(--mono)] text-[0.7rem] uppercase leading-none tracking-[0.3em] text-[var(--softer)]">
-          04 · Elsewhere on this site
-        </div>
-        <div class="grid w-full gap-6 md:grid-cols-3">
-          <For each={linkCards}>
-            {(card) => (
-              <a
-                href={card.href}
-                target={card.external ? "_blank" : undefined}
-                rel={card.external ? "noopener noreferrer" : undefined}
-                class="group flex min-w-0 flex-col gap-2 py-1"
-              >
-                <div class="font-[var(--mono)] text-[0.65rem] uppercase tracking-[0.2em] text-[var(--softer)]">
-                  {card.meta()}
-                </div>
-                <span class="font-[var(--serif)] text-[1.4rem] leading-tight text-[var(--ink)] group-hover:text-[var(--soft)] transition-colors">
-                  {card.label}
-                </span>
-                <span class="font-[var(--sans-serif)] text-[0.875rem] leading-snug text-[var(--soft)]">
-                  {card.description}
-                </span>
-              </a>
-            )}
-          </For>
-        </div>
-      </Section>
+      <Section class="py-10 border-b-0">
+        <div class="grid w-full gap-x-12 gap-y-10 md:grid-cols-3 border-t border-[var(--rule)] pt-10">
+          {/* On this site */}
+          <div class="flex flex-col gap-3">
+            <span class="font-[var(--sans-serif)] text-[0.75rem] font-medium text-[var(--ink)]">
+              On this site
+            </span>
+            <ul class="flex flex-col gap-1">
+              <For each={siteFooterLinks}>
+                {(link) => (
+                  <li>
+                    <a
+                      href={link.href}
+                      class="font-[var(--mono)] text-[0.7rem] tracking-[0.1em] text-[var(--soft)] transition-colors hover:text-[var(--ink)]"
+                    >
+                      {link.label}
+                    </a>
+                  </li>
+                )}
+              </For>
+            </ul>
+          </div>
 
-      <Section class="py-6 border-b-0">
-        <p class="w-full text-center font-[var(--mono)] text-[0.65rem] uppercase leading-[1.8] tracking-[0.2em] text-[var(--softer)]">
-          — Built with Solid + TanStack Start ·{" "}
-          <a
-            href="https://github.com/LadyBluenotes/sarahgerrard.me"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="hover:text-[var(--ink)] transition-colors"
-          >
-            Source on GitHub
-          </a>{" "}
-          —
-        </p>
+          {/* Find me */}
+          <div class="flex flex-col gap-3">
+            <span class="font-[var(--sans-serif)] text-[0.75rem] font-medium text-[var(--ink)]">
+              Find me
+            </span>
+            <ul class="flex flex-col gap-1">
+              <For each={socialFooterLinks}>
+                {(link) => {
+                  const isInternal = link.href.startsWith("/") || link.href.startsWith("mailto:");
+                  return (
+                    <li>
+                      <a
+                        href={link.href}
+                        target={isInternal ? undefined : "_blank"}
+                        rel={isInternal ? undefined : "noopener noreferrer"}
+                        class="flex items-center gap-2 font-[var(--mono)] text-[0.7rem] tracking-[0.1em] text-[var(--soft)] transition-colors hover:text-[var(--ink)]"
+                      >
+                        <span
+                          class={`${link.iconClass} text-[0.9rem] shrink-0`}
+                          aria-hidden="true"
+                        />
+                        {link.label}
+                      </a>
+                    </li>
+                  );
+                }}
+              </For>
+            </ul>
+          </div>
+
+          {/* Under the hood */}
+          <div class="flex flex-col gap-3">
+            <span class="font-[var(--sans-serif)] text-[0.75rem] font-medium text-[var(--ink)]">
+              Under the hood
+            </span>
+            <ul class="flex flex-col gap-1">
+              <For each={stackItems}>
+                {(item) => (
+                  <li>
+                    <a
+                      href={item.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="font-[var(--mono)] text-[0.7rem] tracking-[0.1em] text-[var(--soft)] transition-colors hover:text-[var(--ink)]"
+                    >
+                      {item.label}
+                    </a>
+                  </li>
+                )}
+              </For>
+            </ul>
+          </div>
+        </div>
       </Section>
     </Layout>
   );
