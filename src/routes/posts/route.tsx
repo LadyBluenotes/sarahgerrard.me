@@ -3,20 +3,20 @@ import { Layout } from "~/ui/components/layout/Layout";
 import { seo } from "~/utils/seo";
 
 export const Route = createFileRoute("/posts")({
-	head: () => ({
-		meta: [
-			...seo({
-				title: "Writing - Sarah Gerrard",
-			}),
-		],
-	}),
-	component: RouteComponent,
+  head: () => ({
+    meta: [
+      ...seo({
+        title: "Writing - Sarah Gerrard",
+      }),
+    ],
+  }),
+  component: RouteComponent,
 });
 
 function RouteComponent() {
-	return (
-		<Layout>
-			<Outlet />
-		</Layout>
-	)
+  return (
+    <Layout>
+      <Outlet />
+    </Layout>
+  );
 }

@@ -1,36 +1,45 @@
-import { createFileRoute } from '@tanstack/solid-router'
+import { createFileRoute } from "@tanstack/solid-router";
 import { buildRss } from "~/server/rss";
 import { Show } from "solid-js";
 
-export const Route = createFileRoute('/rss.xml')({
-	server: {
-		handlers: {
-			GET: async ({ request }) => {
-				const url = new URL(request.url);
-				const origin = url.origin;
+export const Route = createFileRoute("/rss.xml")({
+  server: {
+    handlers: {
+      GET: async ({ request }) => {
+        const url = new URL(request.url);
+        const origin = url.origin;
 
-				// Determine whether the client clearly wants XML (feed clients)
-				const accept = (request.headers.get('accept') || '').toLowerCase();
-				const xmlTypes = ['application/rss+xml', 'application/atom+xml', 'application/xml', 'text/xml'];
-				const explicitXml = xmlTypes.some((t) => accept.includes(t));
+        // Determine whether the client clearly wants XML (feed clients)
+        const accept = (request.headers.get("accept") || "").toLowerCase();
+        const xmlTypes = [
+          "application/rss+xml",
+          "application/atom+xml",
+          "application/xml",
+          "text/xml",
+        ];
+        const explicitXml = xmlTypes.some((t) => accept.includes(t));
 
-				// Heuristic: if this looks like a browser (User-Agent) prefer HTML preview
-				const ua = (request.headers.get('user-agent') || '').toLowerCase();
-				const browserLike = /mozilla|applewebkit|chrome|safari|firefox|edge|trident|opera/.test(ua);
+        // Heuristic: if this looks like a browser (User-Agent) prefer HTML preview
+        const ua = (request.headers.get("user-agent") || "").toLowerCase();
+        const browserLike =
+          /mozilla|applewebkit|chrome|safari|firefox|edge|trident|opera/.test(
+            ua,
+          );
 
-				// If the request explicitly wants HTML, or it's a browser and didn't explicitly ask for XML, show HTML preview
-				const wantsHtml = accept.includes('text/html') || (browserLike && !explicitXml);
+        // If the request explicitly wants HTML, or it's a browser and didn't explicitly ask for XML, show HTML preview
+        const wantsHtml =
+          accept.includes("text/html") || (browserLike && !explicitXml);
 
-				try {
-					const feed = buildRss(origin);
-					const xml = feed.rss2();
+        try {
+          const feed = buildRss(origin);
+          const xml = feed.rss2();
 
-					if (wantsHtml) {
-						// Generate a styled HTML preview for browsers
-						const feedObj = feed.options;
-						const items = (feed as any).items || [];
+          if (wantsHtml) {
+            // Generate a styled HTML preview for browsers
+            const feedObj = feed.options;
+            const items = (feed as any).items || [];
 
-						const html = `<!DOCTYPE html>
+            const html = `<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -181,8 +190,8 @@ export const Route = createFileRoute('/rss.xml')({
     <h2 class="subheading">Recent Posts</h2>
     <div class="items">
       ${items
-				.map(
-					(item: any) => `
+        .map(
+          (item: any) => `
         <article class="item">
         <div class="item-header">
         	<h2 class="item-title">
@@ -195,39 +204,39 @@ export const Route = createFileRoute('/rss.xml')({
           
           ${item.description ? `<div class="item-description">${item.description}</div>` : ""}
           ${
-						item.category && item.category.length > 0
-							? `
+            item.category && item.category.length > 0
+              ? `
             <div class="categories">
               ${item.category.map((cat: any) => `<span class="category">${cat.name || cat}</span>`).join("")}
             </div>
           `
-							: ""
-					}
+              : ""
+          }
         </article>
-      `
-				)
-				.join("")}
+      `,
+        )
+        .join("")}
     </div>
   </div>
 </body>
 </html>`;
 
-						return new Response(html, {
-							headers: { 'Content-Type': 'text/html; charset=utf-8' },
-						});
-					}
+            return new Response(html, {
+              headers: { "Content-Type": "text/html; charset=utf-8" },
+            });
+          }
 
-					return new Response(xml, {
-						headers: {
-							'Content-Type': 'application/rss+xml; charset=utf-8',
-							'Cache-Control': 'public, max-age=0, s-maxage=3600',
-						},
-					});
-				} catch (err: any) {
-					console.error('Failed to build RSS feed', err);
-					return new Response('Internal Server Error', { status: 500 });
-				}
-			},
-		},
-	},
+          return new Response(xml, {
+            headers: {
+              "Content-Type": "application/rss+xml; charset=utf-8",
+              "Cache-Control": "public, max-age=0, s-maxage=3600",
+            },
+          });
+        } catch (err: any) {
+          console.error("Failed to build RSS feed", err);
+          return new Response("Internal Server Error", { status: 500 });
+        }
+      },
+    },
+  },
 });

@@ -1,9 +1,11 @@
-export const Section = (props: { children: any; class?: string }) => {
-	return (
-		<section
-			class={`flex flex-col items-start border-b-1 border-[var(--detail)] ${props.class}`}
-		>
-			{props.children}
-		</section>
-	);
+import { JSX } from "solid-js";
+
+export const Section = (props: { children: JSX.Element; class?: string }) => {
+  return (
+    <section
+      class={`flex w-full flex-col items-start border-b border-[var(--rule)] ${props.class ?? ""}`}
+    >
+      {props.children}
+    </section>
+  );
 };

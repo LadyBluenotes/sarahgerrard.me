@@ -1,47 +1,47 @@
 @font-face {
-	font-family: "Inter";
-	src: url("./Inter.woff2") format("woff2");
-	font-weight: 100 900;
-	font-style: normal;
-	font-display: swap;
+  font-family: "Inter";
+  src: url("./Inter.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-	font-family: "Instrument Serif";
-	src: url("./InstrumentSerif-Regular.woff2") format("woff2");
-	font-weight: 100 900;
-	font-style: normal;
-	font-display: swap;
+  font-family: "Instrument Serif";
+  src: url("./InstrumentSerif-Regular.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-	font-family: "Instrument Serif";
-	src: url("./InstrumentSerif-Italic.woff2") format("woff2");
-	font-weight: 100 900;
-	font-style: italic;
-	font-display: swap;
+  font-family: "Instrument Serif";
+  src: url("./InstrumentSerif-Italic.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
 }
 
 @font-face {
-	font-family: "Playfair Display";
-	src: url("./PlayfairDisplay-Regular.woff2") format("woff2");
-	font-weight: 100 900;
-	font-style: normal;
-	font-display: swap;
+  font-family: "Playfair Display";
+  src: url("./PlayfairDisplay-Regular.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-	font-family: "Playfair Display";
-	src: url("./PlayfairDisplay-Italic.woff2") format("woff2");
-	font-weight: 100 900;
-	font-style: italic;
-	font-display: swap;
+  font-family: "Playfair Display";
+  src: url("./PlayfairDisplay-Italic.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
 }
 
 @font-face {
-	font-family: "JetBrains Mono";
-	src: url("./JetBrainsMono-Regular.woff2") format("woff2");
-	font-weight: 100 900;
-	font-style: normal;
-	font-display: swap;
+  font-family: "JetBrains Mono";
+  src: url("./JetBrainsMono-Regular.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
 }

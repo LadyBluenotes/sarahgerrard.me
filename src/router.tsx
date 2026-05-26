@@ -4,13 +4,11 @@ import { DefaultCatchBoundary } from "./ui/components/errors/DefaultCatchBoundar
 import { NotFound } from "./ui/components/errors/NotFound";
 
 export function getRouter() {
-
-
   return createRouter({
-		routeTree,
-		defaultPreload: "intent",
-		defaultErrorComponent: DefaultCatchBoundary,
-		defaultNotFoundComponent: () => <NotFound />,
-		scrollRestoration: true,
-	});
+    routeTree,
+    defaultPreload: "intent",
+    defaultErrorComponent: DefaultCatchBoundary,
+    defaultNotFoundComponent: () => <NotFound />,
+    scrollRestoration: true,
+  });
 }

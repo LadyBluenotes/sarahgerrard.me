@@ -2,7 +2,7 @@
 title: Questions I Ask Before I Write a Line of Code
 summary: A practical list of questions I run through before starting work to scope the smallest useful change, reduce surprises, and make my work easier to review, test, and maintain.
 date: 2026-02-13T12:00:00.000Z
-category: code
+category: technical
 tags: [planning, code-review, maintainability]
 ---
 

@@ -7,17 +7,17 @@ import viteSolid from "vite-plugin-solid";
 import UnoCSS from "unocss/vite";
 
 export default defineConfig({
-	server: {
-		port: 3000,
-	},
-	plugins: [
-		netlify(),
-		tsConfigPaths({
-			projects: ["./tsconfig.json"],
-		}),
-		tanstackStart(),
-		contentCollections(),
-		viteSolid({ ssr: true }),
-		UnoCSS(),
-	],
+  server: {
+    port: 3000,
+  },
+  plugins: [
+    netlify(),
+    tsConfigPaths({
+      projects: ["./tsconfig.json"],
+    }),
+    tanstackStart(),
+    contentCollections(),
+    viteSolid({ ssr: true }),
+    UnoCSS(),
+  ],
 });
